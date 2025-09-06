@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PSEN2 — Linhas da tabela dbo.variantes</title>
+<style>
+  :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif; }
+  body { margin: 24px; }
+  h1 { margin: 0 0 6px 0; font-size: 1.6rem; }
+  .meta { color: #444; font-size: .95rem; margin-bottom: 12px; }
+  .toolbar { display:flex; gap: 8px; align-items:center; margin: 12px 0; flex-wrap: wrap; }
+  input[type="search"] { padding: 8px 10px; border: 1px solid #ccc; border-radius: 10px; min-width: 260px; }
+  button { padding: 8px 12px; border: 1px solid #ccc; border-radius: 10px; background: #f7f7f7; cursor: pointer; }
+  button:hover { background: #eee; }
+  table { width: 100%; border-collapse: collapse; }
+  thead th { position: sticky; top: 0; background: #fafafa; border-bottom: 1px solid #ddd; text-align: left; padding: 10px; cursor: pointer; }
+  tbody td { border-bottom: 1px solid #f0f0f0; padding: 8px 10px; vertical-align: top; }
+  .sortable::after { content: " ⇅"; font-size: .8em; color: #888; }
+  .sorted-asc::after { content: " ↑"; }
+  .sorted-desc::after { content: " ↓"; }
+  .empty { padding: 16px; background: #fff6f6; border: 1px solid #ffdede; border-radius: 12px; }
+  a.btn { display:inline-block; margin: 0 8px 8px 0; padding: 6px 10px; border-radius: 10px; border:1px solid #ddd; text-decoration:none; color:#222; background:#f9f9f9; }
+  a.btn:hover { background:#f0f0f0; }
+</style>
+</head>
+<body>
+<h1>PSEN2 — Linhas da tabela dbo.variantes</h1>
+<div class="meta">Gene: <strong>PSEN2</strong> • Linhas: <strong>12</strong></div>
+<div class="toolbar">
+  <input id="busca" type="search" placeholder="Filtrar linhas... (busca global)">
+  <button id="btnCsv" type="button">Exportar CSV</button>
+  <a class="btn" href="index.html">Voltar ao índice</a>
+</div>
+<div id="wrap">
+<table id="tabela" border="0">
+<thead><tr>
+<th>Gene</th>
+<th>Chr</th>
+<th>Pos</th>
+<th>ID</th>
+<th>Ref</th>
+<th>Alt</th>
+<th>Impacto</th>
+<th>GT</th>
+<th>VAF</th>
+<th>ClinVar_ID</th>
+<th>ClinVar_Significance</th>
+<th>ClinVar_Review_Status</th>
+<th>ClinVar_Disease_Names</th>
+<th>ID_variante</th>
+<th>Qual</th>
+<th>Filtro</th>
+<th>Ensembl</th>
+<th>Alteracao_nucleotidica</th>
+<th>Alteracao_aminoacidica</th>
+<th>GQ</th>
+<th>DP</th>
+<th>AD</th>
+<th>PL</th>
+<th>HGMD</th>
+<th>Resultado</th>
+<th>Status</th>
+<th>Buscar</th>
+<th>SIFT</th>
+<th>PolyPhen</th>
+<th>Biotype</th>
+<th>Alteracao_nucleotidica_reversa</th>
+<th>Alteracao_aminoacidica_reversa</th>
+<th>Resultado_reverso</th>
+<th>encontrado_rsid</th>
+<th>gnomAD_AF_Global</th>
+<th>gnomAD_AFR_AF</th>
+<th>gnomAD_AMR_AF</th>
+<th>gnomAD_ASJ_AF</th>
+<th>gnomAD_EAS_AF</th>
+<th>gnomAD_FIN_AF</th>
+<th>gnomAD_NFE_AF</th>
+<th>gnomAD_SAS_AF</th>
+<th>gnomAD_OTH_AF</th>
+<th>PhyloP</th>
+<th>PhastCons</th>
+<th>GERP</th>
+<th>CADD_Raw</th>
+<th>CADD_Phred</th>
+<th>LOEUF</th>
+<th>Allele_String</th>
+<th>ClinVar_Disease_Count</th>
+<th>letra_inicial_gene</th>
+</tr></thead><tbody>
+<tr>
+<td>PSEN2</td>
+<td>chr1</td>
+<td>226870643</td>
+<td>rs12758915</td>
+<td>A</td>
+<td>G</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.615385</td>
+<td>286071</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Alzheimer disease 4; Dilated cardiomyopathy 1V</td>
+<td>4847</td>
+<td>44.7</td>
+<td>PASS</td>
+<td>ENST00000366783</td>
+<td>ENST00000366783.8:c.-356A&gt;G</td>
+<td></td>
+<td>43</td>
+<td>26</td>
+<td>10*16</td>
+<td>44*0*47</td>
+<td></td>
+<td>A/G</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000366783.8:c.-356A&gt;G</td>
+<td></td>
+<td>A/G</td>
+<td></td>
+<td>0.5016</td>
+<td>0.572</td>
+<td>0.4515</td>
+<td>0.4074</td>
+<td>0.583</td>
+<td>0.4513</td>
+<td>0.473</td>
+<td>0.5841</td>
+<td>0.4672</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.784</td>
+<td>A/C/G/T</td>
+<td>2</td>
+<td>P</td>
+</tr>
+<tr>
+<td>PSEN2</td>
+<td>chr1</td>
+<td>226875528</td>
+<td>rs7961</td>
+<td>C</td>
+<td>T</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.386667</td>
+<td>330575</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Alzheimer disease 4; Dilated cardiomyopathy 1V</td>
+<td>4848</td>
+<td>45.9</td>
+<td>PASS</td>
+<td>ENST00000366783</td>
+<td>ENST00000366783.8:c.-43C&gt;T</td>
+<td></td>
+<td>44</td>
+<td>150</td>
+<td>92*58</td>
+<td>45*0*49</td>
+<td></td>
+<td>C/T</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000366783.8:c.-43C&gt;T</td>
+<td></td>
+<td>C/T</td>
+<td></td>
+<td>0.07702</td>
+<td>0.2364</td>
+<td>0.05484</td>
+<td>0.03485</td>
+<td>0.05704</td>
+<td>0.002545</td>
+<td>0.003087</td>
+<td>0.0591</td>
+<td>0.06285</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.784</td>
+<td>C/T</td>
+<td>2</td>
+<td>P</td>
+</tr>
+<tr>
+<td>PSEN2</td>
+<td>chr1</td>
+<td>226880697</td>
+<td>rs111567390</td>
+<td>G</td>
+<td>T</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.411043</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>4849</td>
+<td>46.5</td>
+<td>PASS</td>
+<td>ENST00000366783</td>
+<td>ENST00000366783.8:c.-20-1191G&gt;T</td>
+<td></td>
+<td>46</td>
+<td>163</td>
+<td>96*67</td>
+<td>46*0*53</td>
+<td></td>
+<td>G/T</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000366783.8:c.-20-1191G&gt;T</td>
+<td></td>
+<td>G/T</td>
+<td></td>
+<td>0.07691</td>
+<td>0.2357</td>
+<td>0.05499</td>
+<td>0.03485</td>
+<td>0.0571</td>
+<td>0.002541</td>
+<td>0.003087</td>
+<td>0.05926</td>
+<td>0.06291</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.784</td>
+<td>G/T</td>
+<td></td>
+<td>P</td>
+</tr>
+<tr>
+<td>PSEN2</td>
+<td>chr1</td>
+<td>226881976</td>
+<td>rs11405</td>
+<td>T</td>
+<td>C</td>
+<td>LOW</td>
+<td>1/1</td>
+<td>1</td>
+<td>248412</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Alzheimer disease 4; Dilated cardiomyopathy 1V</td>
+<td>4850</td>
+<td>64.9</td>
+<td>PASS</td>
+<td>ENST00000366783</td>
+<td>ENST00000366783.8:c.69T&gt;C</td>
+<td>ENSP00000355747.3:p.Ala23=</td>
+<td>60</td>
+<td>125</td>
+<td>0*125</td>
+<td>64*61*0</td>
+<td></td>
+<td>C/C</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000366783.8:c.69T&gt;C</td>
+<td>ENSP00000355747.3:p.Ala23=</td>
+<td>C/C</td>
+<td></td>
+<td>0.7729</td>
+<td>0.8163</td>
+<td>0.7321</td>
+<td>0.7664</td>
+<td>0.5705</td>
+<td>0.7891</td>
+<td>0.7716</td>
+<td>0.7444</td>
+<td>0.7564</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.784</td>
+<td>T/A/C/G</td>
+<td>4</td>
+<td>P</td>
+</tr>
+<tr>
+<td>PSEN2</td>
+<td>chr1</td>
+<td>226882036</td>
+<td>rs6759</td>
+<td>C</td>
+<td>T</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.518072</td>
+<td>244764</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Alzheimer disease 4; Dilated cardiomyopathy 1V</td>
+<td>4851</td>
+<td>44.3</td>
+<td>PASS</td>
+<td>ENST00000366783</td>
+<td>ENST00000366783.8:c.129C&gt;T</td>
+<td>ENSP00000355747.3:p.Asn43=</td>
+<td>43</td>
+<td>83</td>
+<td>40*43</td>
+<td>44*0*49</td>
+<td></td>
+<td>C/T</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000366783.8:c.129C&gt;T</td>
+<td>ENSP00000355747.3:p.Asn43=</td>
+<td>C/T</td>
+<td></td>
+<td>0.4854</td>
+<td>0.3888</td>
+<td>0.525</td>
+<td>0.6115</td>
+<td>0.4114</td>
+<td>0.5448</td>
+<td>0.5274</td>
+<td>0.4158</td>
+<td>0.526</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.784</td>
+<td>C/A/G/T</td>
+<td>4</td>
+<td>P</td>
+</tr>
+<tr>
+<td>PSEN2</td>
+<td>chr1</td>
+<td>226883663</td>
+<td>rs1295643</td>
+<td>G</td>
+<td>A</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.326087</td>
+<td>1674948</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Alzheimer disease 4; Dilated cardiomyopathy 1V</td>
+<td>4852</td>
+<td>50.5</td>
+<td>PASS</td>
+<td>ENST00000366783</td>
+<td>ENST00000366783.8:c.142-42G&gt;A</td>
+<td></td>
+<td>49</td>
+<td>46</td>
+<td>31*15</td>
+<td>50*0*56</td>
+<td></td>
+<td>G/A</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000366783.8:c.142-42G&gt;A</td>
+<td></td>
+<td>G/A</td>
+<td></td>
+<td>0.4855</td>
+<td>0.3888</td>
+<td>0.525</td>
+<td>0.6125</td>
+<td>0.4124</td>
+<td>0.5453</td>
+<td>0.5272</td>
+<td>0.4161</td>
+<td>0.5256</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.784</td>
+<td>G/A/C</td>
+<td>3</td>
+<td>P</td>
+</tr>
+<tr>
+<td>PSEN2</td>
+<td>chr1</td>
+<td>226883676</td>
+<td>rs1295644</td>
+<td>T</td>
+<td>C</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.42623</td>
+<td>1671790</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Alzheimer disease 4; Dilated cardiomyopathy 1V</td>
+<td>4853</td>
+<td>52.1</td>
+<td>PASS</td>
+<td>ENST00000366783</td>
+<td>ENST00000366783.8:c.142-29T&gt;C</td>
+<td></td>
+<td>51</td>
+<td>61</td>
+<td>35*26</td>
+<td>52*0*57</td>
+<td></td>
+<td>T/C</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000366783.8:c.142-29T&gt;C</td>
+<td></td>
+<td>T/C</td>
+<td></td>
+<td>0.6959</td>
+<td>0.5803</td>
+<td>0.6772</td>
+<td>0.732</td>
+<td>0.5141</td>
+<td>0.787</td>
+<td>0.7683</td>
+<td>0.6848</td>
+<td>0.6932</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.784</td>
+<td>T/A/C/G</td>
+<td>3</td>
+<td>P</td>
+</tr>
+<tr>
+<td>PSEN2</td>
+<td>chr1</td>
+<td>226883824</td>
+<td>rs1046240</td>
+<td>C</td>
+<td>T</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.513308</td>
+<td>247730</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Alzheimer disease 4; Dilated cardiomyopathy 1V</td>
+<td>4854</td>
+<td>50.9</td>
+<td>PASS</td>
+<td>ENST00000366783</td>
+<td>ENST00000366783.8:c.261C&gt;T</td>
+<td>ENSP00000355747.3:p.His87=</td>
+<td>45</td>
+<td>263</td>
+<td>128*135</td>
+<td>50*0*46</td>
+<td></td>
+<td>C/T</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000366783.8:c.261C&gt;T</td>
+<td>ENSP00000355747.3:p.His87=</td>
+<td>C/T</td>
+<td></td>
+<td>0.4857</td>
+<td>0.389</td>
+<td>0.5247</td>
+<td>0.6125</td>
+<td>0.4108</td>
+<td>0.5467</td>
+<td>0.5274</td>
+<td>0.416</td>
+<td>0.5251</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.784</td>
+<td>C/T</td>
+<td>4</td>
+<td>P</td>
+</tr>
+<tr>
+<td>PSEN2</td>
+<td>chr1</td>
+<td>226885709</td>
+<td>rs2236910</td>
+<td>G</td>
+<td>C</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td>1710917</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Alzheimer disease 4; Dilated cardiomyopathy 1V</td>
+<td>4855</td>
+<td>53.8</td>
+<td>PASS</td>
+<td>ENST00000366783</td>
+<td>ENST00000366783.8:c.498+30G&gt;C</td>
+<td></td>
+<td>38</td>
+<td>67</td>
+<td>0*67</td>
+<td>53*38*0</td>
+<td></td>
+<td>C/C</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000366783.8:c.498+30G&gt;C</td>
+<td></td>
+<td>C/C</td>
+<td></td>
+<td>0.773</td>
+<td>0.8165</td>
+<td>0.7315</td>
+<td>0.7664</td>
+<td>0.5708</td>
+<td>0.7891</td>
+<td>0.7716</td>
+<td>0.7453</td>
+<td>0.7569</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.784</td>
+<td>G/A/C/T</td>
+<td>3</td>
+<td>P</td>
+</tr>
+<tr>
+<td>PSEN2</td>
+<td>chr1</td>
+<td>226890108</td>
+<td>rs75733498</td>
+<td>C</td>
+<td>T</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.5</td>
+<td>345435</td>
+<td>likely-benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Alzheimer disease 4; Dilated cardiomyopathy 1V</td>
+<td>4856</td>
+<td>47.1</td>
+<td>PASS</td>
+<td>ENST00000366783</td>
+<td>ENST00000366783.8:c.861C&gt;T</td>
+<td>ENSP00000355747.3:p.Pro287=</td>
+<td>46</td>
+<td>126</td>
+<td>63*63</td>
+<td>47*0*53</td>
+<td></td>
+<td>C/T</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000366783.8:c.861C&gt;T</td>
+<td>ENSP00000355747.3:p.Pro287=</td>
+<td>C/T</td>
+<td></td>
+<td>0.006476</td>
+<td>0.0002406</td>
+<td>0.02184</td>
+<td>0.0005767</td>
+<td>0.07554</td>
+<td>0.001979</td>
+<td>0.0003676</td>
+<td>0.03859</td>
+<td>0.008049</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.784</td>
+<td>C/T</td>
+<td>4</td>
+<td>P</td>
+</tr>
+<tr>
+<td>PSEN2</td>
+<td>chr1</td>
+<td>226891254</td>
+<td>rs2802267</td>
+<td>T</td>
+<td>C</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td>1648540</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Alzheimer disease 4; Dilated cardiomyopathy 1V</td>
+<td>4857</td>
+<td>56.4</td>
+<td>PASS</td>
+<td>ENST00000366783</td>
+<td>ENST00000366783.8:c.887-24T&gt;C</td>
+<td></td>
+<td>46</td>
+<td>50</td>
+<td>0*50</td>
+<td>56*46*0</td>
+<td></td>
+<td>C/C</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000366783.8:c.887-24T&gt;C</td>
+<td></td>
+<td>C/C</td>
+<td></td>
+<td>0.7604</td>
+<td>0.768</td>
+<td>0.7303</td>
+<td>0.7675</td>
+<td>0.5896</td>
+<td>0.7901</td>
+<td>0.7716</td>
+<td>0.7467</td>
+<td>0.7554</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.784</td>
+<td>T/C/G</td>
+<td>3</td>
+<td>P</td>
+</tr>
+<tr>
+<td>PSEN2</td>
+<td>chr1</td>
+<td>226894149</td>
+<td>rs2855562</td>
+<td>G</td>
+<td>A</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td>1648373</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Alzheimer disease 4; Dilated cardiomyopathy 1V</td>
+<td>4858</td>
+<td>54.5</td>
+<td>PASS</td>
+<td>ENST00000366783</td>
+<td>ENST00000366783.8:c.1191+24G&gt;A</td>
+<td></td>
+<td>46</td>
+<td>68</td>
+<td>0*68</td>
+<td>54*46*0</td>
+<td></td>
+<td>A/A</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000366783.8:c.1191+24G&gt;A</td>
+<td></td>
+<td>A/A</td>
+<td></td>
+<td>0.5491</td>
+<td>0.4908</td>
+<td>0.619</td>
+<td>0.6478</td>
+<td>0.6467</td>
+<td>0.6099</td>
+<td>0.5459</td>
+<td>0.5399</td>
+<td>0.5845</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.784</td>
+<td>G/A/C/T</td>
+<td>3</td>
+<td>P</td>
+</tr>
+</tbody></table></div>
+<script>
+(function() {{
+  const table = document.getElementById('tabela');
+  const busca = document.getElementById('busca');
+  const btnCsv = document.getElementById('btnCsv');
+  if (!table) return;
+  const getCellText = (tr, idx) => (tr.cells[idx]?.innerText || "").trim();
+  const isNumber = (v) => /^-?\d+(\.\d+)?$/.test(v.replace(/\s+/g, '').replace(',', '.'));
+
+  Array.from(table.tHead.rows[0].cells).forEach((th, idx) => {{
+    th.classList.add('sortable');
+    th.addEventListener('click', () => {{
+      const tbody = table.tBodies[0];
+      const rows = Array.from(tbody.rows);
+      const current = th.classList.contains('sorted-asc') ? 'asc'
+                    : th.classList.contains('sorted-desc') ? 'desc' : null;
+      Array.from(table.tHead.rows[0].cells).forEach(h => h.classList.remove('sorted-asc','sorted-desc'));
+      const dir = current === 'asc' ? -1 : 1;
+      const colIsNum = rows.every(tr => isNumber(getCellText(tr, idx)) || getCellText(tr, idx) === "");
+      rows.sort((a,b) => {{
+        let A = getCellText(a, idx);
+        let B = getCellText(b, idx);
+        if (colIsNum) {{ A = parseFloat(A.replace(',', '.')) || 0; B = parseFloat(B.replace(',', '.')) || 0; }}
+        else {{ A = A.toLowerCase(); B = B.toLowerCase(); }}
+        if (A < B) return -1 * dir;
+        if (A > B) return  1 * dir;
+        return 0;
+      }});
+      rows.forEach(r => tbody.appendChild(r));
+      th.classList.add(dir === 1 ? 'sorted-asc' : 'sorted-desc');
+    }});
+  }});
+
+  busca?.addEventListener('input', () => {{
+    const q = busca.value.toLowerCase();
+    const rows = Array.from(table.tBodies[0].rows);
+    rows.forEach(tr => {{
+      const txt = tr.innerText.toLowerCase();
+      tr.style.display = txt.includes(q) ? '' : 'none';
+    }});
+  }});
+
+  btnCsv?.addEventListener('click', () => {{
+    const rows = [];
+    const selRows = Array.from(table.querySelectorAll('tr'));
+    selRows.forEach((tr, i) => {{
+      if (i>0 && tr.style.display === 'none') return;
+      const cells = Array.from(tr.cells).map(td => {{
+        const t = td.innerText.replace(/"/g,'""');
+        return /[",\n]/.test(t) ? `"${{t}}"` : t;
+      }});
+      rows.push(cells.join(','));
+    }});
+    const blob = new Blob([rows.join('\n')], {{type: 'text/csv;charset=utf-8;'}});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = (document.title || 'export') + '.csv';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(() => URL.revokeObjectURL(url), 5000);
+  }});
+}})();
+</script>
+</body>
+</html>
