@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KNL1 — Linhas da tabela dbo.variantes</title>
+<style>
+  :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif; }
+  body { margin: 24px; }
+  h1 { margin: 0 0 6px 0; font-size: 1.6rem; }
+  .meta { color: #444; font-size: .95rem; margin-bottom: 12px; }
+  .toolbar { display:flex; gap: 8px; align-items:center; margin: 12px 0; flex-wrap: wrap; }
+  input[type="search"] { padding: 8px 10px; border: 1px solid #ccc; border-radius: 10px; min-width: 260px; }
+  button { padding: 8px 12px; border: 1px solid #ccc; border-radius: 10px; background: #f7f7f7; cursor: pointer; }
+  button:hover { background: #eee; }
+  table { width: 100%; border-collapse: collapse; }
+  thead th { position: sticky; top: 0; background: #fafafa; border-bottom: 1px solid #ddd; text-align: left; padding: 10px; cursor: pointer; }
+  tbody td { border-bottom: 1px solid #f0f0f0; padding: 8px 10px; vertical-align: top; }
+  .sortable::after { content: " ⇅"; font-size: .8em; color: #888; }
+  .sorted-asc::after { content: " ↑"; }
+  .sorted-desc::after { content: " ↓"; }
+  .empty { padding: 16px; background: #fff6f6; border: 1px solid #ffdede; border-radius: 12px; }
+  a.btn { display:inline-block; margin: 0 8px 8px 0; padding: 6px 10px; border-radius: 10px; border:1px solid #ddd; text-decoration:none; color:#222; background:#f9f9f9; }
+  a.btn:hover { background:#f0f0f0; }
+</style>
+</head>
+<body>
+<h1>KNL1 — Linhas da tabela dbo.variantes</h1>
+<div class="meta">Gene: <strong>KNL1</strong> • Linhas: <strong>13</strong></div>
+<div class="toolbar">
+  <input id="busca" type="search" placeholder="Filtrar linhas... (busca global)">
+  <button id="btnCsv" type="button">Exportar CSV</button>
+  <a class="btn" href="index.html">Voltar ao índice</a>
+</div>
+<div id="wrap">
+<table id="tabela" border="0">
+<thead><tr>
+<th>Gene</th>
+<th>Chr</th>
+<th>Pos</th>
+<th>ID</th>
+<th>Ref</th>
+<th>Alt</th>
+<th>Impacto</th>
+<th>GT</th>
+<th>VAF</th>
+<th>ClinVar_ID</th>
+<th>ClinVar_Significance</th>
+<th>ClinVar_Review_Status</th>
+<th>ClinVar_Disease_Names</th>
+<th>ID_variante</th>
+<th>Qual</th>
+<th>Filtro</th>
+<th>Ensembl</th>
+<th>Alteracao_nucleotidica</th>
+<th>Alteracao_aminoacidica</th>
+<th>GQ</th>
+<th>DP</th>
+<th>AD</th>
+<th>PL</th>
+<th>HGMD</th>
+<th>Resultado</th>
+<th>Status</th>
+<th>Buscar</th>
+<th>SIFT</th>
+<th>PolyPhen</th>
+<th>Biotype</th>
+<th>Alteracao_nucleotidica_reversa</th>
+<th>Alteracao_aminoacidica_reversa</th>
+<th>Resultado_reverso</th>
+<th>encontrado_rsid</th>
+<th>gnomAD_AF_Global</th>
+<th>gnomAD_AFR_AF</th>
+<th>gnomAD_AMR_AF</th>
+<th>gnomAD_ASJ_AF</th>
+<th>gnomAD_EAS_AF</th>
+<th>gnomAD_FIN_AF</th>
+<th>gnomAD_NFE_AF</th>
+<th>gnomAD_SAS_AF</th>
+<th>gnomAD_OTH_AF</th>
+<th>PhyloP</th>
+<th>PhastCons</th>
+<th>GERP</th>
+<th>CADD_Raw</th>
+<th>CADD_Phred</th>
+<th>LOEUF</th>
+<th>Allele_String</th>
+<th>ClinVar_Disease_Count</th>
+<th>letra_inicial_gene</th>
+</tr></thead><tbody>
+<tr>
+<td>KNL1</td>
+<td>chr15</td>
+<td>40594112</td>
+<td>rs3751652</td>
+<td>C</td>
+<td>T</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.375</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>39556</td>
+<td>43.1</td>
+<td>PASS</td>
+<td>ENST00000399668</td>
+<td></td>
+<td></td>
+<td>43</td>
+<td>96</td>
+<td>60*36</td>
+<td>43*0*53</td>
+<td></td>
+<td>C/T</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td></td>
+<td></td>
+<td>C/T</td>
+<td></td>
+<td>0.3809</td>
+<td>0.3373</td>
+<td>0.3258</td>
+<td>0.4054</td>
+<td>0.2492</td>
+<td>0.4707</td>
+<td>0.409</td>
+<td>0.4593</td>
+<td>0.368</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.366</td>
+<td>C/G/T</td>
+<td></td>
+<td>K</td>
+</tr>
+<tr>
+<td>KNL1</td>
+<td>chr15</td>
+<td>40594423</td>
+<td>rs3751653</td>
+<td>T</td>
+<td>C</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.512821</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>39557</td>
+<td>48.0</td>
+<td>PASS</td>
+<td>ENST00000399668</td>
+<td>ENST00000399668.7:c.-18+31T&gt;C</td>
+<td></td>
+<td>47</td>
+<td>39</td>
+<td>19*20</td>
+<td>47*0*55</td>
+<td></td>
+<td>T/C</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000399668.7:c.-18+31T&gt;C</td>
+<td></td>
+<td>T/C</td>
+<td></td>
+<td>0.4029</td>
+<td>0.4126</td>
+<td>0.3333</td>
+<td>0.4052</td>
+<td>0.2506</td>
+<td>0.4708</td>
+<td>0.41</td>
+<td>0.4594</td>
+<td>0.3821</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.366</td>
+<td>T/C</td>
+<td></td>
+<td>K</td>
+</tr>
+<tr>
+<td>KNL1</td>
+<td>chr15</td>
+<td>40606445</td>
+<td>rs7177192</td>
+<td>G</td>
+<td>C</td>
+<td>MODERATE</td>
+<td>1/1</td>
+<td>1</td>
+<td>116558</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Microcephaly 4: primary: autosomal recessive; Primary Microcephaly: Recessive</td>
+<td>39558</td>
+<td>41.5</td>
+<td>PASS</td>
+<td>ENST00000399668</td>
+<td>ENST00000399668.7:c.128G&gt;C</td>
+<td>ENSP00000382576.3:p.Arg43Thr</td>
+<td>18</td>
+<td>9</td>
+<td>0*9</td>
+<td>41*18*0</td>
+<td></td>
+<td>C/C</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000399668.7:c.128G&gt;C</td>
+<td>ENSP00000382576.3:p.Arg43Thr</td>
+<td>C/C</td>
+<td></td>
+<td>0.7847</td>
+<td>0.7692</td>
+<td>0.6596</td>
+<td>0.8059</td>
+<td>0.323</td>
+<td>0.8463</td>
+<td>0.8511</td>
+<td>0.7266</td>
+<td>0.7759</td>
+<td>-0.751</td>
+<td>0.014</td>
+<td>-4.84</td>
+<td></td>
+<td></td>
+<td>0.366</td>
+<td>G/C/T</td>
+<td>4</td>
+<td>K</td>
+</tr>
+<tr>
+<td>KNL1</td>
+<td>chr15</td>
+<td>40611486</td>
+<td>rs12911738</td>
+<td>A</td>
+<td>G</td>
+<td>MODERATE</td>
+<td>1/1</td>
+<td>1</td>
+<td>116567</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Microcephaly 4: primary: autosomal recessive; Primary Microcephaly: Recessive</td>
+<td>39559</td>
+<td>40.7</td>
+<td>PASS</td>
+<td>ENST00000399668</td>
+<td>ENST00000399668.7:c.259A&gt;G</td>
+<td>ENSP00000382576.3:p.Thr87Ala</td>
+<td>21</td>
+<td>8</td>
+<td>0*8</td>
+<td>40*21*0</td>
+<td></td>
+<td>G/G</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000399668.7:c.259A&gt;G</td>
+<td>ENSP00000382576.3:p.Thr87Ala</td>
+<td>G/G</td>
+<td></td>
+<td>0.826</td>
+<td>0.9139</td>
+<td>0.6724</td>
+<td>0.8062</td>
+<td>0.3231</td>
+<td>0.8461</td>
+<td>0.8516</td>
+<td>0.7268</td>
+<td>0.8065</td>
+<td>0.755</td>
+<td>0.278</td>
+<td>3.8</td>
+<td></td>
+<td></td>
+<td>0.366</td>
+<td>A/G/T</td>
+<td>4</td>
+<td>K</td>
+</tr>
+<tr>
+<td>KNL1</td>
+<td>chr15</td>
+<td>40621642</td>
+<td>rs2412541</td>
+<td>G</td>
+<td>T</td>
+<td>MODERATE</td>
+<td>1/1</td>
+<td>1</td>
+<td>116560</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Microcephaly 4: primary: autosomal recessive; Primary Microcephaly: Recessive</td>
+<td>39560</td>
+<td>56.1</td>
+<td>PASS</td>
+<td>ENST00000399668</td>
+<td>ENST00000399668.7:c.1378G&gt;T</td>
+<td>ENSP00000382576.3:p.Ala460Ser</td>
+<td>44</td>
+<td>28</td>
+<td>0*28</td>
+<td>56*43*0</td>
+<td></td>
+<td>T/T</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000399668.7:c.1378G&gt;T</td>
+<td>ENSP00000382576.3:p.Ala460Ser</td>
+<td>T/T</td>
+<td></td>
+<td>0.7848</td>
+<td>0.7696</td>
+<td>0.659</td>
+<td>0.8061</td>
+<td>0.3242</td>
+<td>0.8461</td>
+<td>0.8511</td>
+<td>0.7269</td>
+<td>0.7751</td>
+<td>-0.131</td>
+<td>0</td>
+<td>1.67</td>
+<td></td>
+<td></td>
+<td>0.366</td>
+<td>G/T</td>
+<td>4</td>
+<td>K</td>
+</tr>
+<tr>
+<td>KNL1</td>
+<td>chr15</td>
+<td>40621979</td>
+<td>rs11858113</td>
+<td>T</td>
+<td>C</td>
+<td>MODERATE</td>
+<td>0/1</td>
+<td>0.519481</td>
+<td>116561</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Microcephaly 4: primary: autosomal recessive; Primary Microcephaly: Recessive</td>
+<td>39561</td>
+<td>54.6</td>
+<td>PASS</td>
+<td>ENST00000399668</td>
+<td>ENST00000399668.7:c.1715T&gt;C</td>
+<td>ENSP00000382576.3:p.Met572Thr</td>
+<td>51</td>
+<td>77</td>
+<td>37*40</td>
+<td>54*0*54</td>
+<td></td>
+<td>T/C</td>
+<td>Het</td>
+<td></td>
+<td>tolerated</td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000399668.7:c.1715T&gt;C</td>
+<td>ENSP00000382576.3:p.Met572Thr</td>
+<td>T/C</td>
+<td></td>
+<td>0.3908</td>
+<td>0.3733</td>
+<td>0.3282</td>
+<td>0.4045</td>
+<td>0.2458</td>
+<td>0.4689</td>
+<td>0.4089</td>
+<td>0.4596</td>
+<td>0.3742</td>
+<td>1.523</td>
+<td>1</td>
+<td>0.769</td>
+<td></td>
+<td></td>
+<td>0.366</td>
+<td>T/C</td>
+<td>4</td>
+<td>K</td>
+</tr>
+<tr>
+<td>KNL1</td>
+<td>chr15</td>
+<td>40622574</td>
+<td>rs11855334</td>
+<td>C</td>
+<td>T</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.369863</td>
+<td>116562</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Microcephaly 4: primary: autosomal recessive; Primary Microcephaly: Recessive</td>
+<td>39562</td>
+<td>49.2</td>
+<td>PASS</td>
+<td>ENST00000399668</td>
+<td>ENST00000399668.7:c.2310C&gt;T</td>
+<td>ENSP00000382576.3:p.Val770=</td>
+<td>48</td>
+<td>73</td>
+<td>46*27</td>
+<td>49*0*52</td>
+<td></td>
+<td>C/T</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000399668.7:c.2310C&gt;T</td>
+<td>ENSP00000382576.3:p.Val770=</td>
+<td>C/T</td>
+<td></td>
+<td>0.3896</td>
+<td>0.369</td>
+<td>0.3279</td>
+<td>0.4046</td>
+<td>0.2461</td>
+<td>0.4701</td>
+<td>0.409</td>
+<td>0.4589</td>
+<td>0.3738</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.366</td>
+<td>C/T</td>
+<td>4</td>
+<td>K</td>
+</tr>
+<tr>
+<td>KNL1</td>
+<td>chr15</td>
+<td>40622847</td>
+<td>rs8041534</td>
+<td>T</td>
+<td>G</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.288889</td>
+<td>116565</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Microcephaly 4: primary: autosomal recessive; Primary Microcephaly: Recessive</td>
+<td>39563</td>
+<td>39.1</td>
+<td>PASS</td>
+<td>ENST00000399668</td>
+<td>ENST00000399668.7:c.2583T&gt;G</td>
+<td>ENSP00000382576.3:p.Thr861=</td>
+<td>38</td>
+<td>45</td>
+<td>32*13</td>
+<td>39*0*46</td>
+<td></td>
+<td>T/G</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000399668.7:c.2583T&gt;G</td>
+<td>ENSP00000382576.3:p.Thr861=</td>
+<td>T/G</td>
+<td></td>
+<td>0.3899</td>
+<td>0.3704</td>
+<td>0.3277</td>
+<td>0.4051</td>
+<td>0.246</td>
+<td>0.4692</td>
+<td>0.4088</td>
+<td>0.46</td>
+<td>0.3729</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.366</td>
+<td>T/G</td>
+<td>4</td>
+<td>K</td>
+</tr>
+<tr>
+<td>KNL1</td>
+<td>chr15</td>
+<td>40622992</td>
+<td>rs8040502</td>
+<td>A</td>
+<td>G</td>
+<td>MODERATE</td>
+<td>1/1</td>
+<td>1</td>
+<td>320581</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Microcephaly 4: primary: autosomal recessive; Primary Microcephaly: Recessive</td>
+<td>39564</td>
+<td>57.6</td>
+<td>PASS</td>
+<td>ENST00000399668</td>
+<td>ENST00000399668.7:c.2728A&gt;G</td>
+<td>ENSP00000382576.3:p.Arg910Gly</td>
+<td>48</td>
+<td>71</td>
+<td>0*71</td>
+<td>57*49*0</td>
+<td></td>
+<td>G/G</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000399668.7:c.2728A&gt;G</td>
+<td>ENSP00000382576.3:p.Arg910Gly</td>
+<td>G/G</td>
+<td></td>
+<td>0.8264</td>
+<td>0.9147</td>
+<td>0.6727</td>
+<td>0.8059</td>
+<td>0.3246</td>
+<td>0.8463</td>
+<td>0.8515</td>
+<td>0.727</td>
+<td>0.8059</td>
+<td>2.686</td>
+<td>0.998</td>
+<td>3.03</td>
+<td></td>
+<td></td>
+<td>0.366</td>
+<td>A/G</td>
+<td>2</td>
+<td>K</td>
+</tr>
+<tr>
+<td>KNL1</td>
+<td>chr15</td>
+<td>40623696</td>
+<td>rs11070285</td>
+<td>T</td>
+<td>C</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.321429</td>
+<td>116568</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Microcephaly 4: primary: autosomal recessive; Primary Microcephaly: Recessive</td>
+<td>39565</td>
+<td>46.6</td>
+<td>PASS</td>
+<td>ENST00000399668</td>
+<td>ENST00000399668.7:c.3432T&gt;C</td>
+<td>ENSP00000382576.3:p.Asn1144=</td>
+<td>45</td>
+<td>56</td>
+<td>38*18</td>
+<td>46*0*50</td>
+<td></td>
+<td>T/C</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000399668.7:c.3432T&gt;C</td>
+<td>ENSP00000382576.3:p.Asn1144=</td>
+<td>T/C</td>
+<td></td>
+<td>0.3911</td>
+<td>0.3718</td>
+<td>0.3282</td>
+<td>0.4153</td>
+<td>0.2464</td>
+<td>0.4701</td>
+<td>0.4097</td>
+<td>0.46</td>
+<td>0.3751</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.366</td>
+<td>T/C</td>
+<td>4</td>
+<td>K</td>
+</tr>
+<tr>
+<td>KNL1</td>
+<td>chr15</td>
+<td>40624039</td>
+<td>rs17747633</td>
+<td>A</td>
+<td>G</td>
+<td>MODERATE</td>
+<td>0/1</td>
+<td>0.428571</td>
+<td>116570</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Primary Microcephaly: Recessive</td>
+<td>39566</td>
+<td>39.9</td>
+<td>PASS</td>
+<td>ENST00000399668</td>
+<td>ENST00000399668.7:c.3775A&gt;G</td>
+<td>ENSP00000382576.3:p.Lys1259Glu</td>
+<td>40</td>
+<td>77</td>
+<td>44*33</td>
+<td>39*0*50</td>
+<td></td>
+<td>A/G</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000399668.7:c.3775A&gt;G</td>
+<td>ENSP00000382576.3:p.Lys1259Glu</td>
+<td>A/G</td>
+<td></td>
+<td>0.3058</td>
+<td>0.08967</td>
+<td>0.3037</td>
+<td>0.4007</td>
+<td>0.07704</td>
+<td>0.3772</td>
+<td>0.4409</td>
+<td>0.2636</td>
+<td>0.336</td>
+<td>0.866</td>
+<td>0.011</td>
+<td>3.44</td>
+<td></td>
+<td></td>
+<td>0.366</td>
+<td>A/G/T</td>
+<td>3</td>
+<td>K</td>
+</tr>
+<tr>
+<td>KNL1</td>
+<td>chr15</td>
+<td>40650517</td>
+<td></td>
+<td>GT</td>
+<td>G</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.37037</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>39567</td>
+<td>21.2</td>
+<td>PASS</td>
+<td>ENST00000399668</td>
+<td>ENST00000399668.7:c.6173-27_6173-26del</td>
+<td></td>
+<td>21</td>
+<td>81</td>
+<td>23*30</td>
+<td>21*0*54</td>
+<td></td>
+<td>GT/G</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000399668.7:c.6173-27_6173-26del</td>
+<td></td>
+<td>GT/G</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.366000</td>
+<td></td>
+<td></td>
+<td>K</td>
+</tr>
+<tr>
+<td>KNL1</td>
+<td>chr15</td>
+<td>40657328</td>
+<td>rs2412544</td>
+<td>C</td>
+<td>T</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.439024</td>
+<td>1554587</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Microcephaly 4: primary: autosomal recessive</td>
+<td>39568</td>
+<td>54.6</td>
+<td>PASS</td>
+<td>ENST00000399668</td>
+<td>ENST00000399668.7:c.6595-27C&gt;T</td>
+<td></td>
+<td>53</td>
+<td>41</td>
+<td>23*18</td>
+<td>54*0*56</td>
+<td></td>
+<td>C/T</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000399668.7:c.6595-27C&gt;T</td>
+<td></td>
+<td>C/T</td>
+<td></td>
+<td>0.388</td>
+<td>0.3636</td>
+<td>0.3278</td>
+<td>0.4054</td>
+<td>0.2456</td>
+<td>0.4688</td>
+<td>0.4087</td>
+<td>0.461</td>
+<td>0.3717</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.366</td>
+<td>C/G/T</td>
+<td>2</td>
+<td>K</td>
+</tr>
+</tbody></table></div>
+<script>
+(function() {{
+  const table = document.getElementById('tabela');
+  const busca = document.getElementById('busca');
+  const btnCsv = document.getElementById('btnCsv');
+  if (!table) return;
+  const getCellText = (tr, idx) => (tr.cells[idx]?.innerText || "").trim();
+  const isNumber = (v) => /^-?\d+(\.\d+)?$/.test(v.replace(/\s+/g, '').replace(',', '.'));
+
+  Array.from(table.tHead.rows[0].cells).forEach((th, idx) => {{
+    th.classList.add('sortable');
+    th.addEventListener('click', () => {{
+      const tbody = table.tBodies[0];
+      const rows = Array.from(tbody.rows);
+      const current = th.classList.contains('sorted-asc') ? 'asc'
+                    : th.classList.contains('sorted-desc') ? 'desc' : null;
+      Array.from(table.tHead.rows[0].cells).forEach(h => h.classList.remove('sorted-asc','sorted-desc'));
+      const dir = current === 'asc' ? -1 : 1;
+      const colIsNum = rows.every(tr => isNumber(getCellText(tr, idx)) || getCellText(tr, idx) === "");
+      rows.sort((a,b) => {{
+        let A = getCellText(a, idx);
+        let B = getCellText(b, idx);
+        if (colIsNum) {{ A = parseFloat(A.replace(',', '.')) || 0; B = parseFloat(B.replace(',', '.')) || 0; }}
+        else {{ A = A.toLowerCase(); B = B.toLowerCase(); }}
+        if (A < B) return -1 * dir;
+        if (A > B) return  1 * dir;
+        return 0;
+      }});
+      rows.forEach(r => tbody.appendChild(r));
+      th.classList.add(dir === 1 ? 'sorted-asc' : 'sorted-desc');
+    }});
+  }});
+
+  busca?.addEventListener('input', () => {{
+    const q = busca.value.toLowerCase();
+    const rows = Array.from(table.tBodies[0].rows);
+    rows.forEach(tr => {{
+      const txt = tr.innerText.toLowerCase();
+      tr.style.display = txt.includes(q) ? '' : 'none';
+    }});
+  }});
+
+  btnCsv?.addEventListener('click', () => {{
+    const rows = [];
+    const selRows = Array.from(table.querySelectorAll('tr'));
+    selRows.forEach((tr, i) => {{
+      if (i>0 && tr.style.display === 'none') return;
+      const cells = Array.from(tr.cells).map(td => {{
+        const t = td.innerText.replace(/"/g,'""');
+        return /[",\n]/.test(t) ? `"${{t}}"` : t;
+      }});
+      rows.push(cells.join(','));
+    }});
+    const blob = new Blob([rows.join('\n')], {{type: 'text/csv;charset=utf-8;'}});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = (document.title || 'export') + '.csv';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(() => URL.revokeObjectURL(url), 5000);
+  }});
+}})();
+</script>
+</body>
+</html>
