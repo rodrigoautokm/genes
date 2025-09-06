@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DSG1 — Linhas da tabela dbo.variantes</title>
+<style>
+  :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif; }
+  body { margin: 24px; }
+  h1 { margin: 0 0 6px 0; font-size: 1.6rem; }
+  .meta { color: #444; font-size: .95rem; margin-bottom: 12px; }
+  .toolbar { display:flex; gap: 8px; align-items:center; margin: 12px 0; flex-wrap: wrap; }
+  input[type="search"] { padding: 8px 10px; border: 1px solid #ccc; border-radius: 10px; min-width: 260px; }
+  button { padding: 8px 12px; border: 1px solid #ccc; border-radius: 10px; background: #f7f7f7; cursor: pointer; }
+  button:hover { background: #eee; }
+  table { width: 100%; border-collapse: collapse; }
+  thead th { position: sticky; top: 0; background: #fafafa; border-bottom: 1px solid #ddd; text-align: left; padding: 10px; cursor: pointer; }
+  tbody td { border-bottom: 1px solid #f0f0f0; padding: 8px 10px; vertical-align: top; }
+  .sortable::after { content: " ⇅"; font-size: .8em; color: #888; }
+  .sorted-asc::after { content: " ↑"; }
+  .sorted-desc::after { content: " ↓"; }
+  .empty { padding: 16px; background: #fff6f6; border: 1px solid #ffdede; border-radius: 12px; }
+  a.btn { display:inline-block; margin: 0 8px 8px 0; padding: 6px 10px; border-radius: 10px; border:1px solid #ddd; text-decoration:none; color:#222; background:#f9f9f9; }
+  a.btn:hover { background:#f0f0f0; }
+</style>
+</head>
+<body>
+<h1>DSG1 — Linhas da tabela dbo.variantes</h1>
+<div class="meta">Gene: <strong>DSG1</strong> • Linhas: <strong>5</strong></div>
+<div class="toolbar">
+  <input id="busca" type="search" placeholder="Filtrar linhas... (busca global)">
+  <button id="btnCsv" type="button">Exportar CSV</button>
+  <a class="btn" href="index.html">Voltar ao índice</a>
+</div>
+<div id="wrap">
+<table id="tabela" border="0">
+<thead><tr>
+<th>Gene</th>
+<th>Chr</th>
+<th>Pos</th>
+<th>ID</th>
+<th>Ref</th>
+<th>Alt</th>
+<th>Impacto</th>
+<th>GT</th>
+<th>VAF</th>
+<th>ClinVar_ID</th>
+<th>ClinVar_Significance</th>
+<th>ClinVar_Review_Status</th>
+<th>ClinVar_Disease_Names</th>
+<th>ID_variante</th>
+<th>Qual</th>
+<th>Filtro</th>
+<th>Ensembl</th>
+<th>Alteracao_nucleotidica</th>
+<th>Alteracao_aminoacidica</th>
+<th>GQ</th>
+<th>DP</th>
+<th>AD</th>
+<th>PL</th>
+<th>HGMD</th>
+<th>Resultado</th>
+<th>Status</th>
+<th>Buscar</th>
+<th>SIFT</th>
+<th>PolyPhen</th>
+<th>Biotype</th>
+<th>Alteracao_nucleotidica_reversa</th>
+<th>Alteracao_aminoacidica_reversa</th>
+<th>Resultado_reverso</th>
+<th>encontrado_rsid</th>
+<th>gnomAD_AF_Global</th>
+<th>gnomAD_AFR_AF</th>
+<th>gnomAD_AMR_AF</th>
+<th>gnomAD_ASJ_AF</th>
+<th>gnomAD_EAS_AF</th>
+<th>gnomAD_FIN_AF</th>
+<th>gnomAD_NFE_AF</th>
+<th>gnomAD_SAS_AF</th>
+<th>gnomAD_OTH_AF</th>
+<th>PhyloP</th>
+<th>PhastCons</th>
+<th>GERP</th>
+<th>CADD_Raw</th>
+<th>CADD_Phred</th>
+<th>LOEUF</th>
+<th>Allele_String</th>
+<th>ClinVar_Disease_Count</th>
+<th>letra_inicial_gene</th>
+</tr></thead><tbody>
+<tr>
+<td>DSG1</td>
+<td>chr18</td>
+<td>31318331</td>
+<td>rs1426310</td>
+<td>A</td>
+<td>G</td>
+<td>MODERATE</td>
+<td>0/1</td>
+<td>0.255319</td>
+<td>455447</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Palmoplantar keratoderma i: striate: focal: or diffuse; Severe dermatitis-multiple allergies-metabolic wasting syndrome</td>
+<td>47065</td>
+<td>33.2</td>
+<td>PASS</td>
+<td>ENST00000257192</td>
+<td>ENST00000257192.5:c.31A&gt;G</td>
+<td>ENSP00000257192.4:p.Met11Val</td>
+<td>33</td>
+<td>94</td>
+<td>70*24</td>
+<td>33*0*47</td>
+<td></td>
+<td>A/G</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000257192.5:c.31A&gt;G</td>
+<td>ENSP00000257192.4:p.Met11Val</td>
+<td>A/G</td>
+<td></td>
+<td>0.446</td>
+<td>0.4411</td>
+<td>0.3179</td>
+<td>0.4562</td>
+<td>0.05845</td>
+<td>0.562</td>
+<td>0.4866</td>
+<td>0.4722</td>
+<td>0.4491</td>
+<td>1.455</td>
+<td>0.796</td>
+<td>4.32</td>
+<td></td>
+<td></td>
+<td>0.455</td>
+<td>A/G</td>
+<td>4</td>
+<td>D</td>
+</tr>
+<tr>
+<td>DSG1</td>
+<td>chr18</td>
+<td>31333636</td>
+<td>rs12967407</td>
+<td>C</td>
+<td>T</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.5</td>
+<td>456022</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Palmoplantar keratoderma i: striate: focal: or diffuse; Severe dermatitis-multiple allergies-metabolic wasting syndrome</td>
+<td>47066</td>
+<td>47.9</td>
+<td>PASS</td>
+<td>ENST00000257192</td>
+<td>ENST00000257192.5:c.732C&gt;T</td>
+<td>ENSP00000257192.4:p.Gly244=</td>
+<td>45</td>
+<td>98</td>
+<td>49*49</td>
+<td>47*0*48</td>
+<td>CM014354</td>
+<td>C/T</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000257192.5:c.732C&gt;T</td>
+<td>ENSP00000257192.4:p.Gly244=</td>
+<td>C/T</td>
+<td></td>
+<td>0.4147</td>
+<td>0.3062</td>
+<td>0.3072</td>
+<td>0.4555</td>
+<td>0.05762</td>
+<td>0.5908</td>
+<td>0.4967</td>
+<td>0.4833</td>
+<td>0.4305</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.455</td>
+<td>C/A/T</td>
+<td>4</td>
+<td>D</td>
+</tr>
+<tr>
+<td>DSG1</td>
+<td>chr18</td>
+<td>31336327</td>
+<td>rs6506917</td>
+<td>G</td>
+<td>A</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.130435</td>
+<td>1709944</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td></td>
+<td>47067</td>
+<td>25.8</td>
+<td>PASS</td>
+<td>ENST00000257192</td>
+<td>ENST00000257192.5:c.1006-27G&gt;A</td>
+<td></td>
+<td>26</td>
+<td>23</td>
+<td>20*3</td>
+<td>25*0*52</td>
+<td></td>
+<td>G/A</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000257192.5:c.1006-27G&gt;A</td>
+<td></td>
+<td>G/A</td>
+<td></td>
+<td>0.5899</td>
+<td>0.7191</td>
+<td>0.4396</td>
+<td>0.5124</td>
+<td>0.122</td>
+<td>0.6674</td>
+<td>0.5668</td>
+<td>0.6799</td>
+<td>0.5829</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.455</td>
+<td>G/A</td>
+<td>1</td>
+<td>D</td>
+</tr>
+<tr>
+<td>DSG1</td>
+<td>chr18</td>
+<td>31344020</td>
+<td>rs11660224</td>
+<td>A</td>
+<td>C</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.42</td>
+<td>1639995</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td></td>
+<td>47068</td>
+<td>49.9</td>
+<td>PASS</td>
+<td>ENST00000257192</td>
+<td>ENST00000257192.5:c.1891+25A&gt;C</td>
+<td></td>
+<td>49</td>
+<td>50</td>
+<td>29*21</td>
+<td>49*0*56</td>
+<td></td>
+<td>A/C</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000257192.5:c.1891+25A&gt;C</td>
+<td></td>
+<td>A/C</td>
+<td></td>
+<td>0.5069</td>
+<td>0.5238</td>
+<td>0.3855</td>
+<td>0.4804</td>
+<td>0.2492</td>
+<td>0.6055</td>
+<td>0.5254</td>
+<td>0.5681</td>
+<td>0.5052</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.455</td>
+<td>A/C</td>
+<td>1</td>
+<td>D</td>
+</tr>
+<tr>
+<td>DSG1</td>
+<td>chr18</td>
+<td>31344021</td>
+<td>rs6506918</td>
+<td>T</td>
+<td>A</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.42</td>
+<td>1610018</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td></td>
+<td>47069</td>
+<td>49.0</td>
+<td>PASS</td>
+<td>ENST00000257192</td>
+<td>ENST00000257192.5:c.1891+26T&gt;A</td>
+<td></td>
+<td>48</td>
+<td>50</td>
+<td>29*21</td>
+<td>49*0*54</td>
+<td></td>
+<td>T/A</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000257192.5:c.1891+26T&gt;A</td>
+<td></td>
+<td>T/A</td>
+<td></td>
+<td>0.6672</td>
+<td>0.9068</td>
+<td>0.479</td>
+<td>0.5682</td>
+<td>0.3008</td>
+<td>0.6672</td>
+<td>0.5939</td>
+<td>0.7197</td>
+<td>0.6477</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.455</td>
+<td>T/A</td>
+<td>1</td>
+<td>D</td>
+</tr>
+</tbody></table></div>
+<script>
+(function() {{
+  const table = document.getElementById('tabela');
+  const busca = document.getElementById('busca');
+  const btnCsv = document.getElementById('btnCsv');
+  if (!table) return;
+  const getCellText = (tr, idx) => (tr.cells[idx]?.innerText || "").trim();
+  const isNumber = (v) => /^-?\d+(\.\d+)?$/.test(v.replace(/\s+/g, '').replace(',', '.'));
+
+  Array.from(table.tHead.rows[0].cells).forEach((th, idx) => {{
+    th.classList.add('sortable');
+    th.addEventListener('click', () => {{
+      const tbody = table.tBodies[0];
+      const rows = Array.from(tbody.rows);
+      const current = th.classList.contains('sorted-asc') ? 'asc'
+                    : th.classList.contains('sorted-desc') ? 'desc' : null;
+      Array.from(table.tHead.rows[0].cells).forEach(h => h.classList.remove('sorted-asc','sorted-desc'));
+      const dir = current === 'asc' ? -1 : 1;
+      const colIsNum = rows.every(tr => isNumber(getCellText(tr, idx)) || getCellText(tr, idx) === "");
+      rows.sort((a,b) => {{
+        let A = getCellText(a, idx);
+        let B = getCellText(b, idx);
+        if (colIsNum) {{ A = parseFloat(A.replace(',', '.')) || 0; B = parseFloat(B.replace(',', '.')) || 0; }}
+        else {{ A = A.toLowerCase(); B = B.toLowerCase(); }}
+        if (A < B) return -1 * dir;
+        if (A > B) return  1 * dir;
+        return 0;
+      }});
+      rows.forEach(r => tbody.appendChild(r));
+      th.classList.add(dir === 1 ? 'sorted-asc' : 'sorted-desc');
+    }});
+  }});
+
+  busca?.addEventListener('input', () => {{
+    const q = busca.value.toLowerCase();
+    const rows = Array.from(table.tBodies[0].rows);
+    rows.forEach(tr => {{
+      const txt = tr.innerText.toLowerCase();
+      tr.style.display = txt.includes(q) ? '' : 'none';
+    }});
+  }});
+
+  btnCsv?.addEventListener('click', () => {{
+    const rows = [];
+    const selRows = Array.from(table.querySelectorAll('tr'));
+    selRows.forEach((tr, i) => {{
+      if (i>0 && tr.style.display === 'none') return;
+      const cells = Array.from(tr.cells).map(td => {{
+        const t = td.innerText.replace(/"/g,'""');
+        return /[",\n]/.test(t) ? `"${{t}}"` : t;
+      }});
+      rows.push(cells.join(','));
+    }});
+    const blob = new Blob([rows.join('\n')], {{type: 'text/csv;charset=utf-8;'}});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = (document.title || 'export') + '.csv';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(() => URL.revokeObjectURL(url), 5000);
+  }});
+}})();
+</script>
+</body>
+</html>
