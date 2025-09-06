@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SLC4A11 — Linhas da tabela dbo.variantes</title>
+<style>
+  :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif; }
+  body { margin: 24px; }
+  h1 { margin: 0 0 6px 0; font-size: 1.6rem; }
+  .meta { color: #444; font-size: .95rem; margin-bottom: 12px; }
+  .toolbar { display:flex; gap: 8px; align-items:center; margin: 12px 0; flex-wrap: wrap; }
+  input[type="search"] { padding: 8px 10px; border: 1px solid #ccc; border-radius: 10px; min-width: 260px; }
+  button { padding: 8px 12px; border: 1px solid #ccc; border-radius: 10px; background: #f7f7f7; cursor: pointer; }
+  button:hover { background: #eee; }
+  table { width: 100%; border-collapse: collapse; }
+  thead th { position: sticky; top: 0; background: #fafafa; border-bottom: 1px solid #ddd; text-align: left; padding: 10px; cursor: pointer; }
+  tbody td { border-bottom: 1px solid #f0f0f0; padding: 8px 10px; vertical-align: top; }
+  .sortable::after { content: " ⇅"; font-size: .8em; color: #888; }
+  .sorted-asc::after { content: " ↑"; }
+  .sorted-desc::after { content: " ↓"; }
+  .empty { padding: 16px; background: #fff6f6; border: 1px solid #ffdede; border-radius: 12px; }
+  a.btn { display:inline-block; margin: 0 8px 8px 0; padding: 6px 10px; border-radius: 10px; border:1px solid #ddd; text-decoration:none; color:#222; background:#f9f9f9; }
+  a.btn:hover { background:#f0f0f0; }
+</style>
+</head>
+<body>
+<h1>SLC4A11 — Linhas da tabela dbo.variantes</h1>
+<div class="meta">Gene: <strong>SLC4A11</strong> • Linhas: <strong>9</strong></div>
+<div class="toolbar">
+  <input id="busca" type="search" placeholder="Filtrar linhas... (busca global)">
+  <button id="btnCsv" type="button">Exportar CSV</button>
+  <a class="btn" href="index.html">Voltar ao índice</a>
+</div>
+<div id="wrap">
+<table id="tabela" border="0">
+<thead><tr>
+<th>Gene</th>
+<th>Chr</th>
+<th>Pos</th>
+<th>ID</th>
+<th>Ref</th>
+<th>Alt</th>
+<th>Impacto</th>
+<th>GT</th>
+<th>VAF</th>
+<th>ClinVar_ID</th>
+<th>ClinVar_Significance</th>
+<th>ClinVar_Review_Status</th>
+<th>ClinVar_Disease_Names</th>
+<th>ID_variante</th>
+<th>Qual</th>
+<th>Filtro</th>
+<th>Ensembl</th>
+<th>Alteracao_nucleotidica</th>
+<th>Alteracao_aminoacidica</th>
+<th>GQ</th>
+<th>DP</th>
+<th>AD</th>
+<th>PL</th>
+<th>HGMD</th>
+<th>Resultado</th>
+<th>Status</th>
+<th>Buscar</th>
+<th>SIFT</th>
+<th>PolyPhen</th>
+<th>Biotype</th>
+<th>Alteracao_nucleotidica_reversa</th>
+<th>Alteracao_aminoacidica_reversa</th>
+<th>Resultado_reverso</th>
+<th>encontrado_rsid</th>
+<th>gnomAD_AF_Global</th>
+<th>gnomAD_AFR_AF</th>
+<th>gnomAD_AMR_AF</th>
+<th>gnomAD_ASJ_AF</th>
+<th>gnomAD_EAS_AF</th>
+<th>gnomAD_FIN_AF</th>
+<th>gnomAD_NFE_AF</th>
+<th>gnomAD_SAS_AF</th>
+<th>gnomAD_OTH_AF</th>
+<th>PhyloP</th>
+<th>PhastCons</th>
+<th>GERP</th>
+<th>CADD_Raw</th>
+<th>CADD_Phred</th>
+<th>LOEUF</th>
+<th>Allele_String</th>
+<th>ClinVar_Disease_Count</th>
+<th>letra_inicial_gene</th>
+</tr></thead><tbody>
+<tr>
+<td>SLC4A11</td>
+<td>chr20</td>
+<td>3229655</td>
+<td>rs41281860</td>
+<td>G</td>
+<td>A</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.472868</td>
+<td>254477</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Congenital hereditary endothelial dystrophy of cornea; Corneal dystrophy; Corneal dystrophy-perceptive deafness syndrome</td>
+<td>51580</td>
+<td>51.1</td>
+<td>PASS</td>
+<td>ENST00000642402</td>
+<td>ENST00000642402.1:c.1611C&gt;T</td>
+<td>ENSP00000493503.1:p.Asn537=</td>
+<td>44</td>
+<td>129</td>
+<td>68*61</td>
+<td>51*0*45</td>
+<td></td>
+<td>G/A</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000642402.1:c.1611G&gt;A</td>
+<td></td>
+<td>C/T</td>
+<td></td>
+<td>0.09049</td>
+<td>0.03435</td>
+<td>0.09102</td>
+<td>0.1272</td>
+<td>0.003283</td>
+<td>0.1414</td>
+<td>0.1257</td>
+<td>0.02897</td>
+<td>0.09706</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.886</td>
+<td>G/A</td>
+<td>5</td>
+<td>S</td>
+</tr>
+<tr>
+<td>SLC4A11</td>
+<td>chr20</td>
+<td>3230589</td>
+<td>rs6084312</td>
+<td>C</td>
+<td>T</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.34375</td>
+<td>248066</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Congenital hereditary endothelial dystrophy of cornea; Corneal dystrophy; Corneal dystrophy-perceptive deafness syndrome</td>
+<td>51581</td>
+<td>42.8</td>
+<td>PASS</td>
+<td>ENST00000642402</td>
+<td>ENST00000642402.1:c.1341G&gt;A</td>
+<td>ENSP00000493503.1:p.Thr447=</td>
+<td>43</td>
+<td>224</td>
+<td>147*77</td>
+<td>42*0*55</td>
+<td></td>
+<td>C/T</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000642402.1:c.1341C&gt;T</td>
+<td></td>
+<td>G/A</td>
+<td></td>
+<td>0.08467</td>
+<td>0.03466</td>
+<td>0.08622</td>
+<td>0.1175</td>
+<td>0.001745</td>
+<td>0.1176</td>
+<td>0.1186</td>
+<td>0.02215</td>
+<td>0.09375</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.886</td>
+<td>C/T</td>
+<td>5</td>
+<td>S</td>
+</tr>
+<tr>
+<td>SLC4A11</td>
+<td>chr20</td>
+<td>3230658</td>
+<td>rs41281862</td>
+<td>G</td>
+<td>A</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.358586</td>
+<td>253140</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Congenital hereditary endothelial dystrophy of cornea; Corneal dystrophy; Corneal dystrophy-perceptive deafness syndrome</td>
+<td>51582</td>
+<td>53.0</td>
+<td>PASS</td>
+<td>ENST00000642402</td>
+<td>ENST00000642402.1:c.1283-11C&gt;T</td>
+<td></td>
+<td>53</td>
+<td>198</td>
+<td>127*71</td>
+<td>52*0*63</td>
+<td></td>
+<td>G/A</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000642402.1:c.1283-11G&gt;A</td>
+<td></td>
+<td>C/T</td>
+<td></td>
+<td>0.0944</td>
+<td>0.03805</td>
+<td>0.09435</td>
+<td>0.1302</td>
+<td>0.0005783</td>
+<td>0.1297</td>
+<td>0.1329</td>
+<td>0.03045</td>
+<td>0.1051</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.886</td>
+<td>G/A/C/T</td>
+<td>5</td>
+<td>S</td>
+</tr>
+<tr>
+<td>SLC4A11</td>
+<td>chr20</td>
+<td>3231073</td>
+<td>rs3803953</td>
+<td>T</td>
+<td>G</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.466019</td>
+<td>248350</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Congenital hereditary endothelial dystrophy of cornea; Corneal dystrophy; Corneal dystrophy-perceptive deafness syndrome</td>
+<td>51583</td>
+<td>52.7</td>
+<td>PASS</td>
+<td>ENST00000642402</td>
+<td>ENST00000642402.1:c.1043-15A&gt;C</td>
+<td></td>
+<td>46</td>
+<td>206</td>
+<td>110*96</td>
+<td>52*0*46</td>
+<td></td>
+<td>T/G</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000642402.1:c.1043-15T&gt;G</td>
+<td></td>
+<td>A/C</td>
+<td></td>
+<td>0.4347</td>
+<td>0.3592</td>
+<td>0.489</td>
+<td>0.5176</td>
+<td>0.4835</td>
+<td>0.4425</td>
+<td>0.4567</td>
+<td>0.355</td>
+<td>0.4388</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.886</td>
+<td>T/G</td>
+<td>5</td>
+<td>S</td>
+</tr>
+<tr>
+<td>SLC4A11</td>
+<td>chr20</td>
+<td>3234173</td>
+<td>rs3827075</td>
+<td>T</td>
+<td>G</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.418803</td>
+<td>245921</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Congenital hereditary endothelial dystrophy of cornea; Corneal dystrophy; Corneal dystrophy-perceptive deafness syndrome</td>
+<td>51584</td>
+<td>44.9</td>
+<td>PASS</td>
+<td>ENST00000642402</td>
+<td>ENST00000642402.1:c.433A&gt;C</td>
+<td>ENSP00000493503.1:p.Arg145=</td>
+<td>44</td>
+<td>234</td>
+<td>136*98</td>
+<td>44*0*52</td>
+<td>CX082312</td>
+<td>T/G</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000642402.1:c.433T&gt;G</td>
+<td></td>
+<td>A/C</td>
+<td></td>
+<td>0.4855</td>
+<td>0.6474</td>
+<td>0.472</td>
+<td>0.3725</td>
+<td>0.5688</td>
+<td>0.5216</td>
+<td>0.3968</td>
+<td>0.3309</td>
+<td>0.4409</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.886</td>
+<td>T/A/C/G</td>
+<td>5</td>
+<td>S</td>
+</tr>
+<tr>
+<td>SLC4A11</td>
+<td>chr20</td>
+<td>3234902</td>
+<td>rs3803957</td>
+<td>C</td>
+<td>A</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.526316</td>
+<td>243306</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Congenital hereditary endothelial dystrophy of cornea; Corneal dystrophy; Corneal dystrophy-perceptive deafness syndrome</td>
+<td>51585</td>
+<td>46.8</td>
+<td>PASS</td>
+<td>ENST00000642402</td>
+<td>ENST00000642402.1:c.89-8G&gt;T</td>
+<td></td>
+<td>46</td>
+<td>76</td>
+<td>36*40</td>
+<td>46*0*52</td>
+<td></td>
+<td>C/A</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000642402.1:c.89-8C&gt;A</td>
+<td></td>
+<td>G/T</td>
+<td></td>
+<td>0.2796</td>
+<td>0.2114</td>
+<td>0.3468</td>
+<td>0.2751</td>
+<td>0.4023</td>
+<td>0.3958</td>
+<td>0.28</td>
+<td>0.2654</td>
+<td>0.2678</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.886</td>
+<td>C/A/G/T</td>
+<td>5</td>
+<td>S</td>
+</tr>
+<tr>
+<td>SLC4A11</td>
+<td>chr20</td>
+<td>3237709</td>
+<td>rs3827076</td>
+<td>C</td>
+<td>G</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.612903</td>
+<td>338145</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Congenital hereditary endothelial dystrophy of cornea; Corneal dystrophy; Corneal dystrophy-perceptive deafness syndrome</td>
+<td>51586</td>
+<td>47.8</td>
+<td>PASS</td>
+<td>ENST00000642402</td>
+<td>ENST00000642402.1:c.44-121G&gt;C</td>
+<td></td>
+<td>40</td>
+<td>31</td>
+<td>12*19</td>
+<td>47*0*41</td>
+<td></td>
+<td>C/G</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000642402.1:c.44-121C&gt;G</td>
+<td></td>
+<td>G/C</td>
+<td></td>
+<td>0.4443</td>
+<td>0.556</td>
+<td>0.4632</td>
+<td>0.3622</td>
+<td>0.5543</td>
+<td>0.5074</td>
+<td>0.3686</td>
+<td>0.3146</td>
+<td>0.4188</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.886</td>
+<td>C/G/T</td>
+<td>3</td>
+<td>S</td>
+</tr>
+<tr>
+<td>SLC4A11</td>
+<td>chr20</td>
+<td>3237988</td>
+<td>rs3810562</td>
+<td>G</td>
+<td>C</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.422764</td>
+<td>1543326</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Congenital hereditary endothelial dystrophy of cornea; Corneal dystrophy-perceptive deafness syndrome</td>
+<td>51587</td>
+<td>49.7</td>
+<td>PASS</td>
+<td>ENST00000642402</td>
+<td>ENST00000642402.1:c.44-400C&gt;G</td>
+<td></td>
+<td>47</td>
+<td>123</td>
+<td>71*52</td>
+<td>49*0*51</td>
+<td></td>
+<td>G/C</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000642402.1:c.44-400G&gt;C</td>
+<td></td>
+<td>C/G</td>
+<td></td>
+<td>0.6478</td>
+<td>0.7891</td>
+<td>0.6316</td>
+<td>0.5527</td>
+<td>0.7156</td>
+<td>0.6126</td>
+<td>0.5816</td>
+<td>0.5186</td>
+<td>0.617</td>
+<td>-1.776</td>
+<td>0</td>
+<td>-1.98</td>
+<td></td>
+<td></td>
+<td>0.886</td>
+<td>G/A/C/T</td>
+<td>3</td>
+<td>S</td>
+</tr>
+<tr>
+<td>SLC4A11</td>
+<td>chr20</td>
+<td>3239046</td>
+<td>rs6084314</td>
+<td>C</td>
+<td>T</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.39823</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>51588</td>
+<td>42.2</td>
+<td>PASS</td>
+<td>ENST00000642402</td>
+<td>ENST00000642402.1:c.43+49G&gt;A</td>
+<td></td>
+<td>42</td>
+<td>113</td>
+<td>68*45</td>
+<td>42*0*52</td>
+<td></td>
+<td>C/T</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000642402.1:c.43+49C&gt;T</td>
+<td></td>
+<td>G/A</td>
+<td></td>
+<td>0.3811</td>
+<td>0.5673</td>
+<td>0.3847</td>
+<td>0.2653</td>
+<td>0.56</td>
+<td>0.3988</td>
+<td>0.2705</td>
+<td>0.2263</td>
+<td>0.3343</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.886</td>
+<td>C/G/T</td>
+<td></td>
+<td>S</td>
+</tr>
+</tbody></table></div>
+<script>
+(function() {{
+  const table = document.getElementById('tabela');
+  const busca = document.getElementById('busca');
+  const btnCsv = document.getElementById('btnCsv');
+  if (!table) return;
+  const getCellText = (tr, idx) => (tr.cells[idx]?.innerText || "").trim();
+  const isNumber = (v) => /^-?\d+(\.\d+)?$/.test(v.replace(/\s+/g, '').replace(',', '.'));
+
+  Array.from(table.tHead.rows[0].cells).forEach((th, idx) => {{
+    th.classList.add('sortable');
+    th.addEventListener('click', () => {{
+      const tbody = table.tBodies[0];
+      const rows = Array.from(tbody.rows);
+      const current = th.classList.contains('sorted-asc') ? 'asc'
+                    : th.classList.contains('sorted-desc') ? 'desc' : null;
+      Array.from(table.tHead.rows[0].cells).forEach(h => h.classList.remove('sorted-asc','sorted-desc'));
+      const dir = current === 'asc' ? -1 : 1;
+      const colIsNum = rows.every(tr => isNumber(getCellText(tr, idx)) || getCellText(tr, idx) === "");
+      rows.sort((a,b) => {{
+        let A = getCellText(a, idx);
+        let B = getCellText(b, idx);
+        if (colIsNum) {{ A = parseFloat(A.replace(',', '.')) || 0; B = parseFloat(B.replace(',', '.')) || 0; }}
+        else {{ A = A.toLowerCase(); B = B.toLowerCase(); }}
+        if (A < B) return -1 * dir;
+        if (A > B) return  1 * dir;
+        return 0;
+      }});
+      rows.forEach(r => tbody.appendChild(r));
+      th.classList.add(dir === 1 ? 'sorted-asc' : 'sorted-desc');
+    }});
+  }});
+
+  busca?.addEventListener('input', () => {{
+    const q = busca.value.toLowerCase();
+    const rows = Array.from(table.tBodies[0].rows);
+    rows.forEach(tr => {{
+      const txt = tr.innerText.toLowerCase();
+      tr.style.display = txt.includes(q) ? '' : 'none';
+    }});
+  }});
+
+  btnCsv?.addEventListener('click', () => {{
+    const rows = [];
+    const selRows = Array.from(table.querySelectorAll('tr'));
+    selRows.forEach((tr, i) => {{
+      if (i>0 && tr.style.display === 'none') return;
+      const cells = Array.from(tr.cells).map(td => {{
+        const t = td.innerText.replace(/"/g,'""');
+        return /[",\n]/.test(t) ? `"${{t}}"` : t;
+      }});
+      rows.push(cells.join(','));
+    }});
+    const blob = new Blob([rows.join('\n')], {{type: 'text/csv;charset=utf-8;'}});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = (document.title || 'export') + '.csv';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(() => URL.revokeObjectURL(url), 5000);
+  }});
+}})();
+</script>
+</body>
+</html>
