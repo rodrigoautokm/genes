@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NADSYN1 — Linhas da tabela dbo.variantes</title>
+<style>
+  :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif; }
+  body { margin: 24px; }
+  h1 { margin: 0 0 6px 0; font-size: 1.6rem; }
+  .meta { color: #444; font-size: .95rem; margin-bottom: 12px; }
+  .toolbar { display:flex; gap: 8px; align-items:center; margin: 12px 0; flex-wrap: wrap; }
+  input[type="search"] { padding: 8px 10px; border: 1px solid #ccc; border-radius: 10px; min-width: 260px; }
+  button { padding: 8px 12px; border: 1px solid #ccc; border-radius: 10px; background: #f7f7f7; cursor: pointer; }
+  button:hover { background: #eee; }
+  table { width: 100%; border-collapse: collapse; }
+  thead th { position: sticky; top: 0; background: #fafafa; border-bottom: 1px solid #ddd; text-align: left; padding: 10px; cursor: pointer; }
+  tbody td { border-bottom: 1px solid #f0f0f0; padding: 8px 10px; vertical-align: top; }
+  .sortable::after { content: " ⇅"; font-size: .8em; color: #888; }
+  .sorted-asc::after { content: " ↑"; }
+  .sorted-desc::after { content: " ↓"; }
+  .empty { padding: 16px; background: #fff6f6; border: 1px solid #ffdede; border-radius: 12px; }
+  a.btn { display:inline-block; margin: 0 8px 8px 0; padding: 6px 10px; border-radius: 10px; border:1px solid #ddd; text-decoration:none; color:#222; background:#f9f9f9; }
+  a.btn:hover { background:#f0f0f0; }
+</style>
+</head>
+<body>
+<h1>NADSYN1 — Linhas da tabela dbo.variantes</h1>
+<div class="meta">Gene: <strong>NADSYN1</strong> • Linhas: <strong>15</strong></div>
+<div class="toolbar">
+  <input id="busca" type="search" placeholder="Filtrar linhas... (busca global)">
+  <button id="btnCsv" type="button">Exportar CSV</button>
+  <a class="btn" href="index.html">Voltar ao índice</a>
+</div>
+<div id="wrap">
+<table id="tabela" border="0">
+<thead><tr>
+<th>Gene</th>
+<th>Chr</th>
+<th>Pos</th>
+<th>ID</th>
+<th>Ref</th>
+<th>Alt</th>
+<th>Impacto</th>
+<th>GT</th>
+<th>VAF</th>
+<th>ClinVar_ID</th>
+<th>ClinVar_Significance</th>
+<th>ClinVar_Review_Status</th>
+<th>ClinVar_Disease_Names</th>
+<th>ID_variante</th>
+<th>Qual</th>
+<th>Filtro</th>
+<th>Ensembl</th>
+<th>Alteracao_nucleotidica</th>
+<th>Alteracao_aminoacidica</th>
+<th>GQ</th>
+<th>DP</th>
+<th>AD</th>
+<th>PL</th>
+<th>HGMD</th>
+<th>Resultado</th>
+<th>Status</th>
+<th>Buscar</th>
+<th>SIFT</th>
+<th>PolyPhen</th>
+<th>Biotype</th>
+<th>Alteracao_nucleotidica_reversa</th>
+<th>Alteracao_aminoacidica_reversa</th>
+<th>Resultado_reverso</th>
+<th>encontrado_rsid</th>
+<th>gnomAD_AF_Global</th>
+<th>gnomAD_AFR_AF</th>
+<th>gnomAD_AMR_AF</th>
+<th>gnomAD_ASJ_AF</th>
+<th>gnomAD_EAS_AF</th>
+<th>gnomAD_FIN_AF</th>
+<th>gnomAD_NFE_AF</th>
+<th>gnomAD_SAS_AF</th>
+<th>gnomAD_OTH_AF</th>
+<th>PhyloP</th>
+<th>PhastCons</th>
+<th>GERP</th>
+<th>CADD_Raw</th>
+<th>CADD_Phred</th>
+<th>LOEUF</th>
+<th>Allele_String</th>
+<th>ClinVar_Disease_Count</th>
+<th>letra_inicial_gene</th>
+</tr></thead><tbody>
+<tr>
+<td>NADSYN1</td>
+<td>chr11</td>
+<td>71448383</td>
+<td>rs4944946</td>
+<td>G</td>
+<td>A</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.392857</td>
+<td>402332</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Smith-Lemli-Opitz syndrome</td>
+<td>31835</td>
+<td>36.4</td>
+<td>PASS</td>
+<td>ENST00000319023</td>
+<td></td>
+<td></td>
+<td>36</td>
+<td>196</td>
+<td>119*77</td>
+<td>36*0*50</td>
+<td></td>
+<td>G/A</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td></td>
+<td></td>
+<td>G/A</td>
+<td></td>
+<td>0.535</td>
+<td>0.2362</td>
+<td>0.5204</td>
+<td>0.6167</td>
+<td>0.3646</td>
+<td>0.5819</td>
+<td>0.7443</td>
+<td>0.2067</td>
+<td>0.5156</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1.039</td>
+<td>G/A/C</td>
+<td>2</td>
+<td>N</td>
+</tr>
+<tr>
+<td>NADSYN1</td>
+<td>chr11</td>
+<td>71453425</td>
+<td>rs12789751</td>
+<td>G</td>
+<td>A</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.576923</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>31836</td>
+<td>54.2</td>
+<td>PASS</td>
+<td>ENST00000319023</td>
+<td>ENST00000319023.7:c.85+44G&gt;A</td>
+<td></td>
+<td>50</td>
+<td>78</td>
+<td>33*45</td>
+<td>54*0*52</td>
+<td></td>
+<td>G/A</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000319023.7:c.85+44G&gt;A</td>
+<td></td>
+<td>G/A</td>
+<td></td>
+<td>0.5318</td>
+<td>0.2352</td>
+<td>0.4845</td>
+<td>0.6148</td>
+<td>0.3842</td>
+<td>0.5883</td>
+<td>0.7431</td>
+<td>0.2118</td>
+<td>0.5161</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.929</td>
+<td>G/A</td>
+<td></td>
+<td>N</td>
+</tr>
+<tr>
+<td>NADSYN1</td>
+<td>chr11</td>
+<td>71458501</td>
+<td>rs2276360</td>
+<td>G</td>
+<td>C</td>
+<td>MODERATE</td>
+<td>0/1</td>
+<td>0.402685</td>
+<td>1652036</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Vertebral: cardiac: renal: and limb defects syndrome 3</td>
+<td>31837</td>
+<td>34.8</td>
+<td>PASS</td>
+<td>ENST00000319023</td>
+<td>ENST00000319023.7:c.220G&gt;C</td>
+<td>ENSP00000326424.2:p.Val74Leu</td>
+<td>34</td>
+<td>149</td>
+<td>89*60</td>
+<td>34*0*45</td>
+<td></td>
+<td>G/C</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000319023.7:c.220G&gt;C</td>
+<td>ENSP00000326424.2:p.Val74Leu</td>
+<td>G/C</td>
+<td></td>
+<td>0.5821</td>
+<td>0.4097</td>
+<td>0.5018</td>
+<td>0.6141</td>
+<td>0.3839</td>
+<td>0.5884</td>
+<td>0.7438</td>
+<td>0.2121</td>
+<td>0.554</td>
+<td>0.23</td>
+<td>0.027</td>
+<td>-2.34</td>
+<td></td>
+<td></td>
+<td>0.929</td>
+<td>G/A/C</td>
+<td>2</td>
+<td>N</td>
+</tr>
+<tr>
+<td>NADSYN1</td>
+<td>chr11</td>
+<td>71463406</td>
+<td>rs2276362</td>
+<td>A</td>
+<td>G</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.392157</td>
+<td>1779928</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Vertebral: cardiac: renal: and limb defects syndrome 3</td>
+<td>31838</td>
+<td>56.7</td>
+<td>PASS</td>
+<td>ENST00000319023</td>
+<td>ENST00000319023.7:c.264-26A&gt;G</td>
+<td></td>
+<td>56</td>
+<td>102</td>
+<td>62*40</td>
+<td>56*0*62</td>
+<td></td>
+<td>A/G</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000319023.7:c.264-26A&gt;G</td>
+<td></td>
+<td>A/G</td>
+<td></td>
+<td>0.5719</td>
+<td>0.3738</td>
+<td>0.4985</td>
+<td>0.6145</td>
+<td>0.3822</td>
+<td>0.5882</td>
+<td>0.7443</td>
+<td>0.2107</td>
+<td>0.5465</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.929</td>
+<td>A/G/T</td>
+<td>1</td>
+<td>N</td>
+</tr>
+<tr>
+<td>NADSYN1</td>
+<td>chr11</td>
+<td>71463507</td>
+<td>rs1629220</td>
+<td>C</td>
+<td>T</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.522523</td>
+<td>1779929</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Vertebral: cardiac: renal: and limb defects syndrome 3</td>
+<td>31839</td>
+<td>49.9</td>
+<td>PASS</td>
+<td>ENST00000319023</td>
+<td>ENST00000319023.7:c.317+22C&gt;T</td>
+<td></td>
+<td>45</td>
+<td>111</td>
+<td>53*58</td>
+<td>49*0*46</td>
+<td></td>
+<td>C/T</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000319023.7:c.317+22C&gt;T</td>
+<td></td>
+<td>C/T</td>
+<td></td>
+<td>0.2812</td>
+<td>0.3381</td>
+<td>0.3004</td>
+<td>0.2195</td>
+<td>0.3974</td>
+<td>0.3563</td>
+<td>0.2105</td>
+<td>0.4572</td>
+<td>0.3188</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.929</td>
+<td>C/G/T</td>
+<td>1</td>
+<td>N</td>
+</tr>
+<tr>
+<td>NADSYN1</td>
+<td>chr11</td>
+<td>71472428</td>
+<td>rs2282621</td>
+<td>C</td>
+<td>T</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.352381</td>
+<td>1779930</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Vertebral: cardiac: renal: and limb defects syndrome 3</td>
+<td>31840</td>
+<td>53.5</td>
+<td>PASS</td>
+<td>ENST00000319023</td>
+<td>ENST00000319023.7:c.408-21C&gt;T</td>
+<td></td>
+<td>52</td>
+<td>105</td>
+<td>68*37</td>
+<td>53*0*58</td>
+<td></td>
+<td>C/T</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000319023.7:c.408-21C&gt;T</td>
+<td></td>
+<td>C/T</td>
+<td></td>
+<td>0.558</td>
+<td>0.3216</td>
+<td>0.4932</td>
+<td>0.6176</td>
+<td>0.4396</td>
+<td>0.5845</td>
+<td>0.7429</td>
+<td>0.2137</td>
+<td>0.5314</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.929</td>
+<td>C/G/T</td>
+<td>1</td>
+<td>N</td>
+</tr>
+<tr>
+<td>NADSYN1</td>
+<td>chr11</td>
+<td>71472431</td>
+<td>rs2282620</td>
+<td>C</td>
+<td>T</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.366972</td>
+<td>1779931</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Vertebral: cardiac: renal: and limb defects syndrome 3</td>
+<td>31841</td>
+<td>58.0</td>
+<td>PASS</td>
+<td>ENST00000319023</td>
+<td>ENST00000319023.7:c.408-18C&gt;T</td>
+<td></td>
+<td>53</td>
+<td>109</td>
+<td>69*40</td>
+<td>57*0*55</td>
+<td></td>
+<td>C/T</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000319023.7:c.408-18C&gt;T</td>
+<td></td>
+<td>C/T</td>
+<td></td>
+<td>0.5582</td>
+<td>0.3217</td>
+<td>0.4932</td>
+<td>0.6178</td>
+<td>0.4399</td>
+<td>0.5847</td>
+<td>0.743</td>
+<td>0.2142</td>
+<td>0.5318</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.929</td>
+<td>C/G/T</td>
+<td>1</td>
+<td>N</td>
+</tr>
+<tr>
+<td>NADSYN1</td>
+<td>chr11</td>
+<td>71473632</td>
+<td>rs7950441</td>
+<td>A</td>
+<td>C</td>
+<td>MODERATE</td>
+<td>1/1</td>
+<td>1</td>
+<td>1779932</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Vertebral: cardiac: renal: and limb defects syndrome 3</td>
+<td>31842</td>
+<td>59.1</td>
+<td>PASS</td>
+<td>ENST00000319023</td>
+<td>ENST00000319023.7:c.612A&gt;C</td>
+<td>ENSP00000326424.2:p.Gln204His</td>
+<td>53</td>
+<td>161</td>
+<td>0*161</td>
+<td>59*53*0</td>
+<td></td>
+<td>C/C</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000319023.7:c.612A&gt;C</td>
+<td>ENSP00000326424.2:p.Gln204His</td>
+<td>C/C</td>
+<td></td>
+<td>1</td>
+<td>1</td>
+<td>0.9999</td>
+<td>1</td>
+<td>1</td>
+<td>0.9999</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>-0.186</td>
+<td>0.838</td>
+<td>1.05</td>
+<td></td>
+<td></td>
+<td>0.929</td>
+<td>A/C/G/T</td>
+<td>1</td>
+<td>N</td>
+</tr>
+<tr>
+<td>NADSYN1</td>
+<td>chr11</td>
+<td>71474433</td>
+<td>rs2276354</td>
+<td>T</td>
+<td>C</td>
+<td>LOW</td>
+<td>1/1</td>
+<td>1</td>
+<td>1612019</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Vertebral: cardiac: renal: and limb defects syndrome 3</td>
+<td>31843</td>
+<td>66.0</td>
+<td>PASS</td>
+<td>ENST00000319023</td>
+<td>ENST00000319023.7:c.705T&gt;C</td>
+<td>ENSP00000326424.2:p.Cys235=</td>
+<td>49</td>
+<td>111</td>
+<td>0*111</td>
+<td>65*48*0</td>
+<td></td>
+<td>C/C</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000319023.7:c.705T&gt;C</td>
+<td>ENSP00000326424.2:p.Cys235=</td>
+<td>C/C</td>
+<td></td>
+<td>0.8914</td>
+<td>0.8367</td>
+<td>0.812</td>
+<td>0.8378</td>
+<td>0.8437</td>
+<td>0.9453</td>
+<td>0.9549</td>
+<td>0.674</td>
+<td>0.8912</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.929</td>
+<td>T/C</td>
+<td>2</td>
+<td>N</td>
+</tr>
+<tr>
+<td>NADSYN1</td>
+<td>chr11</td>
+<td>71474472</td>
+<td>rs2186778</td>
+<td>T</td>
+<td>C</td>
+<td>LOW</td>
+<td>1/1</td>
+<td>0.982456</td>
+<td>1677737</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Vertebral: cardiac: renal: and limb defects syndrome 3</td>
+<td>31844</td>
+<td>71.2</td>
+<td>PASS</td>
+<td>ENST00000319023</td>
+<td>ENST00000319023.7:c.744T&gt;C</td>
+<td>ENSP00000326424.2:p.Ile248=</td>
+<td>56</td>
+<td>114</td>
+<td>2*112</td>
+<td>71*55*0</td>
+<td></td>
+<td>C/C</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000319023.7:c.744T&gt;C</td>
+<td>ENSP00000326424.2:p.Ile248=</td>
+<td>C/C</td>
+<td></td>
+<td>0.8445</td>
+<td>0.6738</td>
+<td>0.7953</td>
+<td>0.8381</td>
+<td>0.8437</td>
+<td>0.9455</td>
+<td>0.9543</td>
+<td>0.6723</td>
+<td>0.8549</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.929</td>
+<td>T/A/C/G</td>
+<td>2</td>
+<td>N</td>
+</tr>
+<tr>
+<td>NADSYN1</td>
+<td>chr11</td>
+<td>71478390</td>
+<td>rs2276353</td>
+<td>T</td>
+<td>C</td>
+<td>LOW</td>
+<td>1/1</td>
+<td>1</td>
+<td>1779933</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Vertebral: cardiac: renal: and limb defects syndrome 3</td>
+<td>31845</td>
+<td>54.2</td>
+<td>PASS</td>
+<td>ENST00000319023</td>
+<td>ENST00000319023.7:c.799-5T&gt;C</td>
+<td></td>
+<td>45</td>
+<td>63</td>
+<td>0*63</td>
+<td>54*45*0</td>
+<td></td>
+<td>C/C</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000319023.7:c.799-5T&gt;C</td>
+<td></td>
+<td>C/C</td>
+<td></td>
+<td>0.8919</td>
+<td>0.8386</td>
+<td>0.8124</td>
+<td>0.8378</td>
+<td>0.8434</td>
+<td>0.945</td>
+<td>0.9549</td>
+<td>0.6717</td>
+<td>0.8908</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.929</td>
+<td>T/A/C/G</td>
+<td>1</td>
+<td>N</td>
+</tr>
+<tr>
+<td>NADSYN1</td>
+<td>chr11</td>
+<td>71479847</td>
+<td>rs4944064</td>
+<td>T</td>
+<td>C</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>31846</td>
+<td>61.5</td>
+<td>PASS</td>
+<td>ENST00000319023</td>
+<td>ENST00000319023.7:c.874-908T&gt;C</td>
+<td></td>
+<td>51</td>
+<td>91</td>
+<td>0*91</td>
+<td>61*51*0</td>
+<td></td>
+<td>C/C</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000319023.7:c.874-908T&gt;C</td>
+<td></td>
+<td>C/C</td>
+<td></td>
+<td>0.8918</td>
+<td>0.8381</td>
+<td>0.8124</td>
+<td>0.8382</td>
+<td>0.8441</td>
+<td>0.9452</td>
+<td>0.9549</td>
+<td>0.6718</td>
+<td>0.8918</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.929</td>
+<td>T/A/C</td>
+<td></td>
+<td>N</td>
+</tr>
+<tr>
+<td>NADSYN1</td>
+<td>chr11</td>
+<td>71480771</td>
+<td>rs7121106</td>
+<td>C</td>
+<td>T</td>
+<td>MODERATE</td>
+<td>0/1</td>
+<td>0.364341</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>31847</td>
+<td>47.8</td>
+<td>PASS</td>
+<td>ENST00000319023</td>
+<td>ENST00000319023.7:c.890C&gt;T</td>
+<td>ENSP00000326424.2:p.Pro297Leu</td>
+<td>48</td>
+<td>129</td>
+<td>82*47</td>
+<td>47*0*65</td>
+<td></td>
+<td>C/T</td>
+<td>Het</td>
+<td></td>
+<td>tolerated_low_confidence</td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000319023.7:c.890C&gt;T</td>
+<td>ENSP00000326424.2:p.Pro297Leu</td>
+<td>C/T</td>
+<td></td>
+<td>0.08304</td>
+<td>0.1408</td>
+<td>0.05681</td>
+<td>0.08122</td>
+<td>0.0832</td>
+<td>0.07544</td>
+<td>0.05298</td>
+<td>0.1211</td>
+<td>0.08712</td>
+<td>6.363</td>
+<td>0.954</td>
+<td>5.18</td>
+<td></td>
+<td></td>
+<td>0.929</td>
+<td>C/T</td>
+<td></td>
+<td>N</td>
+</tr>
+<tr>
+<td>NADSYN1</td>
+<td>chr11</td>
+<td>71481320</td>
+<td>rs59487812</td>
+<td>A</td>
+<td>G</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.475248</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>31848</td>
+<td>41.1</td>
+<td>PASS</td>
+<td>ENST00000319023</td>
+<td>ENST00000319023.7:c.999-36A&gt;G</td>
+<td></td>
+<td>41</td>
+<td>101</td>
+<td>53*48</td>
+<td>41*0*62</td>
+<td></td>
+<td>A/G</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000319023.7:c.999-36A&gt;G</td>
+<td></td>
+<td>A/G</td>
+<td></td>
+<td>0.08306</td>
+<td>0.1408</td>
+<td>0.05696</td>
+<td>0.08103</td>
+<td>0.0834</td>
+<td>0.07539</td>
+<td>0.05299</td>
+<td>0.1212</td>
+<td>0.08642</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.929</td>
+<td>A/C/G/T</td>
+<td></td>
+<td>N</td>
+</tr>
+<tr>
+<td>NADSYN1</td>
+<td>chr11</td>
+<td>71481393</td>
+<td>rs59379414</td>
+<td>C</td>
+<td>A</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.445946</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>31849</td>
+<td>53.0</td>
+<td>PASS</td>
+<td>ENST00000319023</td>
+<td>ENST00000319023.7:c.1036C&gt;A</td>
+<td>ENSP00000326424.2:p.Arg346=</td>
+<td>52</td>
+<td>148</td>
+<td>82*66</td>
+<td>52*0*60</td>
+<td></td>
+<td>C/A</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000319023.7:c.1036C&gt;A</td>
+<td>ENSP00000326424.2:p.Arg346=</td>
+<td>C/A</td>
+<td></td>
+<td>0.08306</td>
+<td>0.1408</td>
+<td>0.05684</td>
+<td>0.08141</td>
+<td>0.08285</td>
+<td>0.0761</td>
+<td>0.05299</td>
+<td>0.1208</td>
+<td>0.08737</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.929</td>
+<td>C/A/T</td>
+<td></td>
+<td>N</td>
+</tr>
+</tbody></table></div>
+<script>
+(function() {{
+  const table = document.getElementById('tabela');
+  const busca = document.getElementById('busca');
+  const btnCsv = document.getElementById('btnCsv');
+  if (!table) return;
+  const getCellText = (tr, idx) => (tr.cells[idx]?.innerText || "").trim();
+  const isNumber = (v) => /^-?\d+(\.\d+)?$/.test(v.replace(/\s+/g, '').replace(',', '.'));
+
+  Array.from(table.tHead.rows[0].cells).forEach((th, idx) => {{
+    th.classList.add('sortable');
+    th.addEventListener('click', () => {{
+      const tbody = table.tBodies[0];
+      const rows = Array.from(tbody.rows);
+      const current = th.classList.contains('sorted-asc') ? 'asc'
+                    : th.classList.contains('sorted-desc') ? 'desc' : null;
+      Array.from(table.tHead.rows[0].cells).forEach(h => h.classList.remove('sorted-asc','sorted-desc'));
+      const dir = current === 'asc' ? -1 : 1;
+      const colIsNum = rows.every(tr => isNumber(getCellText(tr, idx)) || getCellText(tr, idx) === "");
+      rows.sort((a,b) => {{
+        let A = getCellText(a, idx);
+        let B = getCellText(b, idx);
+        if (colIsNum) {{ A = parseFloat(A.replace(',', '.')) || 0; B = parseFloat(B.replace(',', '.')) || 0; }}
+        else {{ A = A.toLowerCase(); B = B.toLowerCase(); }}
+        if (A < B) return -1 * dir;
+        if (A > B) return  1 * dir;
+        return 0;
+      }});
+      rows.forEach(r => tbody.appendChild(r));
+      th.classList.add(dir === 1 ? 'sorted-asc' : 'sorted-desc');
+    }});
+  }});
+
+  busca?.addEventListener('input', () => {{
+    const q = busca.value.toLowerCase();
+    const rows = Array.from(table.tBodies[0].rows);
+    rows.forEach(tr => {{
+      const txt = tr.innerText.toLowerCase();
+      tr.style.display = txt.includes(q) ? '' : 'none';
+    }});
+  }});
+
+  btnCsv?.addEventListener('click', () => {{
+    const rows = [];
+    const selRows = Array.from(table.querySelectorAll('tr'));
+    selRows.forEach((tr, i) => {{
+      if (i>0 && tr.style.display === 'none') return;
+      const cells = Array.from(tr.cells).map(td => {{
+        const t = td.innerText.replace(/"/g,'""');
+        return /[",\n]/.test(t) ? `"${{t}}"` : t;
+      }});
+      rows.push(cells.join(','));
+    }});
+    const blob = new Blob([rows.join('\n')], {{type: 'text/csv;charset=utf-8;'}});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = (document.title || 'export') + '.csv';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(() => URL.revokeObjectURL(url), 5000);
+  }});
+}})();
+</script>
+</body>
+</html>
