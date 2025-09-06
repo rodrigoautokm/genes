@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MEFV — Linhas da tabela dbo.variantes</title>
+<style>
+  :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif; }
+  body { margin: 24px; }
+  h1 { margin: 0 0 6px 0; font-size: 1.6rem; }
+  .meta { color: #444; font-size: .95rem; margin-bottom: 12px; }
+  .toolbar { display:flex; gap: 8px; align-items:center; margin: 12px 0; flex-wrap: wrap; }
+  input[type="search"] { padding: 8px 10px; border: 1px solid #ccc; border-radius: 10px; min-width: 260px; }
+  button { padding: 8px 12px; border: 1px solid #ccc; border-radius: 10px; background: #f7f7f7; cursor: pointer; }
+  button:hover { background: #eee; }
+  table { width: 100%; border-collapse: collapse; }
+  thead th { position: sticky; top: 0; background: #fafafa; border-bottom: 1px solid #ddd; text-align: left; padding: 10px; cursor: pointer; }
+  tbody td { border-bottom: 1px solid #f0f0f0; padding: 8px 10px; vertical-align: top; }
+  .sortable::after { content: " ⇅"; font-size: .8em; color: #888; }
+  .sorted-asc::after { content: " ↑"; }
+  .sorted-desc::after { content: " ↓"; }
+  .empty { padding: 16px; background: #fff6f6; border: 1px solid #ffdede; border-radius: 12px; }
+  a.btn { display:inline-block; margin: 0 8px 8px 0; padding: 6px 10px; border-radius: 10px; border:1px solid #ddd; text-decoration:none; color:#222; background:#f9f9f9; }
+  a.btn:hover { background:#f0f0f0; }
+</style>
+</head>
+<body>
+<h1>MEFV — Linhas da tabela dbo.variantes</h1>
+<div class="meta">Gene: <strong>MEFV</strong> • Linhas: <strong>7</strong></div>
+<div class="toolbar">
+  <input id="busca" type="search" placeholder="Filtrar linhas... (busca global)">
+  <button id="btnCsv" type="button">Exportar CSV</button>
+  <a class="btn" href="index.html">Voltar ao índice</a>
+</div>
+<div id="wrap">
+<table id="tabela" border="0">
+<thead><tr>
+<th>Gene</th>
+<th>Chr</th>
+<th>Pos</th>
+<th>ID</th>
+<th>Ref</th>
+<th>Alt</th>
+<th>Impacto</th>
+<th>GT</th>
+<th>VAF</th>
+<th>ClinVar_ID</th>
+<th>ClinVar_Significance</th>
+<th>ClinVar_Review_Status</th>
+<th>ClinVar_Disease_Names</th>
+<th>ID_variante</th>
+<th>Qual</th>
+<th>Filtro</th>
+<th>Ensembl</th>
+<th>Alteracao_nucleotidica</th>
+<th>Alteracao_aminoacidica</th>
+<th>GQ</th>
+<th>DP</th>
+<th>AD</th>
+<th>PL</th>
+<th>HGMD</th>
+<th>Resultado</th>
+<th>Status</th>
+<th>Buscar</th>
+<th>SIFT</th>
+<th>PolyPhen</th>
+<th>Biotype</th>
+<th>Alteracao_nucleotidica_reversa</th>
+<th>Alteracao_aminoacidica_reversa</th>
+<th>Resultado_reverso</th>
+<th>encontrado_rsid</th>
+<th>gnomAD_AF_Global</th>
+<th>gnomAD_AFR_AF</th>
+<th>gnomAD_AMR_AF</th>
+<th>gnomAD_ASJ_AF</th>
+<th>gnomAD_EAS_AF</th>
+<th>gnomAD_FIN_AF</th>
+<th>gnomAD_NFE_AF</th>
+<th>gnomAD_SAS_AF</th>
+<th>gnomAD_OTH_AF</th>
+<th>PhyloP</th>
+<th>PhastCons</th>
+<th>GERP</th>
+<th>CADD_Raw</th>
+<th>CADD_Phred</th>
+<th>LOEUF</th>
+<th>Allele_String</th>
+<th>ClinVar_Disease_Count</th>
+<th>letra_inicial_gene</th>
+</tr></thead><tbody>
+<tr>
+<td>MEFV</td>
+<td>chr16</td>
+<td>3243888</td>
+<td>rs1231122</td>
+<td>C</td>
+<td>T</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.234043</td>
+<td>126738</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Familial Mediterranean fever</td>
+<td>41572</td>
+<td>46.5</td>
+<td>PASS</td>
+<td>ENST00000219596</td>
+<td>ENST00000219596.6:c.1764G&gt;A</td>
+<td>ENSP00000219596.1:p.Pro588=</td>
+<td>45</td>
+<td>94</td>
+<td>72*22</td>
+<td>46*0*51</td>
+<td></td>
+<td>C/T</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000219596.6:c.1764C&gt;T</td>
+<td></td>
+<td>G/A</td>
+<td></td>
+<td>0.4087</td>
+<td>0.3376</td>
+<td>0.375</td>
+<td>0.4357</td>
+<td>0.3875</td>
+<td>0.4422</td>
+<td>0.461</td>
+<td>0.2722</td>
+<td>0.424</td>
+<td>-0.206</td>
+<td>0</td>
+<td>-0.232</td>
+<td></td>
+<td></td>
+<td>1.147</td>
+<td>C/A/G/T</td>
+<td>3</td>
+<td>M</td>
+</tr>
+<tr>
+<td>MEFV</td>
+<td>chr16</td>
+<td>3243922</td>
+<td>rs1231123</td>
+<td>A</td>
+<td>T</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.240385</td>
+<td>1355109</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Familial Mediterranean fever; Familial Mediterranean fever: autosomal dominant</td>
+<td>41573</td>
+<td>30.4</td>
+<td>PASS</td>
+<td>ENST00000219596</td>
+<td>ENST00000219596.6:c.1760-30T&gt;A</td>
+<td></td>
+<td>30</td>
+<td>104</td>
+<td>79*25</td>
+<td>30*0*48</td>
+<td></td>
+<td>A/T</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000219596.6:c.1760-30A&gt;T</td>
+<td></td>
+<td>T/A</td>
+<td></td>
+<td>0.3892</td>
+<td>0.2981</td>
+<td>0.3551</td>
+<td>0.4184</td>
+<td>0.284</td>
+<td>0.4408</td>
+<td>0.4574</td>
+<td>0.2536</td>
+<td>0.4005</td>
+<td>-0.036</td>
+<td>0</td>
+<td>-1.4</td>
+<td></td>
+<td></td>
+<td>1.147</td>
+<td>A/C/T</td>
+<td>4</td>
+<td>M</td>
+</tr>
+<tr>
+<td>MEFV</td>
+<td>chr16</td>
+<td>3247073</td>
+<td>rs224206</td>
+<td>A</td>
+<td>G</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.330189</td>
+<td>30175</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Autoinflammatory syndrome; Familial Mediterranean fever; Familial Mediterranean fever: autosomal dominant; Inborn genetic diseases</td>
+<td>41574</td>
+<td>47.6</td>
+<td>PASS</td>
+<td>ENST00000219596</td>
+<td>ENST00000219596.6:c.1530T&gt;C</td>
+<td>ENSP00000219596.1:p.Asp510=</td>
+<td>45</td>
+<td>212</td>
+<td>142*70</td>
+<td>47*0*49</td>
+<td></td>
+<td>A/G</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000219596.6:c.1530A&gt;G</td>
+<td></td>
+<td>T/C</td>
+<td></td>
+<td>0.5991</td>
+<td>0.6854</td>
+<td>0.6284</td>
+<td>0.5522</td>
+<td>0.6436</td>
+<td>0.5586</td>
+<td>0.5395</td>
+<td>0.7269</td>
+<td>0.5811</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1.147</td>
+<td>A/G/T</td>
+<td>6</td>
+<td>M</td>
+</tr>
+<tr>
+<td>MEFV</td>
+<td>chr16</td>
+<td>3247175</td>
+<td>rs224207</td>
+<td>T</td>
+<td>C</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.360825</td>
+<td>244842</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Familial Mediterranean fever; Familial Mediterranean fever: autosomal dominant; Inborn genetic diseases</td>
+<td>41575</td>
+<td>63.3</td>
+<td>PASS</td>
+<td>ENST00000219596</td>
+<td>ENST00000219596.6:c.1428A&gt;G</td>
+<td>ENSP00000219596.1:p.Gln476=</td>
+<td>61</td>
+<td>97</td>
+<td>62*35</td>
+<td>63*0*64</td>
+<td></td>
+<td>T/C</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000219596.6:c.1428T&gt;C</td>
+<td></td>
+<td>A/G</td>
+<td></td>
+<td>0.5851</td>
+<td>0.6429</td>
+<td>0.6222</td>
+<td>0.5528</td>
+<td>0.642</td>
+<td>0.5553</td>
+<td>0.5369</td>
+<td>0.727</td>
+<td>0.5701</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1.147</td>
+<td>T/C</td>
+<td>5</td>
+<td>M</td>
+</tr>
+<tr>
+<td>MEFV</td>
+<td>chr16</td>
+<td>3247181</td>
+<td>rs224208</td>
+<td>C</td>
+<td>T</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.350515</td>
+<td>30172</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Autoinflammatory syndrome; Familial Mediterranean fever; Familial Mediterranean fever: autosomal dominant; Inborn genetic diseases</td>
+<td>41576</td>
+<td>62.3</td>
+<td>PASS</td>
+<td>ENST00000219596</td>
+<td>ENST00000219596.6:c.1422G&gt;A</td>
+<td>ENSP00000219596.1:p.Glu474=</td>
+<td>59</td>
+<td>97</td>
+<td>63*34</td>
+<td>62*0*61</td>
+<td></td>
+<td>C/T</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000219596.6:c.1422C&gt;T</td>
+<td></td>
+<td>G/A</td>
+<td></td>
+<td>0.5823</td>
+<td>0.6368</td>
+<td>0.6216</td>
+<td>0.5525</td>
+<td>0.6118</td>
+<td>0.5556</td>
+<td>0.5366</td>
+<td>0.7255</td>
+<td>0.5691</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1.147</td>
+<td>C/G/T</td>
+<td>6</td>
+<td>M</td>
+</tr>
+<tr>
+<td>MEFV</td>
+<td>chr16</td>
+<td>3248865</td>
+<td>rs224212</td>
+<td>T</td>
+<td>C</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.486486</td>
+<td>1533719</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Familial Mediterranean fever; Familial Mediterranean fever: autosomal dominant</td>
+<td>41577</td>
+<td>49.2</td>
+<td>PASS</td>
+<td>ENST00000219596</td>
+<td>ENST00000219596.6:c.1356+44A&gt;G</td>
+<td></td>
+<td>49</td>
+<td>37</td>
+<td>19*18</td>
+<td>49*0*60</td>
+<td></td>
+<td>T/C</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000219596.6:c.1356+44T&gt;C</td>
+<td></td>
+<td>A/G</td>
+<td></td>
+<td>0.5996</td>
+<td>0.6914</td>
+<td>0.6324</td>
+<td>0.5519</td>
+<td>0.6141</td>
+<td>0.5589</td>
+<td>0.5384</td>
+<td>0.7278</td>
+<td>0.583</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1.147</td>
+<td>T/A/C</td>
+<td>4</td>
+<td>M</td>
+</tr>
+<tr>
+<td>MEFV</td>
+<td>chr16</td>
+<td>3249749</td>
+<td>rs224213</td>
+<td>G</td>
+<td>A</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.515625</td>
+<td>30188</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Autoinflammatory syndrome; Familial Mediterranean fever; Familial Mediterranean fever: autosomal dominant; Inborn genetic diseases</td>
+<td>41578</td>
+<td>50.5</td>
+<td>PASS</td>
+<td>ENST00000219596</td>
+<td>ENST00000219596.6:c.942C&gt;T</td>
+<td>ENSP00000219596.1:p.Arg314=</td>
+<td>44</td>
+<td>192</td>
+<td>93*99</td>
+<td>50*0*45</td>
+<td></td>
+<td>G/A</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000219596.6:c.942G&gt;A</td>
+<td></td>
+<td>C/T</td>
+<td></td>
+<td>0.6167</td>
+<td>0.7116</td>
+<td>0.6498</td>
+<td>0.585</td>
+<td>0.7064</td>
+<td>0.5702</td>
+<td>0.5477</td>
+<td>0.7429</td>
+<td>0.6024</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1.147</td>
+<td>G/A/C</td>
+<td>6</td>
+<td>M</td>
+</tr>
+</tbody></table></div>
+<script>
+(function() {{
+  const table = document.getElementById('tabela');
+  const busca = document.getElementById('busca');
+  const btnCsv = document.getElementById('btnCsv');
+  if (!table) return;
+  const getCellText = (tr, idx) => (tr.cells[idx]?.innerText || "").trim();
+  const isNumber = (v) => /^-?\d+(\.\d+)?$/.test(v.replace(/\s+/g, '').replace(',', '.'));
+
+  Array.from(table.tHead.rows[0].cells).forEach((th, idx) => {{
+    th.classList.add('sortable');
+    th.addEventListener('click', () => {{
+      const tbody = table.tBodies[0];
+      const rows = Array.from(tbody.rows);
+      const current = th.classList.contains('sorted-asc') ? 'asc'
+                    : th.classList.contains('sorted-desc') ? 'desc' : null;
+      Array.from(table.tHead.rows[0].cells).forEach(h => h.classList.remove('sorted-asc','sorted-desc'));
+      const dir = current === 'asc' ? -1 : 1;
+      const colIsNum = rows.every(tr => isNumber(getCellText(tr, idx)) || getCellText(tr, idx) === "");
+      rows.sort((a,b) => {{
+        let A = getCellText(a, idx);
+        let B = getCellText(b, idx);
+        if (colIsNum) {{ A = parseFloat(A.replace(',', '.')) || 0; B = parseFloat(B.replace(',', '.')) || 0; }}
+        else {{ A = A.toLowerCase(); B = B.toLowerCase(); }}
+        if (A < B) return -1 * dir;
+        if (A > B) return  1 * dir;
+        return 0;
+      }});
+      rows.forEach(r => tbody.appendChild(r));
+      th.classList.add(dir === 1 ? 'sorted-asc' : 'sorted-desc');
+    }});
+  }});
+
+  busca?.addEventListener('input', () => {{
+    const q = busca.value.toLowerCase();
+    const rows = Array.from(table.tBodies[0].rows);
+    rows.forEach(tr => {{
+      const txt = tr.innerText.toLowerCase();
+      tr.style.display = txt.includes(q) ? '' : 'none';
+    }});
+  }});
+
+  btnCsv?.addEventListener('click', () => {{
+    const rows = [];
+    const selRows = Array.from(table.querySelectorAll('tr'));
+    selRows.forEach((tr, i) => {{
+      if (i>0 && tr.style.display === 'none') return;
+      const cells = Array.from(tr.cells).map(td => {{
+        const t = td.innerText.replace(/"/g,'""');
+        return /[",\n]/.test(t) ? `"${{t}}"` : t;
+      }});
+      rows.push(cells.join(','));
+    }});
+    const blob = new Blob([rows.join('\n')], {{type: 'text/csv;charset=utf-8;'}});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = (document.title || 'export') + '.csv';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(() => URL.revokeObjectURL(url), 5000);
+  }});
+}})();
+</script>
+</body>
+</html>
