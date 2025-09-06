@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>APC — Linhas da tabela dbo.variantes</title>
+<style>
+  :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif; }
+  body { margin: 24px; }
+  h1 { margin: 0 0 6px 0; font-size: 1.6rem; }
+  .meta { color: #444; font-size: .95rem; margin-bottom: 12px; }
+  .toolbar { display:flex; gap: 8px; align-items:center; margin: 12px 0; flex-wrap: wrap; }
+  input[type="search"] { padding: 8px 10px; border: 1px solid #ccc; border-radius: 10px; min-width: 260px; }
+  button { padding: 8px 12px; border: 1px solid #ccc; border-radius: 10px; background: #f7f7f7; cursor: pointer; }
+  button:hover { background: #eee; }
+  table { width: 100%; border-collapse: collapse; }
+  thead th { position: sticky; top: 0; background: #fafafa; border-bottom: 1px solid #ddd; text-align: left; padding: 10px; cursor: pointer; }
+  tbody td { border-bottom: 1px solid #f0f0f0; padding: 8px 10px; vertical-align: top; }
+  .sortable::after { content: " ⇅"; font-size: .8em; color: #888; }
+  .sorted-asc::after { content: " ↑"; }
+  .sorted-desc::after { content: " ↓"; }
+  .empty { padding: 16px; background: #fff6f6; border: 1px solid #ffdede; border-radius: 12px; }
+  a.btn { display:inline-block; margin: 0 8px 8px 0; padding: 6px 10px; border-radius: 10px; border:1px solid #ddd; text-decoration:none; color:#222; background:#f9f9f9; }
+  a.btn:hover { background:#f0f0f0; }
+</style>
+</head>
+<body>
+<h1>APC — Linhas da tabela dbo.variantes</h1>
+<div class="meta">Gene: <strong>APC</strong> • Linhas: <strong>8</strong></div>
+<div class="toolbar">
+  <input id="busca" type="search" placeholder="Filtrar linhas... (busca global)">
+  <button id="btnCsv" type="button">Exportar CSV</button>
+  <a class="btn" href="index.html">Voltar ao índice</a>
+</div>
+<div id="wrap">
+<table id="tabela" border="0">
+<thead><tr>
+<th>Gene</th>
+<th>Chr</th>
+<th>Pos</th>
+<th>ID</th>
+<th>Ref</th>
+<th>Alt</th>
+<th>Impacto</th>
+<th>GT</th>
+<th>VAF</th>
+<th>ClinVar_ID</th>
+<th>ClinVar_Significance</th>
+<th>ClinVar_Review_Status</th>
+<th>ClinVar_Disease_Names</th>
+<th>ID_variante</th>
+<th>Qual</th>
+<th>Filtro</th>
+<th>Ensembl</th>
+<th>Alteracao_nucleotidica</th>
+<th>Alteracao_aminoacidica</th>
+<th>GQ</th>
+<th>DP</th>
+<th>AD</th>
+<th>PL</th>
+<th>HGMD</th>
+<th>Resultado</th>
+<th>Status</th>
+<th>Buscar</th>
+<th>SIFT</th>
+<th>PolyPhen</th>
+<th>Biotype</th>
+<th>Alteracao_nucleotidica_reversa</th>
+<th>Alteracao_aminoacidica_reversa</th>
+<th>Resultado_reverso</th>
+<th>encontrado_rsid</th>
+<th>gnomAD_AF_Global</th>
+<th>gnomAD_AFR_AF</th>
+<th>gnomAD_AMR_AF</th>
+<th>gnomAD_ASJ_AF</th>
+<th>gnomAD_EAS_AF</th>
+<th>gnomAD_FIN_AF</th>
+<th>gnomAD_NFE_AF</th>
+<th>gnomAD_SAS_AF</th>
+<th>gnomAD_OTH_AF</th>
+<th>PhyloP</th>
+<th>PhastCons</th>
+<th>GERP</th>
+<th>CADD_Raw</th>
+<th>CADD_Phred</th>
+<th>LOEUF</th>
+<th>Allele_String</th>
+<th>ClinVar_Disease_Count</th>
+<th>letra_inicial_gene</th>
+</tr></thead><tbody>
+<tr>
+<td>APC</td>
+<td>chr5</td>
+<td>112822734</td>
+<td>rs2545162</td>
+<td>G</td>
+<td>A</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.520325</td>
+<td>74125</td>
+<td>other</td>
+<td>no_assertion_criteria_provided</td>
+<td>Familial colorectal cancer</td>
+<td>15712</td>
+<td>58.3</td>
+<td>PASS</td>
+<td>ENST00000257430</td>
+<td>ENST00000257430.9:c.1408+743G&gt;A</td>
+<td></td>
+<td>52</td>
+<td>123</td>
+<td>59*64</td>
+<td>58*0*53</td>
+<td></td>
+<td>G/A</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000257430.9:c.1408+743G&gt;A</td>
+<td></td>
+<td>G/A</td>
+<td></td>
+<td>0.6178</td>
+<td>0.5427</td>
+<td>0.6912</td>
+<td>0.5999</td>
+<td>0.8218</td>
+<td>0.5455</td>
+<td>0.6341</td>
+<td>0.7395</td>
+<td>0.6325</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.321</td>
+<td>G/A</td>
+<td>2</td>
+<td>A</td>
+</tr>
+<tr>
+<td>APC</td>
+<td>chr5</td>
+<td>112827157</td>
+<td>rs2229992</td>
+<td>T</td>
+<td>C</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.441176</td>
+<td>35064</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>APC-Associated Polyposis Disorders; Carcinoma of colon; Desmoid disease: hereditary; Familial adenomatous polyposis 1; Familial colorectal cancer; Hepatocellular carcinoma; Hereditary cancer-predisposing syndrome; Neoplasm of stomach</td>
+<td>15713</td>
+<td>51.4</td>
+<td>PASS</td>
+<td>ENST00000257430</td>
+<td>ENST00000257430.9:c.1458T&gt;C</td>
+<td>ENSP00000257430.4:p.Tyr486=</td>
+<td>46</td>
+<td>68</td>
+<td>38*30</td>
+<td>51*0*46</td>
+<td>CM990152</td>
+<td>T/C</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000257430.9:c.1458T&gt;C</td>
+<td>ENSP00000257430.4:p.Tyr486=</td>
+<td>T/C</td>
+<td></td>
+<td>0.4819</td>
+<td>0.2063</td>
+<td>0.6226</td>
+<td>0.5496</td>
+<td>0.6709</td>
+<td>0.4806</td>
+<td>0.5859</td>
+<td>0.6462</td>
+<td>0.5123</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.321</td>
+<td>T/A/C/G</td>
+<td>12</td>
+<td>A</td>
+</tr>
+<tr>
+<td>APC</td>
+<td>chr5</td>
+<td>112828864</td>
+<td>rs351771</td>
+<td>G</td>
+<td>A</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.545455</td>
+<td>35066</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>APC-Associated Polyposis Disorders; Carcinoma of colon; Familial adenomatous polyposis 1; Familial colorectal cancer; Hereditary cancer-predisposing syndrome</td>
+<td>15714</td>
+<td>52.3</td>
+<td>PASS</td>
+<td>ENST00000257430</td>
+<td>ENST00000257430.9:c.1635G&gt;A</td>
+<td>ENSP00000257430.4:p.Ala545=</td>
+<td>51</td>
+<td>77</td>
+<td>35*42</td>
+<td>52*0*56</td>
+<td></td>
+<td>G/A</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000257430.9:c.1635G&gt;A</td>
+<td>ENSP00000257430.4:p.Ala545=</td>
+<td>G/A</td>
+<td></td>
+<td>0.6014</td>
+<td>0.5342</td>
+<td>0.6687</td>
+<td>0.566</td>
+<td>0.8189</td>
+<td>0.5363</td>
+<td>0.6126</td>
+<td>0.7321</td>
+<td>0.61</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.321</td>
+<td>G/A/C/T</td>
+<td>7</td>
+<td>A</td>
+</tr>
+<tr>
+<td>APC</td>
+<td>chr5</td>
+<td>112840073</td>
+<td>rs41115</td>
+<td>G</td>
+<td>A</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.493976</td>
+<td>35071</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>APC-Associated Polyposis Disorders; Carcinoma of colon; Colorectal cancer; Desmoid disease: hereditary; Familial adenomatous polyposis 1; Familial colorectal cancer; Gastric adenocarcinoma and proximal polyposis of the stomach; Gastric cancer; Hepatocellular carcinoma; Hereditary cancer-predisposing syndrome</td>
+<td>15715</td>
+<td>55.8</td>
+<td>PASS</td>
+<td>ENST00000257430</td>
+<td>ENST00000257430.9:c.4479G&gt;A</td>
+<td>ENSP00000257430.4:p.Thr1493=</td>
+<td>52</td>
+<td>83</td>
+<td>42*41</td>
+<td>55*0*54</td>
+<td>CD108356</td>
+<td>G/A</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000257430.9:c.4479G&gt;A</td>
+<td>ENSP00000257430.4:p.Thr1493=</td>
+<td>G/A</td>
+<td></td>
+<td>0.6016</td>
+<td>0.5346</td>
+<td>0.6692</td>
+<td>0.5674</td>
+<td>0.8196</td>
+<td>0.5367</td>
+<td>0.6126</td>
+<td>0.7306</td>
+<td>0.6097</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.321</td>
+<td>G/A</td>
+<td>13</td>
+<td>A</td>
+</tr>
+<tr>
+<td>APC</td>
+<td>chr5</td>
+<td>112840628</td>
+<td>rs42427</td>
+<td>G</td>
+<td>A</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.40625</td>
+<td>35074</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>APC-Associated Polyposis Disorders; Carcinoma of colon; Familial adenomatous polyposis 1; Familial colorectal cancer; Hereditary cancer-predisposing syndrome</td>
+<td>15716</td>
+<td>51.1</td>
+<td>PASS</td>
+<td>ENST00000257430</td>
+<td>ENST00000257430.9:c.5034G&gt;A</td>
+<td>ENSP00000257430.4:p.Gly1678=</td>
+<td>45</td>
+<td>96</td>
+<td>57*39</td>
+<td>51*0*45</td>
+<td></td>
+<td>G/A</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000257430.9:c.5034G&gt;A</td>
+<td>ENSP00000257430.4:p.Gly1678=</td>
+<td>G/A</td>
+<td></td>
+<td>0.6047</td>
+<td>0.5361</td>
+<td>0.6745</td>
+<td>0.5672</td>
+<td>0.8195</td>
+<td>0.537</td>
+<td>0.6176</td>
+<td>0.7302</td>
+<td>0.6118</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.321</td>
+<td>G/A/C/T</td>
+<td>7</td>
+<td>A</td>
+</tr>
+<tr>
+<td>APC</td>
+<td>chr5</td>
+<td>112840862</td>
+<td>rs866006</td>
+<td>T</td>
+<td>G</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.617977</td>
+<td>166360</td>
+<td>likely-benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>APC-Associated Polyposis Disorders; APC-related disorder; Familial adenomatous polyposis 1; Hereditary cancer-predisposing syndrome</td>
+<td>15717</td>
+<td>48.3</td>
+<td>PASS</td>
+<td>ENST00000257430</td>
+<td>ENST00000257430.9:c.5268T&gt;G</td>
+<td>ENSP00000257430.4:p.Ser1756=</td>
+<td>46</td>
+<td>89</td>
+<td>34*55</td>
+<td>48*0*49</td>
+<td></td>
+<td>T/G</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000257430.9:c.5268T&gt;G</td>
+<td>ENSP00000257430.4:p.Ser1756=</td>
+<td>T/G</td>
+<td></td>
+<td>0.6028</td>
+<td>0.5352</td>
+<td>0.6693</td>
+<td>0.5741</td>
+<td>0.8193</td>
+<td>0.5364</td>
+<td>0.6147</td>
+<td>0.7307</td>
+<td>0.6127</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.321</td>
+<td>T/A/G</td>
+<td>6</td>
+<td>A</td>
+</tr>
+<tr>
+<td>APC</td>
+<td>chr5</td>
+<td>112841059</td>
+<td>rs459552</td>
+<td>T</td>
+<td>A</td>
+<td>MODERATE</td>
+<td>1/1</td>
+<td>1</td>
+<td>20089</td>
+<td>benign</td>
+<td>reviewed_by_expert_panel</td>
+<td>APC-Associated Polyposis Disorders; Classic or attenuated familial adenomatous polyposis; Familial adenomatous polyposis 1; Familial colorectal cancer; Familial multiple polyposis syndrome; Hereditary cancer-predisposing syndrome</td>
+<td>15718</td>
+<td>58.0</td>
+<td>PASS</td>
+<td>ENST00000257430</td>
+<td>ENST00000257430.9:c.5465T&gt;A</td>
+<td>ENSP00000257430.4:p.Val1822Asp</td>
+<td>48</td>
+<td>103</td>
+<td>0*103</td>
+<td>58*48*0</td>
+<td>CM990164</td>
+<td>A/A</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000257430.9:c.5465T&gt;A</td>
+<td>ENSP00000257430.4:p.Val1822Asp</td>
+<td>A/A</td>
+<td></td>
+<td>0.8201</td>
+<td>0.9566</td>
+<td>0.812</td>
+<td>0.7612</td>
+<td>0.9022</td>
+<td>0.669</td>
+<td>0.7613</td>
+<td>0.7935</td>
+<td>0.8152</td>
+<td>2.36</td>
+<td>0.997</td>
+<td>3.59</td>
+<td></td>
+<td></td>
+<td>0.321</td>
+<td>T/A/G</td>
+<td>8</td>
+<td>A</td>
+</tr>
+<tr>
+<td>APC</td>
+<td>chr5</td>
+<td>112841474</td>
+<td>rs465899</td>
+<td>G</td>
+<td>A</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.475728</td>
+<td>35080</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>APC-Associated Polyposis Disorders; Carcinoma of colon; Familial adenomatous polyposis 1; Familial colorectal cancer; Hereditary cancer-predisposing syndrome</td>
+<td>15719</td>
+<td>50.4</td>
+<td>PASS</td>
+<td>ENST00000257430</td>
+<td>ENST00000257430.9:c.5880G&gt;A</td>
+<td>ENSP00000257430.4:p.Pro1960=</td>
+<td>46</td>
+<td>103</td>
+<td>54*49</td>
+<td>50*0*48</td>
+<td></td>
+<td>G/A</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000257430.9:c.5880G&gt;A</td>
+<td>ENSP00000257430.4:p.Pro1960=</td>
+<td>G/A</td>
+<td></td>
+<td>0.6028</td>
+<td>0.5384</td>
+<td>0.6696</td>
+<td>0.5675</td>
+<td>0.8207</td>
+<td>0.5372</td>
+<td>0.6129</td>
+<td>0.7302</td>
+<td>0.6102</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.321</td>
+<td>G/A/C/T</td>
+<td>7</td>
+<td>A</td>
+</tr>
+</tbody></table></div>
+<script>
+(function() {{
+  const table = document.getElementById('tabela');
+  const busca = document.getElementById('busca');
+  const btnCsv = document.getElementById('btnCsv');
+  if (!table) return;
+  const getCellText = (tr, idx) => (tr.cells[idx]?.innerText || "").trim();
+  const isNumber = (v) => /^-?\d+(\.\d+)?$/.test(v.replace(/\s+/g, '').replace(',', '.'));
+
+  Array.from(table.tHead.rows[0].cells).forEach((th, idx) => {{
+    th.classList.add('sortable');
+    th.addEventListener('click', () => {{
+      const tbody = table.tBodies[0];
+      const rows = Array.from(tbody.rows);
+      const current = th.classList.contains('sorted-asc') ? 'asc'
+                    : th.classList.contains('sorted-desc') ? 'desc' : null;
+      Array.from(table.tHead.rows[0].cells).forEach(h => h.classList.remove('sorted-asc','sorted-desc'));
+      const dir = current === 'asc' ? -1 : 1;
+      const colIsNum = rows.every(tr => isNumber(getCellText(tr, idx)) || getCellText(tr, idx) === "");
+      rows.sort((a,b) => {{
+        let A = getCellText(a, idx);
+        let B = getCellText(b, idx);
+        if (colIsNum) {{ A = parseFloat(A.replace(',', '.')) || 0; B = parseFloat(B.replace(',', '.')) || 0; }}
+        else {{ A = A.toLowerCase(); B = B.toLowerCase(); }}
+        if (A < B) return -1 * dir;
+        if (A > B) return  1 * dir;
+        return 0;
+      }});
+      rows.forEach(r => tbody.appendChild(r));
+      th.classList.add(dir === 1 ? 'sorted-asc' : 'sorted-desc');
+    }});
+  }});
+
+  busca?.addEventListener('input', () => {{
+    const q = busca.value.toLowerCase();
+    const rows = Array.from(table.tBodies[0].rows);
+    rows.forEach(tr => {{
+      const txt = tr.innerText.toLowerCase();
+      tr.style.display = txt.includes(q) ? '' : 'none';
+    }});
+  }});
+
+  btnCsv?.addEventListener('click', () => {{
+    const rows = [];
+    const selRows = Array.from(table.querySelectorAll('tr'));
+    selRows.forEach((tr, i) => {{
+      if (i>0 && tr.style.display === 'none') return;
+      const cells = Array.from(tr.cells).map(td => {{
+        const t = td.innerText.replace(/"/g,'""');
+        return /[",\n]/.test(t) ? `"${{t}}"` : t;
+      }});
+      rows.push(cells.join(','));
+    }});
+    const blob = new Blob([rows.join('\n')], {{type: 'text/csv;charset=utf-8;'}});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = (document.title || 'export') + '.csv';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(() => URL.revokeObjectURL(url), 5000);
+  }});
+}})();
+</script>
+</body>
+</html>
