@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DMXL2 — Linhas da tabela dbo.variantes</title>
+<style>
+  :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif; }
+  body { margin: 24px; }
+  h1 { margin: 0 0 6px 0; font-size: 1.6rem; }
+  .meta { color: #444; font-size: .95rem; margin-bottom: 12px; }
+  .toolbar { display:flex; gap: 8px; align-items:center; margin: 12px 0; flex-wrap: wrap; }
+  input[type="search"] { padding: 8px 10px; border: 1px solid #ccc; border-radius: 10px; min-width: 260px; }
+  button { padding: 8px 12px; border: 1px solid #ccc; border-radius: 10px; background: #f7f7f7; cursor: pointer; }
+  button:hover { background: #eee; }
+  table { width: 100%; border-collapse: collapse; }
+  thead th { position: sticky; top: 0; background: #fafafa; border-bottom: 1px solid #ddd; text-align: left; padding: 10px; cursor: pointer; }
+  tbody td { border-bottom: 1px solid #f0f0f0; padding: 8px 10px; vertical-align: top; }
+  .sortable::after { content: " ⇅"; font-size: .8em; color: #888; }
+  .sorted-asc::after { content: " ↑"; }
+  .sorted-desc::after { content: " ↓"; }
+  .empty { padding: 16px; background: #fff6f6; border: 1px solid #ffdede; border-radius: 12px; }
+  a.btn { display:inline-block; margin: 0 8px 8px 0; padding: 6px 10px; border-radius: 10px; border:1px solid #ddd; text-decoration:none; color:#222; background:#f9f9f9; }
+  a.btn:hover { background:#f0f0f0; }
+</style>
+</head>
+<body>
+<h1>DMXL2 — Linhas da tabela dbo.variantes</h1>
+<div class="meta">Gene: <strong>DMXL2</strong> • Linhas: <strong>14</strong></div>
+<div class="toolbar">
+  <input id="busca" type="search" placeholder="Filtrar linhas... (busca global)">
+  <button id="btnCsv" type="button">Exportar CSV</button>
+  <a class="btn" href="index.html">Voltar ao índice</a>
+</div>
+<div id="wrap">
+<table id="tabela" border="0">
+<thead><tr>
+<th>Gene</th>
+<th>Chr</th>
+<th>Pos</th>
+<th>ID</th>
+<th>Ref</th>
+<th>Alt</th>
+<th>Impacto</th>
+<th>GT</th>
+<th>VAF</th>
+<th>ClinVar_ID</th>
+<th>ClinVar_Significance</th>
+<th>ClinVar_Review_Status</th>
+<th>ClinVar_Disease_Names</th>
+<th>ID_variante</th>
+<th>Qual</th>
+<th>Filtro</th>
+<th>Ensembl</th>
+<th>Alteracao_nucleotidica</th>
+<th>Alteracao_aminoacidica</th>
+<th>GQ</th>
+<th>DP</th>
+<th>AD</th>
+<th>PL</th>
+<th>HGMD</th>
+<th>Resultado</th>
+<th>Status</th>
+<th>Buscar</th>
+<th>SIFT</th>
+<th>PolyPhen</th>
+<th>Biotype</th>
+<th>Alteracao_nucleotidica_reversa</th>
+<th>Alteracao_aminoacidica_reversa</th>
+<th>Resultado_reverso</th>
+<th>encontrado_rsid</th>
+<th>gnomAD_AF_Global</th>
+<th>gnomAD_AFR_AF</th>
+<th>gnomAD_AMR_AF</th>
+<th>gnomAD_ASJ_AF</th>
+<th>gnomAD_EAS_AF</th>
+<th>gnomAD_FIN_AF</th>
+<th>gnomAD_NFE_AF</th>
+<th>gnomAD_SAS_AF</th>
+<th>gnomAD_OTH_AF</th>
+<th>PhyloP</th>
+<th>PhastCons</th>
+<th>GERP</th>
+<th>CADD_Raw</th>
+<th>CADD_Phred</th>
+<th>LOEUF</th>
+<th>Allele_String</th>
+<th>ClinVar_Disease_Count</th>
+<th>letra_inicial_gene</th>
+</tr></thead><tbody>
+<tr>
+<td>DMXL2</td>
+<td>chr15</td>
+<td>51456413</td>
+<td>rs3736485</td>
+<td>A</td>
+<td>G</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.380952</td>
+<td>1636241</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td></td>
+<td>39877</td>
+<td>39.1</td>
+<td>PASS</td>
+<td>ENST00000560891</td>
+<td>ENST00000560891.6:c.8338-44T&gt;C</td>
+<td></td>
+<td>39</td>
+<td>21</td>
+<td>13*8</td>
+<td>39*0*54</td>
+<td></td>
+<td>A/G</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000560891.6:c.8338-44A&gt;G</td>
+<td></td>
+<td>T/C</td>
+<td></td>
+<td>0.4948</td>
+<td>0.4123</td>
+<td>0.528</td>
+<td>0.5234</td>
+<td>0.1575</td>
+<td>0.5757</td>
+<td>0.5527</td>
+<td>0.4179</td>
+<td>0.5019</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.345</td>
+<td>A/C/G</td>
+<td>1</td>
+<td>D</td>
+</tr>
+<tr>
+<td>DMXL2</td>
+<td>chr15</td>
+<td>51458649</td>
+<td>rs7165887</td>
+<td>G</td>
+<td>A</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.484848</td>
+<td>1641330</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Developmental and epileptic encephalopathy: 81; Hearing loss: autosomal dominant 71; Polyendocrine-polyneuropathy syndrome</td>
+<td>39878</td>
+<td>45.9</td>
+<td>PASS</td>
+<td>ENST00000560891</td>
+<td>ENST00000560891.6:c.8077-22C&gt;T</td>
+<td></td>
+<td>41</td>
+<td>66</td>
+<td>34*32</td>
+<td>45*0*42</td>
+<td></td>
+<td>G/A</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000560891.6:c.8077-22G&gt;A</td>
+<td></td>
+<td>C/T</td>
+<td></td>
+<td>0.4652</td>
+<td>0.3717</td>
+<td>0.4882</td>
+<td>0.3816</td>
+<td>0.423</td>
+<td>0.5502</td>
+<td>0.5118</td>
+<td>0.4178</td>
+<td>0.4598</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.345</td>
+<td>G/A</td>
+<td>4</td>
+<td>D</td>
+</tr>
+<tr>
+<td>DMXL2</td>
+<td>chr15</td>
+<td>51466148</td>
+<td></td>
+<td>CA</td>
+<td>C</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.482759</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>39879</td>
+<td>21.7</td>
+<td>PASS</td>
+<td>ENST00000560891</td>
+<td>ENST00000560891.6:c.7520+35_7520+36del</td>
+<td></td>
+<td>22</td>
+<td>29</td>
+<td>15*14</td>
+<td>21*0*48</td>
+<td></td>
+<td>CA/C</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td></td>
+<td></td>
+<td>CA/G</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.345000</td>
+<td></td>
+<td></td>
+<td>D</td>
+</tr>
+<tr>
+<td>DMXL2</td>
+<td>chr15</td>
+<td>51478259</td>
+<td></td>
+<td>AT</td>
+<td>A</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.468085</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>39880</td>
+<td>43.6</td>
+<td>PASS</td>
+<td>ENST00000560891</td>
+<td>ENST00000560891.6:c.6833+11_6833+12del</td>
+<td></td>
+<td>43</td>
+<td>47</td>
+<td>24*22</td>
+<td>43*0*50</td>
+<td></td>
+<td>AT/A</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td></td>
+<td></td>
+<td>AT/T</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.345000</td>
+<td></td>
+<td></td>
+<td>D</td>
+</tr>
+<tr>
+<td>DMXL2</td>
+<td>chr15</td>
+<td>51480940</td>
+<td>rs150163605</td>
+<td>T</td>
+<td>G</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.422764</td>
+<td>891991</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>DMXL2-related disorder</td>
+<td>39881</td>
+<td>41.9</td>
+<td>PASS</td>
+<td>ENST00000560891</td>
+<td>ENST00000560891.6:c.6166A&gt;C</td>
+<td>ENSP00000453267.2:p.Arg2056=</td>
+<td>42</td>
+<td>123</td>
+<td>71*52</td>
+<td>41*0*52</td>
+<td></td>
+<td>T/G</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000560891.6:c.6166T&gt;G</td>
+<td></td>
+<td>A/C</td>
+<td></td>
+<td>0.0007351</td>
+<td>4.809e-05</td>
+<td>0.003398</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0.0008084</td>
+<td>0.000207</td>
+<td>0.0009461</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.345</td>
+<td>T/G</td>
+<td>2</td>
+<td>D</td>
+</tr>
+<tr>
+<td>DMXL2</td>
+<td>chr15</td>
+<td>51491623</td>
+<td>rs10851500</td>
+<td>T</td>
+<td>C</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.387387</td>
+<td>1661444</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Developmental and epileptic encephalopathy: 81; Hearing loss: autosomal dominant 71; Polyendocrine-polyneuropathy syndrome</td>
+<td>39882</td>
+<td>40.8</td>
+<td>PASS</td>
+<td>ENST00000560891</td>
+<td>ENST00000560891.6:c.4908A&gt;G</td>
+<td>ENSP00000453267.2:p.Gly1636=</td>
+<td>41</td>
+<td>111</td>
+<td>68*43</td>
+<td>40*0*53</td>
+<td></td>
+<td>T/C</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000560891.6:c.4908T&gt;C</td>
+<td></td>
+<td>A/G</td>
+<td></td>
+<td>0.4978</td>
+<td>0.4712</td>
+<td>0.5027</td>
+<td>0.3857</td>
+<td>0.428</td>
+<td>0.54</td>
+<td>0.5205</td>
+<td>0.4243</td>
+<td>0.4824</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.345</td>
+<td>T/C</td>
+<td>4</td>
+<td>D</td>
+</tr>
+<tr>
+<td>DMXL2</td>
+<td>chr15</td>
+<td>51491784</td>
+<td>rs12101858</td>
+<td>G</td>
+<td>C</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.5</td>
+<td>1681537</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td></td>
+<td>39883</td>
+<td>42.0</td>
+<td>PASS</td>
+<td>ENST00000560891</td>
+<td>ENST00000560891.6:c.4784-37C&gt;G</td>
+<td></td>
+<td>40</td>
+<td>18</td>
+<td>9*9</td>
+<td>42*0*43</td>
+<td></td>
+<td>G/C</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000560891.6:c.4784-37G&gt;C</td>
+<td></td>
+<td>C/G</td>
+<td></td>
+<td>0.4371</td>
+<td>0.3059</td>
+<td>0.4807</td>
+<td>0.3824</td>
+<td>0.3371</td>
+<td>0.5318</td>
+<td>0.5016</td>
+<td>0.4059</td>
+<td>0.4364</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.345</td>
+<td>G/C</td>
+<td>1</td>
+<td>D</td>
+</tr>
+<tr>
+<td>DMXL2</td>
+<td>chr15</td>
+<td>51499362</td>
+<td>rs12102203</td>
+<td>A</td>
+<td>G</td>
+<td>MODERATE</td>
+<td>0/1</td>
+<td>0.487179</td>
+<td>1661447</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Developmental and epileptic encephalopathy: 81; Hearing loss: autosomal dominant 71; Polyendocrine-polyneuropathy syndrome</td>
+<td>39884</td>
+<td>54.3</td>
+<td>PASS</td>
+<td>ENST00000560891</td>
+<td>ENST00000560891.6:c.3862T&gt;C</td>
+<td>ENSP00000453267.2:p.Ser1288Pro</td>
+<td>45</td>
+<td>78</td>
+<td>40*38</td>
+<td>54*0*45</td>
+<td></td>
+<td>A/G</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000560891.6:c.3862A&gt;G</td>
+<td>ENSP00000453267.2:p.Pro1288Ser</td>
+<td>T/C</td>
+<td></td>
+<td>0.4904</td>
+<td>0.4441</td>
+<td>0.5011</td>
+<td>0.3856</td>
+<td>0.4325</td>
+<td>0.5418</td>
+<td>0.5203</td>
+<td>0.4246</td>
+<td>0.4806</td>
+<td>0.269</td>
+<td>0.67</td>
+<td>1.7</td>
+<td></td>
+<td></td>
+<td>0.345</td>
+<td>A/C/G</td>
+<td>4</td>
+<td>D</td>
+</tr>
+<tr>
+<td>DMXL2</td>
+<td>chr15</td>
+<td>51502975</td>
+<td>rs12592889</td>
+<td>G</td>
+<td>A</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.242857</td>
+<td>1534250</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Developmental and epileptic encephalopathy: 81; Hearing loss: autosomal dominant 71; Polyendocrine-polyneuropathy syndrome</td>
+<td>39885</td>
+<td>31.1</td>
+<td>PASS</td>
+<td>ENST00000560891</td>
+<td>ENST00000560891.6:c.2823C&gt;T</td>
+<td>ENSP00000453267.2:p.Asn941=</td>
+<td>31</td>
+<td>70</td>
+<td>53*17</td>
+<td>31*0*52</td>
+<td></td>
+<td>G/A</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000560891.6:c.2823G&gt;A</td>
+<td></td>
+<td>C/T</td>
+<td></td>
+<td>0.4652</td>
+<td>0.3577</td>
+<td>0.4916</td>
+<td>0.381</td>
+<td>0.4331</td>
+<td>0.5409</td>
+<td>0.5197</td>
+<td>0.4233</td>
+<td>0.463</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.345</td>
+<td>G/A/C</td>
+<td>4</td>
+<td>D</td>
+</tr>
+<tr>
+<td>DMXL2</td>
+<td>chr15</td>
+<td>51576176</td>
+<td>rs2414105</td>
+<td>A</td>
+<td>G</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.202899</td>
+<td>1693709</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td></td>
+<td>39886</td>
+<td>12.9</td>
+<td>PASS</td>
+<td>ENST00000560891</td>
+<td>ENST00000560891.6:c.93T&gt;C</td>
+<td>ENSP00000453267.2:p.Tyr31=</td>
+<td>13</td>
+<td>69</td>
+<td>55*14</td>
+<td>12*0*50</td>
+<td></td>
+<td>A/G</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000560891.6:c.93A&gt;G</td>
+<td></td>
+<td>T/C</td>
+<td></td>
+<td>0.4584</td>
+<td>0.451</td>
+<td>0.4172</td>
+<td>0.3719</td>
+<td>0.3797</td>
+<td>0.3843</td>
+<td>0.4923</td>
+<td>0.3447</td>
+<td>0.4318</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.345</td>
+<td>A/C/G/T</td>
+<td>1</td>
+<td>D</td>
+</tr>
+<tr>
+<td>DMXL2</td>
+<td>chr15</td>
+<td>51576183</td>
+<td>rs3078066</td>
+<td>T</td>
+<td>TA</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.265625</td>
+<td>3662250</td>
+<td>likely-benign</td>
+<td>criteria_provided_single_submitter</td>
+<td></td>
+<td>39887</td>
+<td>5.5</td>
+<td>PASS</td>
+<td>ENST00000560891</td>
+<td>ENST00000560891.6:c.88-3dup</td>
+<td></td>
+<td>6</td>
+<td>64</td>
+<td>13*17</td>
+<td>4*0*39</td>
+<td></td>
+<td>T/TA</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td></td>
+<td></td>
+<td>A/TA</td>
+<td></td>
+<td>0.002834</td>
+<td>0.001832</td>
+<td>0.007502</td>
+<td>0</td>
+<td>0.01019</td>
+<td>0.004638</td>
+<td>0.002252</td>
+<td>0.006702</td>
+<td>0.001453</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.345</td>
+<td>AAAAAAAAAAAAAAAAAAAA/AAAAAAAAAAA/AAAAAAAAAAAAA/AAA</td>
+<td>1</td>
+<td>D</td>
+</tr>
+<tr>
+<td>DMXL2</td>
+<td>chr15</td>
+<td>51622465</td>
+<td>rs2278990</td>
+<td>G</td>
+<td>A</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.441176</td>
+<td>1661450</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Developmental and epileptic encephalopathy: 81; Hearing loss: autosomal dominant 71; Polyendocrine-polyneuropathy syndrome</td>
+<td>39888</td>
+<td>48.2</td>
+<td>PASS</td>
+<td>ENST00000560891</td>
+<td>ENST00000560891.6:c.81C&gt;T</td>
+<td>ENSP00000453267.2:p.Pro27=</td>
+<td>48</td>
+<td>68</td>
+<td>38*30</td>
+<td>48*0*56</td>
+<td></td>
+<td>G/A</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000560891.6:c.81G&gt;A</td>
+<td></td>
+<td>C/T</td>
+<td></td>
+<td>0.4742</td>
+<td>0.4016</td>
+<td>0.4931</td>
+<td>0.3862</td>
+<td>0.349</td>
+<td>0.5392</td>
+<td>0.5194</td>
+<td>0.4188</td>
+<td>0.4683</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.345</td>
+<td>G/A/T</td>
+<td>4</td>
+<td>D</td>
+</tr>
+<tr>
+<td>DMXL2</td>
+<td>chr15</td>
+<td>51622519</td>
+<td>rs2278989</td>
+<td>T</td>
+<td>C</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.445946</td>
+<td>1611635</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Developmental and epileptic encephalopathy: 81; Hearing loss: autosomal dominant 71; Polyendocrine-polyneuropathy syndrome</td>
+<td>39889</td>
+<td>50.2</td>
+<td>PASS</td>
+<td>ENST00000560891</td>
+<td>ENST00000560891.6:c.27A&gt;G</td>
+<td>ENSP00000453267.2:p.Gly9=</td>
+<td>49</td>
+<td>74</td>
+<td>41*33</td>
+<td>50*0*57</td>
+<td></td>
+<td>T/C</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000560891.6:c.27T&gt;C</td>
+<td></td>
+<td>A/G</td>
+<td></td>
+<td>0.475</td>
+<td>0.4021</td>
+<td>0.4947</td>
+<td>0.3867</td>
+<td>0.3498</td>
+<td>0.541</td>
+<td>0.5198</td>
+<td>0.4195</td>
+<td>0.4683</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.345</td>
+<td>T/C/G</td>
+<td>4</td>
+<td>D</td>
+</tr>
+<tr>
+<td>DMXL2</td>
+<td>chr15</td>
+<td>51622581</td>
+<td>rs6493514</td>
+<td>T</td>
+<td>G</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td>1636300</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Developmental and epileptic encephalopathy: 81; Hearing loss: autosomal dominant 71; Polyendocrine-polyneuropathy syndrome</td>
+<td>39890</td>
+<td>49.2</td>
+<td>PASS</td>
+<td>ENST00000560891</td>
+<td>ENST00000560891.6:c.-36A&gt;C</td>
+<td></td>
+<td>47</td>
+<td>33</td>
+<td>0*33</td>
+<td>49*50*0</td>
+<td></td>
+<td>G/G</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td></td>
+<td></td>
+<td>C/C</td>
+<td></td>
+<td>0.8143</td>
+<td>0.87</td>
+<td>0.8206</td>
+<td>0.6928</td>
+<td>0.9901</td>
+<td>0.8744</td>
+<td>0.7604</td>
+<td>0.8457</td>
+<td>0.7906</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.345</td>
+<td>T/A/G</td>
+<td>4</td>
+<td>D</td>
+</tr>
+</tbody></table></div>
+<script>
+(function() {{
+  const table = document.getElementById('tabela');
+  const busca = document.getElementById('busca');
+  const btnCsv = document.getElementById('btnCsv');
+  if (!table) return;
+  const getCellText = (tr, idx) => (tr.cells[idx]?.innerText || "").trim();
+  const isNumber = (v) => /^-?\d+(\.\d+)?$/.test(v.replace(/\s+/g, '').replace(',', '.'));
+
+  Array.from(table.tHead.rows[0].cells).forEach((th, idx) => {{
+    th.classList.add('sortable');
+    th.addEventListener('click', () => {{
+      const tbody = table.tBodies[0];
+      const rows = Array.from(tbody.rows);
+      const current = th.classList.contains('sorted-asc') ? 'asc'
+                    : th.classList.contains('sorted-desc') ? 'desc' : null;
+      Array.from(table.tHead.rows[0].cells).forEach(h => h.classList.remove('sorted-asc','sorted-desc'));
+      const dir = current === 'asc' ? -1 : 1;
+      const colIsNum = rows.every(tr => isNumber(getCellText(tr, idx)) || getCellText(tr, idx) === "");
+      rows.sort((a,b) => {{
+        let A = getCellText(a, idx);
+        let B = getCellText(b, idx);
+        if (colIsNum) {{ A = parseFloat(A.replace(',', '.')) || 0; B = parseFloat(B.replace(',', '.')) || 0; }}
+        else {{ A = A.toLowerCase(); B = B.toLowerCase(); }}
+        if (A < B) return -1 * dir;
+        if (A > B) return  1 * dir;
+        return 0;
+      }});
+      rows.forEach(r => tbody.appendChild(r));
+      th.classList.add(dir === 1 ? 'sorted-asc' : 'sorted-desc');
+    }});
+  }});
+
+  busca?.addEventListener('input', () => {{
+    const q = busca.value.toLowerCase();
+    const rows = Array.from(table.tBodies[0].rows);
+    rows.forEach(tr => {{
+      const txt = tr.innerText.toLowerCase();
+      tr.style.display = txt.includes(q) ? '' : 'none';
+    }});
+  }});
+
+  btnCsv?.addEventListener('click', () => {{
+    const rows = [];
+    const selRows = Array.from(table.querySelectorAll('tr'));
+    selRows.forEach((tr, i) => {{
+      if (i>0 && tr.style.display === 'none') return;
+      const cells = Array.from(tr.cells).map(td => {{
+        const t = td.innerText.replace(/"/g,'""');
+        return /[",\n]/.test(t) ? `"${{t}}"` : t;
+      }});
+      rows.push(cells.join(','));
+    }});
+    const blob = new Blob([rows.join('\n')], {{type: 'text/csv;charset=utf-8;'}});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = (document.title || 'export') + '.csv';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(() => URL.revokeObjectURL(url), 5000);
+  }});
+}})();
+</script>
+</body>
+</html>
