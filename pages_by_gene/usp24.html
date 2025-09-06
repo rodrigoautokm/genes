@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>USP24 — Linhas da tabela dbo.variantes</title>
+<style>
+  :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif; }
+  body { margin: 24px; }
+  h1 { margin: 0 0 6px 0; font-size: 1.6rem; }
+  .meta { color: #444; font-size: .95rem; margin-bottom: 12px; }
+  .toolbar { display:flex; gap: 8px; align-items:center; margin: 12px 0; flex-wrap: wrap; }
+  input[type="search"] { padding: 8px 10px; border: 1px solid #ccc; border-radius: 10px; min-width: 260px; }
+  button { padding: 8px 12px; border: 1px solid #ccc; border-radius: 10px; background: #f7f7f7; cursor: pointer; }
+  button:hover { background: #eee; }
+  table { width: 100%; border-collapse: collapse; }
+  thead th { position: sticky; top: 0; background: #fafafa; border-bottom: 1px solid #ddd; text-align: left; padding: 10px; cursor: pointer; }
+  tbody td { border-bottom: 1px solid #f0f0f0; padding: 8px 10px; vertical-align: top; }
+  .sortable::after { content: " ⇅"; font-size: .8em; color: #888; }
+  .sorted-asc::after { content: " ↑"; }
+  .sorted-desc::after { content: " ↓"; }
+  .empty { padding: 16px; background: #fff6f6; border: 1px solid #ffdede; border-radius: 12px; }
+  a.btn { display:inline-block; margin: 0 8px 8px 0; padding: 6px 10px; border-radius: 10px; border:1px solid #ddd; text-decoration:none; color:#222; background:#f9f9f9; }
+  a.btn:hover { background:#f0f0f0; }
+</style>
+</head>
+<body>
+<h1>USP24 — Linhas da tabela dbo.variantes</h1>
+<div class="meta">Gene: <strong>USP24</strong> • Linhas: <strong>9</strong></div>
+<div class="toolbar">
+  <input id="busca" type="search" placeholder="Filtrar linhas... (busca global)">
+  <button id="btnCsv" type="button">Exportar CSV</button>
+  <a class="btn" href="index.html">Voltar ao índice</a>
+</div>
+<div id="wrap">
+<table id="tabela" border="0">
+<thead><tr>
+<th>Gene</th>
+<th>Chr</th>
+<th>Pos</th>
+<th>ID</th>
+<th>Ref</th>
+<th>Alt</th>
+<th>Impacto</th>
+<th>GT</th>
+<th>VAF</th>
+<th>ClinVar_ID</th>
+<th>ClinVar_Significance</th>
+<th>ClinVar_Review_Status</th>
+<th>ClinVar_Disease_Names</th>
+<th>ID_variante</th>
+<th>Qual</th>
+<th>Filtro</th>
+<th>Ensembl</th>
+<th>Alteracao_nucleotidica</th>
+<th>Alteracao_aminoacidica</th>
+<th>GQ</th>
+<th>DP</th>
+<th>AD</th>
+<th>PL</th>
+<th>HGMD</th>
+<th>Resultado</th>
+<th>Status</th>
+<th>Buscar</th>
+<th>SIFT</th>
+<th>PolyPhen</th>
+<th>Biotype</th>
+<th>Alteracao_nucleotidica_reversa</th>
+<th>Alteracao_aminoacidica_reversa</th>
+<th>Resultado_reverso</th>
+<th>encontrado_rsid</th>
+<th>gnomAD_AF_Global</th>
+<th>gnomAD_AFR_AF</th>
+<th>gnomAD_AMR_AF</th>
+<th>gnomAD_ASJ_AF</th>
+<th>gnomAD_EAS_AF</th>
+<th>gnomAD_FIN_AF</th>
+<th>gnomAD_NFE_AF</th>
+<th>gnomAD_SAS_AF</th>
+<th>gnomAD_OTH_AF</th>
+<th>PhyloP</th>
+<th>PhastCons</th>
+<th>GERP</th>
+<th>CADD_Raw</th>
+<th>CADD_Phred</th>
+<th>LOEUF</th>
+<th>Allele_String</th>
+<th>ClinVar_Disease_Count</th>
+<th>letra_inicial_gene</th>
+</tr></thead><tbody>
+<tr>
+<td>USP24</td>
+<td>chr1</td>
+<td>55063514</td>
+<td>rs505151</td>
+<td>G</td>
+<td>A</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td>30349</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Cardiovascular phenotype; Familial hypercholesterolemia; Hypercholesterolemia: autosomal dominant: 3; Hypercholesterolemia: familial: 1; Hypobetalipoproteinemia</td>
+<td>2053</td>
+<td>60.7</td>
+<td>PASS</td>
+<td>ENST00000294383</td>
+<td></td>
+<td></td>
+<td>48</td>
+<td>87</td>
+<td>0*87</td>
+<td>60*48*0</td>
+<td>CM051950</td>
+<td>A/A</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td></td>
+<td></td>
+<td>T/T</td>
+<td></td>
+<td>0.8994</td>
+<td>0.7427</td>
+<td>0.9576</td>
+<td>0.9464</td>
+<td>0.9488</td>
+<td>0.946</td>
+<td>0.9613</td>
+<td>0.977</td>
+<td>0.9291</td>
+<td>0.938</td>
+<td>0.003</td>
+<td>0.348</td>
+<td></td>
+<td></td>
+<td>1.25</td>
+<td>G/A/C</td>
+<td>7</td>
+<td>U</td>
+</tr>
+<tr>
+<td>USP24</td>
+<td>chr1</td>
+<td>55075501</td>
+<td>rs487230</td>
+<td>A</td>
+<td>G</td>
+<td>MODERATE</td>
+<td>1/1</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2054</td>
+<td>50.2</td>
+<td>PASS</td>
+<td>ENST00000294383</td>
+<td>ENST00000294383.7:c.7403T&gt;C</td>
+<td>ENSP00000294383.5:p.Val2468Ala</td>
+<td>39</td>
+<td>26</td>
+<td>0*26</td>
+<td>50*39*0</td>
+<td></td>
+<td>G/G</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000294383.7:c.7403A&gt;G</td>
+<td>ENSP00000294383.5:p.Ala2468Val</td>
+<td>C/C</td>
+<td></td>
+<td>0.655</td>
+<td>0.3263</td>
+<td>0.8135</td>
+<td>0.7281</td>
+<td>0.9066</td>
+<td>0.7689</td>
+<td>0.7615</td>
+<td>0.8443</td>
+<td>0.723</td>
+<td>5.115</td>
+<td>1</td>
+<td>4.22</td>
+<td></td>
+<td></td>
+<td>0.361</td>
+<td>A/G</td>
+<td></td>
+<td>U</td>
+</tr>
+<tr>
+<td>USP24</td>
+<td>chr1</td>
+<td>55089612</td>
+<td>rs548852</td>
+<td>G</td>
+<td>A</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2055</td>
+<td>52.1</td>
+<td>PASS</td>
+<td>ENST00000294383</td>
+<td>ENST00000294383.7:c.6668+15C&gt;T</td>
+<td></td>
+<td>40</td>
+<td>27</td>
+<td>0*27</td>
+<td>52*40*0</td>
+<td></td>
+<td>A/A</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000294383.7:c.6668+15G&gt;A</td>
+<td></td>
+<td>T/T</td>
+<td></td>
+<td>0.6542</td>
+<td>0.3234</td>
+<td>0.8132</td>
+<td>0.7308</td>
+<td>0.9071</td>
+<td>0.7699</td>
+<td>0.7614</td>
+<td>0.8422</td>
+<td>0.7202</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.361</td>
+<td>G/A/C</td>
+<td></td>
+<td>U</td>
+</tr>
+<tr>
+<td>USP24</td>
+<td>chr1</td>
+<td>55096452</td>
+<td>rs580485</td>
+<td>G</td>
+<td>T</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2056</td>
+<td>51.4</td>
+<td>PASS</td>
+<td>ENST00000294383</td>
+<td>ENST00000294383.7:c.6061+46C&gt;A</td>
+<td></td>
+<td>33</td>
+<td>15</td>
+<td>0*15</td>
+<td>51*33*0</td>
+<td></td>
+<td>T/T</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000294383.7:c.6061+46G&gt;T</td>
+<td></td>
+<td>A/A</td>
+<td></td>
+<td>0.867</td>
+<td>0.869</td>
+<td>0.9009</td>
+<td>0.819</td>
+<td>0.9952</td>
+<td>0.8764</td>
+<td>0.8457</td>
+<td>0.9128</td>
+<td>0.8783</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.361</td>
+<td>G/A/C/T</td>
+<td></td>
+<td>U</td>
+</tr>
+<tr>
+<td>USP24</td>
+<td>chr1</td>
+<td>55101737</td>
+<td>rs615652</td>
+<td>A</td>
+<td>G</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2057</td>
+<td>48.1</td>
+<td>PASS</td>
+<td>ENST00000294383</td>
+<td>ENST00000294383.7:c.5026-34T&gt;C</td>
+<td></td>
+<td>40</td>
+<td>56</td>
+<td>0*56</td>
+<td>48*40*0</td>
+<td></td>
+<td>G/G</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000294383.7:c.5026-34A&gt;G</td>
+<td></td>
+<td>C/C</td>
+<td></td>
+<td>0.8655</td>
+<td>0.8527</td>
+<td>0.9005</td>
+<td>0.8254</td>
+<td>0.9956</td>
+<td>0.8793</td>
+<td>0.8513</td>
+<td>0.9141</td>
+<td>0.879</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.361</td>
+<td>A/C/G/T</td>
+<td></td>
+<td>U</td>
+</tr>
+<tr>
+<td>USP24</td>
+<td>chr1</td>
+<td>55106280</td>
+<td>rs41301092</td>
+<td>T</td>
+<td>C</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.465116</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2058</td>
+<td>47.6</td>
+<td>PASS</td>
+<td>ENST00000294383</td>
+<td>ENST00000294383.7:c.4763-17A&gt;G</td>
+<td></td>
+<td>47</td>
+<td>43</td>
+<td>23*20</td>
+<td>47*0*55</td>
+<td></td>
+<td>T/C</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000294383.7:c.4763-17T&gt;C</td>
+<td></td>
+<td>A/G</td>
+<td></td>
+<td>0.03436</td>
+<td>0.008151</td>
+<td>0.03274</td>
+<td>0.04035</td>
+<td>0.0001927</td>
+<td>0.05257</td>
+<td>0.05035</td>
+<td>0.03129</td>
+<td>0.04021</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.361</td>
+<td>T/C</td>
+<td></td>
+<td>U</td>
+</tr>
+<tr>
+<td>USP24</td>
+<td>chr1</td>
+<td>55107194</td>
+<td>rs594226</td>
+<td>G</td>
+<td>A</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2059</td>
+<td>48.5</td>
+<td>PASS</td>
+<td>ENST00000294383</td>
+<td>ENST00000294383.7:c.4762+45C&gt;T</td>
+<td></td>
+<td>34</td>
+<td>32</td>
+<td>0*32</td>
+<td>48*34*0</td>
+<td></td>
+<td>A/A</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000294383.7:c.4762+45G&gt;A</td>
+<td></td>
+<td>T/T</td>
+<td></td>
+<td>0.655</td>
+<td>0.3263</td>
+<td>0.8136</td>
+<td>0.7281</td>
+<td>0.9071</td>
+<td>0.7707</td>
+<td>0.7609</td>
+<td>0.8436</td>
+<td>0.7235</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.361</td>
+<td>G/A/C/T</td>
+<td></td>
+<td>U</td>
+</tr>
+<tr>
+<td>USP24</td>
+<td>chr1</td>
+<td>55172402</td>
+<td>rs1165222</td>
+<td>G</td>
+<td>A</td>
+<td>MODERATE</td>
+<td>1/1</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2060</td>
+<td>50.7</td>
+<td>PASS</td>
+<td>ENST00000294383</td>
+<td>ENST00000294383.7:c.677C&gt;T</td>
+<td>ENSP00000294383.5:p.Thr226Ile</td>
+<td>36</td>
+<td>38</td>
+<td>0*38</td>
+<td>50*36*0</td>
+<td>CM065514</td>
+<td>A/A</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000294383.7:c.677G&gt;A</td>
+<td>ENSP00000294383.5:p.Ile226Thr</td>
+<td>T/T</td>
+<td></td>
+<td>0.8655</td>
+<td>0.8635</td>
+<td>0.9003</td>
+<td>0.8194</td>
+<td>0.994</td>
+<td>0.8758</td>
+<td>0.8459</td>
+<td>0.9127</td>
+<td>0.8794</td>
+<td>2.994</td>
+<td>0.998</td>
+<td>2.19</td>
+<td></td>
+<td></td>
+<td>0.361</td>
+<td>G/A/C/T</td>
+<td></td>
+<td>U</td>
+</tr>
+<tr>
+<td>USP24</td>
+<td>chr1</td>
+<td>55178164</td>
+<td></td>
+<td>TA</td>
+<td>T</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2061</td>
+<td>49.8</td>
+<td>PASS</td>
+<td>ENST00000294383</td>
+<td>ENST00000294383.7:c.325-32_325-31del</td>
+<td></td>
+<td>43</td>
+<td>30</td>
+<td>0*30</td>
+<td>49*43*0</td>
+<td></td>
+<td>T/T</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td></td>
+<td></td>
+<td>A/A</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.361000</td>
+<td></td>
+<td></td>
+<td>U</td>
+</tr>
+</tbody></table></div>
+<script>
+(function() {{
+  const table = document.getElementById('tabela');
+  const busca = document.getElementById('busca');
+  const btnCsv = document.getElementById('btnCsv');
+  if (!table) return;
+  const getCellText = (tr, idx) => (tr.cells[idx]?.innerText || "").trim();
+  const isNumber = (v) => /^-?\d+(\.\d+)?$/.test(v.replace(/\s+/g, '').replace(',', '.'));
+
+  Array.from(table.tHead.rows[0].cells).forEach((th, idx) => {{
+    th.classList.add('sortable');
+    th.addEventListener('click', () => {{
+      const tbody = table.tBodies[0];
+      const rows = Array.from(tbody.rows);
+      const current = th.classList.contains('sorted-asc') ? 'asc'
+                    : th.classList.contains('sorted-desc') ? 'desc' : null;
+      Array.from(table.tHead.rows[0].cells).forEach(h => h.classList.remove('sorted-asc','sorted-desc'));
+      const dir = current === 'asc' ? -1 : 1;
+      const colIsNum = rows.every(tr => isNumber(getCellText(tr, idx)) || getCellText(tr, idx) === "");
+      rows.sort((a,b) => {{
+        let A = getCellText(a, idx);
+        let B = getCellText(b, idx);
+        if (colIsNum) {{ A = parseFloat(A.replace(',', '.')) || 0; B = parseFloat(B.replace(',', '.')) || 0; }}
+        else {{ A = A.toLowerCase(); B = B.toLowerCase(); }}
+        if (A < B) return -1 * dir;
+        if (A > B) return  1 * dir;
+        return 0;
+      }});
+      rows.forEach(r => tbody.appendChild(r));
+      th.classList.add(dir === 1 ? 'sorted-asc' : 'sorted-desc');
+    }});
+  }});
+
+  busca?.addEventListener('input', () => {{
+    const q = busca.value.toLowerCase();
+    const rows = Array.from(table.tBodies[0].rows);
+    rows.forEach(tr => {{
+      const txt = tr.innerText.toLowerCase();
+      tr.style.display = txt.includes(q) ? '' : 'none';
+    }});
+  }});
+
+  btnCsv?.addEventListener('click', () => {{
+    const rows = [];
+    const selRows = Array.from(table.querySelectorAll('tr'));
+    selRows.forEach((tr, i) => {{
+      if (i>0 && tr.style.display === 'none') return;
+      const cells = Array.from(tr.cells).map(td => {{
+        const t = td.innerText.replace(/"/g,'""');
+        return /[",\n]/.test(t) ? `"${{t}}"` : t;
+      }});
+      rows.push(cells.join(','));
+    }});
+    const blob = new Blob([rows.join('\n')], {{type: 'text/csv;charset=utf-8;'}});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = (document.title || 'export') + '.csv';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(() => URL.revokeObjectURL(url), 5000);
+  }});
+}})();
+</script>
+</body>
+</html>
