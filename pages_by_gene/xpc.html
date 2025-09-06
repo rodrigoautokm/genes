@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>XPC — Linhas da tabela dbo.variantes</title>
+<style>
+  :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif; }
+  body { margin: 24px; }
+  h1 { margin: 0 0 6px 0; font-size: 1.6rem; }
+  .meta { color: #444; font-size: .95rem; margin-bottom: 12px; }
+  .toolbar { display:flex; gap: 8px; align-items:center; margin: 12px 0; flex-wrap: wrap; }
+  input[type="search"] { padding: 8px 10px; border: 1px solid #ccc; border-radius: 10px; min-width: 260px; }
+  button { padding: 8px 12px; border: 1px solid #ccc; border-radius: 10px; background: #f7f7f7; cursor: pointer; }
+  button:hover { background: #eee; }
+  table { width: 100%; border-collapse: collapse; }
+  thead th { position: sticky; top: 0; background: #fafafa; border-bottom: 1px solid #ddd; text-align: left; padding: 10px; cursor: pointer; }
+  tbody td { border-bottom: 1px solid #f0f0f0; padding: 8px 10px; vertical-align: top; }
+  .sortable::after { content: " ⇅"; font-size: .8em; color: #888; }
+  .sorted-asc::after { content: " ↑"; }
+  .sorted-desc::after { content: " ↓"; }
+  .empty { padding: 16px; background: #fff6f6; border: 1px solid #ffdede; border-radius: 12px; }
+  a.btn { display:inline-block; margin: 0 8px 8px 0; padding: 6px 10px; border-radius: 10px; border:1px solid #ddd; text-decoration:none; color:#222; background:#f9f9f9; }
+  a.btn:hover { background:#f0f0f0; }
+</style>
+</head>
+<body>
+<h1>XPC — Linhas da tabela dbo.variantes</h1>
+<div class="meta">Gene: <strong>XPC</strong> • Linhas: <strong>11</strong></div>
+<div class="toolbar">
+  <input id="busca" type="search" placeholder="Filtrar linhas... (busca global)">
+  <button id="btnCsv" type="button">Exportar CSV</button>
+  <a class="btn" href="index.html">Voltar ao índice</a>
+</div>
+<div id="wrap">
+<table id="tabela" border="0">
+<thead><tr>
+<th>Gene</th>
+<th>Chr</th>
+<th>Pos</th>
+<th>ID</th>
+<th>Ref</th>
+<th>Alt</th>
+<th>Impacto</th>
+<th>GT</th>
+<th>VAF</th>
+<th>ClinVar_ID</th>
+<th>ClinVar_Significance</th>
+<th>ClinVar_Review_Status</th>
+<th>ClinVar_Disease_Names</th>
+<th>ID_variante</th>
+<th>Qual</th>
+<th>Filtro</th>
+<th>Ensembl</th>
+<th>Alteracao_nucleotidica</th>
+<th>Alteracao_aminoacidica</th>
+<th>GQ</th>
+<th>DP</th>
+<th>AD</th>
+<th>PL</th>
+<th>HGMD</th>
+<th>Resultado</th>
+<th>Status</th>
+<th>Buscar</th>
+<th>SIFT</th>
+<th>PolyPhen</th>
+<th>Biotype</th>
+<th>Alteracao_nucleotidica_reversa</th>
+<th>Alteracao_aminoacidica_reversa</th>
+<th>Resultado_reverso</th>
+<th>encontrado_rsid</th>
+<th>gnomAD_AF_Global</th>
+<th>gnomAD_AFR_AF</th>
+<th>gnomAD_AMR_AF</th>
+<th>gnomAD_ASJ_AF</th>
+<th>gnomAD_EAS_AF</th>
+<th>gnomAD_FIN_AF</th>
+<th>gnomAD_NFE_AF</th>
+<th>gnomAD_SAS_AF</th>
+<th>gnomAD_OTH_AF</th>
+<th>PhyloP</th>
+<th>PhastCons</th>
+<th>GERP</th>
+<th>CADD_Raw</th>
+<th>CADD_Phred</th>
+<th>LOEUF</th>
+<th>Allele_String</th>
+<th>ClinVar_Disease_Count</th>
+<th>letra_inicial_gene</th>
+</tr></thead><tbody>
+<tr>
+<td>XPC</td>
+<td>chr3</td>
+<td>14145323</td>
+<td>rs2470458</td>
+<td>T</td>
+<td>C</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.575758</td>
+<td>263158</td>
+<td>likely-benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Arrhythmogenic right ventricular cardiomyopathy; Xeroderma pigmentosum; Xeroderma pigmentosum: group C</td>
+<td>9491</td>
+<td>58.5</td>
+<td>PASS</td>
+<td>ENST00000285021</td>
+<td>ENST00000285021.12:c.*618A&gt;G</td>
+<td></td>
+<td>55</td>
+<td>33</td>
+<td>14*19</td>
+<td>58*0*58</td>
+<td></td>
+<td>T/C</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000285021.12:c.*618T&gt;C</td>
+<td></td>
+<td>A/G</td>
+<td></td>
+<td>0.1662</td>
+<td>0.09653</td>
+<td>0.1558</td>
+<td>0.2085</td>
+<td>0.0005792</td>
+<td>0.2382</td>
+<td>0.2121</td>
+<td>0.09597</td>
+<td>0.1899</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1.023</td>
+<td>T/C</td>
+<td>3</td>
+<td>X</td>
+</tr>
+<tr>
+<td>XPC</td>
+<td>chr3</td>
+<td>14145330</td>
+<td>rs2470352</td>
+<td>A</td>
+<td>T</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.529412</td>
+<td>1146218</td>
+<td>uncertain-significance</td>
+<td>criteria_provided_single_submitter</td>
+<td>Xeroderma pigmentosum: group C</td>
+<td>9492</td>
+<td>60.8</td>
+<td>PASS</td>
+<td>ENST00000285021</td>
+<td>ENST00000285021.12:c.*611T&gt;A</td>
+<td></td>
+<td>58</td>
+<td>34</td>
+<td>16*18</td>
+<td>60*0*61</td>
+<td></td>
+<td>A/T</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000285021.12:c.*611A&gt;T</td>
+<td></td>
+<td>T/A</td>
+<td></td>
+<td>0.1664</td>
+<td>0.09671</td>
+<td>0.1562</td>
+<td>0.2084</td>
+<td>0.0005812</td>
+<td>0.2387</td>
+<td>0.2123</td>
+<td>0.0956</td>
+<td>0.1895</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1.023</td>
+<td>A/G/T</td>
+<td>1</td>
+<td>X</td>
+</tr>
+<tr>
+<td>XPC</td>
+<td>chr3</td>
+<td>14145949</td>
+<td>rs2228001</td>
+<td>G</td>
+<td>T</td>
+<td>MODERATE</td>
+<td>0/1</td>
+<td>0.453745</td>
+<td>170436</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Arrhythmogenic right ventricular cardiomyopathy; Xeroderma pigmentosum; Xeroderma pigmentosum: group C</td>
+<td>9493</td>
+<td>44.9</td>
+<td>PASS</td>
+<td>ENST00000285021</td>
+<td>ENST00000285021.12:c.2815C&gt;A</td>
+<td>ENSP00000285021.8:p.Gln939Lys</td>
+<td>45</td>
+<td>227</td>
+<td>122*103</td>
+<td>44*0*56</td>
+<td>CM070359</td>
+<td>G/T</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000285021.12:c.2815G&gt;T</td>
+<td>ENSP00000285021.8:p.Lys939Gln</td>
+<td>C/A</td>
+<td></td>
+<td>0.6479</td>
+<td>0.7263</td>
+<td>0.6708</td>
+<td>0.5329</td>
+<td>0.6369</td>
+<td>0.6994</td>
+<td>0.5932</td>
+<td>0.6584</td>
+<td>0.648</td>
+<td>2.828</td>
+<td>1</td>
+<td>4.24</td>
+<td></td>
+<td></td>
+<td>1.023</td>
+<td>G/C/T</td>
+<td>5</td>
+<td>X</td>
+</tr>
+<tr>
+<td>XPC</td>
+<td>chr3</td>
+<td>14146199</td>
+<td>rs2733532</td>
+<td>T</td>
+<td>C</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.538462</td>
+<td>248804</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Xeroderma pigmentosum group A; Xeroderma pigmentosum: group C</td>
+<td>9494</td>
+<td>45.1</td>
+<td>PASS</td>
+<td>ENST00000285021</td>
+<td>ENST00000285021.12:c.2605-40A&gt;G</td>
+<td></td>
+<td>45</td>
+<td>26</td>
+<td>12*14</td>
+<td>45*0*64</td>
+<td></td>
+<td>T/C</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000285021.12:c.2605-40T&gt;C</td>
+<td></td>
+<td>A/G</td>
+<td></td>
+<td>0.6566</td>
+<td>0.7459</td>
+<td>0.6762</td>
+<td>0.5335</td>
+<td>0.6418</td>
+<td>0.7017</td>
+<td>0.5982</td>
+<td>0.6603</td>
+<td>0.6509</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1.023</td>
+<td>T/C/G</td>
+<td>4</td>
+<td>X</td>
+</tr>
+<tr>
+<td>XPC</td>
+<td>chr3</td>
+<td>14147262</td>
+<td>rs2733534</td>
+<td>G</td>
+<td>C</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.53125</td>
+<td>243844</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Xeroderma pigmentosum group A; Xeroderma pigmentosum: group C</td>
+<td>9495</td>
+<td>55.8</td>
+<td>PASS</td>
+<td>ENST00000285021</td>
+<td>ENST00000285021.12:c.2604+28C&gt;G</td>
+<td></td>
+<td>55</td>
+<td>64</td>
+<td>30*34</td>
+<td>55*0*60</td>
+<td></td>
+<td>G/C</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000285021.12:c.2604+28G&gt;C</td>
+<td></td>
+<td>C/G</td>
+<td></td>
+<td>0.4145</td>
+<td>0.3523</td>
+<td>0.4124</td>
+<td>0.4348</td>
+<td>0.0427</td>
+<td>0.4613</td>
+<td>0.4727</td>
+<td>0.3876</td>
+<td>0.4399</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1.023</td>
+<td>G/C</td>
+<td>4</td>
+<td>X</td>
+</tr>
+<tr>
+<td>XPC</td>
+<td>chr3</td>
+<td>14148737</td>
+<td>rs2279017</td>
+<td>T</td>
+<td>G</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.470085</td>
+<td>170435</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Xeroderma pigmentosum group A; Xeroderma pigmentosum: group C</td>
+<td>9496</td>
+<td>59.5</td>
+<td>PASS</td>
+<td>ENST00000285021</td>
+<td>ENST00000285021.12:c.2251-6A&gt;C</td>
+<td></td>
+<td>57</td>
+<td>234</td>
+<td>124*110</td>
+<td>59*0*60</td>
+<td>CS022113</td>
+<td>T/G</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000285021.12:c.2251-6T&gt;G</td>
+<td></td>
+<td>A/C</td>
+<td></td>
+<td>0.642</td>
+<td>0.705</td>
+<td>0.6681</td>
+<td>0.5329</td>
+<td>0.6373</td>
+<td>0.7001</td>
+<td>0.5942</td>
+<td>0.6575</td>
+<td>0.6443</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1.023</td>
+<td>T/C/G</td>
+<td>4</td>
+<td>X</td>
+</tr>
+<tr>
+<td>XPC</td>
+<td>chr3</td>
+<td>14148768</td>
+<td>rs2470353</td>
+<td>G</td>
+<td>C</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.454148</td>
+<td>248907</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Xeroderma pigmentosum group A; Xeroderma pigmentosum: group C</td>
+<td>9497</td>
+<td>58.1</td>
+<td>PASS</td>
+<td>ENST00000285021</td>
+<td>ENST00000285021.12:c.2251-37C&gt;G</td>
+<td></td>
+<td>58</td>
+<td>229</td>
+<td>125*104</td>
+<td>58*0*67</td>
+<td></td>
+<td>G/C</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000285021.12:c.2251-37G&gt;C</td>
+<td></td>
+<td>C/G</td>
+<td></td>
+<td>0.4142</td>
+<td>0.3521</td>
+<td>0.4114</td>
+<td>0.4369</td>
+<td>0.04271</td>
+<td>0.4614</td>
+<td>0.4724</td>
+<td>0.387</td>
+<td>0.4393</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1.023</td>
+<td>G/A/C/T</td>
+<td>4</td>
+<td>X</td>
+</tr>
+<tr>
+<td>XPC</td>
+<td>chr3</td>
+<td>14156487</td>
+<td>rs2958057</td>
+<td>A</td>
+<td>T</td>
+<td>LOW</td>
+<td>1/1</td>
+<td>1</td>
+<td>170433</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Xeroderma pigmentosum: group C</td>
+<td>9498</td>
+<td>59.8</td>
+<td>PASS</td>
+<td>ENST00000285021</td>
+<td>ENST00000285021.12:c.1881T&gt;A</td>
+<td>ENSP00000285021.8:p.Ala627=</td>
+<td>51</td>
+<td>123</td>
+<td>0*123</td>
+<td>59*51*0</td>
+<td></td>
+<td>T/T</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000285021.12:c.1881A&gt;T</td>
+<td></td>
+<td>A/A</td>
+<td></td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1.023</td>
+<td>A/C/G/T</td>
+<td>3</td>
+<td>X</td>
+</tr>
+<tr>
+<td>XPC</td>
+<td>chr3</td>
+<td>14158387</td>
+<td>rs2228000</td>
+<td>G</td>
+<td>A</td>
+<td>MODERATE</td>
+<td>0/1</td>
+<td>0.392405</td>
+<td>122343</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Xeroderma pigmentosum group A; Xeroderma pigmentosum: group C</td>
+<td>9499</td>
+<td>49.5</td>
+<td>PASS</td>
+<td>ENST00000285021</td>
+<td>ENST00000285021.12:c.1496C&gt;T</td>
+<td>ENSP00000285021.8:p.Ala499Val</td>
+<td>49</td>
+<td>158</td>
+<td>96*62</td>
+<td>49*0*62</td>
+<td>CM057944</td>
+<td>G/A</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000285021.12:c.1496G&gt;A</td>
+<td>ENSP00000285021.8:p.Val499Ala</td>
+<td>C/T</td>
+<td></td>
+<td>0.2153</td>
+<td>0.09112</td>
+<td>0.2414</td>
+<td>0.2222</td>
+<td>0.3636</td>
+<td>0.3673</td>
+<td>0.2473</td>
+<td>0.2005</td>
+<td>0.2438</td>
+<td>0.006</td>
+<td>0.001</td>
+<td>-1.03</td>
+<td></td>
+<td></td>
+<td>1.023</td>
+<td>G/A</td>
+<td>4</td>
+<td>X</td>
+</tr>
+<tr>
+<td>XPC</td>
+<td>chr3</td>
+<td>14158408</td>
+<td>rs2227999</td>
+<td>C</td>
+<td>T</td>
+<td>MODERATE</td>
+<td>0/1</td>
+<td>0.41844</td>
+<td>122348</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>XPC-related disorder; Xeroderma pigmentosum group A; Xeroderma pigmentosum: group C</td>
+<td>9500</td>
+<td>50.3</td>
+<td>PASS</td>
+<td>ENST00000285021</td>
+<td>ENST00000285021.12:c.1475G&gt;A</td>
+<td>ENSP00000285021.8:p.Arg492His</td>
+<td>50</td>
+<td>141</td>
+<td>82*59</td>
+<td>50*0*57</td>
+<td>CM068096</td>
+<td>C/T</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000285021.12:c.1475C&gt;T</td>
+<td>ENSP00000285021.8:p.His492Arg</td>
+<td>G/A</td>
+<td></td>
+<td>0.03966</td>
+<td>0.01091</td>
+<td>0.04589</td>
+<td>0.07632</td>
+<td>0.0003879</td>
+<td>0.02951</td>
+<td>0.05844</td>
+<td>0.03543</td>
+<td>0.06013</td>
+<td>-0.19</td>
+<td>0</td>
+<td>-4.51</td>
+<td></td>
+<td></td>
+<td>1.023</td>
+<td>C/T</td>
+<td>5</td>
+<td>X</td>
+</tr>
+<tr>
+<td>XPC</td>
+<td>chr3</td>
+<td>14178595</td>
+<td>rs2607775</td>
+<td>C</td>
+<td>G</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.584906</td>
+<td>247851</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Xeroderma pigmentosum group A; Xeroderma pigmentosum: group C</td>
+<td>9501</td>
+<td>48.2</td>
+<td>PASS</td>
+<td>ENST00000285021</td>
+<td>ENST00000285021.12:c.-27G&gt;C</td>
+<td></td>
+<td>44</td>
+<td>106</td>
+<td>44*62</td>
+<td>48*0*46</td>
+<td></td>
+<td>C/G</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td></td>
+<td></td>
+<td>G/C</td>
+<td></td>
+<td>0.4215</td>
+<td>0.3728</td>
+<td>0.415</td>
+<td>0.428</td>
+<td>0.04217</td>
+<td>0.4624</td>
+<td>0.4755</td>
+<td>0.3874</td>
+<td>0.4433</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1.023</td>
+<td>C/G</td>
+<td>4</td>
+<td>X</td>
+</tr>
+</tbody></table></div>
+<script>
+(function() {{
+  const table = document.getElementById('tabela');
+  const busca = document.getElementById('busca');
+  const btnCsv = document.getElementById('btnCsv');
+  if (!table) return;
+  const getCellText = (tr, idx) => (tr.cells[idx]?.innerText || "").trim();
+  const isNumber = (v) => /^-?\d+(\.\d+)?$/.test(v.replace(/\s+/g, '').replace(',', '.'));
+
+  Array.from(table.tHead.rows[0].cells).forEach((th, idx) => {{
+    th.classList.add('sortable');
+    th.addEventListener('click', () => {{
+      const tbody = table.tBodies[0];
+      const rows = Array.from(tbody.rows);
+      const current = th.classList.contains('sorted-asc') ? 'asc'
+                    : th.classList.contains('sorted-desc') ? 'desc' : null;
+      Array.from(table.tHead.rows[0].cells).forEach(h => h.classList.remove('sorted-asc','sorted-desc'));
+      const dir = current === 'asc' ? -1 : 1;
+      const colIsNum = rows.every(tr => isNumber(getCellText(tr, idx)) || getCellText(tr, idx) === "");
+      rows.sort((a,b) => {{
+        let A = getCellText(a, idx);
+        let B = getCellText(b, idx);
+        if (colIsNum) {{ A = parseFloat(A.replace(',', '.')) || 0; B = parseFloat(B.replace(',', '.')) || 0; }}
+        else {{ A = A.toLowerCase(); B = B.toLowerCase(); }}
+        if (A < B) return -1 * dir;
+        if (A > B) return  1 * dir;
+        return 0;
+      }});
+      rows.forEach(r => tbody.appendChild(r));
+      th.classList.add(dir === 1 ? 'sorted-asc' : 'sorted-desc');
+    }});
+  }});
+
+  busca?.addEventListener('input', () => {{
+    const q = busca.value.toLowerCase();
+    const rows = Array.from(table.tBodies[0].rows);
+    rows.forEach(tr => {{
+      const txt = tr.innerText.toLowerCase();
+      tr.style.display = txt.includes(q) ? '' : 'none';
+    }});
+  }});
+
+  btnCsv?.addEventListener('click', () => {{
+    const rows = [];
+    const selRows = Array.from(table.querySelectorAll('tr'));
+    selRows.forEach((tr, i) => {{
+      if (i>0 && tr.style.display === 'none') return;
+      const cells = Array.from(tr.cells).map(td => {{
+        const t = td.innerText.replace(/"/g,'""');
+        return /[",\n]/.test(t) ? `"${{t}}"` : t;
+      }});
+      rows.push(cells.join(','));
+    }});
+    const blob = new Blob([rows.join('\n')], {{type: 'text/csv;charset=utf-8;'}});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = (document.title || 'export') + '.csv';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(() => URL.revokeObjectURL(url), 5000);
+  }});
+}})();
+</script>
+</body>
+</html>
