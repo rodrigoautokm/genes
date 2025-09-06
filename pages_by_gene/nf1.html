@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NF1 — Linhas da tabela dbo.variantes</title>
+<style>
+  :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif; }
+  body { margin: 24px; }
+  h1 { margin: 0 0 6px 0; font-size: 1.6rem; }
+  .meta { color: #444; font-size: .95rem; margin-bottom: 12px; }
+  .toolbar { display:flex; gap: 8px; align-items:center; margin: 12px 0; flex-wrap: wrap; }
+  input[type="search"] { padding: 8px 10px; border: 1px solid #ccc; border-radius: 10px; min-width: 260px; }
+  button { padding: 8px 12px; border: 1px solid #ccc; border-radius: 10px; background: #f7f7f7; cursor: pointer; }
+  button:hover { background: #eee; }
+  table { width: 100%; border-collapse: collapse; }
+  thead th { position: sticky; top: 0; background: #fafafa; border-bottom: 1px solid #ddd; text-align: left; padding: 10px; cursor: pointer; }
+  tbody td { border-bottom: 1px solid #f0f0f0; padding: 8px 10px; vertical-align: top; }
+  .sortable::after { content: " ⇅"; font-size: .8em; color: #888; }
+  .sorted-asc::after { content: " ↑"; }
+  .sorted-desc::after { content: " ↓"; }
+  .empty { padding: 16px; background: #fff6f6; border: 1px solid #ffdede; border-radius: 12px; }
+  a.btn { display:inline-block; margin: 0 8px 8px 0; padding: 6px 10px; border-radius: 10px; border:1px solid #ddd; text-decoration:none; color:#222; background:#f9f9f9; }
+  a.btn:hover { background:#f0f0f0; }
+</style>
+</head>
+<body>
+<h1>NF1 — Linhas da tabela dbo.variantes</h1>
+<div class="meta">Gene: <strong>NF1</strong> • Linhas: <strong>14</strong></div>
+<div class="toolbar">
+  <input id="busca" type="search" placeholder="Filtrar linhas... (busca global)">
+  <button id="btnCsv" type="button">Exportar CSV</button>
+  <a class="btn" href="index.html">Voltar ao índice</a>
+</div>
+<div id="wrap">
+<table id="tabela" border="0">
+<thead><tr>
+<th>Gene</th>
+<th>Chr</th>
+<th>Pos</th>
+<th>ID</th>
+<th>Ref</th>
+<th>Alt</th>
+<th>Impacto</th>
+<th>GT</th>
+<th>VAF</th>
+<th>ClinVar_ID</th>
+<th>ClinVar_Significance</th>
+<th>ClinVar_Review_Status</th>
+<th>ClinVar_Disease_Names</th>
+<th>ID_variante</th>
+<th>Qual</th>
+<th>Filtro</th>
+<th>Ensembl</th>
+<th>Alteracao_nucleotidica</th>
+<th>Alteracao_aminoacidica</th>
+<th>GQ</th>
+<th>DP</th>
+<th>AD</th>
+<th>PL</th>
+<th>HGMD</th>
+<th>Resultado</th>
+<th>Status</th>
+<th>Buscar</th>
+<th>SIFT</th>
+<th>PolyPhen</th>
+<th>Biotype</th>
+<th>Alteracao_nucleotidica_reversa</th>
+<th>Alteracao_aminoacidica_reversa</th>
+<th>Resultado_reverso</th>
+<th>encontrado_rsid</th>
+<th>gnomAD_AF_Global</th>
+<th>gnomAD_AFR_AF</th>
+<th>gnomAD_AMR_AF</th>
+<th>gnomAD_ASJ_AF</th>
+<th>gnomAD_EAS_AF</th>
+<th>gnomAD_FIN_AF</th>
+<th>gnomAD_NFE_AF</th>
+<th>gnomAD_SAS_AF</th>
+<th>gnomAD_OTH_AF</th>
+<th>PhyloP</th>
+<th>PhastCons</th>
+<th>GERP</th>
+<th>CADD_Raw</th>
+<th>CADD_Phred</th>
+<th>LOEUF</th>
+<th>Allele_String</th>
+<th>ClinVar_Disease_Count</th>
+<th>letra_inicial_gene</th>
+</tr></thead><tbody>
+<tr>
+<td>NF1</td>
+<td>chr17</td>
+<td>31159134</td>
+<td>rs2952976</td>
+<td>G</td>
+<td>A</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td>251659</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Neurofibromatosis: familial spinal; Neurofibromatosis: type 1</td>
+<td>44723</td>
+<td>55.6</td>
+<td>PASS</td>
+<td>ENST00000358273</td>
+<td>ENST00000358273.9:c.288+41G&gt;A</td>
+<td></td>
+<td>39</td>
+<td>38</td>
+<td>0*38</td>
+<td>55*39*0</td>
+<td></td>
+<td>A/A</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000358273.9:c.288+41G&gt;A</td>
+<td></td>
+<td>A/A</td>
+<td></td>
+<td>0.5701</td>
+<td>0.3028</td>
+<td>0.5647</td>
+<td>0.769</td>
+<td>0.5603</td>
+<td>0.6552</td>
+<td>0.7035</td>
+<td>0.6204</td>
+<td>0.6297</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.249</td>
+<td>G/A/C</td>
+<td>4</td>
+<td>N</td>
+</tr>
+<tr>
+<td>NF1</td>
+<td>chr17</td>
+<td>31181757</td>
+<td>rs1801052</td>
+<td>G</td>
+<td>A</td>
+<td>LOW</td>
+<td>1/1</td>
+<td>1</td>
+<td>162647</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Café-au-lait macules with pulmonary stenosis; Cardiovascular phenotype; Hereditary cancer-predisposing syndrome; Neurofibromatosis: familial spinal; Neurofibromatosis: type 1; Neurofibromatosis-Noonan syndrome</td>
+<td>44724</td>
+<td>36.9</td>
+<td>PASS</td>
+<td>ENST00000358273</td>
+<td>ENST00000358273.9:c.702G&gt;A</td>
+<td>ENSP00000351015.4:p.Leu234=</td>
+<td>8</td>
+<td>4</td>
+<td>0*4</td>
+<td>36*7*0</td>
+<td>CD148107</td>
+<td>A/A</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000358273.9:c.702G&gt;A</td>
+<td>ENSP00000351015.4:p.Leu234=</td>
+<td>A/A</td>
+<td></td>
+<td>0.5718</td>
+<td>0.3039</td>
+<td>0.5651</td>
+<td>0.7682</td>
+<td>0.5616</td>
+<td>0.6603</td>
+<td>0.7044</td>
+<td>0.6261</td>
+<td>0.6318</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.249</td>
+<td>G/A/T</td>
+<td>9</td>
+<td>N</td>
+</tr>
+<tr>
+<td>NF1</td>
+<td>chr17</td>
+<td>31182773</td>
+<td>rs2953000</td>
+<td>C</td>
+<td>T</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td>680762</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td></td>
+<td>44725</td>
+<td>49.1</td>
+<td>PASS</td>
+<td>ENST00000358273</td>
+<td>ENST00000358273.9:c.888+108C&gt;T</td>
+<td></td>
+<td>37</td>
+<td>41</td>
+<td>0*41</td>
+<td>49*37*0</td>
+<td></td>
+<td>T/T</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000358273.9:c.888+108C&gt;T</td>
+<td></td>
+<td>T/T</td>
+<td></td>
+<td>0.5515</td>
+<td>0.2517</td>
+<td>0.5573</td>
+<td>0.7653</td>
+<td>0.4732</td>
+<td>0.6529</td>
+<td>0.7029</td>
+<td>0.6155</td>
+<td>0.6162</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.249</td>
+<td>C/T</td>
+<td>1</td>
+<td>N</td>
+</tr>
+<tr>
+<td>NF1</td>
+<td>chr17</td>
+<td>31182783</td>
+<td>rs2952999</td>
+<td>G</td>
+<td>T</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td>680763</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td></td>
+<td>44726</td>
+<td>56.9</td>
+<td>PASS</td>
+<td>ENST00000358273</td>
+<td>ENST00000358273.9:c.888+118G&gt;T</td>
+<td></td>
+<td>42</td>
+<td>40</td>
+<td>0*40</td>
+<td>56*42*0</td>
+<td></td>
+<td>T/T</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000358273.9:c.888+118G&gt;T</td>
+<td></td>
+<td>T/T</td>
+<td></td>
+<td>0.5659</td>
+<td>0.302</td>
+<td>0.5627</td>
+<td>0.7657</td>
+<td>0.4713</td>
+<td>0.6531</td>
+<td>0.7031</td>
+<td>0.6152</td>
+<td>0.6272</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.249</td>
+<td>G/C/T</td>
+<td>1</td>
+<td>N</td>
+</tr>
+<tr>
+<td>NF1</td>
+<td>chr17</td>
+<td>31214419</td>
+<td>rs2905876</td>
+<td>T</td>
+<td>C</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td>254326</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Neurofibromatosis: familial spinal; Neurofibromatosis: type 1</td>
+<td>44727</td>
+<td>47.3</td>
+<td>PASS</td>
+<td>ENST00000358273</td>
+<td>ENST00000358273.9:c.1393-32T&gt;C</td>
+<td></td>
+<td>28</td>
+<td>13</td>
+<td>0*13</td>
+<td>47*27*0</td>
+<td></td>
+<td>C/C</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000358273.9:c.1393-32T&gt;C</td>
+<td></td>
+<td>C/C</td>
+<td></td>
+<td>0.537</td>
+<td>0.1863</td>
+<td>0.5522</td>
+<td>0.7679</td>
+<td>0.5606</td>
+<td>0.6562</td>
+<td>0.7041</td>
+<td>0.6253</td>
+<td>0.6046</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.249</td>
+<td>T/A/C/G</td>
+<td>4</td>
+<td>N</td>
+</tr>
+<tr>
+<td>NF1</td>
+<td>chr17</td>
+<td>31218969</td>
+<td>rs398119783</td>
+<td>A</td>
+<td>AT</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>0.925926</td>
+<td>246149</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td></td>
+<td>44728</td>
+<td>56.3</td>
+<td>PASS</td>
+<td>ENST00000358273</td>
+<td>ENST00000358273.9:c.1528-29dup</td>
+<td></td>
+<td>42</td>
+<td>108</td>
+<td>5*100</td>
+<td>56*42*0</td>
+<td></td>
+<td>AT/AT</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000358273.9:c.1528-29dup</td>
+<td></td>
+<td>AT/AT</td>
+<td></td>
+<td>0.5777</td>
+<td>0.326</td>
+<td>0.5681</td>
+<td>0.7677</td>
+<td>0.5609</td>
+<td>0.657</td>
+<td>0.7047</td>
+<td>0.6203</td>
+<td>0.6384</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.249</td>
+<td>TTTTTTT/TTTTTT/TTTTTTTT/TTTTTTTTT</td>
+<td>2</td>
+<td>N</td>
+</tr>
+<tr>
+<td>NF1</td>
+<td>chr17</td>
+<td>31219157</td>
+<td>rs2905880</td>
+<td>T</td>
+<td>C</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td>251277</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Neurofibromatosis: familial spinal; Neurofibromatosis: type 1</td>
+<td>44729</td>
+<td>56.5</td>
+<td>PASS</td>
+<td>ENST00000358273</td>
+<td>ENST00000358273.9:c.1641+39T&gt;C</td>
+<td></td>
+<td>46</td>
+<td>82</td>
+<td>0*82</td>
+<td>56*46*0</td>
+<td></td>
+<td>C/C</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000358273.9:c.1641+39T&gt;C</td>
+<td></td>
+<td>C/C</td>
+<td></td>
+<td>0.5369</td>
+<td>0.1864</td>
+<td>0.5528</td>
+<td>0.768</td>
+<td>0.5585</td>
+<td>0.6574</td>
+<td>0.7036</td>
+<td>0.619</td>
+<td>0.6058</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.249</td>
+<td>T/A/C/G</td>
+<td>4</td>
+<td>N</td>
+</tr>
+<tr>
+<td>NF1</td>
+<td>chr17</td>
+<td>31320340</td>
+<td>rs3837848</td>
+<td>A</td>
+<td>AT</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.296296</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>44731</td>
+<td>19.7</td>
+<td>PASS</td>
+<td>ENST00000358273</td>
+<td>ENST00000358273.9:c.4836-5477dup</td>
+<td></td>
+<td>20</td>
+<td>27</td>
+<td>16*8</td>
+<td>19*0*46</td>
+<td></td>
+<td>A/AT</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000358273.9:c.4836-5477dup</td>
+<td></td>
+<td>A/AT</td>
+<td></td>
+<td>0.3967</td>
+<td>0.1684</td>
+<td>0.3766</td>
+<td>0.5759</td>
+<td>0.342</td>
+<td>0.4556</td>
+<td>0.5136</td>
+<td>0.5127</td>
+<td>0.4298</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1.297</td>
+<td>TTT/TTTT/TTTTT</td>
+<td></td>
+<td>N</td>
+</tr>
+<tr>
+<td>NF1</td>
+<td>chr17</td>
+<td>31326275</td>
+<td>rs9894648</td>
+<td>T</td>
+<td>C</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.515152</td>
+<td>248620</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Neurofibromatosis: familial spinal; Neurofibromatosis: type 1</td>
+<td>44732</td>
+<td>53.9</td>
+<td>PASS</td>
+<td>ENST00000358273</td>
+<td>ENST00000358273.9:c.5268+23T&gt;C</td>
+<td></td>
+<td>50</td>
+<td>66</td>
+<td>32*34</td>
+<td>53*0*51</td>
+<td></td>
+<td>T/C</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000358273.9:c.5268+23T&gt;C</td>
+<td></td>
+<td>T/C</td>
+<td></td>
+<td>0.6472</td>
+<td>0.7492</td>
+<td>0.5097</td>
+<td>0.7042</td>
+<td>0.4458</td>
+<td>0.6204</td>
+<td>0.6337</td>
+<td>0.6183</td>
+<td>0.6474</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.249</td>
+<td>T/C</td>
+<td>4</td>
+<td>N</td>
+</tr>
+<tr>
+<td>NF1</td>
+<td>chr17</td>
+<td>31327858</td>
+<td>rs2285894</td>
+<td>T</td>
+<td>A</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.371795</td>
+<td>243946</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Neurofibromatosis: familial spinal; Neurofibromatosis: type 1</td>
+<td>44733</td>
+<td>45.7</td>
+<td>PASS</td>
+<td>ENST00000358273</td>
+<td>ENST00000358273.9:c.5609+19T&gt;A</td>
+<td></td>
+<td>45</td>
+<td>156</td>
+<td>98*58</td>
+<td>45*0*51</td>
+<td></td>
+<td>T/A</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000358273.9:c.5609+19T&gt;A</td>
+<td></td>
+<td>T/A</td>
+<td></td>
+<td>0.5017</td>
+<td>0.294</td>
+<td>0.4457</td>
+<td>0.6839</td>
+<td>0.3581</td>
+<td>0.6015</td>
+<td>0.6194</td>
+<td>0.5611</td>
+<td>0.5279</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.249</td>
+<td>T/A</td>
+<td>4</td>
+<td>N</td>
+</tr>
+<tr>
+<td>NF1</td>
+<td>chr17</td>
+<td>31336606</td>
+<td>rs7406038</td>
+<td>T</td>
+<td>A</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.555556</td>
+<td>1679896</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Neurofibromatosis: type 1</td>
+<td>44734</td>
+<td>33.4</td>
+<td>PASS</td>
+<td>ENST00000358273</td>
+<td>ENST00000358273.9:c.6148-29T&gt;A</td>
+<td></td>
+<td>33</td>
+<td>36</td>
+<td>16*20</td>
+<td>33*0*39</td>
+<td></td>
+<td>T/A</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000358273.9:c.6148-29T&gt;A</td>
+<td></td>
+<td>T/A</td>
+<td></td>
+<td>0.5172</td>
+<td>0.2169</td>
+<td>0.5034</td>
+<td>0.6941</td>
+<td>0.4122</td>
+<td>0.6342</td>
+<td>0.651</td>
+<td>0.5974</td>
+<td>0.5496</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.249</td>
+<td>T/A</td>
+<td>2</td>
+<td>N</td>
+</tr>
+<tr>
+<td>NF1</td>
+<td>chr17</td>
+<td>31336607</td>
+<td>rs7406039</td>
+<td>T</td>
+<td>A</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.571429</td>
+<td>1688480</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Neurofibromatosis: type 1</td>
+<td>44735</td>
+<td>30.6</td>
+<td>PASS</td>
+<td>ENST00000358273</td>
+<td>ENST00000358273.9:c.6148-28T&gt;A</td>
+<td></td>
+<td>30</td>
+<td>35</td>
+<td>15*20</td>
+<td>30*0*38</td>
+<td></td>
+<td>T/A</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000358273.9:c.6148-28T&gt;A</td>
+<td></td>
+<td>T/A</td>
+<td></td>
+<td>0.5349</td>
+<td>0.3577</td>
+<td>0.4764</td>
+<td>0.6905</td>
+<td>0.4584</td>
+<td>0.6231</td>
+<td>0.6254</td>
+<td>0.6876</td>
+<td>0.5633</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.249</td>
+<td>T/A</td>
+<td>2</td>
+<td>N</td>
+</tr>
+<tr>
+<td>NF1</td>
+<td>chr17</td>
+<td>31343172</td>
+<td>rs7405740</td>
+<td>C</td>
+<td>G</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.608696</td>
+<td>250694</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Neurofibromatosis: familial spinal; Neurofibromatosis: type 1</td>
+<td>44736</td>
+<td>50.1</td>
+<td>PASS</td>
+<td>ENST00000358273</td>
+<td>ENST00000358273.9:c.7189+37C&gt;G</td>
+<td></td>
+<td>48</td>
+<td>46</td>
+<td>18*28</td>
+<td>50*0*52</td>
+<td></td>
+<td>C/G</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000358273.9:c.7189+37C&gt;G</td>
+<td></td>
+<td>C/G</td>
+<td></td>
+<td>0.8838</td>
+<td>0.8005</td>
+<td>0.8774</td>
+<td>0.9188</td>
+<td>0.8909</td>
+<td>0.9501</td>
+<td>0.9184</td>
+<td>0.9522</td>
+<td>0.8674</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.249</td>
+<td>C/G</td>
+<td>4</td>
+<td>N</td>
+</tr>
+<tr>
+<td>NF1</td>
+<td>chr17</td>
+<td>31352228</td>
+<td>rs964288</td>
+<td>G</td>
+<td>A</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.458333</td>
+<td>243268</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Neurofibromatosis: familial spinal; Neurofibromatosis: type 1</td>
+<td>44737</td>
+<td>50.4</td>
+<td>PASS</td>
+<td>ENST00000358273</td>
+<td>ENST00000358273.9:c.7458-29G&gt;A</td>
+<td></td>
+<td>49</td>
+<td>72</td>
+<td>39*33</td>
+<td>50*0*55</td>
+<td></td>
+<td>G/A</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000358273.9:c.7458-29G&gt;A</td>
+<td></td>
+<td>G/A</td>
+<td></td>
+<td>0.5005</td>
+<td>0.2875</td>
+<td>0.4454</td>
+<td>0.6843</td>
+<td>0.3561</td>
+<td>0.6005</td>
+<td>0.6204</td>
+<td>0.5665</td>
+<td>0.5294</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.249</td>
+<td>G/A/C</td>
+<td>4</td>
+<td>N</td>
+</tr>
+</tbody></table></div>
+<script>
+(function() {{
+  const table = document.getElementById('tabela');
+  const busca = document.getElementById('busca');
+  const btnCsv = document.getElementById('btnCsv');
+  if (!table) return;
+  const getCellText = (tr, idx) => (tr.cells[idx]?.innerText || "").trim();
+  const isNumber = (v) => /^-?\d+(\.\d+)?$/.test(v.replace(/\s+/g, '').replace(',', '.'));
+
+  Array.from(table.tHead.rows[0].cells).forEach((th, idx) => {{
+    th.classList.add('sortable');
+    th.addEventListener('click', () => {{
+      const tbody = table.tBodies[0];
+      const rows = Array.from(tbody.rows);
+      const current = th.classList.contains('sorted-asc') ? 'asc'
+                    : th.classList.contains('sorted-desc') ? 'desc' : null;
+      Array.from(table.tHead.rows[0].cells).forEach(h => h.classList.remove('sorted-asc','sorted-desc'));
+      const dir = current === 'asc' ? -1 : 1;
+      const colIsNum = rows.every(tr => isNumber(getCellText(tr, idx)) || getCellText(tr, idx) === "");
+      rows.sort((a,b) => {{
+        let A = getCellText(a, idx);
+        let B = getCellText(b, idx);
+        if (colIsNum) {{ A = parseFloat(A.replace(',', '.')) || 0; B = parseFloat(B.replace(',', '.')) || 0; }}
+        else {{ A = A.toLowerCase(); B = B.toLowerCase(); }}
+        if (A < B) return -1 * dir;
+        if (A > B) return  1 * dir;
+        return 0;
+      }});
+      rows.forEach(r => tbody.appendChild(r));
+      th.classList.add(dir === 1 ? 'sorted-asc' : 'sorted-desc');
+    }});
+  }});
+
+  busca?.addEventListener('input', () => {{
+    const q = busca.value.toLowerCase();
+    const rows = Array.from(table.tBodies[0].rows);
+    rows.forEach(tr => {{
+      const txt = tr.innerText.toLowerCase();
+      tr.style.display = txt.includes(q) ? '' : 'none';
+    }});
+  }});
+
+  btnCsv?.addEventListener('click', () => {{
+    const rows = [];
+    const selRows = Array.from(table.querySelectorAll('tr'));
+    selRows.forEach((tr, i) => {{
+      if (i>0 && tr.style.display === 'none') return;
+      const cells = Array.from(tr.cells).map(td => {{
+        const t = td.innerText.replace(/"/g,'""');
+        return /[",\n]/.test(t) ? `"${{t}}"` : t;
+      }});
+      rows.push(cells.join(','));
+    }});
+    const blob = new Blob([rows.join('\n')], {{type: 'text/csv;charset=utf-8;'}});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = (document.title || 'export') + '.csv';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(() => URL.revokeObjectURL(url), 5000);
+  }});
+}})();
+</script>
+</body>
+</html>
