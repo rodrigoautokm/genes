@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CACNA1D — Linhas da tabela dbo.variantes</title>
+<style>
+  :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif; }
+  body { margin: 24px; }
+  h1 { margin: 0 0 6px 0; font-size: 1.6rem; }
+  .meta { color: #444; font-size: .95rem; margin-bottom: 12px; }
+  .toolbar { display:flex; gap: 8px; align-items:center; margin: 12px 0; flex-wrap: wrap; }
+  input[type="search"] { padding: 8px 10px; border: 1px solid #ccc; border-radius: 10px; min-width: 260px; }
+  button { padding: 8px 12px; border: 1px solid #ccc; border-radius: 10px; background: #f7f7f7; cursor: pointer; }
+  button:hover { background: #eee; }
+  table { width: 100%; border-collapse: collapse; }
+  thead th { position: sticky; top: 0; background: #fafafa; border-bottom: 1px solid #ddd; text-align: left; padding: 10px; cursor: pointer; }
+  tbody td { border-bottom: 1px solid #f0f0f0; padding: 8px 10px; vertical-align: top; }
+  .sortable::after { content: " ⇅"; font-size: .8em; color: #888; }
+  .sorted-asc::after { content: " ↑"; }
+  .sorted-desc::after { content: " ↓"; }
+  .empty { padding: 16px; background: #fff6f6; border: 1px solid #ffdede; border-radius: 12px; }
+  a.btn { display:inline-block; margin: 0 8px 8px 0; padding: 6px 10px; border-radius: 10px; border:1px solid #ddd; text-decoration:none; color:#222; background:#f9f9f9; }
+  a.btn:hover { background:#f0f0f0; }
+</style>
+</head>
+<body>
+<h1>CACNA1D — Linhas da tabela dbo.variantes</h1>
+<div class="meta">Gene: <strong>CACNA1D</strong> • Linhas: <strong>6</strong></div>
+<div class="toolbar">
+  <input id="busca" type="search" placeholder="Filtrar linhas... (busca global)">
+  <button id="btnCsv" type="button">Exportar CSV</button>
+  <a class="btn" href="index.html">Voltar ao índice</a>
+</div>
+<div id="wrap">
+<table id="tabela" border="0">
+<thead><tr>
+<th>Gene</th>
+<th>Chr</th>
+<th>Pos</th>
+<th>ID</th>
+<th>Ref</th>
+<th>Alt</th>
+<th>Impacto</th>
+<th>GT</th>
+<th>VAF</th>
+<th>ClinVar_ID</th>
+<th>ClinVar_Significance</th>
+<th>ClinVar_Review_Status</th>
+<th>ClinVar_Disease_Names</th>
+<th>ID_variante</th>
+<th>Qual</th>
+<th>Filtro</th>
+<th>Ensembl</th>
+<th>Alteracao_nucleotidica</th>
+<th>Alteracao_aminoacidica</th>
+<th>GQ</th>
+<th>DP</th>
+<th>AD</th>
+<th>PL</th>
+<th>HGMD</th>
+<th>Resultado</th>
+<th>Status</th>
+<th>Buscar</th>
+<th>SIFT</th>
+<th>PolyPhen</th>
+<th>Biotype</th>
+<th>Alteracao_nucleotidica_reversa</th>
+<th>Alteracao_aminoacidica_reversa</th>
+<th>Resultado_reverso</th>
+<th>encontrado_rsid</th>
+<th>gnomAD_AF_Global</th>
+<th>gnomAD_AFR_AF</th>
+<th>gnomAD_AMR_AF</th>
+<th>gnomAD_ASJ_AF</th>
+<th>gnomAD_EAS_AF</th>
+<th>gnomAD_FIN_AF</th>
+<th>gnomAD_NFE_AF</th>
+<th>gnomAD_SAS_AF</th>
+<th>gnomAD_OTH_AF</th>
+<th>PhyloP</th>
+<th>PhastCons</th>
+<th>GERP</th>
+<th>CADD_Raw</th>
+<th>CADD_Phred</th>
+<th>LOEUF</th>
+<th>Allele_String</th>
+<th>ClinVar_Disease_Count</th>
+<th>letra_inicial_gene</th>
+</tr></thead><tbody>
+<tr>
+<td>CACNA1D</td>
+<td>chr3</td>
+<td>53666523</td>
+<td>rs2250736</td>
+<td>T</td>
+<td>C</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.441748</td>
+<td>222719</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Aldosterone-producing adenoma with seizures and neurological abnormalities; Sinoatrial node dysfunction and deafness</td>
+<td>10368</td>
+<td>47.7</td>
+<td>PASS</td>
+<td>ENST00000350061</td>
+<td>ENST00000350061.11:c.1104T&gt;C</td>
+<td>ENSP00000288133.5:p.Asp368=</td>
+<td>46</td>
+<td>206</td>
+<td>115*91</td>
+<td>47*0*50</td>
+<td></td>
+<td>T/C</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000350061.11:c.1104T&gt;C</td>
+<td>ENSP00000288133.5:p.Asp368=</td>
+<td>T/C</td>
+<td></td>
+<td>0.6433</td>
+<td>0.8754</td>
+<td>0.5872</td>
+<td>0.4847</td>
+<td>0.6364</td>
+<td>0.596</td>
+<td>0.5309</td>
+<td>0.6636</td>
+<td>0.5824</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.251</td>
+<td>T/C/G</td>
+<td>4</td>
+<td>C</td>
+</tr>
+<tr>
+<td>CACNA1D</td>
+<td>chr3</td>
+<td>53724022</td>
+<td>rs2070617</td>
+<td>G</td>
+<td>A</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.445596</td>
+<td>1667136</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td></td>
+<td>10369</td>
+<td>44.0</td>
+<td>PASS</td>
+<td>ENST00000350061</td>
+<td>ENST00000350061.11:c.2100+23G&gt;A</td>
+<td></td>
+<td>44</td>
+<td>193</td>
+<td>107*86</td>
+<td>43*0*58</td>
+<td></td>
+<td>G/A</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000350061.11:c.2100+23G&gt;A</td>
+<td></td>
+<td>G/A</td>
+<td></td>
+<td>0.1702</td>
+<td>0.1218</td>
+<td>0.2191</td>
+<td>0.0804</td>
+<td>0.4872</td>
+<td>0.2253</td>
+<td>0.1473</td>
+<td>0.364</td>
+<td>0.1641</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.251</td>
+<td>G/A/C</td>
+<td>1</td>
+<td>C</td>
+</tr>
+<tr>
+<td>CACNA1D</td>
+<td>chr3</td>
+<td>53731999</td>
+<td>rs2612033</td>
+<td>T</td>
+<td>C</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.466667</td>
+<td>602498</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Aldosterone-producing adenoma with seizures and neurological abnormalities; Sinoatrial node dysfunction and deafness</td>
+<td>10370</td>
+<td>43.1</td>
+<td>PASS</td>
+<td>ENST00000350061</td>
+<td>ENST00000350061.11:c.2407-17T&gt;C</td>
+<td></td>
+<td>43</td>
+<td>75</td>
+<td>40*35</td>
+<td>43*0*55</td>
+<td></td>
+<td>T/C</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000350061.11:c.2407-17T&gt;C</td>
+<td></td>
+<td>T/C</td>
+<td></td>
+<td>0.8794</td>
+<td>0.8806</td>
+<td>0.9016</td>
+<td>0.8433</td>
+<td>0.9996</td>
+<td>0.9147</td>
+<td>0.8611</td>
+<td>0.8653</td>
+<td>0.8742</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.251</td>
+<td>T/A/C</td>
+<td>4</td>
+<td>C</td>
+</tr>
+<tr>
+<td>CACNA1D</td>
+<td>chr3</td>
+<td>53742968</td>
+<td>rs2612026</td>
+<td>T</td>
+<td>C</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.534247</td>
+<td>1554666</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Aldosterone-producing adenoma with seizures and neurological abnormalities; Sinoatrial node dysfunction and deafness</td>
+<td>10371</td>
+<td>49.5</td>
+<td>PASS</td>
+<td>ENST00000350061</td>
+<td>ENST00000350061.11:c.2812-43T&gt;C</td>
+<td></td>
+<td>46</td>
+<td>73</td>
+<td>34*39</td>
+<td>49*0*49</td>
+<td></td>
+<td>T/C</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000350061.11:c.2812-43T&gt;C</td>
+<td></td>
+<td>T/C</td>
+<td></td>
+<td>0.778</td>
+<td>0.583</td>
+<td>0.8646</td>
+<td>0.8176</td>
+<td>0.9994</td>
+<td>0.8783</td>
+<td>0.8345</td>
+<td>0.8573</td>
+<td>0.8027</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.251</td>
+<td>T/A/C/G</td>
+<td>3</td>
+<td>C</td>
+</tr>
+<tr>
+<td>CACNA1D</td>
+<td>chr3</td>
+<td>53745798</td>
+<td>rs3821860</td>
+<td>A</td>
+<td>G</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.310345</td>
+<td>1654412</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td></td>
+<td>10372</td>
+<td>39.9</td>
+<td>PASS</td>
+<td>ENST00000350061</td>
+<td>ENST00000350061.11:c.3115-25A&gt;G</td>
+<td></td>
+<td>40</td>
+<td>87</td>
+<td>60*27</td>
+<td>39*0*52</td>
+<td></td>
+<td>A/G</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000350061.11:c.3115-25A&gt;G</td>
+<td></td>
+<td>A/G</td>
+<td></td>
+<td>0.3004</td>
+<td>0.1847</td>
+<td>0.2546</td>
+<td>0.3592</td>
+<td>0.1592</td>
+<td>0.3778</td>
+<td>0.3745</td>
+<td>0.301</td>
+<td>0.3076</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.251</td>
+<td>A/G</td>
+<td>1</td>
+<td>C</td>
+</tr>
+<tr>
+<td>CACNA1D</td>
+<td>chr3</td>
+<td>53780170</td>
+<td>rs1829423</td>
+<td>G</td>
+<td>A</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.421053</td>
+<td>1554787</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Aldosterone-producing adenoma with seizures and neurological abnormalities; Sinoatrial node dysfunction and deafness</td>
+<td>10373</td>
+<td>53.5</td>
+<td>PASS</td>
+<td>ENST00000350061</td>
+<td>ENST00000350061.11:c.4690+42G&gt;A</td>
+<td></td>
+<td>46</td>
+<td>114</td>
+<td>66*48</td>
+<td>53*0*47</td>
+<td></td>
+<td>G/A</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000350061.11:c.4690+42G&gt;A</td>
+<td></td>
+<td>G/A</td>
+<td></td>
+<td>0.6474</td>
+<td>0.6449</td>
+<td>0.6004</td>
+<td>0.7486</td>
+<td>0.4333</td>
+<td>0.676</td>
+<td>0.6786</td>
+<td>0.4461</td>
+<td>0.6525</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.251</td>
+<td>G/A</td>
+<td>3</td>
+<td>C</td>
+</tr>
+</tbody></table></div>
+<script>
+(function() {{
+  const table = document.getElementById('tabela');
+  const busca = document.getElementById('busca');
+  const btnCsv = document.getElementById('btnCsv');
+  if (!table) return;
+  const getCellText = (tr, idx) => (tr.cells[idx]?.innerText || "").trim();
+  const isNumber = (v) => /^-?\d+(\.\d+)?$/.test(v.replace(/\s+/g, '').replace(',', '.'));
+
+  Array.from(table.tHead.rows[0].cells).forEach((th, idx) => {{
+    th.classList.add('sortable');
+    th.addEventListener('click', () => {{
+      const tbody = table.tBodies[0];
+      const rows = Array.from(tbody.rows);
+      const current = th.classList.contains('sorted-asc') ? 'asc'
+                    : th.classList.contains('sorted-desc') ? 'desc' : null;
+      Array.from(table.tHead.rows[0].cells).forEach(h => h.classList.remove('sorted-asc','sorted-desc'));
+      const dir = current === 'asc' ? -1 : 1;
+      const colIsNum = rows.every(tr => isNumber(getCellText(tr, idx)) || getCellText(tr, idx) === "");
+      rows.sort((a,b) => {{
+        let A = getCellText(a, idx);
+        let B = getCellText(b, idx);
+        if (colIsNum) {{ A = parseFloat(A.replace(',', '.')) || 0; B = parseFloat(B.replace(',', '.')) || 0; }}
+        else {{ A = A.toLowerCase(); B = B.toLowerCase(); }}
+        if (A < B) return -1 * dir;
+        if (A > B) return  1 * dir;
+        return 0;
+      }});
+      rows.forEach(r => tbody.appendChild(r));
+      th.classList.add(dir === 1 ? 'sorted-asc' : 'sorted-desc');
+    }});
+  }});
+
+  busca?.addEventListener('input', () => {{
+    const q = busca.value.toLowerCase();
+    const rows = Array.from(table.tBodies[0].rows);
+    rows.forEach(tr => {{
+      const txt = tr.innerText.toLowerCase();
+      tr.style.display = txt.includes(q) ? '' : 'none';
+    }});
+  }});
+
+  btnCsv?.addEventListener('click', () => {{
+    const rows = [];
+    const selRows = Array.from(table.querySelectorAll('tr'));
+    selRows.forEach((tr, i) => {{
+      if (i>0 && tr.style.display === 'none') return;
+      const cells = Array.from(tr.cells).map(td => {{
+        const t = td.innerText.replace(/"/g,'""');
+        return /[",\n]/.test(t) ? `"${{t}}"` : t;
+      }});
+      rows.push(cells.join(','));
+    }});
+    const blob = new Blob([rows.join('\n')], {{type: 'text/csv;charset=utf-8;'}});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = (document.title || 'export') + '.csv';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(() => URL.revokeObjectURL(url), 5000);
+  }});
+}})();
+</script>
+</body>
+</html>
