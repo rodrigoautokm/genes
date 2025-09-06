@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RASA3 — Linhas da tabela dbo.variantes</title>
+<style>
+  :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif; }
+  body { margin: 24px; }
+  h1 { margin: 0 0 6px 0; font-size: 1.6rem; }
+  .meta { color: #444; font-size: .95rem; margin-bottom: 12px; }
+  .toolbar { display:flex; gap: 8px; align-items:center; margin: 12px 0; flex-wrap: wrap; }
+  input[type="search"] { padding: 8px 10px; border: 1px solid #ccc; border-radius: 10px; min-width: 260px; }
+  button { padding: 8px 12px; border: 1px solid #ccc; border-radius: 10px; background: #f7f7f7; cursor: pointer; }
+  button:hover { background: #eee; }
+  table { width: 100%; border-collapse: collapse; }
+  thead th { position: sticky; top: 0; background: #fafafa; border-bottom: 1px solid #ddd; text-align: left; padding: 10px; cursor: pointer; }
+  tbody td { border-bottom: 1px solid #f0f0f0; padding: 8px 10px; vertical-align: top; }
+  .sortable::after { content: " ⇅"; font-size: .8em; color: #888; }
+  .sorted-asc::after { content: " ↑"; }
+  .sorted-desc::after { content: " ↓"; }
+  .empty { padding: 16px; background: #fff6f6; border: 1px solid #ffdede; border-radius: 12px; }
+  a.btn { display:inline-block; margin: 0 8px 8px 0; padding: 6px 10px; border-radius: 10px; border:1px solid #ddd; text-decoration:none; color:#222; background:#f9f9f9; }
+  a.btn:hover { background:#f0f0f0; }
+</style>
+</head>
+<body>
+<h1>RASA3 — Linhas da tabela dbo.variantes</h1>
+<div class="meta">Gene: <strong>RASA3</strong> • Linhas: <strong>11</strong></div>
+<div class="toolbar">
+  <input id="busca" type="search" placeholder="Filtrar linhas... (busca global)">
+  <button id="btnCsv" type="button">Exportar CSV</button>
+  <a class="btn" href="index.html">Voltar ao índice</a>
+</div>
+<div id="wrap">
+<table id="tabela" border="0">
+<thead><tr>
+<th>Gene</th>
+<th>Chr</th>
+<th>Pos</th>
+<th>ID</th>
+<th>Ref</th>
+<th>Alt</th>
+<th>Impacto</th>
+<th>GT</th>
+<th>VAF</th>
+<th>ClinVar_ID</th>
+<th>ClinVar_Significance</th>
+<th>ClinVar_Review_Status</th>
+<th>ClinVar_Disease_Names</th>
+<th>ID_variante</th>
+<th>Qual</th>
+<th>Filtro</th>
+<th>Ensembl</th>
+<th>Alteracao_nucleotidica</th>
+<th>Alteracao_aminoacidica</th>
+<th>GQ</th>
+<th>DP</th>
+<th>AD</th>
+<th>PL</th>
+<th>HGMD</th>
+<th>Resultado</th>
+<th>Status</th>
+<th>Buscar</th>
+<th>SIFT</th>
+<th>PolyPhen</th>
+<th>Biotype</th>
+<th>Alteracao_nucleotidica_reversa</th>
+<th>Alteracao_aminoacidica_reversa</th>
+<th>Resultado_reverso</th>
+<th>encontrado_rsid</th>
+<th>gnomAD_AF_Global</th>
+<th>gnomAD_AFR_AF</th>
+<th>gnomAD_AMR_AF</th>
+<th>gnomAD_ASJ_AF</th>
+<th>gnomAD_EAS_AF</th>
+<th>gnomAD_FIN_AF</th>
+<th>gnomAD_NFE_AF</th>
+<th>gnomAD_SAS_AF</th>
+<th>gnomAD_OTH_AF</th>
+<th>PhyloP</th>
+<th>PhastCons</th>
+<th>GERP</th>
+<th>CADD_Raw</th>
+<th>CADD_Phred</th>
+<th>LOEUF</th>
+<th>Allele_String</th>
+<th>ClinVar_Disease_Count</th>
+<th>letra_inicial_gene</th>
+</tr></thead><tbody>
+<tr>
+<td>RASA3</td>
+<td>chr13</td>
+<td>113981629</td>
+<td>rs71449038</td>
+<td>G</td>
+<td>A</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.631579</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>37135</td>
+<td>53.3</td>
+<td>PASS</td>
+<td>ENST00000334062</td>
+<td>ENST00000334062.8:c.2429+46C&gt;T</td>
+<td></td>
+<td>49</td>
+<td>57</td>
+<td>21*36</td>
+<td>53*0*51</td>
+<td></td>
+<td>G/A</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000334062.8:c.2429+46G&gt;A</td>
+<td></td>
+<td>C/T</td>
+<td></td>
+<td>0.2931</td>
+<td>0.1296</td>
+<td>0.3338</td>
+<td>0.2772</td>
+<td>0.3354</td>
+<td>0.37</td>
+<td>0.3675</td>
+<td>0.3334</td>
+<td>0.2904</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.813</td>
+<td>G/A/C</td>
+<td></td>
+<td>R</td>
+</tr>
+<tr>
+<td>RASA3</td>
+<td>chr13</td>
+<td>114007650</td>
+<td>rs9562086</td>
+<td>C</td>
+<td>T</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.514706</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>37136</td>
+<td>51.3</td>
+<td>PASS</td>
+<td>ENST00000334062</td>
+<td>ENST00000334062.8:c.1669-44G&gt;A</td>
+<td></td>
+<td>49</td>
+<td>136</td>
+<td>66*70</td>
+<td>51*0*53</td>
+<td></td>
+<td>C/T</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000334062.8:c.1669-44C&gt;T</td>
+<td></td>
+<td>G/A</td>
+<td></td>
+<td>0.5115</td>
+<td>0.6238</td>
+<td>0.4745</td>
+<td>0.4948</td>
+<td>0.6057</td>
+<td>0.5229</td>
+<td>0.4374</td>
+<td>0.6047</td>
+<td>0.5156</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.813</td>
+<td>C/G/T</td>
+<td></td>
+<td>R</td>
+</tr>
+<tr>
+<td>RASA3</td>
+<td>chr13</td>
+<td>114009337</td>
+<td>rs6560943</td>
+<td>C</td>
+<td>T</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.72093</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>37137</td>
+<td>48.8</td>
+<td>PASS</td>
+<td>ENST00000334062</td>
+<td>ENST00000334062.8:c.1668+50G&gt;A</td>
+<td></td>
+<td>47</td>
+<td>43</td>
+<td>12*31</td>
+<td>48*0*50</td>
+<td></td>
+<td>C/T</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000334062.8:c.1668+50C&gt;T</td>
+<td></td>
+<td>G/A</td>
+<td></td>
+<td>0.7013</td>
+<td>0.8532</td>
+<td>0.6608</td>
+<td>0.72</td>
+<td>0.6646</td>
+<td>0.632</td>
+<td>0.6317</td>
+<td>0.668</td>
+<td>0.7025</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.813</td>
+<td>C/A/T</td>
+<td></td>
+<td>R</td>
+</tr>
+<tr>
+<td>RASA3</td>
+<td>chr13</td>
+<td>114013117</td>
+<td>rs7322518</td>
+<td>C</td>
+<td>T</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.545455</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>37138</td>
+<td>55.0</td>
+<td>PASS</td>
+<td>ENST00000334062</td>
+<td>ENST00000334062.8:c.1512+25G&gt;A</td>
+<td></td>
+<td>49</td>
+<td>110</td>
+<td>50*60</td>
+<td>54*0*50</td>
+<td></td>
+<td>C/T</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000334062.8:c.1512+25C&gt;T</td>
+<td></td>
+<td>G/A</td>
+<td></td>
+<td>0.557</td>
+<td>0.7634</td>
+<td>0.5183</td>
+<td>0.4951</td>
+<td>0.6641</td>
+<td>0.5249</td>
+<td>0.438</td>
+<td>0.61</td>
+<td>0.5475</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.813</td>
+<td>C/G/T</td>
+<td></td>
+<td>R</td>
+</tr>
+<tr>
+<td>RASA3</td>
+<td>chr13</td>
+<td>114015162</td>
+<td>rs2274720</td>
+<td>G</td>
+<td>C</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.405405</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>37139</td>
+<td>47.0</td>
+<td>PASS</td>
+<td>ENST00000334062</td>
+<td>ENST00000334062.8:c.1405+47C&gt;G</td>
+<td></td>
+<td>46</td>
+<td>74</td>
+<td>44*30</td>
+<td>46*0*52</td>
+<td></td>
+<td>G/C</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000334062.8:c.1405+47G&gt;C</td>
+<td></td>
+<td>C/G</td>
+<td></td>
+<td>0.1927</td>
+<td>0.2769</td>
+<td>0.1362</td>
+<td>0.2157</td>
+<td>0.1978</td>
+<td>0.1841</td>
+<td>0.1538</td>
+<td>0.2132</td>
+<td>0.1944</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.813</td>
+<td>G/C</td>
+<td></td>
+<td>R</td>
+</tr>
+<tr>
+<td>RASA3</td>
+<td>chr13</td>
+<td>114015172</td>
+<td>rs2274719</td>
+<td>A</td>
+<td>C</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.439024</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>37140</td>
+<td>50.6</td>
+<td>PASS</td>
+<td>ENST00000334062</td>
+<td>ENST00000334062.8:c.1405+37T&gt;G</td>
+<td></td>
+<td>48</td>
+<td>82</td>
+<td>46*36</td>
+<td>50*0*52</td>
+<td></td>
+<td>A/C</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000334062.8:c.1405+37A&gt;C</td>
+<td></td>
+<td>T/G</td>
+<td></td>
+<td>0.7073</td>
+<td>0.8705</td>
+<td>0.6659</td>
+<td>0.7225</td>
+<td>0.6657</td>
+<td>0.6313</td>
+<td>0.633</td>
+<td>0.668</td>
+<td>0.7098</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.813</td>
+<td>A/C/G/T</td>
+<td></td>
+<td>R</td>
+</tr>
+<tr>
+<td>RASA3</td>
+<td>chr13</td>
+<td>114015288</td>
+<td>rs2274717</td>
+<td>A</td>
+<td>G</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.472727</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>37141</td>
+<td>39.8</td>
+<td>PASS</td>
+<td>ENST00000334062</td>
+<td>ENST00000334062.8:c.1326T&gt;C</td>
+<td>ENSP00000335029.7:p.Thr442=</td>
+<td>40</td>
+<td>220</td>
+<td>116*104</td>
+<td>39*0*56</td>
+<td></td>
+<td>A/G</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000334062.8:c.1326A&gt;G</td>
+<td></td>
+<td>T/C</td>
+<td></td>
+<td>0.7073</td>
+<td>0.8707</td>
+<td>0.6663</td>
+<td>0.7226</td>
+<td>0.6651</td>
+<td>0.6315</td>
+<td>0.6328</td>
+<td>0.6687</td>
+<td>0.71</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.813</td>
+<td>A/G/T</td>
+<td></td>
+<td>R</td>
+</tr>
+<tr>
+<td>RASA3</td>
+<td>chr13</td>
+<td>114017303</td>
+<td>rs61749934</td>
+<td>G</td>
+<td>A</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.51938</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>37142</td>
+<td>48.7</td>
+<td>PASS</td>
+<td>ENST00000334062</td>
+<td>ENST00000334062.8:c.1140C&gt;T</td>
+<td>ENSP00000335029.7:p.Ile380=</td>
+<td>45</td>
+<td>129</td>
+<td>62*67</td>
+<td>48*0*47</td>
+<td></td>
+<td>G/A</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000334062.8:c.1140G&gt;A</td>
+<td></td>
+<td>C/T</td>
+<td></td>
+<td>0.09923</td>
+<td>0.03082</td>
+<td>0.09629</td>
+<td>0.2092</td>
+<td>0.0005789</td>
+<td>0.171</td>
+<td>0.132</td>
+<td>0.1023</td>
+<td>0.1151</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.813</td>
+<td>G/A/C</td>
+<td></td>
+<td>R</td>
+</tr>
+<tr>
+<td>RASA3</td>
+<td>chr13</td>
+<td>114018959</td>
+<td>rs12875472</td>
+<td>C</td>
+<td>T</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.465116</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>37143</td>
+<td>46.8</td>
+<td>PASS</td>
+<td>ENST00000334062</td>
+<td>ENST00000334062.8:c.786-40G&gt;A</td>
+<td></td>
+<td>46</td>
+<td>43</td>
+<td>23*20</td>
+<td>46*0*52</td>
+<td></td>
+<td>C/T</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000334062.8:c.786-40C&gt;T</td>
+<td></td>
+<td>G/A</td>
+<td></td>
+<td>0.1637</td>
+<td>0.1792</td>
+<td>0.1241</td>
+<td>0.2105</td>
+<td>0.1975</td>
+<td>0.1844</td>
+<td>0.1526</td>
+<td>0.2076</td>
+<td>0.1744</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.813</td>
+<td>C/T</td>
+<td></td>
+<td>R</td>
+</tr>
+<tr>
+<td>RASA3</td>
+<td>chr13</td>
+<td>114021555</td>
+<td>rs2274713</td>
+<td>T</td>
+<td>G</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.478261</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>37144</td>
+<td>48.2</td>
+<td>PASS</td>
+<td>ENST00000334062</td>
+<td>ENST00000334062.8:c.681-47A&gt;C</td>
+<td></td>
+<td>48</td>
+<td>46</td>
+<td>24*22</td>
+<td>48*0*57</td>
+<td></td>
+<td>T/G</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000334062.8:c.681-47T&gt;G</td>
+<td></td>
+<td>A/C</td>
+<td></td>
+<td>0.7073</td>
+<td>0.8702</td>
+<td>0.6665</td>
+<td>0.7226</td>
+<td>0.6649</td>
+<td>0.6314</td>
+<td>0.6331</td>
+<td>0.6682</td>
+<td>0.7089</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.813</td>
+<td>T/A/C/G</td>
+<td></td>
+<td>R</td>
+</tr>
+<tr>
+<td>RASA3</td>
+<td>chr13</td>
+<td>114027366</td>
+<td>rs3829340</td>
+<td>C</td>
+<td>T</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.503937</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>37145</td>
+<td>52.2</td>
+<td>PASS</td>
+<td>ENST00000334062</td>
+<td>ENST00000334062.8:c.603+23G&gt;A</td>
+<td></td>
+<td>51</td>
+<td>127</td>
+<td>63*64</td>
+<td>52*0*56</td>
+<td></td>
+<td>C/T</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000334062.8:c.603+23C&gt;T</td>
+<td></td>
+<td>G/A</td>
+<td></td>
+<td>0.7015</td>
+<td>0.8526</td>
+<td>0.661</td>
+<td>0.7206</td>
+<td>0.6655</td>
+<td>0.632</td>
+<td>0.6322</td>
+<td>0.6707</td>
+<td>0.7039</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.813</td>
+<td>C/T</td>
+<td></td>
+<td>R</td>
+</tr>
+</tbody></table></div>
+<script>
+(function() {{
+  const table = document.getElementById('tabela');
+  const busca = document.getElementById('busca');
+  const btnCsv = document.getElementById('btnCsv');
+  if (!table) return;
+  const getCellText = (tr, idx) => (tr.cells[idx]?.innerText || "").trim();
+  const isNumber = (v) => /^-?\d+(\.\d+)?$/.test(v.replace(/\s+/g, '').replace(',', '.'));
+
+  Array.from(table.tHead.rows[0].cells).forEach((th, idx) => {{
+    th.classList.add('sortable');
+    th.addEventListener('click', () => {{
+      const tbody = table.tBodies[0];
+      const rows = Array.from(tbody.rows);
+      const current = th.classList.contains('sorted-asc') ? 'asc'
+                    : th.classList.contains('sorted-desc') ? 'desc' : null;
+      Array.from(table.tHead.rows[0].cells).forEach(h => h.classList.remove('sorted-asc','sorted-desc'));
+      const dir = current === 'asc' ? -1 : 1;
+      const colIsNum = rows.every(tr => isNumber(getCellText(tr, idx)) || getCellText(tr, idx) === "");
+      rows.sort((a,b) => {{
+        let A = getCellText(a, idx);
+        let B = getCellText(b, idx);
+        if (colIsNum) {{ A = parseFloat(A.replace(',', '.')) || 0; B = parseFloat(B.replace(',', '.')) || 0; }}
+        else {{ A = A.toLowerCase(); B = B.toLowerCase(); }}
+        if (A < B) return -1 * dir;
+        if (A > B) return  1 * dir;
+        return 0;
+      }});
+      rows.forEach(r => tbody.appendChild(r));
+      th.classList.add(dir === 1 ? 'sorted-asc' : 'sorted-desc');
+    }});
+  }});
+
+  busca?.addEventListener('input', () => {{
+    const q = busca.value.toLowerCase();
+    const rows = Array.from(table.tBodies[0].rows);
+    rows.forEach(tr => {{
+      const txt = tr.innerText.toLowerCase();
+      tr.style.display = txt.includes(q) ? '' : 'none';
+    }});
+  }});
+
+  btnCsv?.addEventListener('click', () => {{
+    const rows = [];
+    const selRows = Array.from(table.querySelectorAll('tr'));
+    selRows.forEach((tr, i) => {{
+      if (i>0 && tr.style.display === 'none') return;
+      const cells = Array.from(tr.cells).map(td => {{
+        const t = td.innerText.replace(/"/g,'""');
+        return /[",\n]/.test(t) ? `"${{t}}"` : t;
+      }});
+      rows.push(cells.join(','));
+    }});
+    const blob = new Blob([rows.join('\n')], {{type: 'text/csv;charset=utf-8;'}});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = (document.title || 'export') + '.csv';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(() => URL.revokeObjectURL(url), 5000);
+  }});
+}})();
+</script>
+</body>
+</html>
