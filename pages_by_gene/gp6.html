@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GP6 — Linhas da tabela dbo.variantes</title>
+<style>
+  :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif; }
+  body { margin: 24px; }
+  h1 { margin: 0 0 6px 0; font-size: 1.6rem; }
+  .meta { color: #444; font-size: .95rem; margin-bottom: 12px; }
+  .toolbar { display:flex; gap: 8px; align-items:center; margin: 12px 0; flex-wrap: wrap; }
+  input[type="search"] { padding: 8px 10px; border: 1px solid #ccc; border-radius: 10px; min-width: 260px; }
+  button { padding: 8px 12px; border: 1px solid #ccc; border-radius: 10px; background: #f7f7f7; cursor: pointer; }
+  button:hover { background: #eee; }
+  table { width: 100%; border-collapse: collapse; }
+  thead th { position: sticky; top: 0; background: #fafafa; border-bottom: 1px solid #ddd; text-align: left; padding: 10px; cursor: pointer; }
+  tbody td { border-bottom: 1px solid #f0f0f0; padding: 8px 10px; vertical-align: top; }
+  .sortable::after { content: " ⇅"; font-size: .8em; color: #888; }
+  .sorted-asc::after { content: " ↑"; }
+  .sorted-desc::after { content: " ↓"; }
+  .empty { padding: 16px; background: #fff6f6; border: 1px solid #ffdede; border-radius: 12px; }
+  a.btn { display:inline-block; margin: 0 8px 8px 0; padding: 6px 10px; border-radius: 10px; border:1px solid #ddd; text-decoration:none; color:#222; background:#f9f9f9; }
+  a.btn:hover { background:#f0f0f0; }
+</style>
+</head>
+<body>
+<h1>GP6 — Linhas da tabela dbo.variantes</h1>
+<div class="meta">Gene: <strong>GP6</strong> • Linhas: <strong>13</strong></div>
+<div class="toolbar">
+  <input id="busca" type="search" placeholder="Filtrar linhas... (busca global)">
+  <button id="btnCsv" type="button">Exportar CSV</button>
+  <a class="btn" href="index.html">Voltar ao índice</a>
+</div>
+<div id="wrap">
+<table id="tabela" border="0">
+<thead><tr>
+<th>Gene</th>
+<th>Chr</th>
+<th>Pos</th>
+<th>ID</th>
+<th>Ref</th>
+<th>Alt</th>
+<th>Impacto</th>
+<th>GT</th>
+<th>VAF</th>
+<th>ClinVar_ID</th>
+<th>ClinVar_Significance</th>
+<th>ClinVar_Review_Status</th>
+<th>ClinVar_Disease_Names</th>
+<th>ID_variante</th>
+<th>Qual</th>
+<th>Filtro</th>
+<th>Ensembl</th>
+<th>Alteracao_nucleotidica</th>
+<th>Alteracao_aminoacidica</th>
+<th>GQ</th>
+<th>DP</th>
+<th>AD</th>
+<th>PL</th>
+<th>HGMD</th>
+<th>Resultado</th>
+<th>Status</th>
+<th>Buscar</th>
+<th>SIFT</th>
+<th>PolyPhen</th>
+<th>Biotype</th>
+<th>Alteracao_nucleotidica_reversa</th>
+<th>Alteracao_aminoacidica_reversa</th>
+<th>Resultado_reverso</th>
+<th>encontrado_rsid</th>
+<th>gnomAD_AF_Global</th>
+<th>gnomAD_AFR_AF</th>
+<th>gnomAD_AMR_AF</th>
+<th>gnomAD_ASJ_AF</th>
+<th>gnomAD_EAS_AF</th>
+<th>gnomAD_FIN_AF</th>
+<th>gnomAD_NFE_AF</th>
+<th>gnomAD_SAS_AF</th>
+<th>gnomAD_OTH_AF</th>
+<th>PhyloP</th>
+<th>PhastCons</th>
+<th>GERP</th>
+<th>CADD_Raw</th>
+<th>CADD_Phred</th>
+<th>LOEUF</th>
+<th>Allele_String</th>
+<th>ClinVar_Disease_Count</th>
+<th>letra_inicial_gene</th>
+</tr></thead><tbody>
+<tr>
+<td>GP6</td>
+<td>chr19</td>
+<td>55014129</td>
+<td>rs1671150</td>
+<td>A</td>
+<td>G</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td>254446</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Platelet-type bleeding disorder 11</td>
+<td>51122</td>
+<td>62.0</td>
+<td>PASS</td>
+<td>ENST00000417454</td>
+<td>ENST00000417454.5:c.*792T&gt;C</td>
+<td></td>
+<td>52</td>
+<td>75</td>
+<td>0*75</td>
+<td>62*52*0</td>
+<td></td>
+<td>G/G</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000417454.5:c.*792A&gt;G</td>
+<td></td>
+<td>C/C</td>
+<td></td>
+<td>0.755</td>
+<td>0.5701</td>
+<td>0.8019</td>
+<td>0.7921</td>
+<td>0.8239</td>
+<td>0.876</td>
+<td>0.8319</td>
+<td>0.7219</td>
+<td>0.7865</td>
+<td>-1.841</td>
+<td>0.001</td>
+<td>-0.47</td>
+<td></td>
+<td></td>
+<td>1.734</td>
+<td>A/C/G/T</td>
+<td>3</td>
+<td>G</td>
+</tr>
+<tr>
+<td>GP6</td>
+<td>chr19</td>
+<td>55014228</td>
+<td>rs1654412</td>
+<td>T</td>
+<td>C</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td>254108</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Platelet-type bleeding disorder 11</td>
+<td>51123</td>
+<td>61.9</td>
+<td>PASS</td>
+<td>ENST00000417454</td>
+<td>ENST00000417454.5:c.*693A&gt;G</td>
+<td></td>
+<td>55</td>
+<td>58</td>
+<td>0*58</td>
+<td>61*55*0</td>
+<td></td>
+<td>C/C</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000417454.5:c.*693T&gt;C</td>
+<td></td>
+<td>G/G</td>
+<td></td>
+<td>0.7442</td>
+<td>0.5328</td>
+<td>0.7994</td>
+<td>0.7915</td>
+<td>0.8181</td>
+<td>0.8756</td>
+<td>0.8316</td>
+<td>0.7214</td>
+<td>0.7825</td>
+<td>-0.833</td>
+<td>0.01</td>
+<td>-0.47</td>
+<td></td>
+<td></td>
+<td>1.734</td>
+<td>T/A/C/G</td>
+<td>3</td>
+<td>G</td>
+</tr>
+<tr>
+<td>GP6</td>
+<td>chr19</td>
+<td>55014450</td>
+<td>rs41275822</td>
+<td>C</td>
+<td>T</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.56875</td>
+<td>249148</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td></td>
+<td>51124</td>
+<td>57.7</td>
+<td>PASS</td>
+<td>ENST00000417454</td>
+<td>ENST00000417454.5:c.*471G&gt;A</td>
+<td></td>
+<td>52</td>
+<td>160</td>
+<td>69*91</td>
+<td>57*0*52</td>
+<td></td>
+<td>C/T</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000417454.5:c.*471C&gt;T</td>
+<td></td>
+<td>G/A</td>
+<td></td>
+<td>0.02307</td>
+<td>0.005754</td>
+<td>0.02212</td>
+<td>0.04092</td>
+<td>0.0005785</td>
+<td>0.04245</td>
+<td>0.0327</td>
+<td>0.005595</td>
+<td>0.02849</td>
+<td>0.046</td>
+<td>0.001</td>
+<td>0.493</td>
+<td></td>
+<td></td>
+<td>1.734</td>
+<td>C/A/T</td>
+<td>2</td>
+<td>G</td>
+</tr>
+<tr>
+<td>GP6</td>
+<td>chr19</td>
+<td>55014526</td>
+<td>rs1671151</td>
+<td>G</td>
+<td>A</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td>243793</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Platelet-type bleeding disorder 11</td>
+<td>51125</td>
+<td>61.4</td>
+<td>PASS</td>
+<td>ENST00000417454</td>
+<td>ENST00000417454.5:c.*395C&gt;T</td>
+<td></td>
+<td>51</td>
+<td>175</td>
+<td>0*175</td>
+<td>61*51*0</td>
+<td></td>
+<td>A/A</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000417454.5:c.*395G&gt;A</td>
+<td></td>
+<td>T/T</td>
+<td></td>
+<td>0.7446</td>
+<td>0.5332</td>
+<td>0.7995</td>
+<td>0.7918</td>
+<td>0.8245</td>
+<td>0.876</td>
+<td>0.8318</td>
+<td>0.7217</td>
+<td>0.7824</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1.734</td>
+<td>G/A/C/T</td>
+<td>3</td>
+<td>G</td>
+</tr>
+<tr>
+<td>GP6</td>
+<td>chr19</td>
+<td>55014977</td>
+<td>rs1671152</td>
+<td>T</td>
+<td>G</td>
+<td>MODERATE</td>
+<td>1/1</td>
+<td>1</td>
+<td>244207</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Platelet-type bleeding disorder 11</td>
+<td>51126</td>
+<td>55.8</td>
+<td>PASS</td>
+<td>ENST00000417454</td>
+<td>ENST00000417454.5:c.964A&gt;C</td>
+<td>ENSP00000394922.1:p.Asn322His</td>
+<td>48</td>
+<td>103</td>
+<td>0*103</td>
+<td>55*48*0</td>
+<td></td>
+<td>G/G</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000417454.5:c.964T&gt;G</td>
+<td>ENSP00000394922.1:p.His322Asn</td>
+<td>C/C</td>
+<td></td>
+<td>0.8153</td>
+<td>0.6947</td>
+<td>0.8876</td>
+<td>0.8054</td>
+<td>0.9754</td>
+<td>0.8906</td>
+<td>0.851</td>
+<td>0.7871</td>
+<td>0.8355</td>
+<td>0.191</td>
+<td>0</td>
+<td>2.65</td>
+<td></td>
+<td></td>
+<td>1.734</td>
+<td>T/A/G</td>
+<td>3</td>
+<td>G</td>
+</tr>
+<tr>
+<td>GP6</td>
+<td>chr19</td>
+<td>55014991</td>
+<td>rs1654413</td>
+<td>A</td>
+<td>T</td>
+<td>MODERATE</td>
+<td>1/1</td>
+<td>1</td>
+<td>251811</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Platelet-type bleeding disorder 11</td>
+<td>51127</td>
+<td>60.2</td>
+<td>PASS</td>
+<td>ENST00000417454</td>
+<td>ENST00000417454.5:c.950T&gt;A</td>
+<td>ENSP00000394922.1:p.Leu317Gln</td>
+<td>57</td>
+<td>108</td>
+<td>0*108</td>
+<td>60*60*0</td>
+<td></td>
+<td>T/T</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000417454.5:c.950A&gt;T</td>
+<td>ENSP00000394922.1:p.Gln317Leu</td>
+<td>A/A</td>
+<td></td>
+<td>0.7514</td>
+<td>0.5588</td>
+<td>0.8008</td>
+<td>0.7918</td>
+<td>0.8221</td>
+<td>0.8751</td>
+<td>0.8314</td>
+<td>0.7218</td>
+<td>0.7858</td>
+<td>-0.855</td>
+<td>0</td>
+<td>-0.947</td>
+<td></td>
+<td></td>
+<td>1.734</td>
+<td>A/C/G/T</td>
+<td>3</td>
+<td>G</td>
+</tr>
+<tr>
+<td>GP6</td>
+<td>chr19</td>
+<td>55015005</td>
+<td>rs2304166</td>
+<td>G</td>
+<td>C</td>
+<td>LOW</td>
+<td>1/1</td>
+<td>1</td>
+<td>1530789</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>GP6-related disorder; Platelet-type bleeding disorder 11</td>
+<td>51128</td>
+<td>49.8</td>
+<td>PASS</td>
+<td>ENST00000417454</td>
+<td>ENST00000417454.5:c.936C&gt;G</td>
+<td>ENSP00000394922.1:p.Leu312=</td>
+<td>46</td>
+<td>125</td>
+<td>0*125</td>
+<td>49*48*0</td>
+<td></td>
+<td>C/C</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000417454.5:c.936G&gt;C</td>
+<td></td>
+<td>G/G</td>
+<td></td>
+<td>0.4822</td>
+<td>0.2539</td>
+<td>0.5306</td>
+<td>0.5465</td>
+<td>0.2341</td>
+<td>0.6276</td>
+<td>0.6043</td>
+<td>0.4379</td>
+<td>0.5038</td>
+<td>0.277</td>
+<td>0.472</td>
+<td>2.65</td>
+<td></td>
+<td></td>
+<td>1.734</td>
+<td>G/A/C/T</td>
+<td>3</td>
+<td>G</td>
+</tr>
+<tr>
+<td>GP6</td>
+<td>chr19</td>
+<td>55015713</td>
+<td>rs2304167</td>
+<td>C</td>
+<td>T</td>
+<td>MODERATE</td>
+<td>1/1</td>
+<td>1</td>
+<td>251969</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Platelet-type bleeding disorder 11</td>
+<td>51129</td>
+<td>51.2</td>
+<td>PASS</td>
+<td>ENST00000417454</td>
+<td>ENST00000417454.5:c.745G&gt;A</td>
+<td>ENSP00000394922.1:p.Ala249Thr</td>
+<td>42</td>
+<td>169</td>
+<td>0*169</td>
+<td>51*42*0</td>
+<td></td>
+<td>T/T</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000417454.5:c.745C&gt;T</td>
+<td>ENSP00000394922.1:p.Thr249Ala</td>
+<td>A/A</td>
+<td></td>
+<td>0.7416</td>
+<td>0.5223</td>
+<td>0.7991</td>
+<td>0.7918</td>
+<td>0.8211</td>
+<td>0.8757</td>
+<td>0.832</td>
+<td>0.7213</td>
+<td>0.7808</td>
+<td>-2.769</td>
+<td>0</td>
+<td>-6.29</td>
+<td></td>
+<td></td>
+<td>1.734</td>
+<td>C/T</td>
+<td>3</td>
+<td>G</td>
+</tr>
+<tr>
+<td>GP6</td>
+<td>chr19</td>
+<td>55018667</td>
+<td>rs1654416</td>
+<td>C</td>
+<td>T</td>
+<td>MODERATE</td>
+<td>1/1</td>
+<td>1</td>
+<td>246602</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Platelet-type bleeding disorder 11</td>
+<td>51130</td>
+<td>64.1</td>
+<td>PASS</td>
+<td>ENST00000417454</td>
+<td>ENST00000417454.5:c.709G&gt;A</td>
+<td>ENSP00000394922.1:p.Glu237Lys</td>
+<td>53</td>
+<td>148</td>
+<td>0*148</td>
+<td>64*53*0</td>
+<td></td>
+<td>T/T</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000417454.5:c.709C&gt;T</td>
+<td>ENSP00000394922.1:p.Lys237Glu</td>
+<td>A/A</td>
+<td></td>
+<td>0.7721</td>
+<td>0.6227</td>
+<td>0.8097</td>
+<td>0.7963</td>
+<td>0.8206</td>
+<td>0.8766</td>
+<td>0.8358</td>
+<td>0.7216</td>
+<td>0.8015</td>
+<td>-0.136</td>
+<td>0</td>
+<td>-1.81</td>
+<td></td>
+<td></td>
+<td>1.734</td>
+<td>C/G/T</td>
+<td>3</td>
+<td>G</td>
+</tr>
+<tr>
+<td>GP6</td>
+<td>chr19</td>
+<td>55025227</td>
+<td>rs1613662</td>
+<td>G</td>
+<td>A</td>
+<td>MODERATE</td>
+<td>1/1</td>
+<td>1</td>
+<td>241611</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Platelet-type bleeding disorder 11</td>
+<td>51131</td>
+<td>57.8</td>
+<td>PASS</td>
+<td>ENST00000417454</td>
+<td>ENST00000417454.5:c.655C&gt;T</td>
+<td>ENSP00000394922.1:p.Pro219Ser</td>
+<td>52</td>
+<td>211</td>
+<td>0*211</td>
+<td>57*52*0</td>
+<td>CM013737</td>
+<td>A/A</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000417454.5:c.655G&gt;A</td>
+<td>ENSP00000394922.1:p.Ser219Pro</td>
+<td>T/T</td>
+<td></td>
+<td>0.8343</td>
+<td>0.7735</td>
+<td>0.8874</td>
+<td>0.7952</td>
+<td>0.9757</td>
+<td>0.8901</td>
+<td>0.8458</td>
+<td>0.7861</td>
+<td>0.8454</td>
+<td>-0.373</td>
+<td>0</td>
+<td>-0.223</td>
+<td></td>
+<td></td>
+<td>1.734</td>
+<td>G/A/C/T</td>
+<td>3</td>
+<td>G</td>
+</tr>
+<tr>
+<td>GP6</td>
+<td>chr19</td>
+<td>55027612</td>
+<td>rs1654425</td>
+<td>T</td>
+<td>C</td>
+<td>LOW</td>
+<td>1/1</td>
+<td>1</td>
+<td>250060</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Platelet-type bleeding disorder 11</td>
+<td>51132</td>
+<td>61.6</td>
+<td>PASS</td>
+<td>ENST00000417454</td>
+<td>ENST00000417454.5:c.576A&gt;G</td>
+<td>ENSP00000394922.1:p.Ser192=</td>
+<td>53</td>
+<td>267</td>
+<td>0*267</td>
+<td>61*53*0</td>
+<td></td>
+<td>C/C</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000417454.5:c.576T&gt;C</td>
+<td></td>
+<td>G/G</td>
+<td></td>
+<td>0.8903</td>
+<td>0.966</td>
+<td>0.9126</td>
+<td>0.7954</td>
+<td>0.9758</td>
+<td>0.8901</td>
+<td>0.8467</td>
+<td>0.7866</td>
+<td>0.886</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1.734</td>
+<td>T/A/C/G</td>
+<td>3</td>
+<td>G</td>
+</tr>
+<tr>
+<td>GP6</td>
+<td>chr19</td>
+<td>55027693</td>
+<td>rs892089</td>
+<td>A</td>
+<td>G</td>
+<td>LOW</td>
+<td>1/1</td>
+<td>1</td>
+<td>242923</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Platelet-type bleeding disorder 11</td>
+<td>51133</td>
+<td>55.6</td>
+<td>PASS</td>
+<td>ENST00000417454</td>
+<td>ENST00000417454.5:c.495T&gt;C</td>
+<td>ENSP00000394922.1:p.Phe165=</td>
+<td>42</td>
+<td>297</td>
+<td>0*297</td>
+<td>55*42*0</td>
+<td></td>
+<td>G/G</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000417454.5:c.495A&gt;G</td>
+<td></td>
+<td>C/C</td>
+<td></td>
+<td>0.7592</td>
+<td>0.5983</td>
+<td>0.798</td>
+<td>0.7802</td>
+<td>0.8213</td>
+<td>0.8746</td>
+<td>0.8263</td>
+<td>0.7192</td>
+<td>0.7871</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1.734</td>
+<td>A/G</td>
+<td>3</td>
+<td>G</td>
+</tr>
+<tr>
+<td>GP6</td>
+<td>chr19</td>
+<td>55027704</td>
+<td>rs892090</td>
+<td>T</td>
+<td>G</td>
+<td>LOW</td>
+<td>1/1</td>
+<td>1</td>
+<td>250940</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Platelet-type bleeding disorder 11</td>
+<td>51134</td>
+<td>57.8</td>
+<td>PASS</td>
+<td>ENST00000417454</td>
+<td>ENST00000417454.5:c.484A&gt;C</td>
+<td>ENSP00000394922.1:p.Arg162=</td>
+<td>51</td>
+<td>288</td>
+<td>0*288</td>
+<td>57*52*0</td>
+<td></td>
+<td>G/G</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000417454.5:c.484T&gt;G</td>
+<td></td>
+<td>C/C</td>
+<td></td>
+<td>0.8342</td>
+<td>0.7731</td>
+<td>0.8873</td>
+<td>0.7952</td>
+<td>0.9756</td>
+<td>0.8902</td>
+<td>0.8459</td>
+<td>0.7855</td>
+<td>0.8463</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1.734</td>
+<td>T/A/C/G</td>
+<td>3</td>
+<td>G</td>
+</tr>
+</tbody></table></div>
+<script>
+(function() {{
+  const table = document.getElementById('tabela');
+  const busca = document.getElementById('busca');
+  const btnCsv = document.getElementById('btnCsv');
+  if (!table) return;
+  const getCellText = (tr, idx) => (tr.cells[idx]?.innerText || "").trim();
+  const isNumber = (v) => /^-?\d+(\.\d+)?$/.test(v.replace(/\s+/g, '').replace(',', '.'));
+
+  Array.from(table.tHead.rows[0].cells).forEach((th, idx) => {{
+    th.classList.add('sortable');
+    th.addEventListener('click', () => {{
+      const tbody = table.tBodies[0];
+      const rows = Array.from(tbody.rows);
+      const current = th.classList.contains('sorted-asc') ? 'asc'
+                    : th.classList.contains('sorted-desc') ? 'desc' : null;
+      Array.from(table.tHead.rows[0].cells).forEach(h => h.classList.remove('sorted-asc','sorted-desc'));
+      const dir = current === 'asc' ? -1 : 1;
+      const colIsNum = rows.every(tr => isNumber(getCellText(tr, idx)) || getCellText(tr, idx) === "");
+      rows.sort((a,b) => {{
+        let A = getCellText(a, idx);
+        let B = getCellText(b, idx);
+        if (colIsNum) {{ A = parseFloat(A.replace(',', '.')) || 0; B = parseFloat(B.replace(',', '.')) || 0; }}
+        else {{ A = A.toLowerCase(); B = B.toLowerCase(); }}
+        if (A < B) return -1 * dir;
+        if (A > B) return  1 * dir;
+        return 0;
+      }});
+      rows.forEach(r => tbody.appendChild(r));
+      th.classList.add(dir === 1 ? 'sorted-asc' : 'sorted-desc');
+    }});
+  }});
+
+  busca?.addEventListener('input', () => {{
+    const q = busca.value.toLowerCase();
+    const rows = Array.from(table.tBodies[0].rows);
+    rows.forEach(tr => {{
+      const txt = tr.innerText.toLowerCase();
+      tr.style.display = txt.includes(q) ? '' : 'none';
+    }});
+  }});
+
+  btnCsv?.addEventListener('click', () => {{
+    const rows = [];
+    const selRows = Array.from(table.querySelectorAll('tr'));
+    selRows.forEach((tr, i) => {{
+      if (i>0 && tr.style.display === 'none') return;
+      const cells = Array.from(tr.cells).map(td => {{
+        const t = td.innerText.replace(/"/g,'""');
+        return /[",\n]/.test(t) ? `"${{t}}"` : t;
+      }});
+      rows.push(cells.join(','));
+    }});
+    const blob = new Blob([rows.join('\n')], {{type: 'text/csv;charset=utf-8;'}});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = (document.title || 'export') + '.csv';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(() => URL.revokeObjectURL(url), 5000);
+  }});
+}})();
+</script>
+</body>
+</html>
