@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LRRK1 — Linhas da tabela dbo.variantes</title>
+<style>
+  :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif; }
+  body { margin: 24px; }
+  h1 { margin: 0 0 6px 0; font-size: 1.6rem; }
+  .meta { color: #444; font-size: .95rem; margin-bottom: 12px; }
+  .toolbar { display:flex; gap: 8px; align-items:center; margin: 12px 0; flex-wrap: wrap; }
+  input[type="search"] { padding: 8px 10px; border: 1px solid #ccc; border-radius: 10px; min-width: 260px; }
+  button { padding: 8px 12px; border: 1px solid #ccc; border-radius: 10px; background: #f7f7f7; cursor: pointer; }
+  button:hover { background: #eee; }
+  table { width: 100%; border-collapse: collapse; }
+  thead th { position: sticky; top: 0; background: #fafafa; border-bottom: 1px solid #ddd; text-align: left; padding: 10px; cursor: pointer; }
+  tbody td { border-bottom: 1px solid #f0f0f0; padding: 8px 10px; vertical-align: top; }
+  .sortable::after { content: " ⇅"; font-size: .8em; color: #888; }
+  .sorted-asc::after { content: " ↑"; }
+  .sorted-desc::after { content: " ↓"; }
+  .empty { padding: 16px; background: #fff6f6; border: 1px solid #ffdede; border-radius: 12px; }
+  a.btn { display:inline-block; margin: 0 8px 8px 0; padding: 6px 10px; border-radius: 10px; border:1px solid #ddd; text-decoration:none; color:#222; background:#f9f9f9; }
+  a.btn:hover { background:#f0f0f0; }
+</style>
+</head>
+<body>
+<h1>LRRK1 — Linhas da tabela dbo.variantes</h1>
+<div class="meta">Gene: <strong>LRRK1</strong> • Linhas: <strong>14</strong></div>
+<div class="toolbar">
+  <input id="busca" type="search" placeholder="Filtrar linhas... (busca global)">
+  <button id="btnCsv" type="button">Exportar CSV</button>
+  <a class="btn" href="index.html">Voltar ao índice</a>
+</div>
+<div id="wrap">
+<table id="tabela" border="0">
+<thead><tr>
+<th>Gene</th>
+<th>Chr</th>
+<th>Pos</th>
+<th>ID</th>
+<th>Ref</th>
+<th>Alt</th>
+<th>Impacto</th>
+<th>GT</th>
+<th>VAF</th>
+<th>ClinVar_ID</th>
+<th>ClinVar_Significance</th>
+<th>ClinVar_Review_Status</th>
+<th>ClinVar_Disease_Names</th>
+<th>ID_variante</th>
+<th>Qual</th>
+<th>Filtro</th>
+<th>Ensembl</th>
+<th>Alteracao_nucleotidica</th>
+<th>Alteracao_aminoacidica</th>
+<th>GQ</th>
+<th>DP</th>
+<th>AD</th>
+<th>PL</th>
+<th>HGMD</th>
+<th>Resultado</th>
+<th>Status</th>
+<th>Buscar</th>
+<th>SIFT</th>
+<th>PolyPhen</th>
+<th>Biotype</th>
+<th>Alteracao_nucleotidica_reversa</th>
+<th>Alteracao_aminoacidica_reversa</th>
+<th>Resultado_reverso</th>
+<th>encontrado_rsid</th>
+<th>gnomAD_AF_Global</th>
+<th>gnomAD_AFR_AF</th>
+<th>gnomAD_AMR_AF</th>
+<th>gnomAD_ASJ_AF</th>
+<th>gnomAD_EAS_AF</th>
+<th>gnomAD_FIN_AF</th>
+<th>gnomAD_NFE_AF</th>
+<th>gnomAD_SAS_AF</th>
+<th>gnomAD_OTH_AF</th>
+<th>PhyloP</th>
+<th>PhastCons</th>
+<th>GERP</th>
+<th>CADD_Raw</th>
+<th>CADD_Phred</th>
+<th>LOEUF</th>
+<th>Allele_String</th>
+<th>ClinVar_Disease_Count</th>
+<th>letra_inicial_gene</th>
+</tr></thead><tbody>
+<tr>
+<td>LRRK1</td>
+<td>chr15</td>
+<td>100924710</td>
+<td>rs11630691</td>
+<td>T</td>
+<td>C</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.365979</td>
+<td>2132062</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>LRRK1-related disorder</td>
+<td>40973</td>
+<td>46.4</td>
+<td>PASS</td>
+<td>ENST00000388948</td>
+<td>ENST00000388948.8:c.78T&gt;C</td>
+<td>ENSP00000373600.3:p.Arg26=</td>
+<td>41</td>
+<td>194</td>
+<td>123*71</td>
+<td>46*0*42</td>
+<td></td>
+<td>T/C</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000388948.8:c.78T&gt;C</td>
+<td>ENSP00000373600.3:p.Arg26=</td>
+<td>T/C</td>
+<td></td>
+<td>0.3395</td>
+<td>0.6007</td>
+<td>0.2226</td>
+<td>0.2976</td>
+<td>0.1261</td>
+<td>0.1932</td>
+<td>0.2537</td>
+<td>0.2975</td>
+<td>0.3178</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.631</td>
+<td>T/C</td>
+<td>2</td>
+<td>L</td>
+</tr>
+<tr>
+<td>LRRK1</td>
+<td>chr15</td>
+<td>101010653</td>
+<td>rs12595297</td>
+<td>G</td>
+<td>T</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.559322</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>40974</td>
+<td>53.3</td>
+<td>PASS</td>
+<td>ENST00000388948</td>
+<td>ENST00000388948.8:c.1118-21G&gt;T</td>
+<td></td>
+<td>44</td>
+<td>59</td>
+<td>26*33</td>
+<td>53*0*44</td>
+<td></td>
+<td>G/T</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000388948.8:c.1118-21G&gt;T</td>
+<td></td>
+<td>G/T</td>
+<td></td>
+<td>0.7544</td>
+<td>0.7703</td>
+<td>0.7608</td>
+<td>0.7056</td>
+<td>0.7797</td>
+<td>0.769</td>
+<td>0.7435</td>
+<td>0.7574</td>
+<td>0.7714</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.631</td>
+<td>G/C/T</td>
+<td></td>
+<td>L</td>
+</tr>
+<tr>
+<td>LRRK1</td>
+<td>chr15</td>
+<td>101010656</td>
+<td></td>
+<td>CT</td>
+<td>C</td>
+<td>LOW</td>
+<td>1/1</td>
+<td>0.559322</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>40975</td>
+<td>41.3</td>
+<td>PASS</td>
+<td>ENST00000388948</td>
+<td>ENST00000388948.8:c.1118-18_1118-17del</td>
+<td></td>
+<td>30</td>
+<td>59</td>
+<td>5*33</td>
+<td>41*30*0</td>
+<td></td>
+<td>C/C</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000388948.8:c.1118-18_1118-17del</td>
+<td></td>
+<td>C/C</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.631000</td>
+<td></td>
+<td></td>
+<td>L</td>
+</tr>
+<tr>
+<td>LRRK1</td>
+<td>chr15</td>
+<td>101022588</td>
+<td>rs11247253</td>
+<td>G</td>
+<td>A</td>
+<td>LOW</td>
+<td>1/1</td>
+<td>1</td>
+<td>2124843</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>LRRK1-related disorder</td>
+<td>40976</td>
+<td>57.0</td>
+<td>PASS</td>
+<td>ENST00000388948</td>
+<td>ENST00000388948.8:c.2058G&gt;A</td>
+<td>ENSP00000373600.3:p.Ser686=</td>
+<td>49</td>
+<td>101</td>
+<td>0*101</td>
+<td>56*50*0</td>
+<td></td>
+<td>A/A</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000388948.8:c.2058G&gt;A</td>
+<td>ENSP00000373600.3:p.Ser686=</td>
+<td>A/A</td>
+<td></td>
+<td>0.7337</td>
+<td>0.4216</td>
+<td>0.828</td>
+<td>0.8373</td>
+<td>0.8268</td>
+<td>0.885</td>
+<td>0.8525</td>
+<td>0.8875</td>
+<td>0.7479</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.631</td>
+<td>G/A/C/T</td>
+<td>2</td>
+<td>L</td>
+</tr>
+<tr>
+<td>LRRK1</td>
+<td>chr15</td>
+<td>101027707</td>
+<td>rs56003881</td>
+<td>G</td>
+<td>A</td>
+<td>MODERATE</td>
+<td>0/1</td>
+<td>0.335878</td>
+<td>2173199</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td></td>
+<td>40977</td>
+<td>40.3</td>
+<td>PASS</td>
+<td>ENST00000388948</td>
+<td>ENST00000388948.8:c.2596G&gt;A</td>
+<td>ENSP00000373600.3:p.Asp866Asn</td>
+<td>40</td>
+<td>131</td>
+<td>87*44</td>
+<td>40*0*52</td>
+<td></td>
+<td>G/A</td>
+<td>Het</td>
+<td></td>
+<td>deleterious_low_confidence</td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000388948.8:c.2596G&gt;A</td>
+<td>ENSP00000373600.3:p.Asp866Asn</td>
+<td>G/A</td>
+<td></td>
+<td>0.001523</td>
+<td>0.000505</td>
+<td>0.0008496</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0.002646</td>
+<td>0.002277</td>
+<td>0.0009461</td>
+<td>3.168</td>
+<td>1</td>
+<td>0.155</td>
+<td></td>
+<td></td>
+<td>0.631</td>
+<td>G/A</td>
+<td>1</td>
+<td>L</td>
+</tr>
+<tr>
+<td>LRRK1</td>
+<td>chr15</td>
+<td>101029262</td>
+<td>rs11639307</td>
+<td>T</td>
+<td>C</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>40978</td>
+<td>53.3</td>
+<td>PASS</td>
+<td>ENST00000388948</td>
+<td>ENST00000388948.8:c.2963+30T&gt;C</td>
+<td></td>
+<td>47</td>
+<td>39</td>
+<td>0*39</td>
+<td>53*48*0</td>
+<td></td>
+<td>C/C</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000388948.8:c.2963+30T&gt;C</td>
+<td></td>
+<td>C/C</td>
+<td></td>
+<td>0.6129</td>
+<td>0.3233</td>
+<td>0.6404</td>
+<td>0.688</td>
+<td>0.538</td>
+<td>0.7298</td>
+<td>0.751</td>
+<td>0.7884</td>
+<td>0.6155</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.631</td>
+<td>T/C</td>
+<td></td>
+<td>L</td>
+</tr>
+<tr>
+<td>LRRK1</td>
+<td>chr15</td>
+<td>101051718</td>
+<td>rs4965778</td>
+<td>A</td>
+<td>G</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.42029</td>
+<td>2136780</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>LRRK1-related disorder</td>
+<td>40979</td>
+<td>41.3</td>
+<td>PASS</td>
+<td>ENST00000388948</td>
+<td>ENST00000388948.8:c.3447A&gt;G</td>
+<td>ENSP00000373600.3:p.Thr1149=</td>
+<td>39</td>
+<td>69</td>
+<td>40*29</td>
+<td>41*0*43</td>
+<td></td>
+<td>A/G</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000388948.8:c.3447A&gt;G</td>
+<td>ENSP00000373600.3:p.Thr1149=</td>
+<td>A/G</td>
+<td></td>
+<td>0.3682</td>
+<td>0.1634</td>
+<td>0.509</td>
+<td>0.3414</td>
+<td>0.7885</td>
+<td>0.5185</td>
+<td>0.4004</td>
+<td>0.4561</td>
+<td>0.3919</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.631</td>
+<td>A/G/T</td>
+<td>2</td>
+<td>L</td>
+</tr>
+<tr>
+<td>LRRK1</td>
+<td>chr15</td>
+<td>101053436</td>
+<td>rs11631875</td>
+<td>G</td>
+<td>A</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.581081</td>
+<td>2087786</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td></td>
+<td>40980</td>
+<td>50.7</td>
+<td>PASS</td>
+<td>ENST00000388948</td>
+<td>ENST00000388948.8:c.4054+16G&gt;A</td>
+<td></td>
+<td>48</td>
+<td>74</td>
+<td>31*43</td>
+<td>50*0*51</td>
+<td></td>
+<td>G/A</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000388948.8:c.4054+16G&gt;A</td>
+<td></td>
+<td>G/A</td>
+<td></td>
+<td>0.3112</td>
+<td>0.1016</td>
+<td>0.2927</td>
+<td>0.4408</td>
+<td>0.1672</td>
+<td>0.3529</td>
+<td>0.4309</td>
+<td>0.4295</td>
+<td>0.3057</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.631</td>
+<td>G/A/C</td>
+<td>1</td>
+<td>L</td>
+</tr>
+<tr>
+<td>LRRK1</td>
+<td>chr15</td>
+<td>101057061</td>
+<td>rs2924845</td>
+<td>A</td>
+<td>G</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.451613</td>
+<td>2180172</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td></td>
+<td>40981</td>
+<td>46.5</td>
+<td>PASS</td>
+<td>ENST00000388948</td>
+<td>ENST00000388948.8:c.4527+11A&gt;G</td>
+<td></td>
+<td>44</td>
+<td>62</td>
+<td>34*28</td>
+<td>46*0*46</td>
+<td></td>
+<td>A/G</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000388948.8:c.4527+11A&gt;G</td>
+<td></td>
+<td>A/G</td>
+<td></td>
+<td>0.4496</td>
+<td>0.4583</td>
+<td>0.5411</td>
+<td>0.3404</td>
+<td>0.8116</td>
+<td>0.5037</td>
+<td>0.3948</td>
+<td>0.4455</td>
+<td>0.4588</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.631</td>
+<td>A/G/T</td>
+<td>1</td>
+<td>L</td>
+</tr>
+<tr>
+<td>LRRK1</td>
+<td>chr15</td>
+<td>101057995</td>
+<td>rs11857803</td>
+<td>G</td>
+<td>A</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.569231</td>
+<td>2212075</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>LRRK1-related disorder</td>
+<td>40982</td>
+<td>54.1</td>
+<td>PASS</td>
+<td>ENST00000388948</td>
+<td>ENST00000388948.8:c.4533G&gt;A</td>
+<td>ENSP00000373600.3:p.Pro1511=</td>
+<td>51</td>
+<td>130</td>
+<td>56*74</td>
+<td>54*0*53</td>
+<td></td>
+<td>G/A</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000388948.8:c.4533G&gt;A</td>
+<td>ENSP00000373600.3:p.Pro1511=</td>
+<td>G/A</td>
+<td></td>
+<td>0.3942</td>
+<td>0.3247</td>
+<td>0.3422</td>
+<td>0.5023</td>
+<td>0.144</td>
+<td>0.3837</td>
+<td>0.4586</td>
+<td>0.4306</td>
+<td>0.3891</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.631</td>
+<td>G/A/C</td>
+<td>2</td>
+<td>L</td>
+</tr>
+<tr>
+<td>LRRK1</td>
+<td>chr15</td>
+<td>101058109</td>
+<td>rs11853661</td>
+<td>C</td>
+<td>T</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.324138</td>
+<td>2168151</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>LRRK1-related disorder</td>
+<td>40983</td>
+<td>39.5</td>
+<td>PASS</td>
+<td>ENST00000388948</td>
+<td>ENST00000388948.8:c.4647C&gt;T</td>
+<td>ENSP00000373600.3:p.Thr1549=</td>
+<td>39</td>
+<td>145</td>
+<td>98*47</td>
+<td>39*0*55</td>
+<td></td>
+<td>C/T</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000388948.8:c.4647C&gt;T</td>
+<td>ENSP00000373600.3:p.Thr1549=</td>
+<td>C/T</td>
+<td></td>
+<td>0.3789</td>
+<td>0.2992</td>
+<td>0.328</td>
+<td>0.4928</td>
+<td>0.1468</td>
+<td>0.3694</td>
+<td>0.4462</td>
+<td>0.4352</td>
+<td>0.3665</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.631</td>
+<td>C/A/T</td>
+<td>2</td>
+<td>L</td>
+</tr>
+<tr>
+<td>LRRK1</td>
+<td>chr15</td>
+<td>101061162</td>
+<td>rs148929418</td>
+<td>C</td>
+<td>CACTT</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.619048</td>
+<td>2122885</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td></td>
+<td>40984</td>
+<td>48.6</td>
+<td>PASS</td>
+<td>ENST00000388948</td>
+<td>ENST00000388948.8:c.4680-6_4680-3dup</td>
+<td></td>
+<td>47</td>
+<td>105</td>
+<td>40*65</td>
+<td>48*0*52</td>
+<td></td>
+<td>C/CACTT</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000388948.8:c.4680-6_4680-3dup</td>
+<td></td>
+<td>C/CACTT</td>
+<td></td>
+<td>0.3868</td>
+<td>0.2895</td>
+<td>0.349</td>
+<td>0.5029</td>
+<td>0.1665</td>
+<td>0.3765</td>
+<td>0.4618</td>
+<td>0.4344</td>
+<td>0.3748</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.631</td>
+<td>ACTTAC/ACTTACTTAC/ACTTACTTACTTAC</td>
+<td>1</td>
+<td>L</td>
+</tr>
+<tr>
+<td>LRRK1</td>
+<td>chr15</td>
+<td>101066684</td>
+<td>rs2924835</td>
+<td>G</td>
+<td>A</td>
+<td>MODERATE</td>
+<td>0/1</td>
+<td>0.336634</td>
+<td>1652123</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>LRRK1-related disorder</td>
+<td>40985</td>
+<td>49.7</td>
+<td>PASS</td>
+<td>ENST00000388948</td>
+<td>ENST00000388948.8:c.5813G&gt;A</td>
+<td>ENSP00000373600.3:p.Gly1938Asp</td>
+<td>49</td>
+<td>202</td>
+<td>134*68</td>
+<td>49*0*61</td>
+<td></td>
+<td>G/A</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000388948.8:c.5813G&gt;A</td>
+<td>ENSP00000373600.3:p.Gly1938Asp</td>
+<td>G/A</td>
+<td></td>
+<td>0.2603</td>
+<td>0.1083</td>
+<td>0.3184</td>
+<td>0.2914</td>
+<td>0.3385</td>
+<td>0.3452</td>
+<td>0.3133</td>
+<td>0.3312</td>
+<td>0.2806</td>
+<td>3.105</td>
+<td>0.997</td>
+<td>5.51</td>
+<td></td>
+<td></td>
+<td>0.631</td>
+<td>G/A</td>
+<td>2</td>
+<td>L</td>
+</tr>
+<tr>
+<td>LRRK1</td>
+<td>chr15</td>
+<td>101066685</td>
+<td>rs2959197</td>
+<td>C</td>
+<td>A</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.331658</td>
+<td>1621458</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>LRRK1-related disorder</td>
+<td>40986</td>
+<td>45.2</td>
+<td>PASS</td>
+<td>ENST00000388948</td>
+<td>ENST00000388948.8:c.5814C&gt;A</td>
+<td>ENSP00000373600.3:p.Gly1938=</td>
+<td>45</td>
+<td>199</td>
+<td>133*66</td>
+<td>45*0*61</td>
+<td></td>
+<td>C/A</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000388948.8:c.5814C&gt;A</td>
+<td>ENSP00000373600.3:p.Gly1938=</td>
+<td>C/A</td>
+<td></td>
+<td>0.2603</td>
+<td>0.1082</td>
+<td>0.3183</td>
+<td>0.2915</td>
+<td>0.3384</td>
+<td>0.3455</td>
+<td>0.3133</td>
+<td>0.3316</td>
+<td>0.2806</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.631</td>
+<td>C/A/T</td>
+<td>2</td>
+<td>L</td>
+</tr>
+</tbody></table></div>
+<script>
+(function() {{
+  const table = document.getElementById('tabela');
+  const busca = document.getElementById('busca');
+  const btnCsv = document.getElementById('btnCsv');
+  if (!table) return;
+  const getCellText = (tr, idx) => (tr.cells[idx]?.innerText || "").trim();
+  const isNumber = (v) => /^-?\d+(\.\d+)?$/.test(v.replace(/\s+/g, '').replace(',', '.'));
+
+  Array.from(table.tHead.rows[0].cells).forEach((th, idx) => {{
+    th.classList.add('sortable');
+    th.addEventListener('click', () => {{
+      const tbody = table.tBodies[0];
+      const rows = Array.from(tbody.rows);
+      const current = th.classList.contains('sorted-asc') ? 'asc'
+                    : th.classList.contains('sorted-desc') ? 'desc' : null;
+      Array.from(table.tHead.rows[0].cells).forEach(h => h.classList.remove('sorted-asc','sorted-desc'));
+      const dir = current === 'asc' ? -1 : 1;
+      const colIsNum = rows.every(tr => isNumber(getCellText(tr, idx)) || getCellText(tr, idx) === "");
+      rows.sort((a,b) => {{
+        let A = getCellText(a, idx);
+        let B = getCellText(b, idx);
+        if (colIsNum) {{ A = parseFloat(A.replace(',', '.')) || 0; B = parseFloat(B.replace(',', '.')) || 0; }}
+        else {{ A = A.toLowerCase(); B = B.toLowerCase(); }}
+        if (A < B) return -1 * dir;
+        if (A > B) return  1 * dir;
+        return 0;
+      }});
+      rows.forEach(r => tbody.appendChild(r));
+      th.classList.add(dir === 1 ? 'sorted-asc' : 'sorted-desc');
+    }});
+  }});
+
+  busca?.addEventListener('input', () => {{
+    const q = busca.value.toLowerCase();
+    const rows = Array.from(table.tBodies[0].rows);
+    rows.forEach(tr => {{
+      const txt = tr.innerText.toLowerCase();
+      tr.style.display = txt.includes(q) ? '' : 'none';
+    }});
+  }});
+
+  btnCsv?.addEventListener('click', () => {{
+    const rows = [];
+    const selRows = Array.from(table.querySelectorAll('tr'));
+    selRows.forEach((tr, i) => {{
+      if (i>0 && tr.style.display === 'none') return;
+      const cells = Array.from(tr.cells).map(td => {{
+        const t = td.innerText.replace(/"/g,'""');
+        return /[",\n]/.test(t) ? `"${{t}}"` : t;
+      }});
+      rows.push(cells.join(','));
+    }});
+    const blob = new Blob([rows.join('\n')], {{type: 'text/csv;charset=utf-8;'}});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = (document.title || 'export') + '.csv';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(() => URL.revokeObjectURL(url), 5000);
+  }});
+}})();
+</script>
+</body>
+</html>
