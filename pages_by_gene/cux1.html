@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CUX1 — Linhas da tabela dbo.variantes</title>
+<style>
+  :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif; }
+  body { margin: 24px; }
+  h1 { margin: 0 0 6px 0; font-size: 1.6rem; }
+  .meta { color: #444; font-size: .95rem; margin-bottom: 12px; }
+  .toolbar { display:flex; gap: 8px; align-items:center; margin: 12px 0; flex-wrap: wrap; }
+  input[type="search"] { padding: 8px 10px; border: 1px solid #ccc; border-radius: 10px; min-width: 260px; }
+  button { padding: 8px 12px; border: 1px solid #ccc; border-radius: 10px; background: #f7f7f7; cursor: pointer; }
+  button:hover { background: #eee; }
+  table { width: 100%; border-collapse: collapse; }
+  thead th { position: sticky; top: 0; background: #fafafa; border-bottom: 1px solid #ddd; text-align: left; padding: 10px; cursor: pointer; }
+  tbody td { border-bottom: 1px solid #f0f0f0; padding: 8px 10px; vertical-align: top; }
+  .sortable::after { content: " ⇅"; font-size: .8em; color: #888; }
+  .sorted-asc::after { content: " ↑"; }
+  .sorted-desc::after { content: " ↓"; }
+  .empty { padding: 16px; background: #fff6f6; border: 1px solid #ffdede; border-radius: 12px; }
+  a.btn { display:inline-block; margin: 0 8px 8px 0; padding: 6px 10px; border-radius: 10px; border:1px solid #ddd; text-decoration:none; color:#222; background:#f9f9f9; }
+  a.btn:hover { background:#f0f0f0; }
+</style>
+</head>
+<body>
+<h1>CUX1 — Linhas da tabela dbo.variantes</h1>
+<div class="meta">Gene: <strong>CUX1</strong> • Linhas: <strong>12</strong></div>
+<div class="toolbar">
+  <input id="busca" type="search" placeholder="Filtrar linhas... (busca global)">
+  <button id="btnCsv" type="button">Exportar CSV</button>
+  <a class="btn" href="index.html">Voltar ao índice</a>
+</div>
+<div id="wrap">
+<table id="tabela" border="0">
+<thead><tr>
+<th>Gene</th>
+<th>Chr</th>
+<th>Pos</th>
+<th>ID</th>
+<th>Ref</th>
+<th>Alt</th>
+<th>Impacto</th>
+<th>GT</th>
+<th>VAF</th>
+<th>ClinVar_ID</th>
+<th>ClinVar_Significance</th>
+<th>ClinVar_Review_Status</th>
+<th>ClinVar_Disease_Names</th>
+<th>ID_variante</th>
+<th>Qual</th>
+<th>Filtro</th>
+<th>Ensembl</th>
+<th>Alteracao_nucleotidica</th>
+<th>Alteracao_aminoacidica</th>
+<th>GQ</th>
+<th>DP</th>
+<th>AD</th>
+<th>PL</th>
+<th>HGMD</th>
+<th>Resultado</th>
+<th>Status</th>
+<th>Buscar</th>
+<th>SIFT</th>
+<th>PolyPhen</th>
+<th>Biotype</th>
+<th>Alteracao_nucleotidica_reversa</th>
+<th>Alteracao_aminoacidica_reversa</th>
+<th>Resultado_reverso</th>
+<th>encontrado_rsid</th>
+<th>gnomAD_AF_Global</th>
+<th>gnomAD_AFR_AF</th>
+<th>gnomAD_AMR_AF</th>
+<th>gnomAD_ASJ_AF</th>
+<th>gnomAD_EAS_AF</th>
+<th>gnomAD_FIN_AF</th>
+<th>gnomAD_NFE_AF</th>
+<th>gnomAD_SAS_AF</th>
+<th>gnomAD_OTH_AF</th>
+<th>PhyloP</th>
+<th>PhastCons</th>
+<th>GERP</th>
+<th>CADD_Raw</th>
+<th>CADD_Phred</th>
+<th>LOEUF</th>
+<th>Allele_String</th>
+<th>ClinVar_Disease_Count</th>
+<th>letra_inicial_gene</th>
+</tr></thead><tbody>
+<tr>
+<td>CUX1</td>
+<td>chr7</td>
+<td>102097326</td>
+<td>rs1637257</td>
+<td>T</td>
+<td>G</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td>1661330</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Global developmental delay with or without impaired intellectual development</td>
+<td>21452</td>
+<td>53.1</td>
+<td>PASS</td>
+<td>ENST00000292535</td>
+<td>ENST00000292535.12:c.269-38T&gt;G</td>
+<td></td>
+<td>39</td>
+<td>39</td>
+<td>0*39</td>
+<td>53*38*0</td>
+<td></td>
+<td>G/G</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000292535.12:c.269-38T&gt;G</td>
+<td></td>
+<td>G/G</td>
+<td></td>
+<td>0.6059</td>
+<td>0.7931</td>
+<td>0.4886</td>
+<td>0.6693</td>
+<td>0.04963</td>
+<td>0.5139</td>
+<td>0.583</td>
+<td>0.4473</td>
+<td>0.5962</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.245</td>
+<td>T/A/G</td>
+<td>1</td>
+<td>C</td>
+</tr>
+<tr>
+<td>CUX1</td>
+<td>chr7</td>
+<td>102097330</td>
+<td>rs1734879</td>
+<td>C</td>
+<td>A</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td>1661331</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Global developmental delay with or without impaired intellectual development</td>
+<td>21453</td>
+<td>59.1</td>
+<td>PASS</td>
+<td>ENST00000292535</td>
+<td>ENST00000292535.12:c.269-34C&gt;A</td>
+<td></td>
+<td>50</td>
+<td>44</td>
+<td>0*44</td>
+<td>59*50*0</td>
+<td></td>
+<td>A/A</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000292535.12:c.269-34C&gt;A</td>
+<td></td>
+<td>A/A</td>
+<td></td>
+<td>0.606</td>
+<td>0.7932</td>
+<td>0.4887</td>
+<td>0.6691</td>
+<td>0.04911</td>
+<td>0.5142</td>
+<td>0.5829</td>
+<td>0.4485</td>
+<td>0.5958</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.245</td>
+<td>C/A</td>
+<td>1</td>
+<td>C</td>
+</tr>
+<tr>
+<td>CUX1</td>
+<td>chr7</td>
+<td>102097547</td>
+<td>rs10638510</td>
+<td>T</td>
+<td>TTC</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>21454</td>
+<td>48.0</td>
+<td>PASS</td>
+<td>ENST00000292535</td>
+<td>ENST00000292535.12:c.406+46_406+47insTC</td>
+<td></td>
+<td>34</td>
+<td>17</td>
+<td>0*17</td>
+<td>48*34*0</td>
+<td></td>
+<td>TTC/TTC</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000292535.12:c.406+46_406+47insTC</td>
+<td></td>
+<td>TTC/TTC</td>
+<td></td>
+<td>0.6042</td>
+<td>0.7863</td>
+<td>0.4885</td>
+<td>0.6692</td>
+<td>0.04927</td>
+<td>0.5117</td>
+<td>0.5831</td>
+<td>0.4495</td>
+<td>0.5966</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.245</td>
+<td>-/TC/TTC</td>
+<td></td>
+<td>C</td>
+</tr>
+<tr>
+<td>CUX1</td>
+<td>chr7</td>
+<td>102104295</td>
+<td>rs201480</td>
+<td>A</td>
+<td>G</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>21455</td>
+<td>65.1</td>
+<td>PASS</td>
+<td>ENST00000292535</td>
+<td>ENST00000292535.12:c.407-41A&gt;G</td>
+<td></td>
+<td>51</td>
+<td>41</td>
+<td>0*41</td>
+<td>65*50*0</td>
+<td></td>
+<td>G/G</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000292535.12:c.407-41A&gt;G</td>
+<td></td>
+<td>G/G</td>
+<td></td>
+<td>0.6279</td>
+<td>0.7918</td>
+<td>0.5683</td>
+<td>0.6969</td>
+<td>0.09659</td>
+<td>0.5314</td>
+<td>0.5982</td>
+<td>0.555</td>
+<td>0.6229</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.245</td>
+<td>A/C/G/T</td>
+<td></td>
+<td>C</td>
+</tr>
+<tr>
+<td>CUX1</td>
+<td>chr7</td>
+<td>102104313</td>
+<td>rs371174192</td>
+<td>G</td>
+<td>GT</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>0.764706</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>21456</td>
+<td>58.5</td>
+<td>PASS</td>
+<td>ENST00000292535</td>
+<td>ENST00000292535.12:c.407-12dup</td>
+<td></td>
+<td>51</td>
+<td>51</td>
+<td>4*39</td>
+<td>58*51*0</td>
+<td></td>
+<td>GT/GT</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000292535.12:c.407-12dup</td>
+<td></td>
+<td>GT/GT</td>
+<td></td>
+<td>0.47</td>
+<td>0.4956</td>
+<td>0.4766</td>
+<td>0.5641</td>
+<td>0.05706</td>
+<td>0.4513</td>
+<td>0.4838</td>
+<td>0.457</td>
+<td>0.4788</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.245</td>
+<td>TTTTTTTTTTT/TTTTTTTTTT/TTTTTTTTTTTT/TTTTTTTTTTTTT/</td>
+<td></td>
+<td>C</td>
+</tr>
+<tr>
+<td>CUX1</td>
+<td>chr7</td>
+<td>102111780</td>
+<td>rs9655774</td>
+<td>A</td>
+<td>G</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.54023</td>
+<td>1661332</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Global developmental delay with or without impaired intellectual development</td>
+<td>21457</td>
+<td>51.5</td>
+<td>PASS</td>
+<td>ENST00000292535</td>
+<td>ENST00000292535.12:c.607+6A&gt;G</td>
+<td></td>
+<td>51</td>
+<td>87</td>
+<td>40*47</td>
+<td>51*0*57</td>
+<td></td>
+<td>A/G</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000292535.12:c.607+6A&gt;G</td>
+<td></td>
+<td>A/G</td>
+<td></td>
+<td>0.2274</td>
+<td>0.1335</td>
+<td>0.2228</td>
+<td>0.2781</td>
+<td>0.01949</td>
+<td>0.2775</td>
+<td>0.2916</td>
+<td>0.2193</td>
+<td>0.2334</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.245</td>
+<td>A/G/T</td>
+<td>1</td>
+<td>C</td>
+</tr>
+<tr>
+<td>CUX1</td>
+<td>chr7</td>
+<td>102115304</td>
+<td>rs201501</td>
+<td>G</td>
+<td>A</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td>1661334</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Global developmental delay with or without impaired intellectual development</td>
+<td>21458</td>
+<td>45.2</td>
+<td>PASS</td>
+<td>ENST00000292535</td>
+<td>ENST00000292535.12:c.674+31G&gt;A</td>
+<td></td>
+<td>37</td>
+<td>69</td>
+<td>0*69</td>
+<td>45*37*0</td>
+<td></td>
+<td>A/A</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000292535.12:c.674+31G&gt;A</td>
+<td></td>
+<td>A/A</td>
+<td></td>
+<td>0.4575</td>
+<td>0.4794</td>
+<td>0.4041</td>
+<td>0.5596</td>
+<td>0.04882</td>
+<td>0.4553</td>
+<td>0.4831</td>
+<td>0.4535</td>
+<td>0.4667</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.245</td>
+<td>G/A</td>
+<td>1</td>
+<td>C</td>
+</tr>
+<tr>
+<td>CUX1</td>
+<td>chr7</td>
+<td>102193869</td>
+<td>rs2230104</td>
+<td>G</td>
+<td>A</td>
+<td>LOW</td>
+<td>1/1</td>
+<td>1</td>
+<td>1661335</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Global developmental delay with or without impaired intellectual development</td>
+<td>21459</td>
+<td>60.3</td>
+<td>PASS</td>
+<td>ENST00000292535</td>
+<td>ENST00000292535.12:c.1104G&gt;A</td>
+<td>ENSP00000292535.7:p.Pro368=</td>
+<td>53</td>
+<td>154</td>
+<td>0*154</td>
+<td>60*53*0</td>
+<td></td>
+<td>A/A</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000292535.12:c.1104G&gt;A</td>
+<td>ENSP00000292535.7:p.Pro368=</td>
+<td>A/A</td>
+<td></td>
+<td>0.3615</td>
+<td>0.3674</td>
+<td>0.3132</td>
+<td>0.4003</td>
+<td>0.06988</td>
+<td>0.3501</td>
+<td>0.3909</td>
+<td>0.36</td>
+<td>0.3582</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.245</td>
+<td>G/A</td>
+<td>1</td>
+<td>C</td>
+</tr>
+<tr>
+<td>CUX1</td>
+<td>chr7</td>
+<td>102201571</td>
+<td>rs60987662</td>
+<td>A</td>
+<td>G</td>
+<td>LOW</td>
+<td>1/1</td>
+<td>1</td>
+<td>1661336</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Global developmental delay with or without impaired intellectual development</td>
+<td>21460</td>
+<td>57.2</td>
+<td>PASS</td>
+<td>ENST00000292535</td>
+<td>ENST00000292535.12:c.2274A&gt;G</td>
+<td>ENSP00000292535.7:p.Pro758=</td>
+<td>50</td>
+<td>224</td>
+<td>0*224</td>
+<td>57*51*0</td>
+<td></td>
+<td>G/G</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000292535.12:c.2274A&gt;G</td>
+<td>ENSP00000292535.7:p.Pro758=</td>
+<td>G/G</td>
+<td></td>
+<td>0.3776</td>
+<td>0.4207</td>
+<td>0.3235</td>
+<td>0.4017</td>
+<td>0.08075</td>
+<td>0.3564</td>
+<td>0.3895</td>
+<td>0.3604</td>
+<td>0.3738</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.245</td>
+<td>A/C/G</td>
+<td>1</td>
+<td>C</td>
+</tr>
+<tr>
+<td>CUX1</td>
+<td>chr7</td>
+<td>102227319</td>
+<td>rs430841</td>
+<td>A</td>
+<td>G</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>21461</td>
+<td>43.3</td>
+<td>PASS</td>
+<td>ENST00000292535</td>
+<td>ENST00000292535.12:c.3131-48A&gt;G</td>
+<td></td>
+<td>40</td>
+<td>31</td>
+<td>0*31</td>
+<td>43*43*0</td>
+<td></td>
+<td>G/G</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000292535.12:c.3131-48A&gt;G</td>
+<td></td>
+<td>G/G</td>
+<td></td>
+<td>0.9986</td>
+<td>0.9996</td>
+<td>0.9997</td>
+<td>1</td>
+<td>1</td>
+<td>0.9999</td>
+<td>0.9973</td>
+<td>0.9996</td>
+<td>0.9995</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.245</td>
+<td>A/C/G/T</td>
+<td></td>
+<td>C</td>
+</tr>
+<tr>
+<td>CUX1</td>
+<td>chr7</td>
+<td>102273527</td>
+<td>rs2974957</td>
+<td>A</td>
+<td>C</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.553571</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>21462</td>
+<td>50.9</td>
+<td>PASS</td>
+<td>ENST00000292538</td>
+<td>ENST00000292538.9:c.1383+34A&gt;C</td>
+<td></td>
+<td>45</td>
+<td>56</td>
+<td>25*31</td>
+<td>50*0*46</td>
+<td></td>
+<td>A/C</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000292538.9:c.1383+34A&gt;C</td>
+<td></td>
+<td>A/C</td>
+<td></td>
+<td>0.8979</td>
+<td>0.9712</td>
+<td>0.9157</td>
+<td>0.8672</td>
+<td>0.9744</td>
+<td>0.8397</td>
+<td>0.854</td>
+<td>0.8946</td>
+<td>0.8854</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.245</td>
+<td>A/C</td>
+<td></td>
+<td>C</td>
+</tr>
+<tr>
+<td>CUX1</td>
+<td>chr7</td>
+<td>102274250</td>
+<td>rs803064</td>
+<td>G</td>
+<td>A</td>
+<td>MODERATE</td>
+<td>0/1</td>
+<td>0.444444</td>
+<td>1661337</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Global developmental delay with or without impaired intellectual development</td>
+<td>21463</td>
+<td>44.7</td>
+<td>PASS</td>
+<td>ENST00000292538</td>
+<td>ENST00000292538.9:c.1390G&gt;A</td>
+<td>ENSP00000292538.4:p.Ala464Thr</td>
+<td>44</td>
+<td>99</td>
+<td>55*44</td>
+<td>44*0*50</td>
+<td></td>
+<td>G/A</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000292538.9:c.1390G&gt;A</td>
+<td>ENSP00000292538.4:p.Ala464Thr</td>
+<td>G/A</td>
+<td></td>
+<td>0.5626</td>
+<td>0.5935</td>
+<td>0.5202</td>
+<td>0.5818</td>
+<td>0.494</td>
+<td>0.515</td>
+<td>0.5635</td>
+<td>0.5798</td>
+<td>0.5431</td>
+<td>2.588</td>
+<td>0.859</td>
+<td>-0.106</td>
+<td></td>
+<td></td>
+<td>0.245</td>
+<td>G/A</td>
+<td>1</td>
+<td>C</td>
+</tr>
+</tbody></table></div>
+<script>
+(function() {{
+  const table = document.getElementById('tabela');
+  const busca = document.getElementById('busca');
+  const btnCsv = document.getElementById('btnCsv');
+  if (!table) return;
+  const getCellText = (tr, idx) => (tr.cells[idx]?.innerText || "").trim();
+  const isNumber = (v) => /^-?\d+(\.\d+)?$/.test(v.replace(/\s+/g, '').replace(',', '.'));
+
+  Array.from(table.tHead.rows[0].cells).forEach((th, idx) => {{
+    th.classList.add('sortable');
+    th.addEventListener('click', () => {{
+      const tbody = table.tBodies[0];
+      const rows = Array.from(tbody.rows);
+      const current = th.classList.contains('sorted-asc') ? 'asc'
+                    : th.classList.contains('sorted-desc') ? 'desc' : null;
+      Array.from(table.tHead.rows[0].cells).forEach(h => h.classList.remove('sorted-asc','sorted-desc'));
+      const dir = current === 'asc' ? -1 : 1;
+      const colIsNum = rows.every(tr => isNumber(getCellText(tr, idx)) || getCellText(tr, idx) === "");
+      rows.sort((a,b) => {{
+        let A = getCellText(a, idx);
+        let B = getCellText(b, idx);
+        if (colIsNum) {{ A = parseFloat(A.replace(',', '.')) || 0; B = parseFloat(B.replace(',', '.')) || 0; }}
+        else {{ A = A.toLowerCase(); B = B.toLowerCase(); }}
+        if (A < B) return -1 * dir;
+        if (A > B) return  1 * dir;
+        return 0;
+      }});
+      rows.forEach(r => tbody.appendChild(r));
+      th.classList.add(dir === 1 ? 'sorted-asc' : 'sorted-desc');
+    }});
+  }});
+
+  busca?.addEventListener('input', () => {{
+    const q = busca.value.toLowerCase();
+    const rows = Array.from(table.tBodies[0].rows);
+    rows.forEach(tr => {{
+      const txt = tr.innerText.toLowerCase();
+      tr.style.display = txt.includes(q) ? '' : 'none';
+    }});
+  }});
+
+  btnCsv?.addEventListener('click', () => {{
+    const rows = [];
+    const selRows = Array.from(table.querySelectorAll('tr'));
+    selRows.forEach((tr, i) => {{
+      if (i>0 && tr.style.display === 'none') return;
+      const cells = Array.from(tr.cells).map(td => {{
+        const t = td.innerText.replace(/"/g,'""');
+        return /[",\n]/.test(t) ? `"${{t}}"` : t;
+      }});
+      rows.push(cells.join(','));
+    }});
+    const blob = new Blob([rows.join('\n')], {{type: 'text/csv;charset=utf-8;'}});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = (document.title || 'export') + '.csv';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(() => URL.revokeObjectURL(url), 5000);
+  }});
+}})();
+</script>
+</body>
+</html>
