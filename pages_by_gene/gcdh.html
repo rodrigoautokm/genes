@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GCDH — Linhas da tabela dbo.variantes</title>
+<style>
+  :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif; }
+  body { margin: 24px; }
+  h1 { margin: 0 0 6px 0; font-size: 1.6rem; }
+  .meta { color: #444; font-size: .95rem; margin-bottom: 12px; }
+  .toolbar { display:flex; gap: 8px; align-items:center; margin: 12px 0; flex-wrap: wrap; }
+  input[type="search"] { padding: 8px 10px; border: 1px solid #ccc; border-radius: 10px; min-width: 260px; }
+  button { padding: 8px 12px; border: 1px solid #ccc; border-radius: 10px; background: #f7f7f7; cursor: pointer; }
+  button:hover { background: #eee; }
+  table { width: 100%; border-collapse: collapse; }
+  thead th { position: sticky; top: 0; background: #fafafa; border-bottom: 1px solid #ddd; text-align: left; padding: 10px; cursor: pointer; }
+  tbody td { border-bottom: 1px solid #f0f0f0; padding: 8px 10px; vertical-align: top; }
+  .sortable::after { content: " ⇅"; font-size: .8em; color: #888; }
+  .sorted-asc::after { content: " ↑"; }
+  .sorted-desc::after { content: " ↓"; }
+  .empty { padding: 16px; background: #fff6f6; border: 1px solid #ffdede; border-radius: 12px; }
+  a.btn { display:inline-block; margin: 0 8px 8px 0; padding: 6px 10px; border-radius: 10px; border:1px solid #ddd; text-decoration:none; color:#222; background:#f9f9f9; }
+  a.btn:hover { background:#f0f0f0; }
+</style>
+</head>
+<body>
+<h1>GCDH — Linhas da tabela dbo.variantes</h1>
+<div class="meta">Gene: <strong>GCDH</strong> • Linhas: <strong>7</strong></div>
+<div class="toolbar">
+  <input id="busca" type="search" placeholder="Filtrar linhas... (busca global)">
+  <button id="btnCsv" type="button">Exportar CSV</button>
+  <a class="btn" href="index.html">Voltar ao índice</a>
+</div>
+<div id="wrap">
+<table id="tabela" border="0">
+<thead><tr>
+<th>Gene</th>
+<th>Chr</th>
+<th>Pos</th>
+<th>ID</th>
+<th>Ref</th>
+<th>Alt</th>
+<th>Impacto</th>
+<th>GT</th>
+<th>VAF</th>
+<th>ClinVar_ID</th>
+<th>ClinVar_Significance</th>
+<th>ClinVar_Review_Status</th>
+<th>ClinVar_Disease_Names</th>
+<th>ID_variante</th>
+<th>Qual</th>
+<th>Filtro</th>
+<th>Ensembl</th>
+<th>Alteracao_nucleotidica</th>
+<th>Alteracao_aminoacidica</th>
+<th>GQ</th>
+<th>DP</th>
+<th>AD</th>
+<th>PL</th>
+<th>HGMD</th>
+<th>Resultado</th>
+<th>Status</th>
+<th>Buscar</th>
+<th>SIFT</th>
+<th>PolyPhen</th>
+<th>Biotype</th>
+<th>Alteracao_nucleotidica_reversa</th>
+<th>Alteracao_aminoacidica_reversa</th>
+<th>Resultado_reverso</th>
+<th>encontrado_rsid</th>
+<th>gnomAD_AF_Global</th>
+<th>gnomAD_AFR_AF</th>
+<th>gnomAD_AMR_AF</th>
+<th>gnomAD_ASJ_AF</th>
+<th>gnomAD_EAS_AF</th>
+<th>gnomAD_FIN_AF</th>
+<th>gnomAD_NFE_AF</th>
+<th>gnomAD_SAS_AF</th>
+<th>gnomAD_OTH_AF</th>
+<th>PhyloP</th>
+<th>PhastCons</th>
+<th>GERP</th>
+<th>CADD_Raw</th>
+<th>CADD_Phred</th>
+<th>LOEUF</th>
+<th>Allele_String</th>
+<th>ClinVar_Disease_Count</th>
+<th>letra_inicial_gene</th>
+</tr></thead><tbody>
+<tr>
+<td>GCDH</td>
+<td>chr19</td>
+<td>12891219</td>
+<td>rs7251834</td>
+<td>A</td>
+<td>G</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td>1527144</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Glutaric aciduria: type 1</td>
+<td>48957</td>
+<td>58.5</td>
+<td>PASS</td>
+<td>ENST00000222214</td>
+<td>ENST00000222214.10:c.-35+17A&gt;G</td>
+<td></td>
+<td>43</td>
+<td>115</td>
+<td>0*115</td>
+<td>58*42*0</td>
+<td></td>
+<td>G/G</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000222214.10:c.-35+17A&gt;G</td>
+<td></td>
+<td>G/G</td>
+<td></td>
+<td>0.9631</td>
+<td>0.9909</td>
+<td>0.9575</td>
+<td>0.8848</td>
+<td>0.9996</td>
+<td>0.9879</td>
+<td>0.9453</td>
+<td>0.9716</td>
+<td>0.9419</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.752</td>
+<td>A/G/T</td>
+<td>2</td>
+<td>G</td>
+</tr>
+<tr>
+<td>GCDH</td>
+<td>chr19</td>
+<td>12891586</td>
+<td>rs1799918</td>
+<td>G</td>
+<td>C</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.483516</td>
+<td>1527183</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Glutaric aciduria: type 1</td>
+<td>48958</td>
+<td>46.7</td>
+<td>PASS</td>
+<td>ENST00000222214</td>
+<td>ENST00000222214.10:c.127+64G&gt;C</td>
+<td></td>
+<td>46</td>
+<td>91</td>
+<td>47*44</td>
+<td>46*0*52</td>
+<td></td>
+<td>G/C</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000222214.10:c.127+64G&gt;C</td>
+<td></td>
+<td>G/C</td>
+<td></td>
+<td>0.3098</td>
+<td>0.2163</td>
+<td>0.3779</td>
+<td>0.2816</td>
+<td>0.1517</td>
+<td>0.2965</td>
+<td>0.3688</td>
+<td>0.2637</td>
+<td>0.3275</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.752</td>
+<td>G/C</td>
+<td>2</td>
+<td>G</td>
+</tr>
+<tr>
+<td>GCDH</td>
+<td>chr19</td>
+<td>12891749</td>
+<td>rs2242517</td>
+<td>T</td>
+<td>G</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.463158</td>
+<td>1527184</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Glutaric aciduria: type 1</td>
+<td>48959</td>
+<td>52.1</td>
+<td>PASS</td>
+<td>ENST00000222214</td>
+<td>ENST00000222214.10:c.128-82T&gt;G</td>
+<td></td>
+<td>50</td>
+<td>95</td>
+<td>51*44</td>
+<td>52*0*53</td>
+<td></td>
+<td>T/G</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000222214.10:c.128-82T&gt;G</td>
+<td></td>
+<td>T/G</td>
+<td></td>
+<td>0.453</td>
+<td>0.6041</td>
+<td>0.4577</td>
+<td>0.3441</td>
+<td>0.16</td>
+<td>0.313</td>
+<td>0.4203</td>
+<td>0.3028</td>
+<td>0.4343</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.752</td>
+<td>T/A/C/G</td>
+<td>2</td>
+<td>G</td>
+</tr>
+<tr>
+<td>GCDH</td>
+<td>chr19</td>
+<td>12897793</td>
+<td>rs1060218</td>
+<td>G</td>
+<td>T</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.397727</td>
+<td>78250</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Elevated circulating glutaric acid concentration; Glutaric aciduria: type 1</td>
+<td>48960</td>
+<td>49.2</td>
+<td>PASS</td>
+<td>ENST00000222214</td>
+<td>ENST00000222214.10:c.1173G&gt;T</td>
+<td>ENSP00000222214.4:p.Gly391=</td>
+<td>48</td>
+<td>264</td>
+<td>159*105</td>
+<td>49*0*53</td>
+<td>CD962014</td>
+<td>G/T</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000222214.10:c.1173G&gt;T</td>
+<td>ENSP00000222214.4:p.Gly391=</td>
+<td>G/T</td>
+<td></td>
+<td>0.3071</td>
+<td>0.2016</td>
+<td>0.3914</td>
+<td>0.2843</td>
+<td>0.1455</td>
+<td>0.296</td>
+<td>0.3694</td>
+<td>0.2644</td>
+<td>0.3224</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.752</td>
+<td>G/T</td>
+<td>4</td>
+<td>G</td>
+</tr>
+<tr>
+<td>GCDH</td>
+<td>chr19</td>
+<td>12899706</td>
+<td>rs8012</td>
+<td>A</td>
+<td>G</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td>190518</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Elevated circulating glutaric acid concentration; Glutaric aciduria: type 1</td>
+<td>48961</td>
+<td>64.3</td>
+<td>PASS</td>
+<td>ENST00000222214</td>
+<td>ENST00000222214.10:c.*165A&gt;G</td>
+<td></td>
+<td>51</td>
+<td>90</td>
+<td>0*90</td>
+<td>64*51*0</td>
+<td></td>
+<td>G/G</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000222214.10:c.*165A&gt;G</td>
+<td></td>
+<td>G/G</td>
+<td></td>
+<td>0.6432</td>
+<td>0.8189</td>
+<td>0.6776</td>
+<td>0.5069</td>
+<td>0.7879</td>
+<td>0.4614</td>
+<td>0.5527</td>
+<td>0.6879</td>
+<td>0.6241</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.752</td>
+<td>A/G/T</td>
+<td>4</td>
+<td>G</td>
+</tr>
+<tr>
+<td>GCDH</td>
+<td>chr19</td>
+<td>12899829</td>
+<td>rs9384</td>
+<td>G</td>
+<td>T</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.442478</td>
+<td>190519</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Elevated circulating glutaric acid concentration; Glutaric aciduria: type 1</td>
+<td>48962</td>
+<td>43.3</td>
+<td>PASS</td>
+<td>ENST00000222214</td>
+<td>ENST00000222214.10:c.*288G&gt;T</td>
+<td></td>
+<td>42</td>
+<td>113</td>
+<td>63*50</td>
+<td>43*0*46</td>
+<td></td>
+<td>G/T</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000222214.10:c.*288G&gt;T</td>
+<td></td>
+<td>G/T</td>
+<td></td>
+<td>0.3319</td>
+<td>0.2827</td>
+<td>0.3895</td>
+<td>0.3087</td>
+<td>0.1532</td>
+<td>0.2937</td>
+<td>0.3722</td>
+<td>0.2724</td>
+<td>0.3455</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.752</td>
+<td>G/T</td>
+<td>4</td>
+<td>G</td>
+</tr>
+<tr>
+<td>GCDH</td>
+<td>chr19</td>
+<td>12904716</td>
+<td>rs17706531</td>
+<td>A</td>
+<td>G</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.590909</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>48963</td>
+<td>44.7</td>
+<td>PASS</td>
+<td>ENST00000222214</td>
+<td></td>
+<td></td>
+<td>40</td>
+<td>22</td>
+<td>9*13</td>
+<td>44*0*41</td>
+<td></td>
+<td>A/G</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td></td>
+<td></td>
+<td>A/G</td>
+<td></td>
+<td>0.3039</td>
+<td>0.2107</td>
+<td>0.3684</td>
+<td>0.2754</td>
+<td>0.1563</td>
+<td>0.2938</td>
+<td>0.361</td>
+<td>0.274</td>
+<td>0.3241</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.348</td>
+<td>A/G</td>
+<td></td>
+<td>G</td>
+</tr>
+</tbody></table></div>
+<script>
+(function() {{
+  const table = document.getElementById('tabela');
+  const busca = document.getElementById('busca');
+  const btnCsv = document.getElementById('btnCsv');
+  if (!table) return;
+  const getCellText = (tr, idx) => (tr.cells[idx]?.innerText || "").trim();
+  const isNumber = (v) => /^-?\d+(\.\d+)?$/.test(v.replace(/\s+/g, '').replace(',', '.'));
+
+  Array.from(table.tHead.rows[0].cells).forEach((th, idx) => {{
+    th.classList.add('sortable');
+    th.addEventListener('click', () => {{
+      const tbody = table.tBodies[0];
+      const rows = Array.from(tbody.rows);
+      const current = th.classList.contains('sorted-asc') ? 'asc'
+                    : th.classList.contains('sorted-desc') ? 'desc' : null;
+      Array.from(table.tHead.rows[0].cells).forEach(h => h.classList.remove('sorted-asc','sorted-desc'));
+      const dir = current === 'asc' ? -1 : 1;
+      const colIsNum = rows.every(tr => isNumber(getCellText(tr, idx)) || getCellText(tr, idx) === "");
+      rows.sort((a,b) => {{
+        let A = getCellText(a, idx);
+        let B = getCellText(b, idx);
+        if (colIsNum) {{ A = parseFloat(A.replace(',', '.')) || 0; B = parseFloat(B.replace(',', '.')) || 0; }}
+        else {{ A = A.toLowerCase(); B = B.toLowerCase(); }}
+        if (A < B) return -1 * dir;
+        if (A > B) return  1 * dir;
+        return 0;
+      }});
+      rows.forEach(r => tbody.appendChild(r));
+      th.classList.add(dir === 1 ? 'sorted-asc' : 'sorted-desc');
+    }});
+  }});
+
+  busca?.addEventListener('input', () => {{
+    const q = busca.value.toLowerCase();
+    const rows = Array.from(table.tBodies[0].rows);
+    rows.forEach(tr => {{
+      const txt = tr.innerText.toLowerCase();
+      tr.style.display = txt.includes(q) ? '' : 'none';
+    }});
+  }});
+
+  btnCsv?.addEventListener('click', () => {{
+    const rows = [];
+    const selRows = Array.from(table.querySelectorAll('tr'));
+    selRows.forEach((tr, i) => {{
+      if (i>0 && tr.style.display === 'none') return;
+      const cells = Array.from(tr.cells).map(td => {{
+        const t = td.innerText.replace(/"/g,'""');
+        return /[",\n]/.test(t) ? `"${{t}}"` : t;
+      }});
+      rows.push(cells.join(','));
+    }});
+    const blob = new Blob([rows.join('\n')], {{type: 'text/csv;charset=utf-8;'}});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = (document.title || 'export') + '.csv';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(() => URL.revokeObjectURL(url), 5000);
+  }});
+}})();
+</script>
+</body>
+</html>
