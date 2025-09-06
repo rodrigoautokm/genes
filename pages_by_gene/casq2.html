@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CASQ2 — Linhas da tabela dbo.variantes</title>
+<style>
+  :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif; }
+  body { margin: 24px; }
+  h1 { margin: 0 0 6px 0; font-size: 1.6rem; }
+  .meta { color: #444; font-size: .95rem; margin-bottom: 12px; }
+  .toolbar { display:flex; gap: 8px; align-items:center; margin: 12px 0; flex-wrap: wrap; }
+  input[type="search"] { padding: 8px 10px; border: 1px solid #ccc; border-radius: 10px; min-width: 260px; }
+  button { padding: 8px 12px; border: 1px solid #ccc; border-radius: 10px; background: #f7f7f7; cursor: pointer; }
+  button:hover { background: #eee; }
+  table { width: 100%; border-collapse: collapse; }
+  thead th { position: sticky; top: 0; background: #fafafa; border-bottom: 1px solid #ddd; text-align: left; padding: 10px; cursor: pointer; }
+  tbody td { border-bottom: 1px solid #f0f0f0; padding: 8px 10px; vertical-align: top; }
+  .sortable::after { content: " ⇅"; font-size: .8em; color: #888; }
+  .sorted-asc::after { content: " ↑"; }
+  .sorted-desc::after { content: " ↓"; }
+  .empty { padding: 16px; background: #fff6f6; border: 1px solid #ffdede; border-radius: 12px; }
+  a.btn { display:inline-block; margin: 0 8px 8px 0; padding: 6px 10px; border-radius: 10px; border:1px solid #ddd; text-decoration:none; color:#222; background:#f9f9f9; }
+  a.btn:hover { background:#f0f0f0; }
+</style>
+</head>
+<body>
+<h1>CASQ2 — Linhas da tabela dbo.variantes</h1>
+<div class="meta">Gene: <strong>CASQ2</strong> • Linhas: <strong>9</strong></div>
+<div class="toolbar">
+  <input id="busca" type="search" placeholder="Filtrar linhas... (busca global)">
+  <button id="btnCsv" type="button">Exportar CSV</button>
+  <a class="btn" href="index.html">Voltar ao índice</a>
+</div>
+<div id="wrap">
+<table id="tabela" border="0">
+<thead><tr>
+<th>Gene</th>
+<th>Chr</th>
+<th>Pos</th>
+<th>ID</th>
+<th>Ref</th>
+<th>Alt</th>
+<th>Impacto</th>
+<th>GT</th>
+<th>VAF</th>
+<th>ClinVar_ID</th>
+<th>ClinVar_Significance</th>
+<th>ClinVar_Review_Status</th>
+<th>ClinVar_Disease_Names</th>
+<th>ID_variante</th>
+<th>Qual</th>
+<th>Filtro</th>
+<th>Ensembl</th>
+<th>Alteracao_nucleotidica</th>
+<th>Alteracao_aminoacidica</th>
+<th>GQ</th>
+<th>DP</th>
+<th>AD</th>
+<th>PL</th>
+<th>HGMD</th>
+<th>Resultado</th>
+<th>Status</th>
+<th>Buscar</th>
+<th>SIFT</th>
+<th>PolyPhen</th>
+<th>Biotype</th>
+<th>Alteracao_nucleotidica_reversa</th>
+<th>Alteracao_aminoacidica_reversa</th>
+<th>Resultado_reverso</th>
+<th>encontrado_rsid</th>
+<th>gnomAD_AF_Global</th>
+<th>gnomAD_AFR_AF</th>
+<th>gnomAD_AMR_AF</th>
+<th>gnomAD_ASJ_AF</th>
+<th>gnomAD_EAS_AF</th>
+<th>gnomAD_FIN_AF</th>
+<th>gnomAD_NFE_AF</th>
+<th>gnomAD_SAS_AF</th>
+<th>gnomAD_OTH_AF</th>
+<th>PhyloP</th>
+<th>PhastCons</th>
+<th>GERP</th>
+<th>CADD_Raw</th>
+<th>CADD_Phred</th>
+<th>LOEUF</th>
+<th>Allele_String</th>
+<th>ClinVar_Disease_Count</th>
+<th>letra_inicial_gene</th>
+</tr></thead><tbody>
+<tr>
+<td>CASQ2</td>
+<td>chr1</td>
+<td>115701256</td>
+<td>rs7413162</td>
+<td>G</td>
+<td>A</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.29</td>
+<td>37133</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Cardiovascular phenotype; Catecholaminergic polymorphic ventricular tachycardia; Catecholaminergic polymorphic ventricular tachycardia 1; Catecholaminergic polymorphic ventricular tachycardia 2; Caudal regression sequence; Neural tube defect</td>
+<td>2832</td>
+<td>46.4</td>
+<td>PASS</td>
+<td>ENST00000261448</td>
+<td>ENST00000261448.6:c.1185C&gt;T</td>
+<td>ENSP00000261448.5:p.Asp395=</td>
+<td>46</td>
+<td>200</td>
+<td>142*58</td>
+<td>46*0*58</td>
+<td></td>
+<td>G/A</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000261448.6:c.1185G&gt;A</td>
+<td></td>
+<td>C/T</td>
+<td></td>
+<td>0.397</td>
+<td>0.4524</td>
+<td>0.432</td>
+<td>0.3908</td>
+<td>0.2985</td>
+<td>0.4026</td>
+<td>0.3594</td>
+<td>0.4189</td>
+<td>0.4181</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1.322</td>
+<td>G/A</td>
+<td>7</td>
+<td>C</td>
+</tr>
+<tr>
+<td>CASQ2</td>
+<td>chr1</td>
+<td>115703034</td>
+<td>rs12402684</td>
+<td>G</td>
+<td>C</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.520833</td>
+<td>830114</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td></td>
+<td>2833</td>
+<td>50.8</td>
+<td>PASS</td>
+<td>ENST00000261448</td>
+<td>ENST00000261448.6:c.940-39C&gt;G</td>
+<td></td>
+<td>47</td>
+<td>96</td>
+<td>46*50</td>
+<td>50*0*49</td>
+<td></td>
+<td>G/C</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000261448.6:c.940-39G&gt;C</td>
+<td></td>
+<td>C/G</td>
+<td></td>
+<td>0.1964</td>
+<td>0.1444</td>
+<td>0.2459</td>
+<td>0.1973</td>
+<td>0.1641</td>
+<td>0.2111</td>
+<td>0.2112</td>
+<td>0.2671</td>
+<td>0.2107</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1.322</td>
+<td>G/A/C/T</td>
+<td>1</td>
+<td>C</td>
+</tr>
+<tr>
+<td>CASQ2</td>
+<td>chr1</td>
+<td>115705169</td>
+<td>rs3811003</td>
+<td>G</td>
+<td>A</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.369231</td>
+<td>251570</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Catecholaminergic polymorphic ventricular tachycardia 2</td>
+<td>2834</td>
+<td>48.6</td>
+<td>PASS</td>
+<td>ENST00000261448</td>
+<td>ENST00000261448.6:c.939+23C&gt;T</td>
+<td></td>
+<td>48</td>
+<td>65</td>
+<td>41*24</td>
+<td>48*0*55</td>
+<td></td>
+<td>G/A</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000261448.6:c.939+23G&gt;A</td>
+<td></td>
+<td>C/T</td>
+<td></td>
+<td>0.3891</td>
+<td>0.5637</td>
+<td>0.336</td>
+<td>0.2901</td>
+<td>0.5097</td>
+<td>0.3159</td>
+<td>0.3092</td>
+<td>0.2916</td>
+<td>0.3699</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1.322</td>
+<td>G/A/C</td>
+<td>3</td>
+<td>C</td>
+</tr>
+<tr>
+<td>CASQ2</td>
+<td>chr1</td>
+<td>115717911</td>
+<td>rs2997741</td>
+<td>A</td>
+<td>T</td>
+<td>LOW</td>
+<td>1/1</td>
+<td>1</td>
+<td>427400</td>
+<td>likely-benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Catecholaminergic polymorphic ventricular tachycardia 1; Catecholaminergic polymorphic ventricular tachycardia 2</td>
+<td>2835</td>
+<td>57.1</td>
+<td>PASS</td>
+<td>ENST00000261448</td>
+<td>ENST00000261448.6:c.784-17T&gt;A</td>
+<td></td>
+<td>56</td>
+<td>85</td>
+<td>0*85</td>
+<td>57*61*0</td>
+<td></td>
+<td>T/T</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000261448.6:c.784-17A&gt;T</td>
+<td></td>
+<td>A/A</td>
+<td></td>
+<td>0.5988</td>
+<td>0.6914</td>
+<td>0.6078</td>
+<td>0.5392</td>
+<td>0.6486</td>
+<td>0.5644</td>
+<td>0.5447</td>
+<td>0.5925</td>
+<td>0.5997</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1.322</td>
+<td>A/C/G/T</td>
+<td>3</td>
+<td>C</td>
+</tr>
+<tr>
+<td>CASQ2</td>
+<td>chr1</td>
+<td>115717923</td>
+<td>rs3811001</td>
+<td>C</td>
+<td>T</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.571429</td>
+<td>830950</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td></td>
+<td>2836</td>
+<td>51.3</td>
+<td>PASS</td>
+<td>ENST00000261448</td>
+<td>ENST00000261448.6:c.784-29G&gt;A</td>
+<td></td>
+<td>51</td>
+<td>77</td>
+<td>33*44</td>
+<td>51*0*61</td>
+<td></td>
+<td>C/T</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000261448.6:c.784-29C&gt;T</td>
+<td></td>
+<td>G/A</td>
+<td></td>
+<td>0.2306</td>
+<td>0.2143</td>
+<td>0.2745</td>
+<td>0.1984</td>
+<td>0.1673</td>
+<td>0.2239</td>
+<td>0.2325</td>
+<td>0.2773</td>
+<td>0.2502</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1.322</td>
+<td>C/T</td>
+<td>1</td>
+<td>C</td>
+</tr>
+<tr>
+<td>CASQ2</td>
+<td>chr1</td>
+<td>115725557</td>
+<td>rs1647552812</td>
+<td>GAA</td>
+<td>G</td>
+<td>LOW</td>
+<td>1/1</td>
+<td>0.30137</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2837</td>
+<td>16.1</td>
+<td>PASS</td>
+<td>ENST00000261448</td>
+<td>ENST00000261448.6:c.738-6_738-4del</td>
+<td></td>
+<td>5</td>
+<td>146</td>
+<td>6*44</td>
+<td>14*3*0</td>
+<td></td>
+<td>G/G</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td></td>
+<td></td>
+<td>C/C</td>
+<td></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1.322</td>
+<td>GAA/-</td>
+<td></td>
+<td>C</td>
+</tr>
+<tr>
+<td>CASQ2</td>
+<td>chr1</td>
+<td>115740722</td>
+<td>rs9428083</td>
+<td>A</td>
+<td>G</td>
+<td>LOW</td>
+<td>1/1</td>
+<td>1</td>
+<td>37139</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Catecholaminergic polymorphic ventricular tachycardia; Catecholaminergic polymorphic ventricular tachycardia 1; Catecholaminergic polymorphic ventricular tachycardia 2</td>
+<td>2838</td>
+<td>61.0</td>
+<td>PASS</td>
+<td>ENST00000261448</td>
+<td>ENST00000261448.6:c.420+6T&gt;C</td>
+<td></td>
+<td>51</td>
+<td>130</td>
+<td>0*130</td>
+<td>61*51*0</td>
+<td></td>
+<td>G/G</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000261448.6:c.420+6A&gt;G</td>
+<td></td>
+<td>C/C</td>
+<td></td>
+<td>0.7108</td>
+<td>0.3647</td>
+<td>0.7636</td>
+<td>0.8557</td>
+<td>0.762</td>
+<td>0.8166</td>
+<td>0.8751</td>
+<td>0.7396</td>
+<td>0.75</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1.322</td>
+<td>A/G/T</td>
+<td>5</td>
+<td>C</td>
+</tr>
+<tr>
+<td>CASQ2</td>
+<td>chr1</td>
+<td>115768346</td>
+<td>rs4074536</td>
+<td>T</td>
+<td>C</td>
+<td>MODERATE</td>
+<td>0/1</td>
+<td>0.493506</td>
+<td>37136</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Cardiovascular phenotype; Catecholaminergic polymorphic ventricular tachycardia; Catecholaminergic polymorphic ventricular tachycardia 1; Catecholaminergic polymorphic ventricular tachycardia 2</td>
+<td>2839</td>
+<td>57.7</td>
+<td>PASS</td>
+<td>ENST00000261448</td>
+<td>ENST00000261448.6:c.196A&gt;G</td>
+<td>ENSP00000261448.5:p.Thr66Ala</td>
+<td>48</td>
+<td>231</td>
+<td>117*114</td>
+<td>57*0*48</td>
+<td>CM108210</td>
+<td>T/C</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000261448.6:c.196T&gt;C</td>
+<td>ENSP00000261448.5:p.Ala66Thr</td>
+<td>A/G</td>
+<td></td>
+<td>0.3452</td>
+<td>0.4483</td>
+<td>0.3473</td>
+<td>0.2519</td>
+<td>0.5284</td>
+<td>0.2856</td>
+<td>0.2826</td>
+<td>0.3123</td>
+<td>0.3458</td>
+<td>1.629</td>
+<td>0.308</td>
+<td>3.44</td>
+<td></td>
+<td></td>
+<td>1.322</td>
+<td>T/C</td>
+<td>6</td>
+<td>C</td>
+</tr>
+<tr>
+<td>CASQ2</td>
+<td>chr1</td>
+<td>115768577</td>
+<td>rs4074537</td>
+<td>T</td>
+<td>C</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2840</td>
+<td>56.0</td>
+<td>PASS</td>
+<td>ENST00000261448</td>
+<td>ENST00000261448.6:c.-36A&gt;G</td>
+<td></td>
+<td>47</td>
+<td>42</td>
+<td>0*42</td>
+<td>55*47*0</td>
+<td></td>
+<td>C/C</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td></td>
+<td></td>
+<td>G/G</td>
+<td></td>
+<td>0.9635</td>
+<td>0.874</td>
+<td>0.9865</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0.999</td>
+<td>0.9994</td>
+<td>0.9759</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1.322</td>
+<td>T/A/C/G</td>
+<td></td>
+<td>C</td>
+</tr>
+</tbody></table></div>
+<script>
+(function() {{
+  const table = document.getElementById('tabela');
+  const busca = document.getElementById('busca');
+  const btnCsv = document.getElementById('btnCsv');
+  if (!table) return;
+  const getCellText = (tr, idx) => (tr.cells[idx]?.innerText || "").trim();
+  const isNumber = (v) => /^-?\d+(\.\d+)?$/.test(v.replace(/\s+/g, '').replace(',', '.'));
+
+  Array.from(table.tHead.rows[0].cells).forEach((th, idx) => {{
+    th.classList.add('sortable');
+    th.addEventListener('click', () => {{
+      const tbody = table.tBodies[0];
+      const rows = Array.from(tbody.rows);
+      const current = th.classList.contains('sorted-asc') ? 'asc'
+                    : th.classList.contains('sorted-desc') ? 'desc' : null;
+      Array.from(table.tHead.rows[0].cells).forEach(h => h.classList.remove('sorted-asc','sorted-desc'));
+      const dir = current === 'asc' ? -1 : 1;
+      const colIsNum = rows.every(tr => isNumber(getCellText(tr, idx)) || getCellText(tr, idx) === "");
+      rows.sort((a,b) => {{
+        let A = getCellText(a, idx);
+        let B = getCellText(b, idx);
+        if (colIsNum) {{ A = parseFloat(A.replace(',', '.')) || 0; B = parseFloat(B.replace(',', '.')) || 0; }}
+        else {{ A = A.toLowerCase(); B = B.toLowerCase(); }}
+        if (A < B) return -1 * dir;
+        if (A > B) return  1 * dir;
+        return 0;
+      }});
+      rows.forEach(r => tbody.appendChild(r));
+      th.classList.add(dir === 1 ? 'sorted-asc' : 'sorted-desc');
+    }});
+  }});
+
+  busca?.addEventListener('input', () => {{
+    const q = busca.value.toLowerCase();
+    const rows = Array.from(table.tBodies[0].rows);
+    rows.forEach(tr => {{
+      const txt = tr.innerText.toLowerCase();
+      tr.style.display = txt.includes(q) ? '' : 'none';
+    }});
+  }});
+
+  btnCsv?.addEventListener('click', () => {{
+    const rows = [];
+    const selRows = Array.from(table.querySelectorAll('tr'));
+    selRows.forEach((tr, i) => {{
+      if (i>0 && tr.style.display === 'none') return;
+      const cells = Array.from(tr.cells).map(td => {{
+        const t = td.innerText.replace(/"/g,'""');
+        return /[",\n]/.test(t) ? `"${{t}}"` : t;
+      }});
+      rows.push(cells.join(','));
+    }});
+    const blob = new Blob([rows.join('\n')], {{type: 'text/csv;charset=utf-8;'}});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = (document.title || 'export') + '.csv';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(() => URL.revokeObjectURL(url), 5000);
+  }});
+}})();
+</script>
+</body>
+</html>
