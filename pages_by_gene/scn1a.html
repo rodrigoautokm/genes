@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SCN1A — Linhas da tabela dbo.variantes</title>
+<style>
+  :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif; }
+  body { margin: 24px; }
+  h1 { margin: 0 0 6px 0; font-size: 1.6rem; }
+  .meta { color: #444; font-size: .95rem; margin-bottom: 12px; }
+  .toolbar { display:flex; gap: 8px; align-items:center; margin: 12px 0; flex-wrap: wrap; }
+  input[type="search"] { padding: 8px 10px; border: 1px solid #ccc; border-radius: 10px; min-width: 260px; }
+  button { padding: 8px 12px; border: 1px solid #ccc; border-radius: 10px; background: #f7f7f7; cursor: pointer; }
+  button:hover { background: #eee; }
+  table { width: 100%; border-collapse: collapse; }
+  thead th { position: sticky; top: 0; background: #fafafa; border-bottom: 1px solid #ddd; text-align: left; padding: 10px; cursor: pointer; }
+  tbody td { border-bottom: 1px solid #f0f0f0; padding: 8px 10px; vertical-align: top; }
+  .sortable::after { content: " ⇅"; font-size: .8em; color: #888; }
+  .sorted-asc::after { content: " ↑"; }
+  .sorted-desc::after { content: " ↓"; }
+  .empty { padding: 16px; background: #fff6f6; border: 1px solid #ffdede; border-radius: 12px; }
+  a.btn { display:inline-block; margin: 0 8px 8px 0; padding: 6px 10px; border-radius: 10px; border:1px solid #ddd; text-decoration:none; color:#222; background:#f9f9f9; }
+  a.btn:hover { background:#f0f0f0; }
+</style>
+</head>
+<body>
+<h1>SCN1A — Linhas da tabela dbo.variantes</h1>
+<div class="meta">Gene: <strong>SCN1A</strong> • Linhas: <strong>14</strong></div>
+<div class="toolbar">
+  <input id="busca" type="search" placeholder="Filtrar linhas... (busca global)">
+  <button id="btnCsv" type="button">Exportar CSV</button>
+  <a class="btn" href="index.html">Voltar ao índice</a>
+</div>
+<div id="wrap">
+<table id="tabela" border="0">
+<thead><tr>
+<th>Gene</th>
+<th>Chr</th>
+<th>Pos</th>
+<th>ID</th>
+<th>Ref</th>
+<th>Alt</th>
+<th>Impacto</th>
+<th>GT</th>
+<th>VAF</th>
+<th>ClinVar_ID</th>
+<th>ClinVar_Significance</th>
+<th>ClinVar_Review_Status</th>
+<th>ClinVar_Disease_Names</th>
+<th>ID_variante</th>
+<th>Qual</th>
+<th>Filtro</th>
+<th>Ensembl</th>
+<th>Alteracao_nucleotidica</th>
+<th>Alteracao_aminoacidica</th>
+<th>GQ</th>
+<th>DP</th>
+<th>AD</th>
+<th>PL</th>
+<th>HGMD</th>
+<th>Resultado</th>
+<th>Status</th>
+<th>Buscar</th>
+<th>SIFT</th>
+<th>PolyPhen</th>
+<th>Biotype</th>
+<th>Alteracao_nucleotidica_reversa</th>
+<th>Alteracao_aminoacidica_reversa</th>
+<th>Resultado_reverso</th>
+<th>encontrado_rsid</th>
+<th>gnomAD_AF_Global</th>
+<th>gnomAD_AFR_AF</th>
+<th>gnomAD_AMR_AF</th>
+<th>gnomAD_ASJ_AF</th>
+<th>gnomAD_EAS_AF</th>
+<th>gnomAD_FIN_AF</th>
+<th>gnomAD_NFE_AF</th>
+<th>gnomAD_SAS_AF</th>
+<th>gnomAD_OTH_AF</th>
+<th>PhyloP</th>
+<th>PhastCons</th>
+<th>GERP</th>
+<th>CADD_Raw</th>
+<th>CADD_Phred</th>
+<th>LOEUF</th>
+<th>Allele_String</th>
+<th>ClinVar_Disease_Count</th>
+<th>letra_inicial_gene</th>
+</tr></thead><tbody>
+<tr>
+<td>SCN1A</td>
+<td>chr2</td>
+<td>166036278</td>
+<td>rs2298771</td>
+<td>C</td>
+<td>T</td>
+<td>MODERATE</td>
+<td>1/1</td>
+<td>1</td>
+<td>30432</td>
+<td>benign</td>
+<td>no_assertion_criteria_provided</td>
+<td>Early infantile epileptic encephalopathy with suppression bursts; Epilepsy; Generalized epilepsy with febrile seizures plus; Generalized epilepsy with febrile seizures plus: type 2; Inborn genetic diseases; Migraine: familial hemiplegic: 3</td>
+<td>7620</td>
+<td>57.9</td>
+<td>PASS</td>
+<td>ENST00000674923</td>
+<td>ENST00000674923.1:c.3199G&gt;A</td>
+<td>ENSP00000501589.1:p.Ala1067Thr</td>
+<td>46</td>
+<td>48</td>
+<td>0*48</td>
+<td>57*46*0</td>
+<td>CM144700</td>
+<td>T/T</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000674923.1:c.3199C&gt;T</td>
+<td>ENSP00000501589.1:p.Thr1067Ala</td>
+<td>A/A</td>
+<td></td>
+<td>0.7375</td>
+<td>0.823</td>
+<td>0.7421</td>
+<td>0.6026</td>
+<td>0.8908</td>
+<td>0.7558</td>
+<td>0.6825</td>
+<td>0.7094</td>
+<td>0.6838</td>
+<td>-0.31</td>
+<td>0</td>
+<td>-2.85</td>
+<td></td>
+<td></td>
+<td>0.078</td>
+<td>C/G/T</td>
+<td>7</td>
+<td>S</td>
+</tr>
+<tr>
+<td>SCN1A</td>
+<td>chr2</td>
+<td>166036571</td>
+<td>rs7601520</td>
+<td>G</td>
+<td>A</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td>576463</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Generalized epilepsy with febrile seizures plus: type 2; Migraine: familial hemiplegic: 3; Severe myoclonic epilepsy in infancy</td>
+<td>7621</td>
+<td>59.0</td>
+<td>PASS</td>
+<td>ENST00000674923</td>
+<td>ENST00000674923.1:c.2947-41C&gt;T</td>
+<td></td>
+<td>44</td>
+<td>26</td>
+<td>0*26</td>
+<td>59*44*0</td>
+<td></td>
+<td>A/A</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000674923.1:c.2947-41G&gt;A</td>
+<td></td>
+<td>T/T</td>
+<td></td>
+<td>0.7375</td>
+<td>0.8227</td>
+<td>0.742</td>
+<td>0.6026</td>
+<td>0.891</td>
+<td>0.757</td>
+<td>0.6825</td>
+<td>0.7091</td>
+<td>0.6829</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.078</td>
+<td>G/A/C</td>
+<td>5</td>
+<td>S</td>
+</tr>
+<tr>
+<td>SCN1A</td>
+<td>chr2</td>
+<td>166039403</td>
+<td>rs766413788</td>
+<td>CTT</td>
+<td>C</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>0.567901</td>
+<td>2151534</td>
+<td>likely-benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Early infantile epileptic encephalopathy with suppression bursts</td>
+<td>7622</td>
+<td>48.1</td>
+<td>PASS</td>
+<td>ENST00000674923</td>
+<td>ENST00000674923.1:c.2589+18_2589+20del</td>
+<td></td>
+<td>29</td>
+<td>81</td>
+<td>0*46</td>
+<td>48*29*0</td>
+<td></td>
+<td>C/C</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td></td>
+<td></td>
+<td>G/G</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.078000</td>
+<td>CTT/-</td>
+<td>1</td>
+<td>S</td>
+</tr>
+<tr>
+<td>SCN1A</td>
+<td>chr2</td>
+<td>166039633</td>
+<td>rs2126152</td>
+<td>T</td>
+<td>G</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td>4595415</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td></td>
+<td>7623</td>
+<td>60.6</td>
+<td>PASS</td>
+<td>ENST00000674923</td>
+<td>ENST00000674923.1:c.2416-37A&gt;C</td>
+<td></td>
+<td>45</td>
+<td>52</td>
+<td>0*52</td>
+<td>60*45*0</td>
+<td></td>
+<td>G/G</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000674923.1:c.2416-37T&gt;G</td>
+<td></td>
+<td>C/C</td>
+<td></td>
+<td>0.7376</td>
+<td>0.8234</td>
+<td>0.7424</td>
+<td>0.6024</td>
+<td>0.8906</td>
+<td>0.7563</td>
+<td>0.6825</td>
+<td>0.7088</td>
+<td>0.6825</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.078</td>
+<td>T/A/G</td>
+<td>1</td>
+<td>S</td>
+</tr>
+<tr>
+<td>SCN1A</td>
+<td>chr2</td>
+<td>166041354</td>
+<td>rs6432860</td>
+<td>A</td>
+<td>G</td>
+<td>LOW</td>
+<td>1/1</td>
+<td>0.965517</td>
+<td>30431</td>
+<td>benign</td>
+<td>no_assertion_criteria_provided</td>
+<td>Early infantile epileptic encephalopathy with suppression bursts; Epilepsy; Generalized epilepsy with febrile seizures plus; Generalized epilepsy with febrile seizures plus: type 2; Inborn genetic diseases; Migraine: familial hemiplegic: 3</td>
+<td>7624</td>
+<td>55.3</td>
+<td>PASS</td>
+<td>ENST00000674923</td>
+<td>ENST00000674923.1:c.2292T&gt;C</td>
+<td>ENSP00000501589.1:p.Val764=</td>
+<td>45</td>
+<td>58</td>
+<td>2*56</td>
+<td>55*45*0</td>
+<td></td>
+<td>G/G</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000674923.1:c.2292A&gt;G</td>
+<td></td>
+<td>C/C</td>
+<td></td>
+<td>0.7376</td>
+<td>0.8235</td>
+<td>0.7425</td>
+<td>0.6023</td>
+<td>0.8913</td>
+<td>0.7553</td>
+<td>0.6825</td>
+<td>0.7095</td>
+<td>0.6819</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.078</td>
+<td>A/G/T</td>
+<td>8</td>
+<td>S</td>
+</tr>
+<tr>
+<td>SCN1A</td>
+<td>chr2</td>
+<td>166041479</td>
+<td>rs11394960</td>
+<td>G</td>
+<td>GA</td>
+<td>LOW</td>
+<td>1/1</td>
+<td>0.583333</td>
+<td>350738</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Developmental and epileptic encephalopathy 6B; Epilepsy; Familial hemiplegic migraine; Generalized epilepsy with febrile seizures plus: type 2; Migraine: familial hemiplegic: 3; Severe myoclonic epilepsy in infancy</td>
+<td>7625</td>
+<td>33.2</td>
+<td>PASS</td>
+<td>ENST00000674923</td>
+<td>ENST00000674923.1:c.2177-11dup</td>
+<td></td>
+<td>25</td>
+<td>36</td>
+<td>2*21</td>
+<td>33*25*0</td>
+<td></td>
+<td>GA/GA</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td></td>
+<td></td>
+<td>GA/GA</td>
+<td></td>
+<td>0.6753</td>
+<td>0.589</td>
+<td>0.7217</td>
+<td>0.6274</td>
+<td>0.8835</td>
+<td>0.7358</td>
+<td>0.6921</td>
+<td>0.715</td>
+<td>0.6498</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.078</td>
+<td>AAAAAAAAAAAAAA/AAAAAAAAA/AAAAAAAAAAA/AAAAAAAAAAAA/</td>
+<td>8</td>
+<td>S</td>
+</tr>
+<tr>
+<td>SCN1A</td>
+<td>chr2</td>
+<td>166041507</td>
+<td>rs10198801</td>
+<td>G</td>
+<td>T</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td>830011</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td></td>
+<td>7626</td>
+<td>49.1</td>
+<td>PASS</td>
+<td>ENST00000674923</td>
+<td>ENST00000674923.1:c.2177-38C&gt;A</td>
+<td></td>
+<td>40</td>
+<td>25</td>
+<td>0*25</td>
+<td>49*41*0</td>
+<td></td>
+<td>T/T</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000674923.1:c.2177-38G&gt;T</td>
+<td></td>
+<td>A/A</td>
+<td></td>
+<td>0.2565</td>
+<td>0.1053</td>
+<td>0.2327</td>
+<td>0.3854</td>
+<td>0.1944</td>
+<td>0.3024</td>
+<td>0.3401</td>
+<td>0.2857</td>
+<td>0.2935</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.078</td>
+<td>G/A/T</td>
+<td>2</td>
+<td>S</td>
+</tr>
+<tr>
+<td>SCN1A</td>
+<td>chr2</td>
+<td>166044096</td>
+<td>rs6753355</td>
+<td>A</td>
+<td>C</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td>829756</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td></td>
+<td>7627</td>
+<td>47.4</td>
+<td>PASS</td>
+<td>ENST00000674923</td>
+<td>ENST00000674923.1:c.1663-47T&gt;G</td>
+<td></td>
+<td>32</td>
+<td>77</td>
+<td>0*77</td>
+<td>47*32*0</td>
+<td></td>
+<td>C/C</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000674923.1:c.1663-47A&gt;C</td>
+<td></td>
+<td>G/G</td>
+<td></td>
+<td>0.7376</td>
+<td>0.8234</td>
+<td>0.742</td>
+<td>0.6026</td>
+<td>0.8909</td>
+<td>0.756</td>
+<td>0.6824</td>
+<td>0.7095</td>
+<td>0.6825</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.078</td>
+<td>A/C/G/T</td>
+<td>2</td>
+<td>S</td>
+</tr>
+<tr>
+<td>SCN1A</td>
+<td>chr2</td>
+<td>166046935</td>
+<td>rs7580482</td>
+<td>T</td>
+<td>C</td>
+<td>LOW</td>
+<td>1/1</td>
+<td>1</td>
+<td>30430</td>
+<td>benign</td>
+<td>no_assertion_criteria_provided</td>
+<td>Early infantile epileptic encephalopathy with suppression bursts; Epilepsy; Generalized epilepsy with febrile seizures plus: type 2; Inborn genetic diseases; Migraine: familial hemiplegic: 3; Severe myoclonic epilepsy in infancy</td>
+<td>7628</td>
+<td>57.9</td>
+<td>PASS</td>
+<td>ENST00000674923</td>
+<td>ENST00000674923.1:c.1212A&gt;G</td>
+<td>ENSP00000501589.1:p.Val404=</td>
+<td>47</td>
+<td>52</td>
+<td>0*52</td>
+<td>57*47*0</td>
+<td></td>
+<td>C/C</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000674923.1:c.1212T&gt;C</td>
+<td></td>
+<td>G/G</td>
+<td></td>
+<td>0.6665</td>
+<td>0.5738</td>
+<td>0.7178</td>
+<td>0.6022</td>
+<td>0.8912</td>
+<td>0.757</td>
+<td>0.6823</td>
+<td>0.7083</td>
+<td>0.6415</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.078</td>
+<td>T/C</td>
+<td>11</td>
+<td>S</td>
+</tr>
+<tr>
+<td>SCN1A</td>
+<td>chr2</td>
+<td>166048865</td>
+<td>rs1542484</td>
+<td>A</td>
+<td>G</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td>590529</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td></td>
+<td>7629</td>
+<td>49.6</td>
+<td>PASS</td>
+<td>ENST00000674923</td>
+<td>ENST00000674923.1:c.1028+21T&gt;C</td>
+<td></td>
+<td>35</td>
+<td>34</td>
+<td>0*34</td>
+<td>49*34*0</td>
+<td></td>
+<td>G/G</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000674923.1:c.1028+21A&gt;G</td>
+<td></td>
+<td>C/C</td>
+<td></td>
+<td>0.4867</td>
+<td>0.3492</td>
+<td>0.5076</td>
+<td>0.5399</td>
+<td>0.5572</td>
+<td>0.5363</td>
+<td>0.5443</td>
+<td>0.5555</td>
+<td>0.4858</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.078</td>
+<td>A/G</td>
+<td>2</td>
+<td>S</td>
+</tr>
+<tr>
+<td>SCN1A</td>
+<td>chr2</td>
+<td>166048970</td>
+<td>rs994399</td>
+<td>G</td>
+<td>A</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td>430486</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td></td>
+<td>7630</td>
+<td>53.5</td>
+<td>PASS</td>
+<td>ENST00000674923</td>
+<td>ENST00000674923.1:c.965-21C&gt;T</td>
+<td></td>
+<td>45</td>
+<td>43</td>
+<td>0*43</td>
+<td>53*45*0</td>
+<td></td>
+<td>A/A</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000674923.1:c.965-21G&gt;A</td>
+<td></td>
+<td>T/T</td>
+<td></td>
+<td>0.6667</td>
+<td>0.574</td>
+<td>0.7176</td>
+<td>0.6031</td>
+<td>0.8902</td>
+<td>0.757</td>
+<td>0.6827</td>
+<td>0.7098</td>
+<td>0.6408</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.078</td>
+<td>G/A/T</td>
+<td>1</td>
+<td>S</td>
+</tr>
+<tr>
+<td>SCN1A</td>
+<td>chr2</td>
+<td>166053034</td>
+<td>rs3812718</td>
+<td>C</td>
+<td>T</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td>13759</td>
+<td>risk-factor</td>
+<td>no_assertion_criteria_provided</td>
+<td>Early infantile epileptic encephalopathy with suppression bursts; Febrile seizures: familial: 3a; carbamazepine response - Dosage</td>
+<td>7631</td>
+<td>51.0</td>
+<td>PASS</td>
+<td>ENST00000674923</td>
+<td>ENST00000674923.1:c.603-91G&gt;A</td>
+<td></td>
+<td>44</td>
+<td>22</td>
+<td>0*22</td>
+<td>50*45*0</td>
+<td>CS084633</td>
+<td>T/T</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000674923.1:c.603-91C&gt;T</td>
+<td></td>
+<td>A/A</td>
+<td></td>
+<td>0.4845</td>
+<td>0.3483</td>
+<td>0.487</td>
+<td>0.5392</td>
+<td>0.5578</td>
+<td>0.5376</td>
+<td>0.5443</td>
+<td>0.5563</td>
+<td>0.4825</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.078</td>
+<td>C/A/T</td>
+<td>3</td>
+<td>S</td>
+</tr>
+<tr>
+<td>SCN1A</td>
+<td>chr2</td>
+<td>166053049</td>
+<td>rs3812719</td>
+<td>C</td>
+<td>A</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td>834267</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td></td>
+<td>7632</td>
+<td>50.9</td>
+<td>PASS</td>
+<td>ENST00000674923</td>
+<td>ENST00000674923.1:c.603-106G&gt;T</td>
+<td></td>
+<td>40</td>
+<td>21</td>
+<td>0*21</td>
+<td>50*40*0</td>
+<td></td>
+<td>A/A</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000674923.1:c.603-106C&gt;A</td>
+<td></td>
+<td>T/T</td>
+<td></td>
+<td>0.6665</td>
+<td>0.5736</td>
+<td>0.7181</td>
+<td>0.6024</td>
+<td>0.8909</td>
+<td>0.756</td>
+<td>0.6826</td>
+<td>0.708</td>
+<td>0.6398</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.078</td>
+<td>C/A/G/T</td>
+<td>2</td>
+<td>S</td>
+</tr>
+<tr>
+<td>SCN1A</td>
+<td>chr2</td>
+<td>166060846</td>
+<td>rs4667502</td>
+<td>G</td>
+<td>A</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>7633</td>
+<td>55.7</td>
+<td>PASS</td>
+<td>ENST00000674923</td>
+<td>ENST00000674923.1:c.265-2158C&gt;T</td>
+<td></td>
+<td>43</td>
+<td>44</td>
+<td>0*44</td>
+<td>55*43*0</td>
+<td></td>
+<td>A/A</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000674923.1:c.265-2158G&gt;A</td>
+<td></td>
+<td>T/T</td>
+<td></td>
+<td>0.4746</td>
+<td>0.3141</td>
+<td>0.482</td>
+<td>0.5395</td>
+<td>0.5512</td>
+<td>0.5389</td>
+<td>0.5445</td>
+<td>0.556</td>
+<td>0.4758</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.078</td>
+<td>G/A/T</td>
+<td></td>
+<td>S</td>
+</tr>
+</tbody></table></div>
+<script>
+(function() {{
+  const table = document.getElementById('tabela');
+  const busca = document.getElementById('busca');
+  const btnCsv = document.getElementById('btnCsv');
+  if (!table) return;
+  const getCellText = (tr, idx) => (tr.cells[idx]?.innerText || "").trim();
+  const isNumber = (v) => /^-?\d+(\.\d+)?$/.test(v.replace(/\s+/g, '').replace(',', '.'));
+
+  Array.from(table.tHead.rows[0].cells).forEach((th, idx) => {{
+    th.classList.add('sortable');
+    th.addEventListener('click', () => {{
+      const tbody = table.tBodies[0];
+      const rows = Array.from(tbody.rows);
+      const current = th.classList.contains('sorted-asc') ? 'asc'
+                    : th.classList.contains('sorted-desc') ? 'desc' : null;
+      Array.from(table.tHead.rows[0].cells).forEach(h => h.classList.remove('sorted-asc','sorted-desc'));
+      const dir = current === 'asc' ? -1 : 1;
+      const colIsNum = rows.every(tr => isNumber(getCellText(tr, idx)) || getCellText(tr, idx) === "");
+      rows.sort((a,b) => {{
+        let A = getCellText(a, idx);
+        let B = getCellText(b, idx);
+        if (colIsNum) {{ A = parseFloat(A.replace(',', '.')) || 0; B = parseFloat(B.replace(',', '.')) || 0; }}
+        else {{ A = A.toLowerCase(); B = B.toLowerCase(); }}
+        if (A < B) return -1 * dir;
+        if (A > B) return  1 * dir;
+        return 0;
+      }});
+      rows.forEach(r => tbody.appendChild(r));
+      th.classList.add(dir === 1 ? 'sorted-asc' : 'sorted-desc');
+    }});
+  }});
+
+  busca?.addEventListener('input', () => {{
+    const q = busca.value.toLowerCase();
+    const rows = Array.from(table.tBodies[0].rows);
+    rows.forEach(tr => {{
+      const txt = tr.innerText.toLowerCase();
+      tr.style.display = txt.includes(q) ? '' : 'none';
+    }});
+  }});
+
+  btnCsv?.addEventListener('click', () => {{
+    const rows = [];
+    const selRows = Array.from(table.querySelectorAll('tr'));
+    selRows.forEach((tr, i) => {{
+      if (i>0 && tr.style.display === 'none') return;
+      const cells = Array.from(tr.cells).map(td => {{
+        const t = td.innerText.replace(/"/g,'""');
+        return /[",\n]/.test(t) ? `"${{t}}"` : t;
+      }});
+      rows.push(cells.join(','));
+    }});
+    const blob = new Blob([rows.join('\n')], {{type: 'text/csv;charset=utf-8;'}});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = (document.title || 'export') + '.csv';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(() => URL.revokeObjectURL(url), 5000);
+  }});
+}})();
+</script>
+</body>
+</html>
