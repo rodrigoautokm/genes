@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SETX — Linhas da tabela dbo.variantes</title>
+<style>
+  :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif; }
+  body { margin: 24px; }
+  h1 { margin: 0 0 6px 0; font-size: 1.6rem; }
+  .meta { color: #444; font-size: .95rem; margin-bottom: 12px; }
+  .toolbar { display:flex; gap: 8px; align-items:center; margin: 12px 0; flex-wrap: wrap; }
+  input[type="search"] { padding: 8px 10px; border: 1px solid #ccc; border-radius: 10px; min-width: 260px; }
+  button { padding: 8px 12px; border: 1px solid #ccc; border-radius: 10px; background: #f7f7f7; cursor: pointer; }
+  button:hover { background: #eee; }
+  table { width: 100%; border-collapse: collapse; }
+  thead th { position: sticky; top: 0; background: #fafafa; border-bottom: 1px solid #ddd; text-align: left; padding: 10px; cursor: pointer; }
+  tbody td { border-bottom: 1px solid #f0f0f0; padding: 8px 10px; vertical-align: top; }
+  .sortable::after { content: " ⇅"; font-size: .8em; color: #888; }
+  .sorted-asc::after { content: " ↑"; }
+  .sorted-desc::after { content: " ↓"; }
+  .empty { padding: 16px; background: #fff6f6; border: 1px solid #ffdede; border-radius: 12px; }
+  a.btn { display:inline-block; margin: 0 8px 8px 0; padding: 6px 10px; border-radius: 10px; border:1px solid #ddd; text-decoration:none; color:#222; background:#f9f9f9; }
+  a.btn:hover { background:#f0f0f0; }
+</style>
+</head>
+<body>
+<h1>SETX — Linhas da tabela dbo.variantes</h1>
+<div class="meta">Gene: <strong>SETX</strong> • Linhas: <strong>15</strong></div>
+<div class="toolbar">
+  <input id="busca" type="search" placeholder="Filtrar linhas... (busca global)">
+  <button id="btnCsv" type="button">Exportar CSV</button>
+  <a class="btn" href="index.html">Voltar ao índice</a>
+</div>
+<div id="wrap">
+<table id="tabela" border="0">
+<thead><tr>
+<th>Gene</th>
+<th>Chr</th>
+<th>Pos</th>
+<th>ID</th>
+<th>Ref</th>
+<th>Alt</th>
+<th>Impacto</th>
+<th>GT</th>
+<th>VAF</th>
+<th>ClinVar_ID</th>
+<th>ClinVar_Significance</th>
+<th>ClinVar_Review_Status</th>
+<th>ClinVar_Disease_Names</th>
+<th>ID_variante</th>
+<th>Qual</th>
+<th>Filtro</th>
+<th>Ensembl</th>
+<th>Alteracao_nucleotidica</th>
+<th>Alteracao_aminoacidica</th>
+<th>GQ</th>
+<th>DP</th>
+<th>AD</th>
+<th>PL</th>
+<th>HGMD</th>
+<th>Resultado</th>
+<th>Status</th>
+<th>Buscar</th>
+<th>SIFT</th>
+<th>PolyPhen</th>
+<th>Biotype</th>
+<th>Alteracao_nucleotidica_reversa</th>
+<th>Alteracao_aminoacidica_reversa</th>
+<th>Resultado_reverso</th>
+<th>encontrado_rsid</th>
+<th>gnomAD_AF_Global</th>
+<th>gnomAD_AFR_AF</th>
+<th>gnomAD_AMR_AF</th>
+<th>gnomAD_ASJ_AF</th>
+<th>gnomAD_EAS_AF</th>
+<th>gnomAD_FIN_AF</th>
+<th>gnomAD_NFE_AF</th>
+<th>gnomAD_SAS_AF</th>
+<th>gnomAD_OTH_AF</th>
+<th>PhyloP</th>
+<th>PhastCons</th>
+<th>GERP</th>
+<th>CADD_Raw</th>
+<th>CADD_Phred</th>
+<th>LOEUF</th>
+<th>Allele_String</th>
+<th>ClinVar_Disease_Count</th>
+<th>letra_inicial_gene</th>
+</tr></thead><tbody>
+<tr>
+<td>SETX</td>
+<td>chr9</td>
+<td>132264514</td>
+<td>rs1056899</td>
+<td>T</td>
+<td>C</td>
+<td>MODERATE</td>
+<td>0/1</td>
+<td>0.46789</td>
+<td>81702</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Amyotrophic lateral sclerosis type 4; Spinocerebellar ataxia: autosomal recessive: with axonal neuropathy 2</td>
+<td>26471</td>
+<td>40.5</td>
+<td>PASS</td>
+<td>ENST00000224140</td>
+<td>ENST00000224140.6:c.7759A&gt;G</td>
+<td>ENSP00000224140.5:p.Ile2587Val</td>
+<td>39</td>
+<td>109</td>
+<td>58*51</td>
+<td>40*0*45</td>
+<td></td>
+<td>T/C</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000224140.6:c.7759T&gt;C</td>
+<td>ENSP00000224140.5:p.Val2587Ile</td>
+<td>A/G</td>
+<td></td>
+<td>0.4445</td>
+<td>0.7462</td>
+<td>0.3576</td>
+<td>0.3958</td>
+<td>0.7136</td>
+<td>0.2934</td>
+<td>0.289</td>
+<td>0.4529</td>
+<td>0.4163</td>
+<td>-1.187</td>
+<td>0</td>
+<td>-3.8</td>
+<td></td>
+<td></td>
+<td>0.442</td>
+<td>T/C/G</td>
+<td>6</td>
+<td>S</td>
+</tr>
+<tr>
+<td>SETX</td>
+<td>chr9</td>
+<td>132278281</td>
+<td>rs11243704</td>
+<td>C</td>
+<td>T</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.323529</td>
+<td>250557</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Amyotrophic lateral sclerosis type 4; Spinocerebellar ataxia: autosomal recessive: with axonal neuropathy 2</td>
+<td>26472</td>
+<td>39.4</td>
+<td>PASS</td>
+<td>ENST00000224140</td>
+<td>ENST00000224140.6:c.6655-24G&gt;A</td>
+<td></td>
+<td>39</td>
+<td>102</td>
+<td>69*33</td>
+<td>39*0*53</td>
+<td></td>
+<td>C/T</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000224140.6:c.6655-24C&gt;T</td>
+<td></td>
+<td>G/A</td>
+<td></td>
+<td>0.4425</td>
+<td>0.745</td>
+<td>0.3448</td>
+<td>0.4074</td>
+<td>0.6985</td>
+<td>0.2925</td>
+<td>0.2888</td>
+<td>0.4526</td>
+<td>0.4154</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.442</td>
+<td>C/T</td>
+<td>4</td>
+<td>S</td>
+</tr>
+<tr>
+<td>SETX</td>
+<td>chr9</td>
+<td>132283232</td>
+<td>rs2296873</td>
+<td>A</td>
+<td>T</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.5</td>
+<td>247371</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Amyotrophic lateral sclerosis type 4; Spinocerebellar ataxia: autosomal recessive: with axonal neuropathy 2</td>
+<td>26473</td>
+<td>46.6</td>
+<td>PASS</td>
+<td>ENST00000224140</td>
+<td>ENST00000224140.6:c.6546+32T&gt;A</td>
+<td></td>
+<td>46</td>
+<td>82</td>
+<td>41*41</td>
+<td>46*0*52</td>
+<td></td>
+<td>A/T</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000224140.6:c.6546+32A&gt;T</td>
+<td></td>
+<td>T/A</td>
+<td></td>
+<td>0.07553</td>
+<td>0.1225</td>
+<td>0.07044</td>
+<td>0.05187</td>
+<td>0.3789</td>
+<td>0.04687</td>
+<td>0.02764</td>
+<td>0.1265</td>
+<td>0.07001</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.442</td>
+<td>A/G/T</td>
+<td>4</td>
+<td>S</td>
+</tr>
+<tr>
+<td>SETX</td>
+<td>chr9</td>
+<td>132297025</td>
+<td>rs2296869</td>
+<td>A</td>
+<td>G</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.3</td>
+<td>81700</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Amyotrophic lateral sclerosis type 4; Spinocerebellar ataxia: autosomal recessive: with axonal neuropathy 2</td>
+<td>26474</td>
+<td>38.3</td>
+<td>PASS</td>
+<td>ENST00000224140</td>
+<td>ENST00000224140.6:c.5811T&gt;C</td>
+<td>ENSP00000224140.5:p.Asp1937=</td>
+<td>38</td>
+<td>90</td>
+<td>63*27</td>
+<td>38*0*58</td>
+<td></td>
+<td>A/G</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000224140.6:c.5811A&gt;G</td>
+<td></td>
+<td>T/C</td>
+<td></td>
+<td>0.3174</td>
+<td>0.6158</td>
+<td>0.2139</td>
+<td>0.2656</td>
+<td>0.6703</td>
+<td>0.1689</td>
+<td>0.1569</td>
+<td>0.3796</td>
+<td>0.2751</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.442</td>
+<td>A/C/G/T</td>
+<td>6</td>
+<td>S</td>
+</tr>
+<tr>
+<td>SETX</td>
+<td>chr9</td>
+<td>132298067</td>
+<td>rs3831154</td>
+<td>C</td>
+<td>CA</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.266667</td>
+<td>81699</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Amyotrophic Lateral Sclerosis: Dominant; Amyotrophic lateral sclerosis type 4; Spinocerebellar ataxia: autosomal recessive: with axonal neuropathy 2</td>
+<td>26475</td>
+<td>24.6</td>
+<td>PASS</td>
+<td>ENST00000224140</td>
+<td>ENST00000224140.6:c.5781+12dup</td>
+<td></td>
+<td>25</td>
+<td>105</td>
+<td>77*28</td>
+<td>24*0*49</td>
+<td></td>
+<td>C/CA</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td></td>
+<td></td>
+<td>G/CA</td>
+<td></td>
+<td>0.2503</td>
+<td>0.3818</td>
+<td>0.1917</td>
+<td>0.2655</td>
+<td>0.6704</td>
+<td>0.1689</td>
+<td>0.1563</td>
+<td>0.3788</td>
+<td>0.2296</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.442</td>
+<td>A/AA</td>
+<td>7</td>
+<td>S</td>
+</tr>
+<tr>
+<td>SETX</td>
+<td>chr9</td>
+<td>132298298</td>
+<td>rs2296871</td>
+<td>T</td>
+<td>C</td>
+<td>MODERATE</td>
+<td>0/1</td>
+<td>0.314286</td>
+<td>81698</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Amyotrophic lateral sclerosis type 4; Spinocerebellar ataxia: autosomal recessive: with axonal neuropathy 2</td>
+<td>26476</td>
+<td>40.1</td>
+<td>PASS</td>
+<td>ENST00000224140</td>
+<td>ENST00000224140.6:c.5563A&gt;G</td>
+<td>ENSP00000224140.5:p.Thr1855Ala</td>
+<td>40</td>
+<td>35</td>
+<td>24*11</td>
+<td>40*0*53</td>
+<td></td>
+<td>T/C</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000224140.6:c.5563T&gt;C</td>
+<td>ENSP00000224140.5:p.Ala1855Thr</td>
+<td>A/G</td>
+<td></td>
+<td>0.3177</td>
+<td>0.6158</td>
+<td>0.2148</td>
+<td>0.2656</td>
+<td>0.676</td>
+<td>0.169</td>
+<td>0.1568</td>
+<td>0.38</td>
+<td>0.2755</td>
+<td>-0.716</td>
+<td>0</td>
+<td>-8.41</td>
+<td></td>
+<td></td>
+<td>0.442</td>
+<td>T/A/C/G</td>
+<td>6</td>
+<td>S</td>
+</tr>
+<tr>
+<td>SETX</td>
+<td>chr9</td>
+<td>132311741</td>
+<td>rs2296872</td>
+<td>G</td>
+<td>A</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.473684</td>
+<td>81697</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Amyotrophic lateral sclerosis type 4; Spinocerebellar ataxia: autosomal recessive: with axonal neuropathy 2</td>
+<td>26477</td>
+<td>51.1</td>
+<td>PASS</td>
+<td>ENST00000224140</td>
+<td>ENST00000224140.6:c.5374+16C&gt;T</td>
+<td></td>
+<td>50</td>
+<td>38</td>
+<td>20*18</td>
+<td>51*0*55</td>
+<td></td>
+<td>G/A</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000224140.6:c.5374+16G&gt;A</td>
+<td></td>
+<td>C/T</td>
+<td></td>
+<td>0.2509</td>
+<td>0.3832</td>
+<td>0.1915</td>
+<td>0.2659</td>
+<td>0.6708</td>
+<td>0.1685</td>
+<td>0.1566</td>
+<td>0.3792</td>
+<td>0.2289</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.442</td>
+<td>G/A/T</td>
+<td>6</td>
+<td>S</td>
+</tr>
+<tr>
+<td>SETX</td>
+<td>chr9</td>
+<td>132327442</td>
+<td>rs543573</td>
+<td>T</td>
+<td>C</td>
+<td>MODERATE</td>
+<td>0/1</td>
+<td>0.382353</td>
+<td>81696</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Amyotrophic lateral sclerosis type 4; Spinocerebellar ataxia: autosomal recessive: with axonal neuropathy 2</td>
+<td>26478</td>
+<td>44.1</td>
+<td>PASS</td>
+<td>ENST00000224140</td>
+<td>ENST00000224140.6:c.4156A&gt;G</td>
+<td>ENSP00000224140.5:p.Ile1386Val</td>
+<td>44</td>
+<td>102</td>
+<td>63*39</td>
+<td>44*0*54</td>
+<td></td>
+<td>T/C</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000224140.6:c.4156T&gt;C</td>
+<td>ENSP00000224140.5:p.Val1386Ile</td>
+<td>A/G</td>
+<td></td>
+<td>0.683</td>
+<td>0.384</td>
+<td>0.7865</td>
+<td>0.7344</td>
+<td>0.3237</td>
+<td>0.8322</td>
+<td>0.8442</td>
+<td>0.6199</td>
+<td>0.7256</td>
+<td>-1.059</td>
+<td>0</td>
+<td>-1.62</td>
+<td></td>
+<td></td>
+<td>0.442</td>
+<td>T/A/C/G</td>
+<td>6</td>
+<td>S</td>
+</tr>
+<tr>
+<td>SETX</td>
+<td>chr9</td>
+<td>132327844</td>
+<td>rs1183768</td>
+<td>C</td>
+<td>T</td>
+<td>MODERATE</td>
+<td>0/1</td>
+<td>0.380952</td>
+<td>81695</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Amyotrophic lateral sclerosis type 4; Spinocerebellar ataxia: autosomal recessive: with axonal neuropathy 2</td>
+<td>26479</td>
+<td>36.0</td>
+<td>PASS</td>
+<td>ENST00000224140</td>
+<td>ENST00000224140.6:c.3754G&gt;A</td>
+<td>ENSP00000224140.5:p.Gly1252Arg</td>
+<td>36</td>
+<td>126</td>
+<td>78*48</td>
+<td>35*0*52</td>
+<td></td>
+<td>C/T</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000224140.6:c.3754C&gt;T</td>
+<td>ENSP00000224140.5:p.Arg1252Gly</td>
+<td>G/A</td>
+<td></td>
+<td>0.6831</td>
+<td>0.3841</td>
+<td>0.7865</td>
+<td>0.7344</td>
+<td>0.3238</td>
+<td>0.8319</td>
+<td>0.8442</td>
+<td>0.6202</td>
+<td>0.7272</td>
+<td>0.508</td>
+<td>0.001</td>
+<td>4.72</td>
+<td></td>
+<td></td>
+<td>0.442</td>
+<td>C/T</td>
+<td>6</td>
+<td>S</td>
+</tr>
+<tr>
+<td>SETX</td>
+<td>chr9</td>
+<td>132328022</td>
+<td>rs1185193</td>
+<td>A</td>
+<td>C</td>
+<td>MODERATE</td>
+<td>0/1</td>
+<td>0.471429</td>
+<td>81694</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Amyotrophic lateral sclerosis type 4; Spinocerebellar ataxia: autosomal recessive: with axonal neuropathy 2</td>
+<td>26480</td>
+<td>43.4</td>
+<td>PASS</td>
+<td>ENST00000224140</td>
+<td>ENST00000224140.6:c.3576T&gt;G</td>
+<td>ENSP00000224140.5:p.Asp1192Glu</td>
+<td>43</td>
+<td>70</td>
+<td>37*33</td>
+<td>43*0*54</td>
+<td>CD148349</td>
+<td>A/C</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000224140.6:c.3576A&gt;C</td>
+<td>ENSP00000224140.5:p.Glu1192Asp</td>
+<td>T/G</td>
+<td></td>
+<td>0.768</td>
+<td>0.6426</td>
+<td>0.8167</td>
+<td>0.7677</td>
+<td>0.331</td>
+<td>0.8581</td>
+<td>0.86</td>
+<td>0.6363</td>
+<td>0.786</td>
+<td>-1.154</td>
+<td>0</td>
+<td>-9.5</td>
+<td></td>
+<td></td>
+<td>0.442</td>
+<td>A/C/T</td>
+<td>6</td>
+<td>S</td>
+</tr>
+<tr>
+<td>SETX</td>
+<td>chr9</td>
+<td>132329619</td>
+<td>rs882709</td>
+<td>G</td>
+<td>C</td>
+<td>MODERATE</td>
+<td>0/1</td>
+<td>0.271186</td>
+<td>81692</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Amyotrophic lateral sclerosis type 4; Spinocerebellar ataxia: autosomal recessive: with axonal neuropathy 2</td>
+<td>26481</td>
+<td>53.5</td>
+<td>PASS</td>
+<td>ENST00000224140</td>
+<td>ENST00000224140.6:c.1979C&gt;G</td>
+<td>ENSP00000224140.5:p.Ala660Gly</td>
+<td>53</td>
+<td>59</td>
+<td>43*16</td>
+<td>53*0*60</td>
+<td></td>
+<td>G/C</td>
+<td>Het</td>
+<td></td>
+<td>tolerated</td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000224140.6:c.1979G&gt;C</td>
+<td>ENSP00000224140.5:p.Gly660Ala</td>
+<td>C/G</td>
+<td></td>
+<td>0.125</td>
+<td>0.2279</td>
+<td>0.08667</td>
+<td>0.09361</td>
+<td>0.4221</td>
+<td>0.05965</td>
+<td>0.05908</td>
+<td>0.1616</td>
+<td>0.1041</td>
+<td>1.271</td>
+<td>0.004</td>
+<td>2.12</td>
+<td></td>
+<td></td>
+<td>0.442</td>
+<td>G/C/T</td>
+<td>6</td>
+<td>S</td>
+</tr>
+<tr>
+<td>SETX</td>
+<td>chr9</td>
+<td>132329630</td>
+<td>rs113997459</td>
+<td>T</td>
+<td>C</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.323077</td>
+<td>644841</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Amyotrophic lateral sclerosis type 4; Hereditary spastic paraplegia; Inborn genetic diseases; Spinocerebellar ataxia: autosomal recessive: with axonal neuropathy 2</td>
+<td>26482</td>
+<td>57.1</td>
+<td>PASS</td>
+<td>ENST00000224140</td>
+<td>ENST00000224140.6:c.1968A&gt;G</td>
+<td>ENSP00000224140.5:p.Val656=</td>
+<td>56</td>
+<td>65</td>
+<td>44*21</td>
+<td>57*0*62</td>
+<td></td>
+<td>T/C</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000224140.6:c.1968T&gt;C</td>
+<td></td>
+<td>A/G</td>
+<td></td>
+<td>0.005933</td>
+<td>0.0202</td>
+<td>0.003137</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>2.939e-05</td>
+<td>0</td>
+<td>0.006616</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.442</td>
+<td>T/C</td>
+<td>7</td>
+<td>S</td>
+</tr>
+<tr>
+<td>SETX</td>
+<td>chr9</td>
+<td>132329641</td>
+<td>rs116333061</td>
+<td>G</td>
+<td>T</td>
+<td>MODERATE</td>
+<td>0/1</td>
+<td>0.4</td>
+<td>2383</td>
+<td>pathogenic</td>
+<td>no_assertion_criteria_provided</td>
+<td>Amyotrophic lateral sclerosis type 4; Hereditary spastic paraplegia; Spinocerebellar ataxia: autosomal recessive: with axonal neuropathy 2</td>
+<td>26483</td>
+<td>51.1</td>
+<td>PASS</td>
+<td>ENST00000224140</td>
+<td>ENST00000224140.6:c.1957C&gt;A</td>
+<td>ENSP00000224140.5:p.Gln653Lys</td>
+<td>50</td>
+<td>70</td>
+<td>42*28</td>
+<td>51*0*57</td>
+<td>CM076515</td>
+<td>G/T</td>
+<td>Het</td>
+<td></td>
+<td>deleterious</td>
+<td>possibly_damaging</td>
+<td>protein_coding</td>
+<td>ENST00000224140.6:c.1957G&gt;T</td>
+<td>ENSP00000224140.5:p.Lys653Gln</td>
+<td>C/A</td>
+<td></td>
+<td>0.005918</td>
+<td>0.02015</td>
+<td>0.00314</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>2.941e-05</td>
+<td>0</td>
+<td>0.006629</td>
+<td>2.209</td>
+<td>0.044</td>
+<td>4.21</td>
+<td></td>
+<td></td>
+<td>0.442</td>
+<td>G/T</td>
+<td>7</td>
+<td>S</td>
+</tr>
+<tr>
+<td>SETX</td>
+<td>chr9</td>
+<td>132331073</td>
+<td>rs9411449</td>
+<td>A</td>
+<td>G</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.338235</td>
+<td>81691</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Amyotrophic lateral sclerosis type 4; Spinocerebellar ataxia: autosomal recessive: with axonal neuropathy 2</td>
+<td>26484</td>
+<td>40.6</td>
+<td>PASS</td>
+<td>ENST00000224140</td>
+<td>ENST00000224140.6:c.1077T&gt;C</td>
+<td>ENSP00000224140.5:p.Tyr359=</td>
+<td>41</td>
+<td>68</td>
+<td>45*23</td>
+<td>40*0*56</td>
+<td></td>
+<td>A/G</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000224140.6:c.1077A&gt;G</td>
+<td></td>
+<td>T/C</td>
+<td></td>
+<td>0.7502</td>
+<td>0.6185</td>
+<td>0.8082</td>
+<td>0.7344</td>
+<td>0.3333</td>
+<td>0.8311</td>
+<td>0.8447</td>
+<td>0.6203</td>
+<td>0.7695</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.442</td>
+<td>A/G</td>
+<td>6</td>
+<td>S</td>
+</tr>
+<tr>
+<td>SETX</td>
+<td>chr9</td>
+<td>132353630</td>
+<td>rs66524976</td>
+<td>T</td>
+<td>TA</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.493151</td>
+<td>1671970</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td></td>
+<td>26485</td>
+<td>49.7</td>
+<td>PASS</td>
+<td>ENST00000224140</td>
+<td>ENST00000224140.6:c.-8+18dup</td>
+<td></td>
+<td>48</td>
+<td>73</td>
+<td>30*36</td>
+<td>49*0*52</td>
+<td></td>
+<td>T/TA</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td></td>
+<td></td>
+<td>A/TA</td>
+<td></td>
+<td>0.6902</td>
+<td>0.4292</td>
+<td>0.7813</td>
+<td>0.7639</td>
+<td>0.3272</td>
+<td>0.8245</td>
+<td>0.8334</td>
+<td>0.6106</td>
+<td>0.7278</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.442</td>
+<td>AAAAAAAAAAA/AAAAAAAAAA/AAAAAAAAAAAA/AAAAAAAAAAAAA</td>
+<td>1</td>
+<td>S</td>
+</tr>
+</tbody></table></div>
+<script>
+(function() {{
+  const table = document.getElementById('tabela');
+  const busca = document.getElementById('busca');
+  const btnCsv = document.getElementById('btnCsv');
+  if (!table) return;
+  const getCellText = (tr, idx) => (tr.cells[idx]?.innerText || "").trim();
+  const isNumber = (v) => /^-?\d+(\.\d+)?$/.test(v.replace(/\s+/g, '').replace(',', '.'));
+
+  Array.from(table.tHead.rows[0].cells).forEach((th, idx) => {{
+    th.classList.add('sortable');
+    th.addEventListener('click', () => {{
+      const tbody = table.tBodies[0];
+      const rows = Array.from(tbody.rows);
+      const current = th.classList.contains('sorted-asc') ? 'asc'
+                    : th.classList.contains('sorted-desc') ? 'desc' : null;
+      Array.from(table.tHead.rows[0].cells).forEach(h => h.classList.remove('sorted-asc','sorted-desc'));
+      const dir = current === 'asc' ? -1 : 1;
+      const colIsNum = rows.every(tr => isNumber(getCellText(tr, idx)) || getCellText(tr, idx) === "");
+      rows.sort((a,b) => {{
+        let A = getCellText(a, idx);
+        let B = getCellText(b, idx);
+        if (colIsNum) {{ A = parseFloat(A.replace(',', '.')) || 0; B = parseFloat(B.replace(',', '.')) || 0; }}
+        else {{ A = A.toLowerCase(); B = B.toLowerCase(); }}
+        if (A < B) return -1 * dir;
+        if (A > B) return  1 * dir;
+        return 0;
+      }});
+      rows.forEach(r => tbody.appendChild(r));
+      th.classList.add(dir === 1 ? 'sorted-asc' : 'sorted-desc');
+    }});
+  }});
+
+  busca?.addEventListener('input', () => {{
+    const q = busca.value.toLowerCase();
+    const rows = Array.from(table.tBodies[0].rows);
+    rows.forEach(tr => {{
+      const txt = tr.innerText.toLowerCase();
+      tr.style.display = txt.includes(q) ? '' : 'none';
+    }});
+  }});
+
+  btnCsv?.addEventListener('click', () => {{
+    const rows = [];
+    const selRows = Array.from(table.querySelectorAll('tr'));
+    selRows.forEach((tr, i) => {{
+      if (i>0 && tr.style.display === 'none') return;
+      const cells = Array.from(tr.cells).map(td => {{
+        const t = td.innerText.replace(/"/g,'""');
+        return /[",\n]/.test(t) ? `"${{t}}"` : t;
+      }});
+      rows.push(cells.join(','));
+    }});
+    const blob = new Blob([rows.join('\n')], {{type: 'text/csv;charset=utf-8;'}});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = (document.title || 'export') + '.csv';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(() => URL.revokeObjectURL(url), 5000);
+  }});
+}})();
+</script>
+</body>
+</html>
