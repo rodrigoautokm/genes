@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CDH3 — Linhas da tabela dbo.variantes</title>
+<style>
+  :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif; }
+  body { margin: 24px; }
+  h1 { margin: 0 0 6px 0; font-size: 1.6rem; }
+  .meta { color: #444; font-size: .95rem; margin-bottom: 12px; }
+  .toolbar { display:flex; gap: 8px; align-items:center; margin: 12px 0; flex-wrap: wrap; }
+  input[type="search"] { padding: 8px 10px; border: 1px solid #ccc; border-radius: 10px; min-width: 260px; }
+  button { padding: 8px 12px; border: 1px solid #ccc; border-radius: 10px; background: #f7f7f7; cursor: pointer; }
+  button:hover { background: #eee; }
+  table { width: 100%; border-collapse: collapse; }
+  thead th { position: sticky; top: 0; background: #fafafa; border-bottom: 1px solid #ddd; text-align: left; padding: 10px; cursor: pointer; }
+  tbody td { border-bottom: 1px solid #f0f0f0; padding: 8px 10px; vertical-align: top; }
+  .sortable::after { content: " ⇅"; font-size: .8em; color: #888; }
+  .sorted-asc::after { content: " ↑"; }
+  .sorted-desc::after { content: " ↓"; }
+  .empty { padding: 16px; background: #fff6f6; border: 1px solid #ffdede; border-radius: 12px; }
+  a.btn { display:inline-block; margin: 0 8px 8px 0; padding: 6px 10px; border-radius: 10px; border:1px solid #ddd; text-decoration:none; color:#222; background:#f9f9f9; }
+  a.btn:hover { background:#f0f0f0; }
+</style>
+</head>
+<body>
+<h1>CDH3 — Linhas da tabela dbo.variantes</h1>
+<div class="meta">Gene: <strong>CDH3</strong> • Linhas: <strong>13</strong></div>
+<div class="toolbar">
+  <input id="busca" type="search" placeholder="Filtrar linhas... (busca global)">
+  <button id="btnCsv" type="button">Exportar CSV</button>
+  <a class="btn" href="index.html">Voltar ao índice</a>
+</div>
+<div id="wrap">
+<table id="tabela" border="0">
+<thead><tr>
+<th>Gene</th>
+<th>Chr</th>
+<th>Pos</th>
+<th>ID</th>
+<th>Ref</th>
+<th>Alt</th>
+<th>Impacto</th>
+<th>GT</th>
+<th>VAF</th>
+<th>ClinVar_ID</th>
+<th>ClinVar_Significance</th>
+<th>ClinVar_Review_Status</th>
+<th>ClinVar_Disease_Names</th>
+<th>ID_variante</th>
+<th>Qual</th>
+<th>Filtro</th>
+<th>Ensembl</th>
+<th>Alteracao_nucleotidica</th>
+<th>Alteracao_aminoacidica</th>
+<th>GQ</th>
+<th>DP</th>
+<th>AD</th>
+<th>PL</th>
+<th>HGMD</th>
+<th>Resultado</th>
+<th>Status</th>
+<th>Buscar</th>
+<th>SIFT</th>
+<th>PolyPhen</th>
+<th>Biotype</th>
+<th>Alteracao_nucleotidica_reversa</th>
+<th>Alteracao_aminoacidica_reversa</th>
+<th>Resultado_reverso</th>
+<th>encontrado_rsid</th>
+<th>gnomAD_AF_Global</th>
+<th>gnomAD_AFR_AF</th>
+<th>gnomAD_AMR_AF</th>
+<th>gnomAD_ASJ_AF</th>
+<th>gnomAD_EAS_AF</th>
+<th>gnomAD_FIN_AF</th>
+<th>gnomAD_NFE_AF</th>
+<th>gnomAD_SAS_AF</th>
+<th>gnomAD_OTH_AF</th>
+<th>PhyloP</th>
+<th>PhastCons</th>
+<th>GERP</th>
+<th>CADD_Raw</th>
+<th>CADD_Phred</th>
+<th>LOEUF</th>
+<th>Allele_String</th>
+<th>ClinVar_Disease_Count</th>
+<th>letra_inicial_gene</th>
+</tr></thead><tbody>
+<tr>
+<td>CDH3</td>
+<td>chr16</td>
+<td>68678096</td>
+<td>rs1952048</td>
+<td>A</td>
+<td>G</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td>836748</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Congenital hypotrichosis with juvenile macular dystrophy; EEM syndrome</td>
+<td>42689</td>
+<td>55.3</td>
+<td>PASS</td>
+<td>ENST00000264012</td>
+<td>ENST00000264012.9:c.247-38A&gt;G</td>
+<td></td>
+<td>41</td>
+<td>38</td>
+<td>0*38</td>
+<td>55*41*0</td>
+<td></td>
+<td>G/G</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000264012.9:c.247-38A&gt;G</td>
+<td></td>
+<td>G/G</td>
+<td></td>
+<td>0.439</td>
+<td>0.3453</td>
+<td>0.4278</td>
+<td>0.4556</td>
+<td>0.624</td>
+<td>0.4408</td>
+<td>0.4805</td>
+<td>0.4598</td>
+<td>0.443</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.823</td>
+<td>A/G/T</td>
+<td>3</td>
+<td>C</td>
+</tr>
+<tr>
+<td>CDH3</td>
+<td>chr16</td>
+<td>68678314</td>
+<td>rs2296410</td>
+<td>T</td>
+<td>C</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td>836652</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Congenital hypotrichosis with juvenile macular dystrophy; EEM syndrome</td>
+<td>42690</td>
+<td>54.3</td>
+<td>PASS</td>
+<td>ENST00000264012</td>
+<td>ENST00000264012.9:c.390+37T&gt;C</td>
+<td></td>
+<td>43</td>
+<td>68</td>
+<td>0*68</td>
+<td>54*43*0</td>
+<td></td>
+<td>C/C</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000264012.9:c.390+37T&gt;C</td>
+<td></td>
+<td>C/C</td>
+<td></td>
+<td>0.8667</td>
+<td>0.8772</td>
+<td>0.8258</td>
+<td>0.926</td>
+<td>0.7744</td>
+<td>0.8155</td>
+<td>0.8867</td>
+<td>0.7829</td>
+<td>0.8707</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.823</td>
+<td>T/A/C</td>
+<td>3</td>
+<td>C</td>
+</tr>
+<tr>
+<td>CDH3</td>
+<td>chr16</td>
+<td>68679827</td>
+<td>rs2296409</td>
+<td>G</td>
+<td>A</td>
+<td>LOW</td>
+<td>1/1</td>
+<td>1</td>
+<td>299306</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Congenital hypotrichosis with juvenile macular dystrophy; EEM syndrome</td>
+<td>42691</td>
+<td>52.3</td>
+<td>PASS</td>
+<td>ENST00000264012</td>
+<td>ENST00000264012.9:c.720G&gt;A</td>
+<td>ENSP00000264012.4:p.Thr240=</td>
+<td>40</td>
+<td>134</td>
+<td>0*134</td>
+<td>52*40*0</td>
+<td></td>
+<td>A/A</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000264012.9:c.720G&gt;A</td>
+<td>ENSP00000264012.4:p.Thr240=</td>
+<td>A/A</td>
+<td></td>
+<td>0.627</td>
+<td>0.674</td>
+<td>0.5431</td>
+<td>0.5721</td>
+<td>0.6274</td>
+<td>0.6101</td>
+<td>0.6273</td>
+<td>0.5456</td>
+<td>0.619</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.823</td>
+<td>G/A</td>
+<td>3</td>
+<td>C</td>
+</tr>
+<tr>
+<td>CDH3</td>
+<td>chr16</td>
+<td>68679920</td>
+<td>rs2296408</td>
+<td>C</td>
+<td>A</td>
+<td>LOW</td>
+<td>1/1</td>
+<td>1</td>
+<td>259290</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Congenital hypotrichosis with juvenile macular dystrophy; EEM syndrome</td>
+<td>42692</td>
+<td>61.0</td>
+<td>PASS</td>
+<td>ENST00000264012</td>
+<td>ENST00000264012.9:c.813C&gt;A</td>
+<td>ENSP00000264012.4:p.Thr271=</td>
+<td>52</td>
+<td>226</td>
+<td>0*226</td>
+<td>60*52*0</td>
+<td></td>
+<td>A/A</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000264012.9:c.813C&gt;A</td>
+<td>ENSP00000264012.4:p.Thr271=</td>
+<td>A/A</td>
+<td></td>
+<td>0.6262</td>
+<td>0.6733</td>
+<td>0.5405</td>
+<td>0.5709</td>
+<td>0.6255</td>
+<td>0.6079</td>
+<td>0.6271</td>
+<td>0.5443</td>
+<td>0.6199</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.823</td>
+<td>C/A/G/T</td>
+<td>3</td>
+<td>C</td>
+</tr>
+<tr>
+<td>CDH3</td>
+<td>chr16</td>
+<td>68682276</td>
+<td>rs1886697</td>
+<td>T</td>
+<td>C</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.424658</td>
+<td>1636464</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td></td>
+<td>42693</td>
+<td>48.6</td>
+<td>PASS</td>
+<td>ENST00000264012</td>
+<td>ENST00000264012.9:c.997-26T&gt;C</td>
+<td></td>
+<td>48</td>
+<td>73</td>
+<td>42*31</td>
+<td>48*0*56</td>
+<td></td>
+<td>T/C</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000264012.9:c.997-26T&gt;C</td>
+<td></td>
+<td>T/C</td>
+<td></td>
+<td>0.6149</td>
+<td>0.6546</td>
+<td>0.5335</td>
+<td>0.5709</td>
+<td>0.5627</td>
+<td>0.6057</td>
+<td>0.6193</td>
+<td>0.5576</td>
+<td>0.6147</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.823</td>
+<td>T/C</td>
+<td>1</td>
+<td>C</td>
+</tr>
+<tr>
+<td>CDH3</td>
+<td>chr16</td>
+<td>68684847</td>
+<td>rs2281850</td>
+<td>A</td>
+<td>G</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.385246</td>
+<td>1609753</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td></td>
+<td>42694</td>
+<td>45.4</td>
+<td>PASS</td>
+<td>ENST00000264012</td>
+<td>ENST00000264012.9:c.1424+23A&gt;G</td>
+<td></td>
+<td>42</td>
+<td>244</td>
+<td>150*94</td>
+<td>45*0*44</td>
+<td></td>
+<td>A/G</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000264012.9:c.1424+23A&gt;G</td>
+<td></td>
+<td>A/G</td>
+<td></td>
+<td>0.6194</td>
+<td>0.6708</td>
+<td>0.5357</td>
+<td>0.5706</td>
+<td>0.5622</td>
+<td>0.606</td>
+<td>0.6189</td>
+<td>0.5575</td>
+<td>0.6161</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.823</td>
+<td>A/G/T</td>
+<td>1</td>
+<td>C</td>
+</tr>
+<tr>
+<td>CDH3</td>
+<td>chr16</td>
+<td>68687567</td>
+<td>rs2296405</td>
+<td>T</td>
+<td>C</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.478788</td>
+<td>336277</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Congenital hypotrichosis with juvenile macular dystrophy; EEM syndrome</td>
+<td>42695</td>
+<td>57.6</td>
+<td>PASS</td>
+<td>ENST00000264012</td>
+<td>ENST00000264012.9:c.1626T&gt;C</td>
+<td>ENSP00000264012.4:p.Asn542=</td>
+<td>55</td>
+<td>165</td>
+<td>86*79</td>
+<td>57*0*57</td>
+<td></td>
+<td>T/C</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000264012.9:c.1626T&gt;C</td>
+<td>ENSP00000264012.4:p.Asn542=</td>
+<td>T/C</td>
+<td></td>
+<td>0.6194</td>
+<td>0.6701</td>
+<td>0.5364</td>
+<td>0.5709</td>
+<td>0.5624</td>
+<td>0.6075</td>
+<td>0.6188</td>
+<td>0.5565</td>
+<td>0.6166</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.823</td>
+<td>T/A/C</td>
+<td>3</td>
+<td>C</td>
+</tr>
+<tr>
+<td>CDH3</td>
+<td>chr16</td>
+<td>68687630</td>
+<td>rs1126933</td>
+<td>G</td>
+<td>C</td>
+<td>MODERATE</td>
+<td>0/1</td>
+<td>0.543478</td>
+<td>305316</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>EEM syndrome</td>
+<td>42696</td>
+<td>51.1</td>
+<td>PASS</td>
+<td>ENST00000264012</td>
+<td>ENST00000264012.9:c.1689G&gt;C</td>
+<td>ENSP00000264012.4:p.Gln563His</td>
+<td>51</td>
+<td>230</td>
+<td>105*125</td>
+<td>51*0*64</td>
+<td></td>
+<td>G/C</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000264012.9:c.1689G&gt;C</td>
+<td>ENSP00000264012.4:p.Gln563His</td>
+<td>G/C</td>
+<td></td>
+<td>0.316</td>
+<td>0.08407</td>
+<td>0.3503</td>
+<td>0.3566</td>
+<td>0.5102</td>
+<td>0.4134</td>
+<td>0.4151</td>
+<td>0.3383</td>
+<td>0.317</td>
+<td>-0.134</td>
+<td>0.001</td>
+<td>-3.29</td>
+<td></td>
+<td></td>
+<td>0.823</td>
+<td>G/A/C/T</td>
+<td>2</td>
+<td>C</td>
+</tr>
+<tr>
+<td>CDH3</td>
+<td>chr16</td>
+<td>68691880</td>
+<td>rs2274239</td>
+<td>G</td>
+<td>A</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.480447</td>
+<td>268784</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Congenital hypotrichosis with juvenile macular dystrophy; EEM syndrome</td>
+<td>42697</td>
+<td>50.8</td>
+<td>PASS</td>
+<td>ENST00000264012</td>
+<td>ENST00000264012.9:c.1956G&gt;A</td>
+<td>ENSP00000264012.4:p.Lys652=</td>
+<td>48</td>
+<td>179</td>
+<td>93*86</td>
+<td>50*0*50</td>
+<td></td>
+<td>G/A</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000264012.9:c.1956G&gt;A</td>
+<td>ENSP00000264012.4:p.Lys652=</td>
+<td>G/A</td>
+<td></td>
+<td>0.6067</td>
+<td>0.6436</td>
+<td>0.5298</td>
+<td>0.5649</td>
+<td>0.5004</td>
+<td>0.605</td>
+<td>0.6148</td>
+<td>0.5502</td>
+<td>0.603</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.823</td>
+<td>G/A/C</td>
+<td>3</td>
+<td>C</td>
+</tr>
+<tr>
+<td>CDH3</td>
+<td>chr16</td>
+<td>68695209</td>
+<td>rs8060790</td>
+<td>A</td>
+<td>G</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.418301</td>
+<td>1666376</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td></td>
+<td>42698</td>
+<td>51.4</td>
+<td>PASS</td>
+<td>ENST00000264012</td>
+<td>ENST00000264012.9:c.2003-46A&gt;G</td>
+<td></td>
+<td>49</td>
+<td>153</td>
+<td>89*64</td>
+<td>51*0*52</td>
+<td></td>
+<td>A/G</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000264012.9:c.2003-46A&gt;G</td>
+<td></td>
+<td>A/G</td>
+<td></td>
+<td>0.5713</td>
+<td>0.5227</td>
+<td>0.5163</td>
+<td>0.5648</td>
+<td>0.5029</td>
+<td>0.6048</td>
+<td>0.6133</td>
+<td>0.5497</td>
+<td>0.5764</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.823</td>
+<td>A/G/T</td>
+<td>1</td>
+<td>C</td>
+</tr>
+<tr>
+<td>CDH3</td>
+<td>chr16</td>
+<td>68695882</td>
+<td>rs17715450</td>
+<td>C</td>
+<td>A</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.4875</td>
+<td>79721</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Congenital hypotrichosis with juvenile macular dystrophy; EEM syndrome</td>
+<td>42699</td>
+<td>46.5</td>
+<td>PASS</td>
+<td>ENST00000264012</td>
+<td>ENST00000264012.9:c.2239C&gt;A</td>
+<td>ENSP00000264012.4:p.Arg747=</td>
+<td>46</td>
+<td>160</td>
+<td>82*78</td>
+<td>46*0*60</td>
+<td></td>
+<td>C/A</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000264012.9:c.2239C&gt;A</td>
+<td>ENSP00000264012.4:p.Arg747=</td>
+<td>C/A</td>
+<td></td>
+<td>0.4986</td>
+<td>0.3112</td>
+<td>0.4773</td>
+<td>0.5461</td>
+<td>0.4996</td>
+<td>0.5969</td>
+<td>0.5937</td>
+<td>0.5396</td>
+<td>0.5104</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.823</td>
+<td>C/A/T</td>
+<td>4</td>
+<td>C</td>
+</tr>
+<tr>
+<td>CDH3</td>
+<td>chr16</td>
+<td>68722547</td>
+<td>rs12923775</td>
+<td>C</td>
+<td>T</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.266667</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>42700</td>
+<td>42.6</td>
+<td>PASS</td>
+<td>ENST00000569080</td>
+<td>ENST00000569080.2:c.222C&gt;T</td>
+<td>ENSP00000463415.1:p.Pro74=</td>
+<td>42</td>
+<td>45</td>
+<td>33*12</td>
+<td>42*0*57</td>
+<td></td>
+<td>C/T</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000569080.2:c.222C&gt;T</td>
+<td>ENSP00000463415.1:p.Pro74=</td>
+<td>C/T</td>
+<td></td>
+<td>0.489</td>
+<td>0.3013</td>
+<td>0.4749</td>
+<td>0.5161</td>
+<td>0.4911</td>
+<td>0.5792</td>
+<td>0.5858</td>
+<td>0.5253</td>
+<td>0.5052</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.823</td>
+<td>C/T</td>
+<td></td>
+<td>C</td>
+</tr>
+<tr>
+<td>CDH3</td>
+<td>chr16</td>
+<td>68722566</td>
+<td>rs12923655</td>
+<td>A</td>
+<td>C</td>
+<td>MODERATE</td>
+<td>0/1</td>
+<td>0.227273</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>42701</td>
+<td>36.3</td>
+<td>PASS</td>
+<td>ENST00000569080</td>
+<td>ENST00000569080.2:c.241A&gt;C</td>
+<td>ENSP00000463415.1:p.Thr81Pro</td>
+<td>36</td>
+<td>44</td>
+<td>34*10</td>
+<td>36*0*59</td>
+<td></td>
+<td>A/C</td>
+<td>Het</td>
+<td></td>
+<td>deleterious_low_confidence</td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000569080.2:c.241A&gt;C</td>
+<td>ENSP00000463415.1:p.Thr81Pro</td>
+<td>A/C</td>
+<td></td>
+<td>0.3634</td>
+<td>0.1695</td>
+<td>0.3867</td>
+<td>0.4044</td>
+<td>0.4851</td>
+<td>0.4213</td>
+<td>0.4525</td>
+<td>0.3863</td>
+<td>0.3739</td>
+<td>0.416</td>
+<td>0.001</td>
+<td>1.7</td>
+<td></td>
+<td></td>
+<td>0.823</td>
+<td>A/C/G</td>
+<td></td>
+<td>C</td>
+</tr>
+</tbody></table></div>
+<script>
+(function() {{
+  const table = document.getElementById('tabela');
+  const busca = document.getElementById('busca');
+  const btnCsv = document.getElementById('btnCsv');
+  if (!table) return;
+  const getCellText = (tr, idx) => (tr.cells[idx]?.innerText || "").trim();
+  const isNumber = (v) => /^-?\d+(\.\d+)?$/.test(v.replace(/\s+/g, '').replace(',', '.'));
+
+  Array.from(table.tHead.rows[0].cells).forEach((th, idx) => {{
+    th.classList.add('sortable');
+    th.addEventListener('click', () => {{
+      const tbody = table.tBodies[0];
+      const rows = Array.from(tbody.rows);
+      const current = th.classList.contains('sorted-asc') ? 'asc'
+                    : th.classList.contains('sorted-desc') ? 'desc' : null;
+      Array.from(table.tHead.rows[0].cells).forEach(h => h.classList.remove('sorted-asc','sorted-desc'));
+      const dir = current === 'asc' ? -1 : 1;
+      const colIsNum = rows.every(tr => isNumber(getCellText(tr, idx)) || getCellText(tr, idx) === "");
+      rows.sort((a,b) => {{
+        let A = getCellText(a, idx);
+        let B = getCellText(b, idx);
+        if (colIsNum) {{ A = parseFloat(A.replace(',', '.')) || 0; B = parseFloat(B.replace(',', '.')) || 0; }}
+        else {{ A = A.toLowerCase(); B = B.toLowerCase(); }}
+        if (A < B) return -1 * dir;
+        if (A > B) return  1 * dir;
+        return 0;
+      }});
+      rows.forEach(r => tbody.appendChild(r));
+      th.classList.add(dir === 1 ? 'sorted-asc' : 'sorted-desc');
+    }});
+  }});
+
+  busca?.addEventListener('input', () => {{
+    const q = busca.value.toLowerCase();
+    const rows = Array.from(table.tBodies[0].rows);
+    rows.forEach(tr => {{
+      const txt = tr.innerText.toLowerCase();
+      tr.style.display = txt.includes(q) ? '' : 'none';
+    }});
+  }});
+
+  btnCsv?.addEventListener('click', () => {{
+    const rows = [];
+    const selRows = Array.from(table.querySelectorAll('tr'));
+    selRows.forEach((tr, i) => {{
+      if (i>0 && tr.style.display === 'none') return;
+      const cells = Array.from(tr.cells).map(td => {{
+        const t = td.innerText.replace(/"/g,'""');
+        return /[",\n]/.test(t) ? `"${{t}}"` : t;
+      }});
+      rows.push(cells.join(','));
+    }});
+    const blob = new Blob([rows.join('\n')], {{type: 'text/csv;charset=utf-8;'}});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = (document.title || 'export') + '.csv';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(() => URL.revokeObjectURL(url), 5000);
+  }});
+}})();
+</script>
+</body>
+</html>
