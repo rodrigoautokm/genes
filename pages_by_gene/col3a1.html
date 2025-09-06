@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>COL3A1 — Linhas da tabela dbo.variantes</title>
+<style>
+  :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif; }
+  body { margin: 24px; }
+  h1 { margin: 0 0 6px 0; font-size: 1.6rem; }
+  .meta { color: #444; font-size: .95rem; margin-bottom: 12px; }
+  .toolbar { display:flex; gap: 8px; align-items:center; margin: 12px 0; flex-wrap: wrap; }
+  input[type="search"] { padding: 8px 10px; border: 1px solid #ccc; border-radius: 10px; min-width: 260px; }
+  button { padding: 8px 12px; border: 1px solid #ccc; border-radius: 10px; background: #f7f7f7; cursor: pointer; }
+  button:hover { background: #eee; }
+  table { width: 100%; border-collapse: collapse; }
+  thead th { position: sticky; top: 0; background: #fafafa; border-bottom: 1px solid #ddd; text-align: left; padding: 10px; cursor: pointer; }
+  tbody td { border-bottom: 1px solid #f0f0f0; padding: 8px 10px; vertical-align: top; }
+  .sortable::after { content: " ⇅"; font-size: .8em; color: #888; }
+  .sorted-asc::after { content: " ↑"; }
+  .sorted-desc::after { content: " ↓"; }
+  .empty { padding: 16px; background: #fff6f6; border: 1px solid #ffdede; border-radius: 12px; }
+  a.btn { display:inline-block; margin: 0 8px 8px 0; padding: 6px 10px; border-radius: 10px; border:1px solid #ddd; text-decoration:none; color:#222; background:#f9f9f9; }
+  a.btn:hover { background:#f0f0f0; }
+</style>
+</head>
+<body>
+<h1>COL3A1 — Linhas da tabela dbo.variantes</h1>
+<div class="meta">Gene: <strong>COL3A1</strong> • Linhas: <strong>13</strong></div>
+<div class="toolbar">
+  <input id="busca" type="search" placeholder="Filtrar linhas... (busca global)">
+  <button id="btnCsv" type="button">Exportar CSV</button>
+  <a class="btn" href="index.html">Voltar ao índice</a>
+</div>
+<div id="wrap">
+<table id="tabela" border="0">
+<thead><tr>
+<th>Gene</th>
+<th>Chr</th>
+<th>Pos</th>
+<th>ID</th>
+<th>Ref</th>
+<th>Alt</th>
+<th>Impacto</th>
+<th>GT</th>
+<th>VAF</th>
+<th>ClinVar_ID</th>
+<th>ClinVar_Significance</th>
+<th>ClinVar_Review_Status</th>
+<th>ClinVar_Disease_Names</th>
+<th>ID_variante</th>
+<th>Qual</th>
+<th>Filtro</th>
+<th>Ensembl</th>
+<th>Alteracao_nucleotidica</th>
+<th>Alteracao_aminoacidica</th>
+<th>GQ</th>
+<th>DP</th>
+<th>AD</th>
+<th>PL</th>
+<th>HGMD</th>
+<th>Resultado</th>
+<th>Status</th>
+<th>Buscar</th>
+<th>SIFT</th>
+<th>PolyPhen</th>
+<th>Biotype</th>
+<th>Alteracao_nucleotidica_reversa</th>
+<th>Alteracao_aminoacidica_reversa</th>
+<th>Resultado_reverso</th>
+<th>encontrado_rsid</th>
+<th>gnomAD_AF_Global</th>
+<th>gnomAD_AFR_AF</th>
+<th>gnomAD_AMR_AF</th>
+<th>gnomAD_ASJ_AF</th>
+<th>gnomAD_EAS_AF</th>
+<th>gnomAD_FIN_AF</th>
+<th>gnomAD_NFE_AF</th>
+<th>gnomAD_SAS_AF</th>
+<th>gnomAD_OTH_AF</th>
+<th>PhyloP</th>
+<th>PhastCons</th>
+<th>GERP</th>
+<th>CADD_Raw</th>
+<th>CADD_Phred</th>
+<th>LOEUF</th>
+<th>Allele_String</th>
+<th>ClinVar_Disease_Count</th>
+<th>letra_inicial_gene</th>
+</tr></thead><tbody>
+<tr>
+<td>COL3A1</td>
+<td>chr2</td>
+<td>188997207</td>
+<td>rs35795890</td>
+<td>C</td>
+<td>A</td>
+<td>MODERATE</td>
+<td>0/1</td>
+<td>0.398374</td>
+<td>124401</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Ehlers-Danlos syndrome; Ehlers-Danlos syndrome: type 4; Familial thoracic aortic aneurysm and aortic dissection</td>
+<td>8001</td>
+<td>44.8</td>
+<td>PASS</td>
+<td>ENST00000304636</td>
+<td>ENST00000304636.9:c.1804C&gt;A</td>
+<td>ENSP00000304408.4:p.Pro602Thr</td>
+<td>44</td>
+<td>123</td>
+<td>74*49</td>
+<td>44*0*51</td>
+<td></td>
+<td>C/A</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000304636.9:c.1804C&gt;A</td>
+<td>ENSP00000304408.4:p.Pro602Thr</td>
+<td>C/A</td>
+<td></td>
+<td>0.005134</td>
+<td>0.00323</td>
+<td>0.008834</td>
+<td>0.006062</td>
+<td>0</td>
+<td>0.002927</td>
+<td>0.006206</td>
+<td>0.0004153</td>
+<td>0.01373</td>
+<td>2.99</td>
+<td>0.989</td>
+<td>6.03</td>
+<td></td>
+<td></td>
+<td>0.291</td>
+<td>C/A/G</td>
+<td>5</td>
+<td>C</td>
+</tr>
+<tr>
+<td>COL3A1</td>
+<td>chr2</td>
+<td>188997322</td>
+<td>rs7579815</td>
+<td>G</td>
+<td>C</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.386364</td>
+<td>2109623</td>
+<td>likely-benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Ehlers-Danlos syndrome: type 4</td>
+<td>8002</td>
+<td>56.0</td>
+<td>PASS</td>
+<td>ENST00000304636</td>
+<td>ENST00000304636.9:c.1816-14G&gt;C</td>
+<td></td>
+<td>56</td>
+<td>44</td>
+<td>27*17</td>
+<td>56*0*66</td>
+<td></td>
+<td>G/C</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000304636.9:c.1816-14G&gt;C</td>
+<td></td>
+<td>G/C</td>
+<td></td>
+<td>0.1557</td>
+<td>0.2172</td>
+<td>0.1319</td>
+<td>0.1409</td>
+<td>0.004265</td>
+<td>0.09067</td>
+<td>0.149</td>
+<td>0.1055</td>
+<td>0.1589</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.291</td>
+<td>G/A/C</td>
+<td>1</td>
+<td>C</td>
+</tr>
+<tr>
+<td>COL3A1</td>
+<td>chr2</td>
+<td>188997371</td>
+<td>rs7579903</td>
+<td>G</td>
+<td>A</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.35</td>
+<td>124405</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Ehlers-Danlos syndrome: type 4; Familial thoracic aortic aneurysm and aortic dissection; Polymicrogyria with or without vascular-type Ehlers-Danlos syndrome</td>
+<td>8003</td>
+<td>52.6</td>
+<td>PASS</td>
+<td>ENST00000304636</td>
+<td>ENST00000304636.9:c.1851G&gt;A</td>
+<td>ENSP00000304408.4:p.Gln617=</td>
+<td>52</td>
+<td>60</td>
+<td>39*21</td>
+<td>52*0*62</td>
+<td></td>
+<td>G/A</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000304636.9:c.1851G&gt;A</td>
+<td>ENSP00000304408.4:p.Gln617=</td>
+<td>G/A</td>
+<td></td>
+<td>0.1555</td>
+<td>0.2171</td>
+<td>0.1319</td>
+<td>0.1409</td>
+<td>0.004254</td>
+<td>0.08965</td>
+<td>0.1488</td>
+<td>0.1034</td>
+<td>0.1585</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.291</td>
+<td>G/A</td>
+<td>5</td>
+<td>C</td>
+</tr>
+<tr>
+<td>COL3A1</td>
+<td>chr2</td>
+<td>188998663</td>
+<td>rs13306272</td>
+<td>C</td>
+<td>T</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.350877</td>
+<td>124408</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Ehlers-Danlos syndrome: type 4; Familial thoracic aortic aneurysm and aortic dissection; Polymicrogyria with or without vascular-type Ehlers-Danlos syndrome</td>
+<td>8004</td>
+<td>37.2</td>
+<td>PASS</td>
+<td>ENST00000304636</td>
+<td>ENST00000304636.9:c.1978-11C&gt;T</td>
+<td></td>
+<td>37</td>
+<td>57</td>
+<td>37*20</td>
+<td>37*0*48</td>
+<td></td>
+<td>C/T</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000304636.9:c.1978-11C&gt;T</td>
+<td></td>
+<td>C/T</td>
+<td></td>
+<td>0.2399</td>
+<td>0.1916</td>
+<td>0.2397</td>
+<td>0.3137</td>
+<td>0.2306</td>
+<td>0.2622</td>
+<td>0.2566</td>
+<td>0.3356</td>
+<td>0.2609</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.291</td>
+<td>C/T</td>
+<td>4</td>
+<td>C</td>
+</tr>
+<tr>
+<td>COL3A1</td>
+<td>chr2</td>
+<td>188999354</td>
+<td>rs1800255</td>
+<td>G</td>
+<td>A</td>
+<td>MODERATE</td>
+<td>0/1</td>
+<td>0.32</td>
+<td>18745</td>
+<td>benign</td>
+<td>no_assertion_criteria_provided</td>
+<td>COLLAGEN TYPE III POLYMORPHISM; Ehlers-Danlos syndrome; Ehlers-Danlos syndrome: type 4; Familial thoracic aortic aneurysm and aortic dissection; Polymicrogyria with or without vascular-type Ehlers-Danlos syndrome</td>
+<td>8005</td>
+<td>44.1</td>
+<td>PASS</td>
+<td>ENST00000304636</td>
+<td>ENST00000304636.9:c.2092G&gt;A</td>
+<td>ENSP00000304408.4:p.Ala698Thr</td>
+<td>43</td>
+<td>100</td>
+<td>68*32</td>
+<td>44*0*47</td>
+<td>CM086593</td>
+<td>G/A</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000304636.9:c.2092G&gt;A</td>
+<td>ENSP00000304408.4:p.Ala698Thr</td>
+<td>G/A</td>
+<td></td>
+<td>0.2162</td>
+<td>0.1205</td>
+<td>0.2323</td>
+<td>0.3006</td>
+<td>0.2313</td>
+<td>0.2595</td>
+<td>0.2525</td>
+<td>0.3029</td>
+<td>0.2412</td>
+<td>0.112</td>
+<td>0</td>
+<td>0.873</td>
+<td></td>
+<td></td>
+<td>0.291</td>
+<td>G/A/C/T</td>
+<td>9</td>
+<td>C</td>
+</tr>
+<tr>
+<td>COL3A1</td>
+<td>chr2</td>
+<td>188999856</td>
+<td>rs1801184</td>
+<td>T</td>
+<td>C</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.312102</td>
+<td>124411</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Ehlers-Danlos syndrome: type 4; Familial thoracic aortic aneurysm and aortic dissection; Polymicrogyria with or without vascular-type Ehlers-Danlos syndrome</td>
+<td>8006</td>
+<td>30.2</td>
+<td>PASS</td>
+<td>ENST00000304636</td>
+<td>ENST00000304636.9:c.2244T&gt;C</td>
+<td>ENSP00000304408.4:p.Gly748=</td>
+<td>30</td>
+<td>157</td>
+<td>108*49</td>
+<td>30*0*47</td>
+<td></td>
+<td>T/C</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000304636.9:c.2244T&gt;C</td>
+<td>ENSP00000304408.4:p.Gly748=</td>
+<td>T/C</td>
+<td></td>
+<td>0.2715</td>
+<td>0.2991</td>
+<td>0.2521</td>
+<td>0.3448</td>
+<td>0.0748</td>
+<td>0.1663</td>
+<td>0.2917</td>
+<td>0.1585</td>
+<td>0.3021</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.291</td>
+<td>T/C</td>
+<td>5</td>
+<td>C</td>
+</tr>
+<tr>
+<td>COL3A1</td>
+<td>chr2</td>
+<td>189001473</td>
+<td>rs2271682</td>
+<td>T</td>
+<td>A</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.397059</td>
+<td>253758</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Ehlers-Danlos syndrome: type 4; Polymicrogyria with or without vascular-type Ehlers-Danlos syndrome</td>
+<td>8007</td>
+<td>49.0</td>
+<td>PASS</td>
+<td>ENST00000304636</td>
+<td>ENST00000304636.9:c.2337+23T&gt;A</td>
+<td></td>
+<td>46</td>
+<td>68</td>
+<td>41*27</td>
+<td>48*0*49</td>
+<td></td>
+<td>T/A</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000304636.9:c.2337+23T&gt;A</td>
+<td></td>
+<td>T/A</td>
+<td></td>
+<td>0.7192</td>
+<td>0.6684</td>
+<td>0.7448</td>
+<td>0.6535</td>
+<td>0.9255</td>
+<td>0.8337</td>
+<td>0.7083</td>
+<td>0.8418</td>
+<td>0.6954</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.291</td>
+<td>T/A/C/G</td>
+<td>4</td>
+<td>C</td>
+</tr>
+<tr>
+<td>COL3A1</td>
+<td>chr2</td>
+<td>189003464</td>
+<td>rs376643618</td>
+<td>T</td>
+<td>A</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.232877</td>
+<td>418506</td>
+<td>uncertain-significance</td>
+<td>criteria_provided_single_submitter</td>
+<td>Ehlers-Danlos syndrome: type 4; Familial thoracic aortic aneurysm and aortic dissection; See cases</td>
+<td>8008</td>
+<td>51.5</td>
+<td>PASS</td>
+<td>ENST00000304636</td>
+<td>ENST00000304636.9:c.2607T&gt;A</td>
+<td>ENSP00000304408.4:p.Pro869=</td>
+<td>51</td>
+<td>73</td>
+<td>56*17</td>
+<td>51*0*61</td>
+<td></td>
+<td>T/A</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000304636.9:c.2607T&gt;A</td>
+<td>ENSP00000304408.4:p.Pro869=</td>
+<td>T/A</td>
+<td></td>
+<td>0.000020</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.000029</td>
+<td>0.000207</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.291</td>
+<td>T/A</td>
+<td>5</td>
+<td>C</td>
+</tr>
+<tr>
+<td>COL3A1</td>
+<td>chr2</td>
+<td>189003474</td>
+<td>rs367789349</td>
+<td>G</td>
+<td>A</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.253968</td>
+<td>616504</td>
+<td>likely-benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Ehlers-Danlos syndrome: type 4</td>
+<td>8009</td>
+<td>52.4</td>
+<td>PASS</td>
+<td>ENST00000304636</td>
+<td>ENST00000304636.9:c.2607+10G&gt;A</td>
+<td></td>
+<td>46</td>
+<td>63</td>
+<td>47*16</td>
+<td>52*0*47</td>
+<td></td>
+<td>G/A</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000304636.9:c.2607+10G&gt;A</td>
+<td></td>
+<td>G/A</td>
+<td></td>
+<td>0.000020</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.000029</td>
+<td>0.000208</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.291</td>
+<td>G/A</td>
+<td>2</td>
+<td>C</td>
+</tr>
+<tr>
+<td>COL3A1</td>
+<td>chr2</td>
+<td>189006485</td>
+<td></td>
+<td>GT</td>
+<td>G</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.469388</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>8010</td>
+<td>44.6</td>
+<td>PASS</td>
+<td>ENST00000304636</td>
+<td>ENST00000304636.9:c.3201+33_3201+34del</td>
+<td></td>
+<td>44</td>
+<td>49</td>
+<td>26*23</td>
+<td>44*0*58</td>
+<td></td>
+<td>GT/G</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000304636.9:c.3201+33_3201+34del</td>
+<td></td>
+<td>GT/G</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.291000</td>
+<td></td>
+<td></td>
+<td>C</td>
+</tr>
+<tr>
+<td>COL3A1</td>
+<td>chr2</td>
+<td>189007877</td>
+<td>rs779073034</td>
+<td>C</td>
+<td>T</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.375</td>
+<td>4016087</td>
+<td>uncertain-significance</td>
+<td>criteria_provided_single_submitter</td>
+<td>Ehlers-Danlos syndrome: type 4</td>
+<td>8011</td>
+<td>42.7</td>
+<td>PASS</td>
+<td>ENST00000304636</td>
+<td>ENST00000304636.9:c.3364-8C&gt;T</td>
+<td></td>
+<td>42</td>
+<td>64</td>
+<td>40*24</td>
+<td>42*0*50</td>
+<td></td>
+<td>C/T</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000304636.9:c.3364-8C&gt;T</td>
+<td></td>
+<td>C/T</td>
+<td></td>
+<td>0.000013</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.000015</td>
+<td></td>
+<td>0.000478</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.291</td>
+<td>C/A/G/T</td>
+<td>1</td>
+<td>C</td>
+</tr>
+<tr>
+<td>COL3A1</td>
+<td>chr2</td>
+<td>189010147</td>
+<td>rs10204508</td>
+<td>C</td>
+<td>A</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.416667</td>
+<td>247555</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Ehlers-Danlos syndrome: type 4; Polymicrogyria with or without vascular-type Ehlers-Danlos syndrome</td>
+<td>8012</td>
+<td>45.1</td>
+<td>PASS</td>
+<td>ENST00000304636</td>
+<td>ENST00000304636.9:c.3824-31C&gt;A</td>
+<td></td>
+<td>43</td>
+<td>48</td>
+<td>28*20</td>
+<td>45*0*46</td>
+<td></td>
+<td>C/A</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000304636.9:c.3824-31C&gt;A</td>
+<td></td>
+<td>C/A</td>
+<td></td>
+<td>0.233</td>
+<td>0.3089</td>
+<td>0.1857</td>
+<td>0.2944</td>
+<td>0.07502</td>
+<td>0.148</td>
+<td>0.2184</td>
+<td>0.2105</td>
+<td>0.2557</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.291</td>
+<td>C/A/G</td>
+<td>4</td>
+<td>C</td>
+</tr>
+<tr>
+<td>COL3A1</td>
+<td>chr2</td>
+<td>189010695</td>
+<td>rs1516446</td>
+<td>T</td>
+<td>G</td>
+<td>MODERATE</td>
+<td>1/1</td>
+<td>1</td>
+<td>124416</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Ehlers-Danlos syndrome: type 4</td>
+<td>8013</td>
+<td>56.4</td>
+<td>PASS</td>
+<td>ENST00000304636</td>
+<td>ENST00000304636.9:c.4059T&gt;G</td>
+<td>ENSP00000304408.4:p.His1353Gln</td>
+<td>46</td>
+<td>159</td>
+<td>0*159</td>
+<td>56*46*0</td>
+<td></td>
+<td>G/G</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000304636.9:c.4059T&gt;G</td>
+<td>ENSP00000304408.4:p.His1353Gln</td>
+<td>G/G</td>
+<td></td>
+<td>0.9956</td>
+<td>0.9848</td>
+<td>0.9986</td>
+<td>0.9974</td>
+<td>1</td>
+<td>1</td>
+<td>0.9999</td>
+<td>1</td>
+<td>0.9976</td>
+<td>1.719</td>
+<td>0.979</td>
+<td>1.42</td>
+<td></td>
+<td></td>
+<td>0.291</td>
+<td>T/G</td>
+<td>2</td>
+<td>C</td>
+</tr>
+</tbody></table></div>
+<script>
+(function() {{
+  const table = document.getElementById('tabela');
+  const busca = document.getElementById('busca');
+  const btnCsv = document.getElementById('btnCsv');
+  if (!table) return;
+  const getCellText = (tr, idx) => (tr.cells[idx]?.innerText || "").trim();
+  const isNumber = (v) => /^-?\d+(\.\d+)?$/.test(v.replace(/\s+/g, '').replace(',', '.'));
+
+  Array.from(table.tHead.rows[0].cells).forEach((th, idx) => {{
+    th.classList.add('sortable');
+    th.addEventListener('click', () => {{
+      const tbody = table.tBodies[0];
+      const rows = Array.from(tbody.rows);
+      const current = th.classList.contains('sorted-asc') ? 'asc'
+                    : th.classList.contains('sorted-desc') ? 'desc' : null;
+      Array.from(table.tHead.rows[0].cells).forEach(h => h.classList.remove('sorted-asc','sorted-desc'));
+      const dir = current === 'asc' ? -1 : 1;
+      const colIsNum = rows.every(tr => isNumber(getCellText(tr, idx)) || getCellText(tr, idx) === "");
+      rows.sort((a,b) => {{
+        let A = getCellText(a, idx);
+        let B = getCellText(b, idx);
+        if (colIsNum) {{ A = parseFloat(A.replace(',', '.')) || 0; B = parseFloat(B.replace(',', '.')) || 0; }}
+        else {{ A = A.toLowerCase(); B = B.toLowerCase(); }}
+        if (A < B) return -1 * dir;
+        if (A > B) return  1 * dir;
+        return 0;
+      }});
+      rows.forEach(r => tbody.appendChild(r));
+      th.classList.add(dir === 1 ? 'sorted-asc' : 'sorted-desc');
+    }});
+  }});
+
+  busca?.addEventListener('input', () => {{
+    const q = busca.value.toLowerCase();
+    const rows = Array.from(table.tBodies[0].rows);
+    rows.forEach(tr => {{
+      const txt = tr.innerText.toLowerCase();
+      tr.style.display = txt.includes(q) ? '' : 'none';
+    }});
+  }});
+
+  btnCsv?.addEventListener('click', () => {{
+    const rows = [];
+    const selRows = Array.from(table.querySelectorAll('tr'));
+    selRows.forEach((tr, i) => {{
+      if (i>0 && tr.style.display === 'none') return;
+      const cells = Array.from(tr.cells).map(td => {{
+        const t = td.innerText.replace(/"/g,'""');
+        return /[",\n]/.test(t) ? `"${{t}}"` : t;
+      }});
+      rows.push(cells.join(','));
+    }});
+    const blob = new Blob([rows.join('\n')], {{type: 'text/csv;charset=utf-8;'}});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = (document.title || 'export') + '.csv';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(() => URL.revokeObjectURL(url), 5000);
+  }});
+}})();
+</script>
+</body>
+</html>

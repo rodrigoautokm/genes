@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>COL6A3 — Linhas da tabela dbo.variantes</title>
+<style>
+  :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif; }
+  body { margin: 24px; }
+  h1 { margin: 0 0 6px 0; font-size: 1.6rem; }
+  .meta { color: #444; font-size: .95rem; margin-bottom: 12px; }
+  .toolbar { display:flex; gap: 8px; align-items:center; margin: 12px 0; flex-wrap: wrap; }
+  input[type="search"] { padding: 8px 10px; border: 1px solid #ccc; border-radius: 10px; min-width: 260px; }
+  button { padding: 8px 12px; border: 1px solid #ccc; border-radius: 10px; background: #f7f7f7; cursor: pointer; }
+  button:hover { background: #eee; }
+  table { width: 100%; border-collapse: collapse; }
+  thead th { position: sticky; top: 0; background: #fafafa; border-bottom: 1px solid #ddd; text-align: left; padding: 10px; cursor: pointer; }
+  tbody td { border-bottom: 1px solid #f0f0f0; padding: 8px 10px; vertical-align: top; }
+  .sortable::after { content: " ⇅"; font-size: .8em; color: #888; }
+  .sorted-asc::after { content: " ↑"; }
+  .sorted-desc::after { content: " ↓"; }
+  .empty { padding: 16px; background: #fff6f6; border: 1px solid #ffdede; border-radius: 12px; }
+  a.btn { display:inline-block; margin: 0 8px 8px 0; padding: 6px 10px; border-radius: 10px; border:1px solid #ddd; text-decoration:none; color:#222; background:#f9f9f9; }
+  a.btn:hover { background:#f0f0f0; }
+</style>
+</head>
+<body>
+<h1>COL6A3 — Linhas da tabela dbo.variantes</h1>
+<div class="meta">Gene: <strong>COL6A3</strong> • Linhas: <strong>6</strong></div>
+<div class="toolbar">
+  <input id="busca" type="search" placeholder="Filtrar linhas... (busca global)">
+  <button id="btnCsv" type="button">Exportar CSV</button>
+  <a class="btn" href="index.html">Voltar ao índice</a>
+</div>
+<div id="wrap">
+<table id="tabela" border="0">
+<thead><tr>
+<th>Gene</th>
+<th>Chr</th>
+<th>Pos</th>
+<th>ID</th>
+<th>Ref</th>
+<th>Alt</th>
+<th>Impacto</th>
+<th>GT</th>
+<th>VAF</th>
+<th>ClinVar_ID</th>
+<th>ClinVar_Significance</th>
+<th>ClinVar_Review_Status</th>
+<th>ClinVar_Disease_Names</th>
+<th>ID_variante</th>
+<th>Qual</th>
+<th>Filtro</th>
+<th>Ensembl</th>
+<th>Alteracao_nucleotidica</th>
+<th>Alteracao_aminoacidica</th>
+<th>GQ</th>
+<th>DP</th>
+<th>AD</th>
+<th>PL</th>
+<th>HGMD</th>
+<th>Resultado</th>
+<th>Status</th>
+<th>Buscar</th>
+<th>SIFT</th>
+<th>PolyPhen</th>
+<th>Biotype</th>
+<th>Alteracao_nucleotidica_reversa</th>
+<th>Alteracao_aminoacidica_reversa</th>
+<th>Resultado_reverso</th>
+<th>encontrado_rsid</th>
+<th>gnomAD_AF_Global</th>
+<th>gnomAD_AFR_AF</th>
+<th>gnomAD_AMR_AF</th>
+<th>gnomAD_ASJ_AF</th>
+<th>gnomAD_EAS_AF</th>
+<th>gnomAD_FIN_AF</th>
+<th>gnomAD_NFE_AF</th>
+<th>gnomAD_SAS_AF</th>
+<th>gnomAD_OTH_AF</th>
+<th>PhyloP</th>
+<th>PhastCons</th>
+<th>GERP</th>
+<th>CADD_Raw</th>
+<th>CADD_Phred</th>
+<th>LOEUF</th>
+<th>Allele_String</th>
+<th>ClinVar_Disease_Count</th>
+<th>letra_inicial_gene</th>
+</tr></thead><tbody>
+<tr>
+<td>COL6A3</td>
+<td>chr2</td>
+<td>237334649</td>
+<td>rs1131296</td>
+<td>G</td>
+<td>A</td>
+<td>MODERATE</td>
+<td>0/1</td>
+<td>0.576923</td>
+<td>81023</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Bethlem myopathy 1A; Collagen 6-related myopathy; Dystonia 27; Ullrich congenital muscular dystrophy 1A</td>
+<td>8964</td>
+<td>51.7</td>
+<td>PASS</td>
+<td>ENST00000295550</td>
+<td>ENST00000295550.9:c.9206C&gt;T</td>
+<td>ENSP00000295550.4:p.Thr3069Ile</td>
+<td>46</td>
+<td>78</td>
+<td>33*45</td>
+<td>51*0*47</td>
+<td></td>
+<td>G/A</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000295550.9:c.9206G&gt;A</td>
+<td>ENSP00000295550.4:p.Ile3069Thr</td>
+<td>C/T</td>
+<td></td>
+<td>0.3699</td>
+<td>0.2821</td>
+<td>0.3507</td>
+<td>0.3975</td>
+<td>0.4785</td>
+<td>0.5036</td>
+<td>0.3974</td>
+<td>0.3281</td>
+<td>0.3878</td>
+<td>0.655</td>
+<td>0.669</td>
+<td>-1.13</td>
+<td></td>
+<td></td>
+<td>0.519</td>
+<td>G/A</td>
+<td>5</td>
+<td>C</td>
+</tr>
+<tr>
+<td>COL6A3</td>
+<td>chr2</td>
+<td>237334821</td>
+<td>rs2270669</td>
+<td>C</td>
+<td>G</td>
+<td>MODERATE</td>
+<td>0/1</td>
+<td>0.421053</td>
+<td>81019</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Bethlem myopathy 1A; Collagen 6-related myopathy; Dystonia 27; Ullrich congenital muscular dystrophy 1A</td>
+<td>8965</td>
+<td>40.4</td>
+<td>PASS</td>
+<td>ENST00000295550</td>
+<td>ENST00000295550.9:c.9034G&gt;C</td>
+<td>ENSP00000295550.4:p.Ala3012Pro</td>
+<td>40</td>
+<td>190</td>
+<td>110*80</td>
+<td>40*0*47</td>
+<td></td>
+<td>C/G</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000295550.9:c.9034C&gt;G</td>
+<td>ENSP00000295550.4:p.Pro3012Ala</td>
+<td>G/C</td>
+<td></td>
+<td>0.8146</td>
+<td>0.9512</td>
+<td>0.7148</td>
+<td>0.8637</td>
+<td>0.7214</td>
+<td>0.8059</td>
+<td>0.7647</td>
+<td>0.7279</td>
+<td>0.8155</td>
+<td>5.632</td>
+<td>1</td>
+<td>5.29</td>
+<td></td>
+<td></td>
+<td>0.519</td>
+<td>C/A/G/T</td>
+<td>5</td>
+<td>C</td>
+</tr>
+<tr>
+<td>COL6A3</td>
+<td>chr2</td>
+<td>237336320</td>
+<td>rs6728818</td>
+<td>A</td>
+<td>G</td>
+<td>MODERATE</td>
+<td>0/1</td>
+<td>0.482759</td>
+<td>81013</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Bethlem myopathy 1A; Collagen 6-related myopathy; Dystonia 27; Ullrich congenital muscular dystrophy 1A</td>
+<td>8966</td>
+<td>56.5</td>
+<td>PASS</td>
+<td>ENST00000295550</td>
+<td>ENST00000295550.9:c.8780T&gt;C</td>
+<td>ENSP00000295550.4:p.Met2927Thr</td>
+<td>48</td>
+<td>174</td>
+<td>89*84</td>
+<td>56*0*48</td>
+<td></td>
+<td>A/G</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000295550.9:c.8780A&gt;G</td>
+<td>ENSP00000295550.4:p.Thr2927Met</td>
+<td>T/C</td>
+<td></td>
+<td>0.6783</td>
+<td>0.7784</td>
+<td>0.591</td>
+<td>0.7382</td>
+<td>0.5364</td>
+<td>0.7196</td>
+<td>0.6452</td>
+<td>0.5482</td>
+<td>0.6885</td>
+<td>1.375</td>
+<td>0.017</td>
+<td>2.21</td>
+<td></td>
+<td></td>
+<td>0.519</td>
+<td>A/C/G</td>
+<td>5</td>
+<td>C</td>
+</tr>
+<tr>
+<td>COL6A3</td>
+<td>chr2</td>
+<td>237340987</td>
+<td>rs4433949</td>
+<td>C</td>
+<td>T</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.503145</td>
+<td>3019339</td>
+<td>likely-benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Bethlem myopathy 1A</td>
+<td>8967</td>
+<td>53.4</td>
+<td>PASS</td>
+<td>ENST00000295550</td>
+<td>ENST00000295550.9:c.7929G&gt;A</td>
+<td>ENSP00000295550.4:p.Ala2643=</td>
+<td>46</td>
+<td>159</td>
+<td>79*80</td>
+<td>53*0*46</td>
+<td></td>
+<td>C/T</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000295550.9:c.7929C&gt;T</td>
+<td></td>
+<td>G/A</td>
+<td></td>
+<td>0.3735</td>
+<td>0.2525</td>
+<td>0.3623</td>
+<td>0.4536</td>
+<td>0.477</td>
+<td>0.5084</td>
+<td>0.4162</td>
+<td>0.3344</td>
+<td>0.4015</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.519</td>
+<td>C/A/T</td>
+<td>1</td>
+<td>C</td>
+</tr>
+<tr>
+<td>COL6A3</td>
+<td>chr2</td>
+<td>237350171</td>
+<td>rs3790993</td>
+<td>C</td>
+<td>G</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.367347</td>
+<td>80973</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Bethlem myopathy 1A; Collagen 6-related myopathy; Dystonia 27; Ullrich congenital muscular dystrophy 1A</td>
+<td>8968</td>
+<td>38.0</td>
+<td>PASS</td>
+<td>ENST00000295550</td>
+<td>ENST00000295550.9:c.6855G&gt;C</td>
+<td>ENSP00000295550.4:p.Gly2285=</td>
+<td>37</td>
+<td>196</td>
+<td>124*72</td>
+<td>37*0*47</td>
+<td></td>
+<td>C/G</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000295550.9:c.6855C&gt;G</td>
+<td></td>
+<td>G/C</td>
+<td></td>
+<td>0.5566</td>
+<td>0.5864</td>
+<td>0.5032</td>
+<td>0.581</td>
+<td>0.664</td>
+<td>0.594</td>
+<td>0.5368</td>
+<td>0.5146</td>
+<td>0.5606</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.519</td>
+<td>C/G/T</td>
+<td>7</td>
+<td>C</td>
+</tr>
+<tr>
+<td>COL6A3</td>
+<td>chr2</td>
+<td>237414242</td>
+<td>rs7599762</td>
+<td>G</td>
+<td>C</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>8969</td>
+<td>54.8</td>
+<td>PASS</td>
+<td>ENST00000295550</td>
+<td></td>
+<td></td>
+<td>46</td>
+<td>34</td>
+<td>0*34</td>
+<td>54*46*0</td>
+<td></td>
+<td>C/C</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td></td>
+<td></td>
+<td>G/G</td>
+<td></td>
+<td>0.8931</td>
+<td>0.9702</td>
+<td>0.927</td>
+<td>0.8848</td>
+<td>0.983</td>
+<td>0.8851</td>
+<td>0.8387</td>
+<td>0.8349</td>
+<td>0.92</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.519</td>
+<td>G/A/C/T</td>
+<td></td>
+<td>C</td>
+</tr>
+</tbody></table></div>
+<script>
+(function() {{
+  const table = document.getElementById('tabela');
+  const busca = document.getElementById('busca');
+  const btnCsv = document.getElementById('btnCsv');
+  if (!table) return;
+  const getCellText = (tr, idx) => (tr.cells[idx]?.innerText || "").trim();
+  const isNumber = (v) => /^-?\d+(\.\d+)?$/.test(v.replace(/\s+/g, '').replace(',', '.'));
+
+  Array.from(table.tHead.rows[0].cells).forEach((th, idx) => {{
+    th.classList.add('sortable');
+    th.addEventListener('click', () => {{
+      const tbody = table.tBodies[0];
+      const rows = Array.from(tbody.rows);
+      const current = th.classList.contains('sorted-asc') ? 'asc'
+                    : th.classList.contains('sorted-desc') ? 'desc' : null;
+      Array.from(table.tHead.rows[0].cells).forEach(h => h.classList.remove('sorted-asc','sorted-desc'));
+      const dir = current === 'asc' ? -1 : 1;
+      const colIsNum = rows.every(tr => isNumber(getCellText(tr, idx)) || getCellText(tr, idx) === "");
+      rows.sort((a,b) => {{
+        let A = getCellText(a, idx);
+        let B = getCellText(b, idx);
+        if (colIsNum) {{ A = parseFloat(A.replace(',', '.')) || 0; B = parseFloat(B.replace(',', '.')) || 0; }}
+        else {{ A = A.toLowerCase(); B = B.toLowerCase(); }}
+        if (A < B) return -1 * dir;
+        if (A > B) return  1 * dir;
+        return 0;
+      }});
+      rows.forEach(r => tbody.appendChild(r));
+      th.classList.add(dir === 1 ? 'sorted-asc' : 'sorted-desc');
+    }});
+  }});
+
+  busca?.addEventListener('input', () => {{
+    const q = busca.value.toLowerCase();
+    const rows = Array.from(table.tBodies[0].rows);
+    rows.forEach(tr => {{
+      const txt = tr.innerText.toLowerCase();
+      tr.style.display = txt.includes(q) ? '' : 'none';
+    }});
+  }});
+
+  btnCsv?.addEventListener('click', () => {{
+    const rows = [];
+    const selRows = Array.from(table.querySelectorAll('tr'));
+    selRows.forEach((tr, i) => {{
+      if (i>0 && tr.style.display === 'none') return;
+      const cells = Array.from(tr.cells).map(td => {{
+        const t = td.innerText.replace(/"/g,'""');
+        return /[",\n]/.test(t) ? `"${{t}}"` : t;
+      }});
+      rows.push(cells.join(','));
+    }});
+    const blob = new Blob([rows.join('\n')], {{type: 'text/csv;charset=utf-8;'}});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = (document.title || 'export') + '.csv';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(() => URL.revokeObjectURL(url), 5000);
+  }});
+}})();
+</script>
+</body>
+</html>
