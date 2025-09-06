@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PEX6 — Linhas da tabela dbo.variantes</title>
+<style>
+  :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif; }
+  body { margin: 24px; }
+  h1 { margin: 0 0 6px 0; font-size: 1.6rem; }
+  .meta { color: #444; font-size: .95rem; margin-bottom: 12px; }
+  .toolbar { display:flex; gap: 8px; align-items:center; margin: 12px 0; flex-wrap: wrap; }
+  input[type="search"] { padding: 8px 10px; border: 1px solid #ccc; border-radius: 10px; min-width: 260px; }
+  button { padding: 8px 12px; border: 1px solid #ccc; border-radius: 10px; background: #f7f7f7; cursor: pointer; }
+  button:hover { background: #eee; }
+  table { width: 100%; border-collapse: collapse; }
+  thead th { position: sticky; top: 0; background: #fafafa; border-bottom: 1px solid #ddd; text-align: left; padding: 10px; cursor: pointer; }
+  tbody td { border-bottom: 1px solid #f0f0f0; padding: 8px 10px; vertical-align: top; }
+  .sortable::after { content: " ⇅"; font-size: .8em; color: #888; }
+  .sorted-asc::after { content: " ↑"; }
+  .sorted-desc::after { content: " ↓"; }
+  .empty { padding: 16px; background: #fff6f6; border: 1px solid #ffdede; border-radius: 12px; }
+  a.btn { display:inline-block; margin: 0 8px 8px 0; padding: 6px 10px; border-radius: 10px; border:1px solid #ddd; text-decoration:none; color:#222; background:#f9f9f9; }
+  a.btn:hover { background:#f0f0f0; }
+</style>
+</head>
+<body>
+<h1>PEX6 — Linhas da tabela dbo.variantes</h1>
+<div class="meta">Gene: <strong>PEX6</strong> • Linhas: <strong>14</strong></div>
+<div class="toolbar">
+  <input id="busca" type="search" placeholder="Filtrar linhas... (busca global)">
+  <button id="btnCsv" type="button">Exportar CSV</button>
+  <a class="btn" href="index.html">Voltar ao índice</a>
+</div>
+<div id="wrap">
+<table id="tabela" border="0">
+<thead><tr>
+<th>Gene</th>
+<th>Chr</th>
+<th>Pos</th>
+<th>ID</th>
+<th>Ref</th>
+<th>Alt</th>
+<th>Impacto</th>
+<th>GT</th>
+<th>VAF</th>
+<th>ClinVar_ID</th>
+<th>ClinVar_Significance</th>
+<th>ClinVar_Review_Status</th>
+<th>ClinVar_Disease_Names</th>
+<th>ID_variante</th>
+<th>Qual</th>
+<th>Filtro</th>
+<th>Ensembl</th>
+<th>Alteracao_nucleotidica</th>
+<th>Alteracao_aminoacidica</th>
+<th>GQ</th>
+<th>DP</th>
+<th>AD</th>
+<th>PL</th>
+<th>HGMD</th>
+<th>Resultado</th>
+<th>Status</th>
+<th>Buscar</th>
+<th>SIFT</th>
+<th>PolyPhen</th>
+<th>Biotype</th>
+<th>Alteracao_nucleotidica_reversa</th>
+<th>Alteracao_aminoacidica_reversa</th>
+<th>Resultado_reverso</th>
+<th>encontrado_rsid</th>
+<th>gnomAD_AF_Global</th>
+<th>gnomAD_AFR_AF</th>
+<th>gnomAD_AMR_AF</th>
+<th>gnomAD_ASJ_AF</th>
+<th>gnomAD_EAS_AF</th>
+<th>gnomAD_FIN_AF</th>
+<th>gnomAD_NFE_AF</th>
+<th>gnomAD_SAS_AF</th>
+<th>gnomAD_OTH_AF</th>
+<th>PhyloP</th>
+<th>PhastCons</th>
+<th>GERP</th>
+<th>CADD_Raw</th>
+<th>CADD_Phred</th>
+<th>LOEUF</th>
+<th>Allele_String</th>
+<th>ClinVar_Disease_Count</th>
+<th>letra_inicial_gene</th>
+</tr></thead><tbody>
+<tr>
+<td>PEX6</td>
+<td>chr6</td>
+<td>42960723</td>
+<td>rs10948059</td>
+<td>C</td>
+<td>T</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td>1691928</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td></td>
+<td>18129</td>
+<td>56.3</td>
+<td>PASS</td>
+<td>ENST00000304611</td>
+<td></td>
+<td></td>
+<td>49</td>
+<td>89</td>
+<td>0*89</td>
+<td>56*49*0</td>
+<td></td>
+<td>T/T</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td></td>
+<td></td>
+<td>A/A</td>
+<td></td>
+<td>0.4602</td>
+<td>0.5141</td>
+<td>0.3614</td>
+<td>0.4184</td>
+<td>0.1274</td>
+<td>0.4308</td>
+<td>0.4816</td>
+<td>0.4318</td>
+<td>0.4565</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>C/G/T</td>
+<td>1</td>
+<td>P</td>
+</tr>
+<tr>
+<td>PEX6</td>
+<td>chr6</td>
+<td>42961020</td>
+<td>rs2296805</td>
+<td>T</td>
+<td>G</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td>1678161</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td></td>
+<td>18130</td>
+<td>56.5</td>
+<td>PASS</td>
+<td>ENST00000304611</td>
+<td></td>
+<td></td>
+<td>48</td>
+<td>149</td>
+<td>0*149</td>
+<td>56*48*0</td>
+<td></td>
+<td>G/G</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td></td>
+<td></td>
+<td>C/C</td>
+<td></td>
+<td>0.6617</td>
+<td>0.9114</td>
+<td>0.5864</td>
+<td>0.5112</td>
+<td>0.3364</td>
+<td>0.5234</td>
+<td>0.5817</td>
+<td>0.6421</td>
+<td>0.6484</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1.328</td>
+<td>T/G</td>
+<td>1</td>
+<td>P</td>
+</tr>
+<tr>
+<td>PEX6</td>
+<td>chr6</td>
+<td>42963466</td>
+<td></td>
+<td>TG</td>
+<td>T</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.311111</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>18131</td>
+<td>41.5</td>
+<td>PASS</td>
+<td>ENST00000304611</td>
+<td></td>
+<td></td>
+<td>41</td>
+<td>90</td>
+<td>62*28</td>
+<td>41*0*52</td>
+<td></td>
+<td>TG/T</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td></td>
+<td></td>
+<td>TG/A</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1.328000</td>
+<td></td>
+<td></td>
+<td>P</td>
+</tr>
+<tr>
+<td>PEX6</td>
+<td>chr6</td>
+<td>42963486</td>
+<td>rs4987173</td>
+<td>G</td>
+<td>A</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.605634</td>
+<td>1657274</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td></td>
+<td>18132</td>
+<td>58.0</td>
+<td>PASS</td>
+<td>ENST00000304611</td>
+<td></td>
+<td></td>
+<td>51</td>
+<td>71</td>
+<td>28*43</td>
+<td>57*0*52</td>
+<td></td>
+<td>G/A</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td></td>
+<td></td>
+<td>C/T</td>
+<td></td>
+<td>0.4086</td>
+<td>0.3947</td>
+<td>0.3414</td>
+<td>0.4069</td>
+<td>0.1046</td>
+<td>0.4054</td>
+<td>0.4536</td>
+<td>0.4039</td>
+<td>0.4185</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1.328</td>
+<td>G/A</td>
+<td>1</td>
+<td>P</td>
+</tr>
+<tr>
+<td>PEX6</td>
+<td>chr6</td>
+<td>42963523</td>
+<td>rs2296804</td>
+<td>C</td>
+<td>G</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td>1522194</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td></td>
+<td>18133</td>
+<td>63.0</td>
+<td>PASS</td>
+<td>ENST00000304611</td>
+<td></td>
+<td></td>
+<td>52</td>
+<td>66</td>
+<td>0*66</td>
+<td>62*52*0</td>
+<td></td>
+<td>G/G</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td></td>
+<td></td>
+<td>C/C</td>
+<td></td>
+<td>0.663</td>
+<td>0.9171</td>
+<td>0.5871</td>
+<td>0.5101</td>
+<td>0.3351</td>
+<td>0.5237</td>
+<td>0.5813</td>
+<td>0.6419</td>
+<td>0.6493</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1.328</td>
+<td>C/A/G/T</td>
+<td>1</td>
+<td>P</td>
+</tr>
+<tr>
+<td>PEX6</td>
+<td>chr6</td>
+<td>42964462</td>
+<td>rs1129187</td>
+<td>G</td>
+<td>T</td>
+<td>MODERATE</td>
+<td>0/1</td>
+<td>0.322034</td>
+<td>1338448</td>
+<td>uncertain-significance</td>
+<td>criteria_provided_single_submitter</td>
+<td>Peroxisome biogenesis disorder; Zellweger spectrum disorders</td>
+<td>18134</td>
+<td>46.7</td>
+<td>PASS</td>
+<td>ENST00000304611</td>
+<td>ENST00000304611.13:c.2816C&gt;A</td>
+<td>ENSP00000303511.8:p.Pro939Gln</td>
+<td>46</td>
+<td>177</td>
+<td>120*57</td>
+<td>46*0*54</td>
+<td></td>
+<td>G/T</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000304611.13:c.2816G&gt;T</td>
+<td>ENSP00000303511.8:p.Gln939Pro</td>
+<td>C/A</td>
+<td></td>
+<td>0.4018</td>
+<td>0.3736</td>
+<td>0.3389</td>
+<td>0.4075</td>
+<td>0.1037</td>
+<td>0.403</td>
+<td>0.4526</td>
+<td>0.403</td>
+<td>0.4119</td>
+<td>0.306</td>
+<td>0.003</td>
+<td>0.549</td>
+<td></td>
+<td></td>
+<td>0.799</td>
+<td>G/C/T</td>
+<td>2</td>
+<td>P</td>
+</tr>
+<tr>
+<td>PEX6</td>
+<td>chr6</td>
+<td>42964464</td>
+<td>rs1129186</td>
+<td>C</td>
+<td>T</td>
+<td>LOW</td>
+<td>1/1</td>
+<td>1</td>
+<td>78573</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Heimler syndrome 2; Peroxisome biogenesis disorder; Peroxisome biogenesis disorder 4A (Zellweger); Peroxisome biogenesis disorder 4B; Zellweger spectrum disorders</td>
+<td>18135</td>
+<td>53.1</td>
+<td>PASS</td>
+<td>ENST00000304611</td>
+<td>ENST00000304611.13:c.2814G&gt;A</td>
+<td>ENSP00000303511.8:p.Glu938=</td>
+<td>48</td>
+<td>179</td>
+<td>0*179</td>
+<td>53*49*0</td>
+<td></td>
+<td>T/T</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000304611.13:c.2814C&gt;T</td>
+<td></td>
+<td>A/A</td>
+<td></td>
+<td>0.5579</td>
+<td>0.7324</td>
+<td>0.4185</td>
+<td>0.4651</td>
+<td>0.1819</td>
+<td>0.4625</td>
+<td>0.5347</td>
+<td>0.4908</td>
+<td>0.5473</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.799</td>
+<td>C/G/T</td>
+<td>7</td>
+<td>P</td>
+</tr>
+<tr>
+<td>PEX6</td>
+<td>chr6</td>
+<td>42964977</td>
+<td>rs2274517</td>
+<td>C</td>
+<td>T</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td>1538457</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Heimler syndrome 2; Peroxisome biogenesis disorder 4A (Zellweger); Peroxisome biogenesis disorder 4B</td>
+<td>18136</td>
+<td>55.2</td>
+<td>PASS</td>
+<td>ENST00000304611</td>
+<td>ENST00000304611.13:c.2667-48G&gt;A</td>
+<td></td>
+<td>42</td>
+<td>141</td>
+<td>0*141</td>
+<td>55*42*0</td>
+<td></td>
+<td>T/T</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000304611.13:c.2667-48C&gt;T</td>
+<td></td>
+<td>A/A</td>
+<td></td>
+<td>0.5652</td>
+<td>0.7545</td>
+<td>0.4225</td>
+<td>0.4651</td>
+<td>0.1836</td>
+<td>0.4661</td>
+<td>0.5357</td>
+<td>0.4917</td>
+<td>0.5503</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.799</td>
+<td>C/T</td>
+<td>4</td>
+<td>P</td>
+</tr>
+<tr>
+<td>PEX6</td>
+<td>chr6</td>
+<td>42965097</td>
+<td>rs2274516</td>
+<td>C</td>
+<td>T</td>
+<td>MODERATE</td>
+<td>0/1</td>
+<td>0.465241</td>
+<td>249488</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Peroxisome biogenesis disorder; Peroxisome biogenesis disorder 4A (Zellweger); Zellweger spectrum disorders</td>
+<td>18137</td>
+<td>53.9</td>
+<td>PASS</td>
+<td>ENST00000304611</td>
+<td>ENST00000304611.13:c.2644G&gt;A</td>
+<td>ENSP00000303511.8:p.Val882Ile</td>
+<td>45</td>
+<td>187</td>
+<td>100*87</td>
+<td>53*0*45</td>
+<td></td>
+<td>C/T</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000304611.13:c.2644C&gt;T</td>
+<td>ENSP00000303511.8:p.Ile882Val</td>
+<td>G/A</td>
+<td></td>
+<td>0.02099</td>
+<td>0.009502</td>
+<td>0.007778</td>
+<td>0.009217</td>
+<td>0.02314</td>
+<td>0.04444</td>
+<td>0.02743</td>
+<td>0.02504</td>
+<td>0.01276</td>
+<td>1.61</td>
+<td>0.796</td>
+<td>2.58</td>
+<td></td>
+<td></td>
+<td>0.799</td>
+<td>C/T</td>
+<td>5</td>
+<td>P</td>
+</tr>
+<tr>
+<td>PEX6</td>
+<td>chr6</td>
+<td>42966762</td>
+<td>rs2274514</td>
+<td>C</td>
+<td>T</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td>1472277</td>
+<td>likely-benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Peroxisome biogenesis disorder</td>
+<td>18138</td>
+<td>58.6</td>
+<td>PASS</td>
+<td>ENST00000304611</td>
+<td>ENST00000304611.13:c.1961+20G&gt;A</td>
+<td></td>
+<td>47</td>
+<td>228</td>
+<td>0*228</td>
+<td>58*46*0</td>
+<td></td>
+<td>T/T</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000304611.13:c.1961+20C&gt;T</td>
+<td></td>
+<td>A/A</td>
+<td></td>
+<td>0.5589</td>
+<td>0.7328</td>
+<td>0.4193</td>
+<td>0.466</td>
+<td>0.1833</td>
+<td>0.4654</td>
+<td>0.5358</td>
+<td>0.4923</td>
+<td>0.5466</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.799</td>
+<td>C/A/T</td>
+<td>1</td>
+<td>P</td>
+</tr>
+<tr>
+<td>PEX6</td>
+<td>chr6</td>
+<td>42966882</td>
+<td>rs3818554</td>
+<td>C</td>
+<td>T</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td>676093</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Heimler syndrome 2; Peroxisome biogenesis disorder 4A (Zellweger); Peroxisome biogenesis disorder 4B</td>
+<td>18139</td>
+<td>56.5</td>
+<td>PASS</td>
+<td>ENST00000304611</td>
+<td>ENST00000304611.13:c.1885-24G&gt;A</td>
+<td></td>
+<td>46</td>
+<td>89</td>
+<td>0*89</td>
+<td>56*45*0</td>
+<td></td>
+<td>T/T</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000304611.13:c.1885-24C&gt;T</td>
+<td></td>
+<td>A/A</td>
+<td></td>
+<td>0.5589</td>
+<td>0.7326</td>
+<td>0.4194</td>
+<td>0.4648</td>
+<td>0.1852</td>
+<td>0.4655</td>
+<td>0.5356</td>
+<td>0.4929</td>
+<td>0.5489</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.799</td>
+<td>C/T</td>
+<td>4</td>
+<td>P</td>
+</tr>
+<tr>
+<td>PEX6</td>
+<td>chr6</td>
+<td>42968260</td>
+<td>rs9471982</td>
+<td>G</td>
+<td>A</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td>676094</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td></td>
+<td>18140</td>
+<td>60.6</td>
+<td>PASS</td>
+<td>ENST00000304611</td>
+<td>ENST00000304611.13:c.1688+30C&gt;T</td>
+<td></td>
+<td>58</td>
+<td>169</td>
+<td>0*169</td>
+<td>60*60*0</td>
+<td></td>
+<td>A/A</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000304611.13:c.1688+30G&gt;A</td>
+<td></td>
+<td>T/T</td>
+<td></td>
+<td>0.5599</td>
+<td>0.7364</td>
+<td>0.4199</td>
+<td>0.4654</td>
+<td>0.1829</td>
+<td>0.4659</td>
+<td>0.5357</td>
+<td>0.4911</td>
+<td>0.5455</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.799</td>
+<td>G/A</td>
+<td>1</td>
+<td>P</td>
+</tr>
+<tr>
+<td>PEX6</td>
+<td>chr6</td>
+<td>42975041</td>
+<td>rs9986447</td>
+<td>A</td>
+<td>G</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.477012</td>
+<td>78578</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Heimler syndrome 2; Peroxisome biogenesis disorder; Peroxisome biogenesis disorder 4A (Zellweger); Peroxisome biogenesis disorder 4B; Zellweger spectrum disorders</td>
+<td>18141</td>
+<td>49.1</td>
+<td>PASS</td>
+<td>ENST00000304611</td>
+<td>ENST00000304611.13:c.883-3T&gt;C</td>
+<td></td>
+<td>46</td>
+<td>174</td>
+<td>89*83</td>
+<td>49*0*48</td>
+<td></td>
+<td>A/G</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000304611.13:c.883-3A&gt;G</td>
+<td></td>
+<td>T/C</td>
+<td></td>
+<td>0.3614</td>
+<td>0.2304</td>
+<td>0.3239</td>
+<td>0.4085</td>
+<td>0.1047</td>
+<td>0.405</td>
+<td>0.4532</td>
+<td>0.4036</td>
+<td>0.3806</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.799</td>
+<td>A/G</td>
+<td>10</td>
+<td>P</td>
+</tr>
+<tr>
+<td>PEX6</td>
+<td>chr6</td>
+<td>42978752</td>
+<td>rs9462858</td>
+<td>C</td>
+<td>A</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.525692</td>
+<td>78576</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Heimler syndrome 2; Peroxisome biogenesis disorder; Peroxisome biogenesis disorder 4A (Zellweger); Peroxisome biogenesis disorder 4B; Zellweger spectrum disorders</td>
+<td>18142</td>
+<td>53.4</td>
+<td>PASS</td>
+<td>ENST00000304611</td>
+<td>ENST00000304611.13:c.399G&gt;T</td>
+<td>ENSP00000303511.8:p.Val133=</td>
+<td>50</td>
+<td>253</td>
+<td>120*133</td>
+<td>53*0*52</td>
+<td></td>
+<td>C/A</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000304611.13:c.399C&gt;A</td>
+<td></td>
+<td>G/T</td>
+<td></td>
+<td>0.4026</td>
+<td>0.3735</td>
+<td>0.3392</td>
+<td>0.4078</td>
+<td>0.1031</td>
+<td>0.4058</td>
+<td>0.4535</td>
+<td>0.4048</td>
+<td>0.4134</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.799</td>
+<td>C/A/G/T</td>
+<td>7</td>
+<td>P</td>
+</tr>
+</tbody></table></div>
+<script>
+(function() {{
+  const table = document.getElementById('tabela');
+  const busca = document.getElementById('busca');
+  const btnCsv = document.getElementById('btnCsv');
+  if (!table) return;
+  const getCellText = (tr, idx) => (tr.cells[idx]?.innerText || "").trim();
+  const isNumber = (v) => /^-?\d+(\.\d+)?$/.test(v.replace(/\s+/g, '').replace(',', '.'));
+
+  Array.from(table.tHead.rows[0].cells).forEach((th, idx) => {{
+    th.classList.add('sortable');
+    th.addEventListener('click', () => {{
+      const tbody = table.tBodies[0];
+      const rows = Array.from(tbody.rows);
+      const current = th.classList.contains('sorted-asc') ? 'asc'
+                    : th.classList.contains('sorted-desc') ? 'desc' : null;
+      Array.from(table.tHead.rows[0].cells).forEach(h => h.classList.remove('sorted-asc','sorted-desc'));
+      const dir = current === 'asc' ? -1 : 1;
+      const colIsNum = rows.every(tr => isNumber(getCellText(tr, idx)) || getCellText(tr, idx) === "");
+      rows.sort((a,b) => {{
+        let A = getCellText(a, idx);
+        let B = getCellText(b, idx);
+        if (colIsNum) {{ A = parseFloat(A.replace(',', '.')) || 0; B = parseFloat(B.replace(',', '.')) || 0; }}
+        else {{ A = A.toLowerCase(); B = B.toLowerCase(); }}
+        if (A < B) return -1 * dir;
+        if (A > B) return  1 * dir;
+        return 0;
+      }});
+      rows.forEach(r => tbody.appendChild(r));
+      th.classList.add(dir === 1 ? 'sorted-asc' : 'sorted-desc');
+    }});
+  }});
+
+  busca?.addEventListener('input', () => {{
+    const q = busca.value.toLowerCase();
+    const rows = Array.from(table.tBodies[0].rows);
+    rows.forEach(tr => {{
+      const txt = tr.innerText.toLowerCase();
+      tr.style.display = txt.includes(q) ? '' : 'none';
+    }});
+  }});
+
+  btnCsv?.addEventListener('click', () => {{
+    const rows = [];
+    const selRows = Array.from(table.querySelectorAll('tr'));
+    selRows.forEach((tr, i) => {{
+      if (i>0 && tr.style.display === 'none') return;
+      const cells = Array.from(tr.cells).map(td => {{
+        const t = td.innerText.replace(/"/g,'""');
+        return /[",\n]/.test(t) ? `"${{t}}"` : t;
+      }});
+      rows.push(cells.join(','));
+    }});
+    const blob = new Blob([rows.join('\n')], {{type: 'text/csv;charset=utf-8;'}});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = (document.title || 'export') + '.csv';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(() => URL.revokeObjectURL(url), 5000);
+  }});
+}})();
+</script>
+</body>
+</html>

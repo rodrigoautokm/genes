@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PDE6A — Linhas da tabela dbo.variantes</title>
+<style>
+  :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif; }
+  body { margin: 24px; }
+  h1 { margin: 0 0 6px 0; font-size: 1.6rem; }
+  .meta { color: #444; font-size: .95rem; margin-bottom: 12px; }
+  .toolbar { display:flex; gap: 8px; align-items:center; margin: 12px 0; flex-wrap: wrap; }
+  input[type="search"] { padding: 8px 10px; border: 1px solid #ccc; border-radius: 10px; min-width: 260px; }
+  button { padding: 8px 12px; border: 1px solid #ccc; border-radius: 10px; background: #f7f7f7; cursor: pointer; }
+  button:hover { background: #eee; }
+  table { width: 100%; border-collapse: collapse; }
+  thead th { position: sticky; top: 0; background: #fafafa; border-bottom: 1px solid #ddd; text-align: left; padding: 10px; cursor: pointer; }
+  tbody td { border-bottom: 1px solid #f0f0f0; padding: 8px 10px; vertical-align: top; }
+  .sortable::after { content: " ⇅"; font-size: .8em; color: #888; }
+  .sorted-asc::after { content: " ↑"; }
+  .sorted-desc::after { content: " ↓"; }
+  .empty { padding: 16px; background: #fff6f6; border: 1px solid #ffdede; border-radius: 12px; }
+  a.btn { display:inline-block; margin: 0 8px 8px 0; padding: 6px 10px; border-radius: 10px; border:1px solid #ddd; text-decoration:none; color:#222; background:#f9f9f9; }
+  a.btn:hover { background:#f0f0f0; }
+</style>
+</head>
+<body>
+<h1>PDE6A — Linhas da tabela dbo.variantes</h1>
+<div class="meta">Gene: <strong>PDE6A</strong> • Linhas: <strong>5</strong></div>
+<div class="toolbar">
+  <input id="busca" type="search" placeholder="Filtrar linhas... (busca global)">
+  <button id="btnCsv" type="button">Exportar CSV</button>
+  <a class="btn" href="index.html">Voltar ao índice</a>
+</div>
+<div id="wrap">
+<table id="tabela" border="0">
+<thead><tr>
+<th>Gene</th>
+<th>Chr</th>
+<th>Pos</th>
+<th>ID</th>
+<th>Ref</th>
+<th>Alt</th>
+<th>Impacto</th>
+<th>GT</th>
+<th>VAF</th>
+<th>ClinVar_ID</th>
+<th>ClinVar_Significance</th>
+<th>ClinVar_Review_Status</th>
+<th>ClinVar_Disease_Names</th>
+<th>ID_variante</th>
+<th>Qual</th>
+<th>Filtro</th>
+<th>Ensembl</th>
+<th>Alteracao_nucleotidica</th>
+<th>Alteracao_aminoacidica</th>
+<th>GQ</th>
+<th>DP</th>
+<th>AD</th>
+<th>PL</th>
+<th>HGMD</th>
+<th>Resultado</th>
+<th>Status</th>
+<th>Buscar</th>
+<th>SIFT</th>
+<th>PolyPhen</th>
+<th>Biotype</th>
+<th>Alteracao_nucleotidica_reversa</th>
+<th>Alteracao_aminoacidica_reversa</th>
+<th>Resultado_reverso</th>
+<th>encontrado_rsid</th>
+<th>gnomAD_AF_Global</th>
+<th>gnomAD_AFR_AF</th>
+<th>gnomAD_AMR_AF</th>
+<th>gnomAD_ASJ_AF</th>
+<th>gnomAD_EAS_AF</th>
+<th>gnomAD_FIN_AF</th>
+<th>gnomAD_NFE_AF</th>
+<th>gnomAD_SAS_AF</th>
+<th>gnomAD_OTH_AF</th>
+<th>PhyloP</th>
+<th>PhastCons</th>
+<th>GERP</th>
+<th>CADD_Raw</th>
+<th>CADD_Phred</th>
+<th>LOEUF</th>
+<th>Allele_String</th>
+<th>ClinVar_Disease_Count</th>
+<th>letra_inicial_gene</th>
+</tr></thead><tbody>
+<tr>
+<td>PDE6A</td>
+<td>chr5</td>
+<td>149896810</td>
+<td>rs2244836</td>
+<td>T</td>
+<td>C</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.5875</td>
+<td>1663236</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Retinitis pigmentosa 43</td>
+<td>16354</td>
+<td>55.9</td>
+<td>PASS</td>
+<td>ENST00000255266</td>
+<td>ENST00000255266.10:c.1408-34A&gt;G</td>
+<td></td>
+<td>43</td>
+<td>80</td>
+<td>33*47</td>
+<td>55*0*43</td>
+<td></td>
+<td>T/C</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000255266.10:c.1408-34T&gt;C</td>
+<td></td>
+<td>A/G</td>
+<td></td>
+<td>0.3229</td>
+<td>0.3171</td>
+<td>0.3947</td>
+<td>0.381</td>
+<td>0.2536</td>
+<td>0.3016</td>
+<td>0.3088</td>
+<td>0.4137</td>
+<td>0.3537</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.884</td>
+<td>T/C/G</td>
+<td>2</td>
+<td>P</td>
+</tr>
+<tr>
+<td>PDE6A</td>
+<td>chr5</td>
+<td>149915032</td>
+<td>rs60750624</td>
+<td>C</td>
+<td>CT</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.223404</td>
+<td>1718530</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td></td>
+<td>16355</td>
+<td>37.8</td>
+<td>PASS</td>
+<td>ENST00000255266</td>
+<td>ENST00000255266.10:c.934-26dup</td>
+<td></td>
+<td>19</td>
+<td>94</td>
+<td>15*21</td>
+<td>37*21*49</td>
+<td></td>
+<td>C/CT</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td></td>
+<td></td>
+<td>G/CT</td>
+<td></td>
+<td>0.19</td>
+<td>0.2166</td>
+<td>0.138</td>
+<td>0.1617</td>
+<td>0.3608</td>
+<td>0.1285</td>
+<td>0.1747</td>
+<td>0.2523</td>
+<td>0.1721</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.884</td>
+<td>TTTTTTTTTTTTTTTTTTTTTT/TTTTTTTT/TTTTTTTTTTTTT/TTTT</td>
+<td>1</td>
+<td>P</td>
+</tr>
+<tr>
+<td>PDE6A</td>
+<td>chr5</td>
+<td>149915032</td>
+<td>rs2113628750</td>
+<td>CTT</td>
+<td>C</td>
+<td>MODIFIER</td>
+<td>1/0</td>
+<td>0.265957</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>16356</td>
+<td>37.8</td>
+<td>PASS</td>
+<td>ENST00000255266</td>
+<td>ENST00000255266.10:c.934-27_934-25del</td>
+<td></td>
+<td>19</td>
+<td>94</td>
+<td>15*25</td>
+<td>37*21*51</td>
+<td></td>
+<td>CTT/C</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td></td>
+<td></td>
+<td>CTT/G</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.884000</td>
+<td>CTT/-</td>
+<td></td>
+<td>P</td>
+</tr>
+<tr>
+<td>PDE6A</td>
+<td>chr5</td>
+<td>149944209</td>
+<td>rs2277926</td>
+<td>G</td>
+<td>A</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.438849</td>
+<td>173135</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Retinal dystrophy; Retinitis pigmentosa</td>
+<td>16357</td>
+<td>47.9</td>
+<td>PASS</td>
+<td>ENST00000255266</td>
+<td>ENST00000255266.10:c.465C&gt;T</td>
+<td>ENSP00000255266.5:p.Asn155=</td>
+<td>44</td>
+<td>139</td>
+<td>78*61</td>
+<td>47*0*46</td>
+<td></td>
+<td>G/A</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000255266.10:c.465G&gt;A</td>
+<td></td>
+<td>C/T</td>
+<td></td>
+<td>0.1923</td>
+<td>0.2392</td>
+<td>0.2552</td>
+<td>0.1614</td>
+<td>0.2295</td>
+<td>0.1602</td>
+<td>0.1472</td>
+<td>0.2952</td>
+<td>0.1978</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.884</td>
+<td>G/A</td>
+<td>4</td>
+<td>P</td>
+</tr>
+<tr>
+<td>PDE6A</td>
+<td>chr5</td>
+<td>149944343</td>
+<td>rs2277925</td>
+<td>T</td>
+<td>G</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.541284</td>
+<td>173134</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Retinal dystrophy; Retinitis pigmentosa</td>
+<td>16358</td>
+<td>50.7</td>
+<td>PASS</td>
+<td>ENST00000255266</td>
+<td>ENST00000255266.10:c.331A&gt;C</td>
+<td>ENSP00000255266.5:p.Arg111=</td>
+<td>43</td>
+<td>109</td>
+<td>50*59</td>
+<td>50*0*43</td>
+<td></td>
+<td>T/G</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000255266.10:c.331T&gt;G</td>
+<td></td>
+<td>A/C</td>
+<td></td>
+<td>0.2209</td>
+<td>0.3378</td>
+<td>0.2636</td>
+<td>0.1725</td>
+<td>0.2303</td>
+<td>0.1604</td>
+<td>0.1476</td>
+<td>0.2957</td>
+<td>0.2201</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.884</td>
+<td>T/A/G</td>
+<td>4</td>
+<td>P</td>
+</tr>
+</tbody></table></div>
+<script>
+(function() {{
+  const table = document.getElementById('tabela');
+  const busca = document.getElementById('busca');
+  const btnCsv = document.getElementById('btnCsv');
+  if (!table) return;
+  const getCellText = (tr, idx) => (tr.cells[idx]?.innerText || "").trim();
+  const isNumber = (v) => /^-?\d+(\.\d+)?$/.test(v.replace(/\s+/g, '').replace(',', '.'));
+
+  Array.from(table.tHead.rows[0].cells).forEach((th, idx) => {{
+    th.classList.add('sortable');
+    th.addEventListener('click', () => {{
+      const tbody = table.tBodies[0];
+      const rows = Array.from(tbody.rows);
+      const current = th.classList.contains('sorted-asc') ? 'asc'
+                    : th.classList.contains('sorted-desc') ? 'desc' : null;
+      Array.from(table.tHead.rows[0].cells).forEach(h => h.classList.remove('sorted-asc','sorted-desc'));
+      const dir = current === 'asc' ? -1 : 1;
+      const colIsNum = rows.every(tr => isNumber(getCellText(tr, idx)) || getCellText(tr, idx) === "");
+      rows.sort((a,b) => {{
+        let A = getCellText(a, idx);
+        let B = getCellText(b, idx);
+        if (colIsNum) {{ A = parseFloat(A.replace(',', '.')) || 0; B = parseFloat(B.replace(',', '.')) || 0; }}
+        else {{ A = A.toLowerCase(); B = B.toLowerCase(); }}
+        if (A < B) return -1 * dir;
+        if (A > B) return  1 * dir;
+        return 0;
+      }});
+      rows.forEach(r => tbody.appendChild(r));
+      th.classList.add(dir === 1 ? 'sorted-asc' : 'sorted-desc');
+    }});
+  }});
+
+  busca?.addEventListener('input', () => {{
+    const q = busca.value.toLowerCase();
+    const rows = Array.from(table.tBodies[0].rows);
+    rows.forEach(tr => {{
+      const txt = tr.innerText.toLowerCase();
+      tr.style.display = txt.includes(q) ? '' : 'none';
+    }});
+  }});
+
+  btnCsv?.addEventListener('click', () => {{
+    const rows = [];
+    const selRows = Array.from(table.querySelectorAll('tr'));
+    selRows.forEach((tr, i) => {{
+      if (i>0 && tr.style.display === 'none') return;
+      const cells = Array.from(tr.cells).map(td => {{
+        const t = td.innerText.replace(/"/g,'""');
+        return /[",\n]/.test(t) ? `"${{t}}"` : t;
+      }});
+      rows.push(cells.join(','));
+    }});
+    const blob = new Blob([rows.join('\n')], {{type: 'text/csv;charset=utf-8;'}});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = (document.title || 'export') + '.csv';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(() => URL.revokeObjectURL(url), 5000);
+  }});
+}})();
+</script>
+</body>
+</html>
