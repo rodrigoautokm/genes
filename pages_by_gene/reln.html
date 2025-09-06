@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RELN — Linhas da tabela dbo.variantes</title>
+<style>
+  :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif; }
+  body { margin: 24px; }
+  h1 { margin: 0 0 6px 0; font-size: 1.6rem; }
+  .meta { color: #444; font-size: .95rem; margin-bottom: 12px; }
+  .toolbar { display:flex; gap: 8px; align-items:center; margin: 12px 0; flex-wrap: wrap; }
+  input[type="search"] { padding: 8px 10px; border: 1px solid #ccc; border-radius: 10px; min-width: 260px; }
+  button { padding: 8px 12px; border: 1px solid #ccc; border-radius: 10px; background: #f7f7f7; cursor: pointer; }
+  button:hover { background: #eee; }
+  table { width: 100%; border-collapse: collapse; }
+  thead th { position: sticky; top: 0; background: #fafafa; border-bottom: 1px solid #ddd; text-align: left; padding: 10px; cursor: pointer; }
+  tbody td { border-bottom: 1px solid #f0f0f0; padding: 8px 10px; vertical-align: top; }
+  .sortable::after { content: " ⇅"; font-size: .8em; color: #888; }
+  .sorted-asc::after { content: " ↑"; }
+  .sorted-desc::after { content: " ↓"; }
+  .empty { padding: 16px; background: #fff6f6; border: 1px solid #ffdede; border-radius: 12px; }
+  a.btn { display:inline-block; margin: 0 8px 8px 0; padding: 6px 10px; border-radius: 10px; border:1px solid #ddd; text-decoration:none; color:#222; background:#f9f9f9; }
+  a.btn:hover { background:#f0f0f0; }
+</style>
+</head>
+<body>
+<h1>RELN — Linhas da tabela dbo.variantes</h1>
+<div class="meta">Gene: <strong>RELN</strong> • Linhas: <strong>14</strong></div>
+<div class="toolbar">
+  <input id="busca" type="search" placeholder="Filtrar linhas... (busca global)">
+  <button id="btnCsv" type="button">Exportar CSV</button>
+  <a class="btn" href="index.html">Voltar ao índice</a>
+</div>
+<div id="wrap">
+<table id="tabela" border="0">
+<thead><tr>
+<th>Gene</th>
+<th>Chr</th>
+<th>Pos</th>
+<th>ID</th>
+<th>Ref</th>
+<th>Alt</th>
+<th>Impacto</th>
+<th>GT</th>
+<th>VAF</th>
+<th>ClinVar_ID</th>
+<th>ClinVar_Significance</th>
+<th>ClinVar_Review_Status</th>
+<th>ClinVar_Disease_Names</th>
+<th>ID_variante</th>
+<th>Qual</th>
+<th>Filtro</th>
+<th>Ensembl</th>
+<th>Alteracao_nucleotidica</th>
+<th>Alteracao_aminoacidica</th>
+<th>GQ</th>
+<th>DP</th>
+<th>AD</th>
+<th>PL</th>
+<th>HGMD</th>
+<th>Resultado</th>
+<th>Status</th>
+<th>Buscar</th>
+<th>SIFT</th>
+<th>PolyPhen</th>
+<th>Biotype</th>
+<th>Alteracao_nucleotidica_reversa</th>
+<th>Alteracao_aminoacidica_reversa</th>
+<th>Resultado_reverso</th>
+<th>encontrado_rsid</th>
+<th>gnomAD_AF_Global</th>
+<th>gnomAD_AFR_AF</th>
+<th>gnomAD_AMR_AF</th>
+<th>gnomAD_ASJ_AF</th>
+<th>gnomAD_EAS_AF</th>
+<th>gnomAD_FIN_AF</th>
+<th>gnomAD_NFE_AF</th>
+<th>gnomAD_SAS_AF</th>
+<th>gnomAD_OTH_AF</th>
+<th>PhyloP</th>
+<th>PhastCons</th>
+<th>GERP</th>
+<th>CADD_Raw</th>
+<th>CADD_Phred</th>
+<th>LOEUF</th>
+<th>Allele_String</th>
+<th>ClinVar_Disease_Count</th>
+<th>letra_inicial_gene</th>
+</tr></thead><tbody>
+<tr>
+<td>RELN</td>
+<td>chr7</td>
+<td>103498070</td>
+<td>rs2711885</td>
+<td>C</td>
+<td>G</td>
+<td>LOW</td>
+<td>1/1</td>
+<td>1</td>
+<td>81246</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Familial temporal lobe epilepsy 7; Norman-Roberts syndrome</td>
+<td>21491</td>
+<td>62.2</td>
+<td>PASS</td>
+<td>ENST00000428762</td>
+<td>ENST00000428762.6:c.8843+7G&gt;C</td>
+<td></td>
+<td>47</td>
+<td>95</td>
+<td>0*95</td>
+<td>62*47*0</td>
+<td></td>
+<td>G/G</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000428762.6:c.8843+7C&gt;G</td>
+<td></td>
+<td>C/C</td>
+<td></td>
+<td>0.9897</td>
+<td>0.9974</td>
+<td>0.9936</td>
+<td>0.9747</td>
+<td>1</td>
+<td>0.9767</td>
+<td>0.9859</td>
+<td>0.9923</td>
+<td>0.9877</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.272</td>
+<td>C/G</td>
+<td>5</td>
+<td>R</td>
+</tr>
+<tr>
+<td>RELN</td>
+<td>chr7</td>
+<td>103500700</td>
+<td>rs13232021</td>
+<td>A</td>
+<td>G</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.478261</td>
+<td>243238</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td></td>
+<td>21492</td>
+<td>53.7</td>
+<td>PASS</td>
+<td>ENST00000428762</td>
+<td>ENST00000428762.6:c.8667+45T&gt;C</td>
+<td></td>
+<td>51</td>
+<td>23</td>
+<td>12*11</td>
+<td>53*0*53</td>
+<td></td>
+<td>A/G</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000428762.6:c.8667+45A&gt;G</td>
+<td></td>
+<td>T/C</td>
+<td></td>
+<td>0.1482</td>
+<td>0.08528</td>
+<td>0.156</td>
+<td>0.1349</td>
+<td>0.2917</td>
+<td>0.2178</td>
+<td>0.1555</td>
+<td>0.2684</td>
+<td>0.141</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.272</td>
+<td>A/G/T</td>
+<td>2</td>
+<td>R</td>
+</tr>
+<tr>
+<td>RELN</td>
+<td>chr7</td>
+<td>103515258</td>
+<td>rs2229864</td>
+<td>A</td>
+<td>G</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.439394</td>
+<td>81242</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Familial temporal lobe epilepsy 7; Norman-Roberts syndrome</td>
+<td>21493</td>
+<td>45.0</td>
+<td>PASS</td>
+<td>ENST00000428762</td>
+<td>ENST00000428762.6:c.8046T&gt;C</td>
+<td>ENSP00000392423.1:p.His2682=</td>
+<td>43</td>
+<td>198</td>
+<td>111*87</td>
+<td>44*0*47</td>
+<td></td>
+<td>A/G</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000428762.6:c.8046A&gt;G</td>
+<td></td>
+<td>T/C</td>
+<td></td>
+<td>0.504</td>
+<td>0.7615</td>
+<td>0.4568</td>
+<td>0.3787</td>
+<td>0.8072</td>
+<td>0.3537</td>
+<td>0.3578</td>
+<td>0.6418</td>
+<td>0.4848</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.272</td>
+<td>A/G</td>
+<td>5</td>
+<td>R</td>
+</tr>
+<tr>
+<td>RELN</td>
+<td>chr7</td>
+<td>103515417</td>
+<td>rs56345626</td>
+<td>A</td>
+<td>G</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.53125</td>
+<td>118171</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Familial temporal lobe epilepsy 7; Norman-Roberts syndrome</td>
+<td>21494</td>
+<td>53.2</td>
+<td>PASS</td>
+<td>ENST00000428762</td>
+<td>ENST00000428762.6:c.7887T&gt;C</td>
+<td>ENSP00000392423.1:p.Pro2629=</td>
+<td>48</td>
+<td>96</td>
+<td>45*51</td>
+<td>53*0*50</td>
+<td></td>
+<td>A/G</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000428762.6:c.7887A&gt;G</td>
+<td></td>
+<td>T/C</td>
+<td></td>
+<td>0.1725</td>
+<td>0.1318</td>
+<td>0.1583</td>
+<td>0.1696</td>
+<td>0.2676</td>
+<td>0.2137</td>
+<td>0.1875</td>
+<td>0.1636</td>
+<td>0.1689</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.272</td>
+<td>A/G</td>
+<td>5</td>
+<td>R</td>
+</tr>
+<tr>
+<td>RELN</td>
+<td>chr7</td>
+<td>103535518</td>
+<td>rs362706</td>
+<td>C</td>
+<td>T</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.28</td>
+<td>242583</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Norman-Roberts syndrome</td>
+<td>21495</td>
+<td>37.7</td>
+<td>PASS</td>
+<td>ENST00000428762</td>
+<td>ENST00000428762.6:c.7181-34G&gt;A</td>
+<td></td>
+<td>38</td>
+<td>100</td>
+<td>72*28</td>
+<td>37*0*53</td>
+<td></td>
+<td>C/T</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000428762.6:c.7181-34C&gt;T</td>
+<td></td>
+<td>G/A</td>
+<td></td>
+<td>0.7491</td>
+<td>0.7513</td>
+<td>0.7513</td>
+<td>0.7669</td>
+<td>0.6066</td>
+<td>0.7505</td>
+<td>0.7618</td>
+<td>0.6814</td>
+<td>0.7576</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.272</td>
+<td>C/A/G/T</td>
+<td>3</td>
+<td>R</td>
+</tr>
+<tr>
+<td>RELN</td>
+<td>chr7</td>
+<td>103561959</td>
+<td>rs34125550</td>
+<td>C</td>
+<td>CA</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.236842</td>
+<td>971760</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Familial temporal lobe epilepsy 7; Norman-Roberts syndrome</td>
+<td>21496</td>
+<td>34.8</td>
+<td>PASS</td>
+<td>ENST00000428762</td>
+<td>ENST00000428762.6:c.5211-7dup</td>
+<td></td>
+<td>2</td>
+<td>152</td>
+<td>15*36</td>
+<td>30*6*37</td>
+<td></td>
+<td>C/CA</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td></td>
+<td></td>
+<td>G/CA</td>
+<td></td>
+<td>0.1318</td>
+<td>0.1191</td>
+<td>0.09873</td>
+<td>0.1546</td>
+<td>0.09725</td>
+<td>0.1207</td>
+<td>0.1444</td>
+<td>0.1044</td>
+<td>0.1342</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.272</td>
+<td>AAAAAAAAAAAAAAAAAAA/AAAAAAAAAAAA/AAAAAAAAAAAAA/AAA</td>
+<td>2</td>
+<td>R</td>
+</tr>
+<tr>
+<td>RELN</td>
+<td>chr7</td>
+<td>103561959</td>
+<td>rs1491238244</td>
+<td>CA</td>
+<td>C</td>
+<td>LOW</td>
+<td>0/0</td>
+<td>0.144737</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>21497</td>
+<td>34.8</td>
+<td>PASS</td>
+<td>ENST00000428762</td>
+<td>ENST00000428762.6:c.5211-7_5211-6del</td>
+<td></td>
+<td>2</td>
+<td>152</td>
+<td>15*22</td>
+<td>30*3*52</td>
+<td></td>
+<td>CA/CA</td>
+<td>Normal</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td></td>
+<td></td>
+<td>CA/CA</td>
+<td></td>
+<td>0.000060</td>
+<td>0.000052</td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.000300</td>
+<td>0.000067</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.272000</td>
+<td>CA/-</td>
+<td></td>
+<td>R</td>
+</tr>
+<tr>
+<td>RELN</td>
+<td>chr7</td>
+<td>103561959</td>
+<td></td>
+<td>CAA</td>
+<td>C</td>
+<td>LOW</td>
+<td>1/0</td>
+<td>0.125</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>21498</td>
+<td>34.8</td>
+<td>PASS</td>
+<td>ENST00000428762</td>
+<td>ENST00000428762.6:c.5211-8_5211-6del</td>
+<td></td>
+<td>2</td>
+<td>152</td>
+<td>15*19</td>
+<td>30*6*52</td>
+<td></td>
+<td>CAA/C</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td></td>
+<td></td>
+<td>CAA/G</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.272000</td>
+<td></td>
+<td></td>
+<td>R</td>
+</tr>
+<tr>
+<td>RELN</td>
+<td>chr7</td>
+<td>103565554</td>
+<td>rs35268159</td>
+<td>G</td>
+<td>GA</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.307692</td>
+<td>177789</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Familial temporal lobe epilepsy 7; Norman-Roberts syndrome</td>
+<td>21499</td>
+<td>26.9</td>
+<td>PASS</td>
+<td>ENST00000428762</td>
+<td>ENST00000428762.6:c.4937-4dup</td>
+<td></td>
+<td>27</td>
+<td>52</td>
+<td>30*16</td>
+<td>26*0*52</td>
+<td></td>
+<td>G/GA</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td></td>
+<td></td>
+<td>C/GA</td>
+<td></td>
+<td>0.2798</td>
+<td>0.2856</td>
+<td>0.2359</td>
+<td>0.2767</td>
+<td>0.07928</td>
+<td>0.2794</td>
+<td>0.3022</td>
+<td>0.2679</td>
+<td>0.3134</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.272</td>
+<td>AAAAAAAAAAA/AAAAAAAAA/AAAAAAAAAA/AAAAAAAAAAAA/AAAA</td>
+<td>4</td>
+<td>R</td>
+</tr>
+<tr>
+<td>RELN</td>
+<td>chr7</td>
+<td>103566787</td>
+<td>rs362726</td>
+<td>T</td>
+<td>C</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td>248186</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Norman-Roberts syndrome</td>
+<td>21500</td>
+<td>50.7</td>
+<td>PASS</td>
+<td>ENST00000428762</td>
+<td>ENST00000428762.6:c.4589-28A&gt;G</td>
+<td></td>
+<td>37</td>
+<td>24</td>
+<td>0*24</td>
+<td>50*36*0</td>
+<td></td>
+<td>C/C</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000428762.6:c.4589-28T&gt;C</td>
+<td></td>
+<td>G/G</td>
+<td></td>
+<td>0.4615</td>
+<td>0.6392</td>
+<td>0.4573</td>
+<td>0.3586</td>
+<td>0.4729</td>
+<td>0.364</td>
+<td>0.3842</td>
+<td>0.3383</td>
+<td>0.4791</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.272</td>
+<td>T/C</td>
+<td>3</td>
+<td>R</td>
+</tr>
+<tr>
+<td>RELN</td>
+<td>chr7</td>
+<td>103594538</td>
+<td>rs35588028</td>
+<td>C</td>
+<td>CT</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.432099</td>
+<td>1714285</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td></td>
+<td>21501</td>
+<td>41.3</td>
+<td>PASS</td>
+<td>ENST00000428762</td>
+<td>ENST00000428762.6:c.3540-47dup</td>
+<td></td>
+<td>41</td>
+<td>81</td>
+<td>36*35</td>
+<td>41*0*57</td>
+<td></td>
+<td>C/CT</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td></td>
+<td></td>
+<td>G/CT</td>
+<td></td>
+<td>0.2803</td>
+<td>0.0739</td>
+<td>0.2654</td>
+<td>0.3893</td>
+<td>0.3947</td>
+<td>0.3643</td>
+<td>0.3705</td>
+<td>0.4137</td>
+<td>0.2729</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.272</td>
+<td>TTTTTTTTTTT/TTTTTTTTT/TTTTTTTTTT/TTTTTTTTTTTT/TTTT</td>
+<td>1</td>
+<td>R</td>
+</tr>
+<tr>
+<td>RELN</td>
+<td>chr7</td>
+<td>103651777</td>
+<td>rs2072403</td>
+<td>T</td>
+<td>C</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.366337</td>
+<td>118143</td>
+<td>benign-likely-benign</td>
+<td>no_assertion_criteria_provided</td>
+<td>Familial temporal lobe epilepsy 7; Norman-Roberts syndrome</td>
+<td>21502</td>
+<td>38.1</td>
+<td>PASS</td>
+<td>ENST00000428762</td>
+<td>ENST00000428762.6:c.1776A&gt;G</td>
+<td>ENSP00000392423.1:p.Glu592=</td>
+<td>38</td>
+<td>202</td>
+<td>128*74</td>
+<td>38*0*51</td>
+<td></td>
+<td>T/C</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000428762.6:c.1776T&gt;C</td>
+<td></td>
+<td>A/G</td>
+<td></td>
+<td>0.09405</td>
+<td>0.1866</td>
+<td>0.07666</td>
+<td>0.04388</td>
+<td>0.1379</td>
+<td>0.08139</td>
+<td>0.04796</td>
+<td>0.0362</td>
+<td>0.08009</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.272</td>
+<td>T/C</td>
+<td>5</td>
+<td>R</td>
+</tr>
+<tr>
+<td>RELN</td>
+<td>chr7</td>
+<td>103749507</td>
+<td>rs607755</td>
+<td>A</td>
+<td>G</td>
+<td>LOW</td>
+<td>1/1</td>
+<td>1</td>
+<td>3785830</td>
+<td>uncertain-significance</td>
+<td>criteria_provided_single_submitter</td>
+<td>Familial temporal lobe epilepsy 7; Norman-Roberts syndrome</td>
+<td>21503</td>
+<td>49.2</td>
+<td>PASS</td>
+<td>ENST00000428762</td>
+<td>ENST00000428762.6:c.578-3T&gt;C</td>
+<td></td>
+<td>39</td>
+<td>31</td>
+<td>0*31</td>
+<td>49*39*0</td>
+<td></td>
+<td>G/G</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000428762.6:c.578-3A&gt;G</td>
+<td></td>
+<td>C/C</td>
+<td></td>
+<td>0.4966</td>
+<td>0.444</td>
+<td>0.4671</td>
+<td>0.524</td>
+<td>0.3789</td>
+<td>0.4451</td>
+<td>0.5484</td>
+<td>0.5137</td>
+<td>0.518</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.272</td>
+<td>A/G</td>
+<td>2</td>
+<td>R</td>
+</tr>
+<tr>
+<td>RELN</td>
+<td>chr7</td>
+<td>103989356</td>
+<td>rs55656324</td>
+<td>T</td>
+<td>TGCCGCC</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>0.659341</td>
+<td>481905</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td></td>
+<td>21504</td>
+<td>49.0</td>
+<td>PASS</td>
+<td>ENST00000428762</td>
+<td>ENST00000428762.6:c.-6_-1dup</td>
+<td></td>
+<td>30</td>
+<td>91</td>
+<td>4*60</td>
+<td>48*30*0</td>
+<td></td>
+<td>TGCCGCC/TGCCGCC</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td></td>
+<td></td>
+<td>TGCCGCC/TGCCGCC</td>
+<td></td>
+<td>0.5219</td>
+<td>0.5155</td>
+<td>0.5423</td>
+<td>0.4904</td>
+<td>0.7433</td>
+<td>0.5017</td>
+<td>0.5012</td>
+<td>0.6741</td>
+<td>0.501</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.272</td>
+<td>GCCGCCGCCGCCGCCGCCGCCGCCGC/GCCGCCGCCGC/GCCGCCGCCGC</td>
+<td>2</td>
+<td>R</td>
+</tr>
+</tbody></table></div>
+<script>
+(function() {{
+  const table = document.getElementById('tabela');
+  const busca = document.getElementById('busca');
+  const btnCsv = document.getElementById('btnCsv');
+  if (!table) return;
+  const getCellText = (tr, idx) => (tr.cells[idx]?.innerText || "").trim();
+  const isNumber = (v) => /^-?\d+(\.\d+)?$/.test(v.replace(/\s+/g, '').replace(',', '.'));
+
+  Array.from(table.tHead.rows[0].cells).forEach((th, idx) => {{
+    th.classList.add('sortable');
+    th.addEventListener('click', () => {{
+      const tbody = table.tBodies[0];
+      const rows = Array.from(tbody.rows);
+      const current = th.classList.contains('sorted-asc') ? 'asc'
+                    : th.classList.contains('sorted-desc') ? 'desc' : null;
+      Array.from(table.tHead.rows[0].cells).forEach(h => h.classList.remove('sorted-asc','sorted-desc'));
+      const dir = current === 'asc' ? -1 : 1;
+      const colIsNum = rows.every(tr => isNumber(getCellText(tr, idx)) || getCellText(tr, idx) === "");
+      rows.sort((a,b) => {{
+        let A = getCellText(a, idx);
+        let B = getCellText(b, idx);
+        if (colIsNum) {{ A = parseFloat(A.replace(',', '.')) || 0; B = parseFloat(B.replace(',', '.')) || 0; }}
+        else {{ A = A.toLowerCase(); B = B.toLowerCase(); }}
+        if (A < B) return -1 * dir;
+        if (A > B) return  1 * dir;
+        return 0;
+      }});
+      rows.forEach(r => tbody.appendChild(r));
+      th.classList.add(dir === 1 ? 'sorted-asc' : 'sorted-desc');
+    }});
+  }});
+
+  busca?.addEventListener('input', () => {{
+    const q = busca.value.toLowerCase();
+    const rows = Array.from(table.tBodies[0].rows);
+    rows.forEach(tr => {{
+      const txt = tr.innerText.toLowerCase();
+      tr.style.display = txt.includes(q) ? '' : 'none';
+    }});
+  }});
+
+  btnCsv?.addEventListener('click', () => {{
+    const rows = [];
+    const selRows = Array.from(table.querySelectorAll('tr'));
+    selRows.forEach((tr, i) => {{
+      if (i>0 && tr.style.display === 'none') return;
+      const cells = Array.from(tr.cells).map(td => {{
+        const t = td.innerText.replace(/"/g,'""');
+        return /[",\n]/.test(t) ? `"${{t}}"` : t;
+      }});
+      rows.push(cells.join(','));
+    }});
+    const blob = new Blob([rows.join('\n')], {{type: 'text/csv;charset=utf-8;'}});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = (document.title || 'export') + '.csv';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(() => URL.revokeObjectURL(url), 5000);
+  }});
+}})();
+</script>
+</body>
+</html>
