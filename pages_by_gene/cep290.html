@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CEP290 — Linhas da tabela dbo.variantes</title>
+<style>
+  :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif; }
+  body { margin: 24px; }
+  h1 { margin: 0 0 6px 0; font-size: 1.6rem; }
+  .meta { color: #444; font-size: .95rem; margin-bottom: 12px; }
+  .toolbar { display:flex; gap: 8px; align-items:center; margin: 12px 0; flex-wrap: wrap; }
+  input[type="search"] { padding: 8px 10px; border: 1px solid #ccc; border-radius: 10px; min-width: 260px; }
+  button { padding: 8px 12px; border: 1px solid #ccc; border-radius: 10px; background: #f7f7f7; cursor: pointer; }
+  button:hover { background: #eee; }
+  table { width: 100%; border-collapse: collapse; }
+  thead th { position: sticky; top: 0; background: #fafafa; border-bottom: 1px solid #ddd; text-align: left; padding: 10px; cursor: pointer; }
+  tbody td { border-bottom: 1px solid #f0f0f0; padding: 8px 10px; vertical-align: top; }
+  .sortable::after { content: " ⇅"; font-size: .8em; color: #888; }
+  .sorted-asc::after { content: " ↑"; }
+  .sorted-desc::after { content: " ↓"; }
+  .empty { padding: 16px; background: #fff6f6; border: 1px solid #ffdede; border-radius: 12px; }
+  a.btn { display:inline-block; margin: 0 8px 8px 0; padding: 6px 10px; border-radius: 10px; border:1px solid #ddd; text-decoration:none; color:#222; background:#f9f9f9; }
+  a.btn:hover { background:#f0f0f0; }
+</style>
+</head>
+<body>
+<h1>CEP290 — Linhas da tabela dbo.variantes</h1>
+<div class="meta">Gene: <strong>CEP290</strong> • Linhas: <strong>9</strong></div>
+<div class="toolbar">
+  <input id="busca" type="search" placeholder="Filtrar linhas... (busca global)">
+  <button id="btnCsv" type="button">Exportar CSV</button>
+  <a class="btn" href="index.html">Voltar ao índice</a>
+</div>
+<div id="wrap">
+<table id="tabela" border="0">
+<thead><tr>
+<th>Gene</th>
+<th>Chr</th>
+<th>Pos</th>
+<th>ID</th>
+<th>Ref</th>
+<th>Alt</th>
+<th>Impacto</th>
+<th>GT</th>
+<th>VAF</th>
+<th>ClinVar_ID</th>
+<th>ClinVar_Significance</th>
+<th>ClinVar_Review_Status</th>
+<th>ClinVar_Disease_Names</th>
+<th>ID_variante</th>
+<th>Qual</th>
+<th>Filtro</th>
+<th>Ensembl</th>
+<th>Alteracao_nucleotidica</th>
+<th>Alteracao_aminoacidica</th>
+<th>GQ</th>
+<th>DP</th>
+<th>AD</th>
+<th>PL</th>
+<th>HGMD</th>
+<th>Resultado</th>
+<th>Status</th>
+<th>Buscar</th>
+<th>SIFT</th>
+<th>PolyPhen</th>
+<th>Biotype</th>
+<th>Alteracao_nucleotidica_reversa</th>
+<th>Alteracao_aminoacidica_reversa</th>
+<th>Resultado_reverso</th>
+<th>encontrado_rsid</th>
+<th>gnomAD_AF_Global</th>
+<th>gnomAD_AFR_AF</th>
+<th>gnomAD_AMR_AF</th>
+<th>gnomAD_ASJ_AF</th>
+<th>gnomAD_EAS_AF</th>
+<th>gnomAD_FIN_AF</th>
+<th>gnomAD_NFE_AF</th>
+<th>gnomAD_SAS_AF</th>
+<th>gnomAD_OTH_AF</th>
+<th>PhyloP</th>
+<th>PhastCons</th>
+<th>GERP</th>
+<th>CADD_Raw</th>
+<th>CADD_Phred</th>
+<th>LOEUF</th>
+<th>Allele_String</th>
+<th>ClinVar_Disease_Count</th>
+<th>letra_inicial_gene</th>
+</tr></thead><tbody>
+<tr>
+<td>CEP290</td>
+<td>chr12</td>
+<td>88060817</td>
+<td>rs11405846</td>
+<td>T</td>
+<td>TA</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>0.875</td>
+<td>3784601</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Familial aplasia of the vermis; Meckel-Gruber syndrome; Nephronophthisis</td>
+<td>34860</td>
+<td>44.6</td>
+<td>PASS</td>
+<td>ENST00000552810</td>
+<td>ENST00000552810.6:c.6522+12dup</td>
+<td></td>
+<td>29</td>
+<td>24</td>
+<td>0*21</td>
+<td>44*28*0</td>
+<td></td>
+<td>TA/TA</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td></td>
+<td></td>
+<td>TA/TA</td>
+<td></td>
+<td>0.7789</td>
+<td>0.408</td>
+<td>0.8647</td>
+<td>0.8939</td>
+<td>0.9621</td>
+<td>0.962</td>
+<td>0.925</td>
+<td>0.8972</td>
+<td>0.819</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1.081</td>
+<td>AAAAAAAA/AAAAAA/AAAAAAA/AAAAAAAAA/AAAAAAAAAA</td>
+<td>3</td>
+<td>C</td>
+</tr>
+<tr>
+<td>CEP290</td>
+<td>chr12</td>
+<td>88071829</td>
+<td>rs1263492625</td>
+<td>A</td>
+<td>G</td>
+<td>MODERATE</td>
+<td>0/1</td>
+<td>0.202381</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>34861</td>
+<td>16.4</td>
+<td>PASS</td>
+<td>ENST00000552810</td>
+<td>ENST00000552810.6:c.5807T&gt;C</td>
+<td>ENSP00000448012.1:p.Val1936Ala</td>
+<td>16</td>
+<td>84</td>
+<td>67*17</td>
+<td>16*0*38</td>
+<td></td>
+<td>A/G</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000552810.6:c.5807A&gt;G</td>
+<td>ENSP00000448012.1:p.Ala1936Val</td>
+<td>T/C</td>
+<td></td>
+<td>0.000013</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.000029</td>
+<td></td>
+<td></td>
+<td>1.920000</td>
+<td>0.772000</td>
+<td>2.920000</td>
+<td></td>
+<td></td>
+<td>1.081000</td>
+<td>A/G</td>
+<td></td>
+<td>C</td>
+</tr>
+<tr>
+<td>CEP290</td>
+<td>chr12</td>
+<td>88079272</td>
+<td>rs2468245</td>
+<td>C</td>
+<td>T</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td>114200</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td></td>
+<td>34862</td>
+<td>56.8</td>
+<td>PASS</td>
+<td>ENST00000552810</td>
+<td>ENST00000552810.6:c.5227-43G&gt;A</td>
+<td></td>
+<td>50</td>
+<td>61</td>
+<td>0*61</td>
+<td>56*51*0</td>
+<td></td>
+<td>T/T</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000552810.6:c.5227-43C&gt;T</td>
+<td></td>
+<td>A/A</td>
+<td></td>
+<td>0.7808</td>
+<td>0.4097</td>
+<td>0.866</td>
+<td>0.8946</td>
+<td>0.9645</td>
+<td>0.9624</td>
+<td>0.9277</td>
+<td>0.8972</td>
+<td>0.8223</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1.081</td>
+<td>C/A/G/T</td>
+<td>2</td>
+<td>C</td>
+</tr>
+<tr>
+<td>CEP290</td>
+<td>chr12</td>
+<td>88084539</td>
+<td></td>
+<td>TA</td>
+<td>T</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>0.962963</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>34863</td>
+<td>46.2</td>
+<td>PASS</td>
+<td>ENST00000552810</td>
+<td>ENST00000552810.6:c.4704+46_4704+47del</td>
+<td></td>
+<td>36</td>
+<td>27</td>
+<td>0*26</td>
+<td>46*36*0</td>
+<td></td>
+<td>T/T</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td></td>
+<td></td>
+<td>A/A</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1.081000</td>
+<td></td>
+<td></td>
+<td>C</td>
+</tr>
+<tr>
+<td>CEP290</td>
+<td>chr12</td>
+<td>88089495</td>
+<td></td>
+<td>TA</td>
+<td>T</td>
+<td>LOW</td>
+<td>1/1</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>34864</td>
+<td>52.7</td>
+<td>PASS</td>
+<td>ENST00000552810</td>
+<td>ENST00000552810.6:c.3574-9_3574-8del</td>
+<td></td>
+<td>44</td>
+<td>57</td>
+<td>0*57</td>
+<td>52*44*0</td>
+<td></td>
+<td>T/T</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td></td>
+<td></td>
+<td>A/A</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1.081000</td>
+<td></td>
+<td></td>
+<td>C</td>
+</tr>
+<tr>
+<td>CEP290</td>
+<td>chr12</td>
+<td>88103061</td>
+<td>rs2471532</td>
+<td>C</td>
+<td>G</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td>114191</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Bardet-Biedl syndrome 14; Joubert syndrome 5; Meckel syndrome: type 4; Senior-Loken syndrome 6</td>
+<td>34865</td>
+<td>53.1</td>
+<td>PASS</td>
+<td>ENST00000552810</td>
+<td>ENST00000552810.6:c.2818-50G&gt;C</td>
+<td></td>
+<td>41</td>
+<td>21</td>
+<td>0*21</td>
+<td>53*41*0</td>
+<td></td>
+<td>G/G</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000552810.6:c.2818-50C&gt;G</td>
+<td></td>
+<td>C/C</td>
+<td></td>
+<td>0.7809</td>
+<td>0.4097</td>
+<td>0.866</td>
+<td>0.8945</td>
+<td>0.9648</td>
+<td>0.9627</td>
+<td>0.9277</td>
+<td>0.8988</td>
+<td>0.8224</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1.081</td>
+<td>C/A/G/T</td>
+<td>6</td>
+<td>C</td>
+</tr>
+<tr>
+<td>CEP290</td>
+<td>chr12</td>
+<td>88111301</td>
+<td>rs2468255</td>
+<td>T</td>
+<td>C</td>
+<td>LOW</td>
+<td>1/1</td>
+<td>1</td>
+<td>124245</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Familial aplasia of the vermis; Meckel-Gruber syndrome; Nephronophthisis</td>
+<td>34866</td>
+<td>47.8</td>
+<td>PASS</td>
+<td>ENST00000552810</td>
+<td>ENST00000552810.6:c.2268A&gt;G</td>
+<td>ENSP00000448012.1:p.Ser756=</td>
+<td>28</td>
+<td>17</td>
+<td>0*17</td>
+<td>47*28*0</td>
+<td></td>
+<td>C/C</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000552810.6:c.2268T&gt;C</td>
+<td></td>
+<td>G/G</td>
+<td></td>
+<td>0.7808</td>
+<td>0.4093</td>
+<td>0.866</td>
+<td>0.8946</td>
+<td>0.965</td>
+<td>0.9622</td>
+<td>0.9276</td>
+<td>0.8979</td>
+<td>0.8229</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1.081</td>
+<td>T/A/C/G</td>
+<td>4</td>
+<td>C</td>
+</tr>
+<tr>
+<td>CEP290</td>
+<td>chr12</td>
+<td>88116128</td>
+<td>rs144989691</td>
+<td>T</td>
+<td>C</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>34867</td>
+<td>48.3</td>
+<td>PASS</td>
+<td>ENST00000552810</td>
+<td>ENST00000552810.6:c.1824+905A&gt;G</td>
+<td></td>
+<td>46</td>
+<td>80</td>
+<td>56*24</td>
+<td>48*0*48</td>
+<td></td>
+<td>T/C</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000552810.6:c.1824+905T&gt;C</td>
+<td></td>
+<td>A/G</td>
+<td></td>
+<td>0.02519</td>
+<td>0.007527</td>
+<td>0.02667</td>
+<td>0.005767</td>
+<td>0.0003857</td>
+<td>0.02091</td>
+<td>0.03952</td>
+<td>0.01263</td>
+<td>0.02699</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1.081</td>
+<td>T/A/C</td>
+<td></td>
+<td>C</td>
+</tr>
+<tr>
+<td>CEP290</td>
+<td>chr12</td>
+<td>88129046</td>
+<td>rs71082425</td>
+<td>A</td>
+<td>AC</td>
+<td>LOW</td>
+<td>1/1</td>
+<td>1</td>
+<td>152981</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Bardet-Biedl syndrome; Bardet-Biedl syndrome 14; Familial aplasia of the vermis; Joubert syndrome 5; Leber congenital amaurosis; Meckel syndrome: type 4; Meckel-Gruber syndrome; Nephronophthisis; Renal dysplasia and retinal aplasia; Senior-Loken syndrome 6</td>
+<td>34868</td>
+<td>45.5</td>
+<td>PASS</td>
+<td>ENST00000552810</td>
+<td>ENST00000552810.6:c.853-12_853-11insG</td>
+<td></td>
+<td>41</td>
+<td>38</td>
+<td>0*38</td>
+<td>45*42*0</td>
+<td></td>
+<td>AC/AC</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td></td>
+<td></td>
+<td>AC/AC</td>
+<td></td>
+<td>0.8811</td>
+<td>0.7115</td>
+<td>0.9195</td>
+<td>0.8959</td>
+<td>0.9882</td>
+<td>0.9881</td>
+<td>0.9474</td>
+<td>0.9019</td>
+<td>0.8937</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1.081</td>
+<td>-/C/T</td>
+<td>14</td>
+<td>C</td>
+</tr>
+</tbody></table></div>
+<script>
+(function() {{
+  const table = document.getElementById('tabela');
+  const busca = document.getElementById('busca');
+  const btnCsv = document.getElementById('btnCsv');
+  if (!table) return;
+  const getCellText = (tr, idx) => (tr.cells[idx]?.innerText || "").trim();
+  const isNumber = (v) => /^-?\d+(\.\d+)?$/.test(v.replace(/\s+/g, '').replace(',', '.'));
+
+  Array.from(table.tHead.rows[0].cells).forEach((th, idx) => {{
+    th.classList.add('sortable');
+    th.addEventListener('click', () => {{
+      const tbody = table.tBodies[0];
+      const rows = Array.from(tbody.rows);
+      const current = th.classList.contains('sorted-asc') ? 'asc'
+                    : th.classList.contains('sorted-desc') ? 'desc' : null;
+      Array.from(table.tHead.rows[0].cells).forEach(h => h.classList.remove('sorted-asc','sorted-desc'));
+      const dir = current === 'asc' ? -1 : 1;
+      const colIsNum = rows.every(tr => isNumber(getCellText(tr, idx)) || getCellText(tr, idx) === "");
+      rows.sort((a,b) => {{
+        let A = getCellText(a, idx);
+        let B = getCellText(b, idx);
+        if (colIsNum) {{ A = parseFloat(A.replace(',', '.')) || 0; B = parseFloat(B.replace(',', '.')) || 0; }}
+        else {{ A = A.toLowerCase(); B = B.toLowerCase(); }}
+        if (A < B) return -1 * dir;
+        if (A > B) return  1 * dir;
+        return 0;
+      }});
+      rows.forEach(r => tbody.appendChild(r));
+      th.classList.add(dir === 1 ? 'sorted-asc' : 'sorted-desc');
+    }});
+  }});
+
+  busca?.addEventListener('input', () => {{
+    const q = busca.value.toLowerCase();
+    const rows = Array.from(table.tBodies[0].rows);
+    rows.forEach(tr => {{
+      const txt = tr.innerText.toLowerCase();
+      tr.style.display = txt.includes(q) ? '' : 'none';
+    }});
+  }});
+
+  btnCsv?.addEventListener('click', () => {{
+    const rows = [];
+    const selRows = Array.from(table.querySelectorAll('tr'));
+    selRows.forEach((tr, i) => {{
+      if (i>0 && tr.style.display === 'none') return;
+      const cells = Array.from(tr.cells).map(td => {{
+        const t = td.innerText.replace(/"/g,'""');
+        return /[",\n]/.test(t) ? `"${{t}}"` : t;
+      }});
+      rows.push(cells.join(','));
+    }});
+    const blob = new Blob([rows.join('\n')], {{type: 'text/csv;charset=utf-8;'}});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = (document.title || 'export') + '.csv';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(() => URL.revokeObjectURL(url), 5000);
+  }});
+}})();
+</script>
+</body>
+</html>
