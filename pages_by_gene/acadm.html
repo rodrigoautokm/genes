@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ACADM — Linhas da tabela dbo.variantes</title>
+<style>
+  :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif; }
+  body { margin: 24px; }
+  h1 { margin: 0 0 6px 0; font-size: 1.6rem; }
+  .meta { color: #444; font-size: .95rem; margin-bottom: 12px; }
+  .toolbar { display:flex; gap: 8px; align-items:center; margin: 12px 0; flex-wrap: wrap; }
+  input[type="search"] { padding: 8px 10px; border: 1px solid #ccc; border-radius: 10px; min-width: 260px; }
+  button { padding: 8px 12px; border: 1px solid #ccc; border-radius: 10px; background: #f7f7f7; cursor: pointer; }
+  button:hover { background: #eee; }
+  table { width: 100%; border-collapse: collapse; }
+  thead th { position: sticky; top: 0; background: #fafafa; border-bottom: 1px solid #ddd; text-align: left; padding: 10px; cursor: pointer; }
+  tbody td { border-bottom: 1px solid #f0f0f0; padding: 8px 10px; vertical-align: top; }
+  .sortable::after { content: " ⇅"; font-size: .8em; color: #888; }
+  .sorted-asc::after { content: " ↑"; }
+  .sorted-desc::after { content: " ↓"; }
+  .empty { padding: 16px; background: #fff6f6; border: 1px solid #ffdede; border-radius: 12px; }
+  a.btn { display:inline-block; margin: 0 8px 8px 0; padding: 6px 10px; border-radius: 10px; border:1px solid #ddd; text-decoration:none; color:#222; background:#f9f9f9; }
+  a.btn:hover { background:#f0f0f0; }
+</style>
+</head>
+<body>
+<h1>ACADM — Linhas da tabela dbo.variantes</h1>
+<div class="meta">Gene: <strong>ACADM</strong> • Linhas: <strong>14</strong></div>
+<div class="toolbar">
+  <input id="busca" type="search" placeholder="Filtrar linhas... (busca global)">
+  <button id="btnCsv" type="button">Exportar CSV</button>
+  <a class="btn" href="index.html">Voltar ao índice</a>
+</div>
+<div id="wrap">
+<table id="tabela" border="0">
+<thead><tr>
+<th>Gene</th>
+<th>Chr</th>
+<th>Pos</th>
+<th>ID</th>
+<th>Ref</th>
+<th>Alt</th>
+<th>Impacto</th>
+<th>GT</th>
+<th>VAF</th>
+<th>ClinVar_ID</th>
+<th>ClinVar_Significance</th>
+<th>ClinVar_Review_Status</th>
+<th>ClinVar_Disease_Names</th>
+<th>ID_variante</th>
+<th>Qual</th>
+<th>Filtro</th>
+<th>Ensembl</th>
+<th>Alteracao_nucleotidica</th>
+<th>Alteracao_aminoacidica</th>
+<th>GQ</th>
+<th>DP</th>
+<th>AD</th>
+<th>PL</th>
+<th>HGMD</th>
+<th>Resultado</th>
+<th>Status</th>
+<th>Buscar</th>
+<th>SIFT</th>
+<th>PolyPhen</th>
+<th>Biotype</th>
+<th>Alteracao_nucleotidica_reversa</th>
+<th>Alteracao_aminoacidica_reversa</th>
+<th>Resultado_reverso</th>
+<th>encontrado_rsid</th>
+<th>gnomAD_AF_Global</th>
+<th>gnomAD_AFR_AF</th>
+<th>gnomAD_AMR_AF</th>
+<th>gnomAD_ASJ_AF</th>
+<th>gnomAD_EAS_AF</th>
+<th>gnomAD_FIN_AF</th>
+<th>gnomAD_NFE_AF</th>
+<th>gnomAD_SAS_AF</th>
+<th>gnomAD_OTH_AF</th>
+<th>PhyloP</th>
+<th>PhastCons</th>
+<th>GERP</th>
+<th>CADD_Raw</th>
+<th>CADD_Phred</th>
+<th>LOEUF</th>
+<th>Allele_String</th>
+<th>ClinVar_Disease_Count</th>
+<th>letra_inicial_gene</th>
+</tr></thead><tbody>
+<tr>
+<td>ACADM</td>
+<td>chr1</td>
+<td>75724646</td>
+<td>rs61124994</td>
+<td>C</td>
+<td>G</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.580645</td>
+<td>291725</td>
+<td>likely-benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Medium-chain acyl-coenzyme A dehydrogenase deficiency</td>
+<td>2255</td>
+<td>55.9</td>
+<td>PASS</td>
+<td>ENST00000370841</td>
+<td></td>
+<td></td>
+<td>51</td>
+<td>31</td>
+<td>13*18</td>
+<td>55*0*53</td>
+<td></td>
+<td>C/G</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td></td>
+<td></td>
+<td>C/G</td>
+<td></td>
+<td>0.04263</td>
+<td>0.08637</td>
+<td>0.03307</td>
+<td>0.004896</td>
+<td>0</td>
+<td>0.02363</td>
+<td>0.02953</td>
+<td>0.006838</td>
+<td>0.03598</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.991</td>
+<td>C/G/T</td>
+<td>2</td>
+<td>A</td>
+</tr>
+<tr>
+<td>ACADM</td>
+<td>chr1</td>
+<td>75724754</td>
+<td>rs59932454</td>
+<td>T</td>
+<td>C</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.508651</td>
+<td>123474</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Medium-chain acyl-coenzyme A dehydrogenase deficiency</td>
+<td>2256</td>
+<td>47.7</td>
+<td>PASS</td>
+<td>ENST00000370841</td>
+<td>ENST00000370841.9:c.-34T&gt;C</td>
+<td></td>
+<td>44</td>
+<td>289</td>
+<td>142*147</td>
+<td>47*0*47</td>
+<td></td>
+<td>T/C</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000370841.9:c.-34T&gt;C</td>
+<td></td>
+<td>T/C</td>
+<td></td>
+<td>0.04908</td>
+<td>0.1089</td>
+<td>0.03498</td>
+<td>0.004896</td>
+<td>0</td>
+<td>0.02346</td>
+<td>0.02969</td>
+<td>0.007042</td>
+<td>0.0397</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.991</td>
+<td>T/A/C</td>
+<td>2</td>
+<td>A</td>
+</tr>
+<tr>
+<td>ACADM</td>
+<td>chr1</td>
+<td>75724884</td>
+<td>rs1251075</td>
+<td>C</td>
+<td>G</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td>835588</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td></td>
+<td>2257</td>
+<td>52.6</td>
+<td>PASS</td>
+<td>ENST00000370841</td>
+<td>ENST00000370841.9:c.30+67C&gt;G</td>
+<td></td>
+<td>46</td>
+<td>116</td>
+<td>0*116</td>
+<td>52*47*0</td>
+<td></td>
+<td>G/G</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000370841.9:c.30+67C&gt;G</td>
+<td></td>
+<td>G/G</td>
+<td></td>
+<td>0.3741</td>
+<td>0.5464</td>
+<td>0.3531</td>
+<td>0.2142</td>
+<td>0.0346</td>
+<td>0.2867</td>
+<td>0.3353</td>
+<td>0.2015</td>
+<td>0.3561</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.991</td>
+<td>C/G</td>
+<td>1</td>
+<td>A</td>
+</tr>
+<tr>
+<td>ACADM</td>
+<td>chr1</td>
+<td>75728369</td>
+<td>rs7524467</td>
+<td>C</td>
+<td>G</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.234043</td>
+<td>243096</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Medium-chain acyl-coenzyme A dehydrogenase deficiency</td>
+<td>2258</td>
+<td>22.3</td>
+<td>PASS</td>
+<td>ENST00000370841</td>
+<td>ENST00000370841.9:c.31-32C&gt;G</td>
+<td></td>
+<td>22</td>
+<td>47</td>
+<td>36*11</td>
+<td>22*0*47</td>
+<td></td>
+<td>C/G</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000370841.9:c.31-32C&gt;G</td>
+<td></td>
+<td>C/G</td>
+<td></td>
+<td>0.2423</td>
+<td>0.15</td>
+<td>0.2889</td>
+<td>0.2098</td>
+<td>0.03498</td>
+<td>0.2626</td>
+<td>0.3047</td>
+<td>0.1934</td>
+<td>0.2486</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.991</td>
+<td>C/G/T</td>
+<td>3</td>
+<td>A</td>
+</tr>
+<tr>
+<td>ACADM</td>
+<td>chr1</td>
+<td>75728544</td>
+<td></td>
+<td>GT</td>
+<td>G</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>0.75</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>2259</td>
+<td>51.0</td>
+<td>PASS</td>
+<td>ENST00000370841</td>
+<td>ENST00000370841.9:c.118+56_118+57del</td>
+<td></td>
+<td>33</td>
+<td>20</td>
+<td>5*15</td>
+<td>50*32*0</td>
+<td></td>
+<td>G/G</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000370841.9:c.118+56_118+57del</td>
+<td></td>
+<td>G/G</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.991000</td>
+<td></td>
+<td></td>
+<td>A</td>
+</tr>
+<tr>
+<td>ACADM</td>
+<td>chr1</td>
+<td>75732624</td>
+<td>rs74090724</td>
+<td>T</td>
+<td>C</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.492537</td>
+<td>77880</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Medium-chain acyl-coenzyme A dehydrogenase deficiency</td>
+<td>2260</td>
+<td>47.4</td>
+<td>PASS</td>
+<td>ENST00000370841</td>
+<td>ENST00000370841.9:c.119-20T&gt;C</td>
+<td></td>
+<td>45</td>
+<td>67</td>
+<td>34*33</td>
+<td>47*0*49</td>
+<td></td>
+<td>T/C</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000370841.9:c.119-20T&gt;C</td>
+<td></td>
+<td>T/C</td>
+<td></td>
+<td>0.049</td>
+<td>0.1085</td>
+<td>0.03525</td>
+<td>0.004899</td>
+<td>0</td>
+<td>0.02376</td>
+<td>0.02964</td>
+<td>0.007036</td>
+<td>0.03977</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.991</td>
+<td>T/A/C</td>
+<td>2</td>
+<td>A</td>
+</tr>
+<tr>
+<td>ACADM</td>
+<td>chr1</td>
+<td>75732751</td>
+<td>rs2275378</td>
+<td>T</td>
+<td>C</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td>77883</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Medium-chain acyl-coenzyme A dehydrogenase deficiency</td>
+<td>2261</td>
+<td>62.4</td>
+<td>PASS</td>
+<td>ENST00000370841</td>
+<td>ENST00000370841.9:c.216+10T&gt;C</td>
+<td></td>
+<td>48</td>
+<td>54</td>
+<td>0*54</td>
+<td>62*48*0</td>
+<td></td>
+<td>C/C</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000370841.9:c.216+10T&gt;C</td>
+<td></td>
+<td>C/C</td>
+<td></td>
+<td>0.2994</td>
+<td>0.2872</td>
+<td>0.3267</td>
+<td>0.2146</td>
+<td>0.03467</td>
+<td>0.2855</td>
+<td>0.3344</td>
+<td>0.2005</td>
+<td>0.2952</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.991</td>
+<td>T/A/C/G</td>
+<td>2</td>
+<td>A</td>
+</tr>
+<tr>
+<td>ACADM</td>
+<td>chr1</td>
+<td>75733100</td>
+<td>rs3818855</td>
+<td>G</td>
+<td>A</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td>835589</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Medium-chain acyl-coenzyme A dehydrogenase deficiency</td>
+<td>2262</td>
+<td>59.0</td>
+<td>PASS</td>
+<td>ENST00000370841</td>
+<td>ENST00000370841.9:c.286+178G&gt;A</td>
+<td></td>
+<td>42</td>
+<td>72</td>
+<td>0*72</td>
+<td>58*42*0</td>
+<td></td>
+<td>A/A</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000370841.9:c.286+178G&gt;A</td>
+<td></td>
+<td>A/A</td>
+<td></td>
+<td>0.2995</td>
+<td>0.2877</td>
+<td>0.3265</td>
+<td>0.2148</td>
+<td>0.03472</td>
+<td>0.2861</td>
+<td>0.3345</td>
+<td>0.2001</td>
+<td>0.2933</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.991</td>
+<td>G/A</td>
+<td>2</td>
+<td>A</td>
+</tr>
+<tr>
+<td>ACADM</td>
+<td>chr1</td>
+<td>75733592</td>
+<td>rs74090726</td>
+<td>A</td>
+<td>C</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.50505</td>
+<td>3783</td>
+<td>risk-factor</td>
+<td>no_assertion_criteria_provided</td>
+<td>Medium-chain acyl-coenzyme A dehydrogenase deficiency</td>
+<td>2263</td>
+<td>52.1</td>
+<td>PASS</td>
+<td>ENST00000370841</td>
+<td>ENST00000370841.9:c.351A&gt;C</td>
+<td>ENSP00000359878.5:p.Thr117=</td>
+<td>45</td>
+<td>99</td>
+<td>49*50</td>
+<td>52*0*46</td>
+<td>CM066527</td>
+<td>A/C</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000370841.9:c.351A&gt;C</td>
+<td>ENSP00000359878.5:p.Thr117=</td>
+<td>A/C</td>
+<td></td>
+<td>0.04898</td>
+<td>0.1084</td>
+<td>0.03524</td>
+<td>0.004896</td>
+<td>0</td>
+<td>0.02373</td>
+<td>0.02966</td>
+<td>0.007045</td>
+<td>0.03934</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.991</td>
+<td>A/C/T</td>
+<td>4</td>
+<td>A</td>
+</tr>
+<tr>
+<td>ACADM</td>
+<td>chr1</td>
+<td>75733660</td>
+<td>rs2153126</td>
+<td>C</td>
+<td>G</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td>242505</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Medium-chain acyl-coenzyme A dehydrogenase deficiency</td>
+<td>2264</td>
+<td>61.6</td>
+<td>PASS</td>
+<td>ENST00000370841</td>
+<td>ENST00000370841.9:c.387+32C&gt;G</td>
+<td></td>
+<td>59</td>
+<td>43</td>
+<td>0*43</td>
+<td>61*62*0</td>
+<td></td>
+<td>G/G</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000370841.9:c.387+32C&gt;G</td>
+<td></td>
+<td>G/G</td>
+<td></td>
+<td>0.2995</td>
+<td>0.2873</td>
+<td>0.3264</td>
+<td>0.2143</td>
+<td>0.03483</td>
+<td>0.2854</td>
+<td>0.3344</td>
+<td>0.2005</td>
+<td>0.295</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.991</td>
+<td>C/G</td>
+<td>3</td>
+<td>A</td>
+</tr>
+<tr>
+<td>ACADM</td>
+<td>chr1</td>
+<td>75733710</td>
+<td>rs145811227</td>
+<td>G</td>
+<td>GA</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.444444</td>
+<td>1669238</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td></td>
+<td>2265</td>
+<td>15.8</td>
+<td>PASS</td>
+<td>ENST00000370841</td>
+<td>ENST00000370841.9:c.387+91dup</td>
+<td></td>
+<td>16</td>
+<td>9</td>
+<td>5*4</td>
+<td>15*0*42</td>
+<td></td>
+<td>G/GA</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000370841.9:c.387+91dup</td>
+<td></td>
+<td>G/GA</td>
+<td></td>
+<td>0.04936</td>
+<td>0.109</td>
+<td>0.03559</td>
+<td>0.004919</td>
+<td>0</td>
+<td>0.02422</td>
+<td>0.02991</td>
+<td>0.007134</td>
+<td>0.0396</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.991</td>
+<td>AAAAAAAAA/AAAAAAAA/AAAAAAAAAA</td>
+<td>1</td>
+<td>A</td>
+</tr>
+<tr>
+<td>ACADM</td>
+<td>chr1</td>
+<td>75739958</td>
+<td>rs12127402</td>
+<td>C</td>
+<td>A</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.344828</td>
+<td>245643</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Medium-chain acyl-coenzyme A dehydrogenase deficiency</td>
+<td>2266</td>
+<td>43.3</td>
+<td>PASS</td>
+<td>ENST00000370841</td>
+<td>ENST00000370841.9:c.469-22C&gt;A</td>
+<td></td>
+<td>43</td>
+<td>29</td>
+<td>19*10</td>
+<td>43*0*59</td>
+<td></td>
+<td>C/A</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000370841.9:c.469-22C&gt;A</td>
+<td></td>
+<td>C/A</td>
+<td></td>
+<td>0.2487</td>
+<td>0.172</td>
+<td>0.2908</td>
+<td>0.211</td>
+<td>0.03492</td>
+<td>0.2631</td>
+<td>0.305</td>
+<td>0.1934</td>
+<td>0.2533</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.991</td>
+<td>C/A</td>
+<td>3</td>
+<td>A</td>
+</tr>
+<tr>
+<td>ACADM</td>
+<td>chr1</td>
+<td>75761337</td>
+<td>rs1061337</td>
+<td>A</td>
+<td>G</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.245283</td>
+<td>77878</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Medium-chain acyl-coenzyme A dehydrogenase deficiency</td>
+<td>2267</td>
+<td>32.7</td>
+<td>PASS</td>
+<td>ENST00000370841</td>
+<td>ENST00000370841.9:c.1161A&gt;G</td>
+<td>ENSP00000359878.5:p.Val387=</td>
+<td>33</td>
+<td>53</td>
+<td>40*13</td>
+<td>32*0*50</td>
+<td>CS138290</td>
+<td>A/G</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000370841.9:c.1161A&gt;G</td>
+<td>ENSP00000359878.5:p.Val387=</td>
+<td>A/G</td>
+<td></td>
+<td>0.2355</td>
+<td>0.1479</td>
+<td>0.2539</td>
+<td>0.2058</td>
+<td>0.03363</td>
+<td>0.2568</td>
+<td>0.3006</td>
+<td>0.1881</td>
+<td>0.2415</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.991</td>
+<td>A/G/T</td>
+<td>3</td>
+<td>A</td>
+</tr>
+<tr>
+<td>ACADM</td>
+<td>chr1</td>
+<td>75763641</td>
+<td>rs1146587</td>
+<td>T</td>
+<td>C</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td>405507</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Medium-chain acyl-coenzyme A dehydrogenase deficiency</td>
+<td>2268</td>
+<td>25.5</td>
+<td>PASS</td>
+<td>ENST00000370841</td>
+<td>ENST00000370841.9:c.*878T&gt;C</td>
+<td></td>
+<td>7</td>
+<td>4</td>
+<td>0*4</td>
+<td>24*6*0</td>
+<td></td>
+<td>C/C</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000370841.9:c.*878T&gt;C</td>
+<td></td>
+<td>C/C</td>
+<td></td>
+<td>0.6572</td>
+<td>0.7074</td>
+<td>0.6249</td>
+<td>0.4994</td>
+<td>0.7225</td>
+<td>0.5808</td>
+<td>0.6439</td>
+<td>0.7066</td>
+<td>0.63</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.991</td>
+<td>T/A/C</td>
+<td>1</td>
+<td>A</td>
+</tr>
+</tbody></table></div>
+<script>
+(function() {{
+  const table = document.getElementById('tabela');
+  const busca = document.getElementById('busca');
+  const btnCsv = document.getElementById('btnCsv');
+  if (!table) return;
+  const getCellText = (tr, idx) => (tr.cells[idx]?.innerText || "").trim();
+  const isNumber = (v) => /^-?\d+(\.\d+)?$/.test(v.replace(/\s+/g, '').replace(',', '.'));
+
+  Array.from(table.tHead.rows[0].cells).forEach((th, idx) => {{
+    th.classList.add('sortable');
+    th.addEventListener('click', () => {{
+      const tbody = table.tBodies[0];
+      const rows = Array.from(tbody.rows);
+      const current = th.classList.contains('sorted-asc') ? 'asc'
+                    : th.classList.contains('sorted-desc') ? 'desc' : null;
+      Array.from(table.tHead.rows[0].cells).forEach(h => h.classList.remove('sorted-asc','sorted-desc'));
+      const dir = current === 'asc' ? -1 : 1;
+      const colIsNum = rows.every(tr => isNumber(getCellText(tr, idx)) || getCellText(tr, idx) === "");
+      rows.sort((a,b) => {{
+        let A = getCellText(a, idx);
+        let B = getCellText(b, idx);
+        if (colIsNum) {{ A = parseFloat(A.replace(',', '.')) || 0; B = parseFloat(B.replace(',', '.')) || 0; }}
+        else {{ A = A.toLowerCase(); B = B.toLowerCase(); }}
+        if (A < B) return -1 * dir;
+        if (A > B) return  1 * dir;
+        return 0;
+      }});
+      rows.forEach(r => tbody.appendChild(r));
+      th.classList.add(dir === 1 ? 'sorted-asc' : 'sorted-desc');
+    }});
+  }});
+
+  busca?.addEventListener('input', () => {{
+    const q = busca.value.toLowerCase();
+    const rows = Array.from(table.tBodies[0].rows);
+    rows.forEach(tr => {{
+      const txt = tr.innerText.toLowerCase();
+      tr.style.display = txt.includes(q) ? '' : 'none';
+    }});
+  }});
+
+  btnCsv?.addEventListener('click', () => {{
+    const rows = [];
+    const selRows = Array.from(table.querySelectorAll('tr'));
+    selRows.forEach((tr, i) => {{
+      if (i>0 && tr.style.display === 'none') return;
+      const cells = Array.from(tr.cells).map(td => {{
+        const t = td.innerText.replace(/"/g,'""');
+        return /[",\n]/.test(t) ? `"${{t}}"` : t;
+      }});
+      rows.push(cells.join(','));
+    }});
+    const blob = new Blob([rows.join('\n')], {{type: 'text/csv;charset=utf-8;'}});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = (document.title || 'export') + '.csv';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(() => URL.revokeObjectURL(url), 5000);
+  }});
+}})();
+</script>
+</body>
+</html>
