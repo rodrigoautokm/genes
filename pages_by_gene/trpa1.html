@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TRPA1 — Linhas da tabela dbo.variantes</title>
+<style>
+  :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif; }
+  body { margin: 24px; }
+  h1 { margin: 0 0 6px 0; font-size: 1.6rem; }
+  .meta { color: #444; font-size: .95rem; margin-bottom: 12px; }
+  .toolbar { display:flex; gap: 8px; align-items:center; margin: 12px 0; flex-wrap: wrap; }
+  input[type="search"] { padding: 8px 10px; border: 1px solid #ccc; border-radius: 10px; min-width: 260px; }
+  button { padding: 8px 12px; border: 1px solid #ccc; border-radius: 10px; background: #f7f7f7; cursor: pointer; }
+  button:hover { background: #eee; }
+  table { width: 100%; border-collapse: collapse; }
+  thead th { position: sticky; top: 0; background: #fafafa; border-bottom: 1px solid #ddd; text-align: left; padding: 10px; cursor: pointer; }
+  tbody td { border-bottom: 1px solid #f0f0f0; padding: 8px 10px; vertical-align: top; }
+  .sortable::after { content: " ⇅"; font-size: .8em; color: #888; }
+  .sorted-asc::after { content: " ↑"; }
+  .sorted-desc::after { content: " ↓"; }
+  .empty { padding: 16px; background: #fff6f6; border: 1px solid #ffdede; border-radius: 12px; }
+  a.btn { display:inline-block; margin: 0 8px 8px 0; padding: 6px 10px; border-radius: 10px; border:1px solid #ddd; text-decoration:none; color:#222; background:#f9f9f9; }
+  a.btn:hover { background:#f0f0f0; }
+</style>
+</head>
+<body>
+<h1>TRPA1 — Linhas da tabela dbo.variantes</h1>
+<div class="meta">Gene: <strong>TRPA1</strong> • Linhas: <strong>14</strong></div>
+<div class="toolbar">
+  <input id="busca" type="search" placeholder="Filtrar linhas... (busca global)">
+  <button id="btnCsv" type="button">Exportar CSV</button>
+  <a class="btn" href="index.html">Voltar ao índice</a>
+</div>
+<div id="wrap">
+<table id="tabela" border="0">
+<thead><tr>
+<th>Gene</th>
+<th>Chr</th>
+<th>Pos</th>
+<th>ID</th>
+<th>Ref</th>
+<th>Alt</th>
+<th>Impacto</th>
+<th>GT</th>
+<th>VAF</th>
+<th>ClinVar_ID</th>
+<th>ClinVar_Significance</th>
+<th>ClinVar_Review_Status</th>
+<th>ClinVar_Disease_Names</th>
+<th>ID_variante</th>
+<th>Qual</th>
+<th>Filtro</th>
+<th>Ensembl</th>
+<th>Alteracao_nucleotidica</th>
+<th>Alteracao_aminoacidica</th>
+<th>GQ</th>
+<th>DP</th>
+<th>AD</th>
+<th>PL</th>
+<th>HGMD</th>
+<th>Resultado</th>
+<th>Status</th>
+<th>Buscar</th>
+<th>SIFT</th>
+<th>PolyPhen</th>
+<th>Biotype</th>
+<th>Alteracao_nucleotidica_reversa</th>
+<th>Alteracao_aminoacidica_reversa</th>
+<th>Resultado_reverso</th>
+<th>encontrado_rsid</th>
+<th>gnomAD_AF_Global</th>
+<th>gnomAD_AFR_AF</th>
+<th>gnomAD_AMR_AF</th>
+<th>gnomAD_ASJ_AF</th>
+<th>gnomAD_EAS_AF</th>
+<th>gnomAD_FIN_AF</th>
+<th>gnomAD_NFE_AF</th>
+<th>gnomAD_SAS_AF</th>
+<th>gnomAD_OTH_AF</th>
+<th>PhyloP</th>
+<th>PhastCons</th>
+<th>GERP</th>
+<th>CADD_Raw</th>
+<th>CADD_Phred</th>
+<th>LOEUF</th>
+<th>Allele_String</th>
+<th>ClinVar_Disease_Count</th>
+<th>letra_inicial_gene</th>
+</tr></thead><tbody>
+<tr>
+<td>TRPA1</td>
+<td>chr8</td>
+<td>72026122</td>
+<td>rs2305018</td>
+<td>A</td>
+<td>C</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.47619</td>
+<td>1838956</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Familial episodic pain syndrome with predominantly upper body involvement</td>
+<td>23607</td>
+<td>46.6</td>
+<td>PASS</td>
+<td>ENST00000262209</td>
+<td>ENST00000262209.5:c.2938-49T&gt;G</td>
+<td></td>
+<td>46</td>
+<td>84</td>
+<td>44*40</td>
+<td>46*0*53</td>
+<td></td>
+<td>A/C</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000262209.5:c.2938-49A&gt;C</td>
+<td></td>
+<td>T/G</td>
+<td></td>
+<td>0.2286</td>
+<td>0.1523</td>
+<td>0.2568</td>
+<td>0.2336</td>
+<td>0.3451</td>
+<td>0.3347</td>
+<td>0.2502</td>
+<td>0.1366</td>
+<td>0.2072</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1.063</td>
+<td>A/C/T</td>
+<td>1</td>
+<td>T</td>
+</tr>
+<tr>
+<td>TRPA1</td>
+<td>chr8</td>
+<td>72029975</td>
+<td>rs3824151</td>
+<td>G</td>
+<td>T</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.413043</td>
+<td>1838957</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Familial episodic pain syndrome with predominantly upper body involvement</td>
+<td>23608</td>
+<td>35.8</td>
+<td>PASS</td>
+<td>ENST00000262209</td>
+<td>ENST00000262209.5:c.2869-6C&gt;A</td>
+<td></td>
+<td>34</td>
+<td>138</td>
+<td>81*57</td>
+<td>35*0*39</td>
+<td></td>
+<td>G/T</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000262209.5:c.2869-6G&gt;T</td>
+<td></td>
+<td>C/A</td>
+<td></td>
+<td>0.6285</td>
+<td>0.6564</td>
+<td>0.7412</td>
+<td>0.6493</td>
+<td>0.6933</td>
+<td>0.5523</td>
+<td>0.5896</td>
+<td>0.672</td>
+<td>0.6359</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1.063</td>
+<td>G/A/C/T</td>
+<td>1</td>
+<td>T</td>
+</tr>
+<tr>
+<td>TRPA1</td>
+<td>chr8</td>
+<td>72046564</td>
+<td>rs61757563</td>
+<td>G</td>
+<td>A</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.319149</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>23609</td>
+<td>44.2</td>
+<td>PASS</td>
+<td>ENST00000262209</td>
+<td>ENST00000262209.5:c.2010C&gt;T</td>
+<td>ENSP00000262209.4:p.Thr670=</td>
+<td>44</td>
+<td>47</td>
+<td>32*15</td>
+<td>44*0*53</td>
+<td></td>
+<td>G/A</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000262209.5:c.2010G&gt;A</td>
+<td></td>
+<td>C/T</td>
+<td></td>
+<td>0.04207</td>
+<td>0.01223</td>
+<td>0.03395</td>
+<td>0.03724</td>
+<td>0.0003876</td>
+<td>0.05349</td>
+<td>0.06622</td>
+<td>0.01564</td>
+<td>0.03232</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1.063</td>
+<td>G/A/T</td>
+<td></td>
+<td>T</td>
+</tr>
+<tr>
+<td>TRPA1</td>
+<td>chr8</td>
+<td>72050750</td>
+<td>rs2120474</td>
+<td>G</td>
+<td>A</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.32</td>
+<td>1838958</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Familial episodic pain syndrome with predominantly upper body involvement</td>
+<td>23610</td>
+<td>38.4</td>
+<td>PASS</td>
+<td>ENST00000262209</td>
+<td>ENST00000262209.5:c.1905+28C&gt;T</td>
+<td></td>
+<td>38</td>
+<td>25</td>
+<td>17*8</td>
+<td>38*0*50</td>
+<td></td>
+<td>G/A</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000262209.5:c.1905+28G&gt;A</td>
+<td></td>
+<td>C/T</td>
+<td></td>
+<td>0.6297</td>
+<td>0.6595</td>
+<td>0.7413</td>
+<td>0.6499</td>
+<td>0.6928</td>
+<td>0.5539</td>
+<td>0.5898</td>
+<td>0.674</td>
+<td>0.6365</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1.063</td>
+<td>G/A/C/T</td>
+<td>1</td>
+<td>T</td>
+</tr>
+<tr>
+<td>TRPA1</td>
+<td>chr8</td>
+<td>72053738</td>
+<td>rs3735942</td>
+<td>G</td>
+<td>A</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.392157</td>
+<td>1838959</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Familial episodic pain syndrome with predominantly upper body involvement</td>
+<td>23611</td>
+<td>50.2</td>
+<td>PASS</td>
+<td>ENST00000262209</td>
+<td>ENST00000262209.5:c.1644+15C&gt;T</td>
+<td></td>
+<td>49</td>
+<td>51</td>
+<td>31*20</td>
+<td>50*0*57</td>
+<td></td>
+<td>G/A</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000262209.5:c.1644+15G&gt;A</td>
+<td></td>
+<td>C/T</td>
+<td></td>
+<td>0.3705</td>
+<td>0.3661</td>
+<td>0.5051</td>
+<td>0.2729</td>
+<td>0.548</td>
+<td>0.4145</td>
+<td>0.3292</td>
+<td>0.3553</td>
+<td>0.3485</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1.063</td>
+<td>G/A/T</td>
+<td>1</td>
+<td>T</td>
+</tr>
+<tr>
+<td>TRPA1</td>
+<td>chr8</td>
+<td>72053767</td>
+<td>rs3735943</td>
+<td>G</td>
+<td>A</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.434483</td>
+<td>1838960</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Familial episodic pain syndrome with predominantly upper body involvement</td>
+<td>23612</td>
+<td>59.7</td>
+<td>PASS</td>
+<td>ENST00000262209</td>
+<td>ENST00000262209.5:c.1630C&gt;T</td>
+<td>ENSP00000262209.4:p.Leu544=</td>
+<td>59</td>
+<td>145</td>
+<td>82*63</td>
+<td>59*0*67</td>
+<td></td>
+<td>G/A</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000262209.5:c.1630G&gt;A</td>
+<td></td>
+<td>C/T</td>
+<td></td>
+<td>0.5194</td>
+<td>0.4996</td>
+<td>0.6374</td>
+<td>0.5317</td>
+<td>0.6917</td>
+<td>0.5041</td>
+<td>0.4902</td>
+<td>0.5704</td>
+<td>0.5209</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1.063</td>
+<td>G/A/C</td>
+<td>1</td>
+<td>T</td>
+</tr>
+<tr>
+<td>TRPA1</td>
+<td>chr8</td>
+<td>72053889</td>
+<td>rs3735944</td>
+<td>A</td>
+<td>G</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.573034</td>
+<td>1838961</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Familial episodic pain syndrome with predominantly upper body involvement</td>
+<td>23613</td>
+<td>47.8</td>
+<td>PASS</td>
+<td>ENST00000262209</td>
+<td>ENST00000262209.5:c.1530-22T&gt;C</td>
+<td></td>
+<td>44</td>
+<td>89</td>
+<td>38*51</td>
+<td>47*0*46</td>
+<td></td>
+<td>A/G</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000262209.5:c.1530-22A&gt;G</td>
+<td></td>
+<td>T/C</td>
+<td></td>
+<td>0.5192</td>
+<td>0.4991</td>
+<td>0.6373</td>
+<td>0.5317</td>
+<td>0.6918</td>
+<td>0.5036</td>
+<td>0.4901</td>
+<td>0.5705</td>
+<td>0.5199</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1.063</td>
+<td>A/G/T</td>
+<td>1</td>
+<td>T</td>
+</tr>
+<tr>
+<td>TRPA1</td>
+<td>chr8</td>
+<td>72055862</td>
+<td></td>
+<td>GA</td>
+<td>G</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.513514</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>23614</td>
+<td>36.2</td>
+<td>PASS</td>
+<td>ENST00000262209</td>
+<td>ENST00000262209.5:c.1195-8_1195-7del</td>
+<td></td>
+<td>36</td>
+<td>37</td>
+<td>18*19</td>
+<td>36*0*47</td>
+<td></td>
+<td>GA/G</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td></td>
+<td></td>
+<td>GA/C</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1.063000</td>
+<td></td>
+<td></td>
+<td>T</td>
+</tr>
+<tr>
+<td>TRPA1</td>
+<td>chr8</td>
+<td>72057028</td>
+<td>rs3779752</td>
+<td>A</td>
+<td>C</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.518519</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>23615</td>
+<td>46.3</td>
+<td>PASS</td>
+<td>ENST00000262209</td>
+<td>ENST00000262209.5:c.1094-11T&gt;G</td>
+<td></td>
+<td>44</td>
+<td>54</td>
+<td>26*28</td>
+<td>46*0*49</td>
+<td></td>
+<td>A/C</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000262209.5:c.1094-11A&gt;C</td>
+<td></td>
+<td>T/G</td>
+<td></td>
+<td>0.1314</td>
+<td>0.03109</td>
+<td>0.1769</td>
+<td>0.1143</td>
+<td>0.2887</td>
+<td>0.2341</td>
+<td>0.1571</td>
+<td>0.104</td>
+<td>0.1132</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1.063</td>
+<td>A/C/G/T</td>
+<td></td>
+<td>T</td>
+</tr>
+<tr>
+<td>TRPA1</td>
+<td>chr8</td>
+<td>72059344</td>
+<td>rs11423229</td>
+<td>A</td>
+<td>C</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.285714</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>23616</td>
+<td>43.7</td>
+<td>PASS</td>
+<td>ENST00000262209</td>
+<td>ENST00000262209.5:c.993+46T&gt;G</td>
+<td></td>
+<td>44</td>
+<td>21</td>
+<td>15*6</td>
+<td>43*0*60</td>
+<td></td>
+<td>A/C</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000262209.5:c.993+46A&gt;C</td>
+<td></td>
+<td>T/G</td>
+<td></td>
+<td>0.371</td>
+<td>0.369</td>
+<td>0.5051</td>
+<td>0.2723</td>
+<td>0.5473</td>
+<td>0.4122</td>
+<td>0.329</td>
+<td>0.3556</td>
+<td>0.3496</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1.063</td>
+<td>A/C</td>
+<td></td>
+<td>T</td>
+</tr>
+<tr>
+<td>TRPA1</td>
+<td>chr8</td>
+<td>72063566</td>
+<td>rs7819749</td>
+<td>T</td>
+<td>G</td>
+<td>MODERATE</td>
+<td>1/1</td>
+<td>1</td>
+<td>1838962</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Familial episodic pain syndrome with predominantly upper body involvement</td>
+<td>23617</td>
+<td>51.2</td>
+<td>PASS</td>
+<td>ENST00000262209</td>
+<td>ENST00000262209.5:c.558A&gt;C</td>
+<td>ENSP00000262209.4:p.Lys186Asn</td>
+<td>37</td>
+<td>88</td>
+<td>0*88</td>
+<td>51*36*0</td>
+<td></td>
+<td>G/G</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000262209.5:c.558T&gt;G</td>
+<td>ENSP00000262209.4:p.Asn186Lys</td>
+<td>C/C</td>
+<td></td>
+<td>0.7227</td>
+<td>0.9176</td>
+<td>0.744</td>
+<td>0.6763</td>
+<td>0.9778</td>
+<td>0.6152</td>
+<td>0.5991</td>
+<td>0.7507</td>
+<td>0.7085</td>
+<td>-0.535</td>
+<td>0.145</td>
+<td>-11.2</td>
+<td></td>
+<td></td>
+<td>1.063</td>
+<td>T/A/C/G</td>
+<td>1</td>
+<td>T</td>
+</tr>
+<tr>
+<td>TRPA1</td>
+<td>chr8</td>
+<td>72065468</td>
+<td>rs920829</td>
+<td>C</td>
+<td>T</td>
+<td>MODERATE</td>
+<td>0/1</td>
+<td>0.173913</td>
+<td>3984696</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>TRPA1-related disorder</td>
+<td>23618</td>
+<td>11.0</td>
+<td>PASS</td>
+<td>ENST00000262209</td>
+<td>ENST00000262209.5:c.535G&gt;A</td>
+<td>ENSP00000262209.4:p.Glu179Lys</td>
+<td>11</td>
+<td>69</td>
+<td>57*12</td>
+<td>10*0*38</td>
+<td>CM112389</td>
+<td>C/T</td>
+<td>Het</td>
+<td></td>
+<td>deleterious</td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000262209.5:c.535C&gt;T</td>
+<td>ENSP00000262209.4:p.Lys179Glu</td>
+<td>G/A</td>
+<td></td>
+<td>0.1616</td>
+<td>0.2757</td>
+<td>0.08912</td>
+<td>0.1406</td>
+<td>0.2857</td>
+<td>0.1102</td>
+<td>0.108</td>
+<td>0.1801</td>
+<td>0.1566</td>
+<td>6.8</td>
+<td>1</td>
+<td>5.39</td>
+<td></td>
+<td></td>
+<td>1.063</td>
+<td>C/T</td>
+<td>1</td>
+<td>T</td>
+</tr>
+<tr>
+<td>TRPA1</td>
+<td>chr8</td>
+<td>72069083</td>
+<td>rs28546865</td>
+<td>G</td>
+<td>A</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.47619</td>
+<td>3979509</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>TRPA1-related disorder</td>
+<td>23619</td>
+<td>55.6</td>
+<td>PASS</td>
+<td>ENST00000262209</td>
+<td>ENST00000262209.5:c.384C&gt;T</td>
+<td>ENSP00000262209.4:p.Asn128=</td>
+<td>54</td>
+<td>63</td>
+<td>33*30</td>
+<td>55*0*60</td>
+<td></td>
+<td>G/A</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000262209.5:c.384G&gt;A</td>
+<td></td>
+<td>C/T</td>
+<td></td>
+<td>0.1614</td>
+<td>0.2756</td>
+<td>0.08909</td>
+<td>0.1409</td>
+<td>0.2862</td>
+<td>0.1094</td>
+<td>0.1078</td>
+<td>0.1795</td>
+<td>0.1569</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1.063</td>
+<td>G/A/T</td>
+<td>1</td>
+<td>T</td>
+</tr>
+<tr>
+<td>TRPA1</td>
+<td>chr8</td>
+<td>72069092</td>
+<td>rs1811457</td>
+<td>A</td>
+<td>G</td>
+<td>LOW</td>
+<td>1/1</td>
+<td>1</td>
+<td>1636361</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Familial episodic pain syndrome with predominantly upper body involvement</td>
+<td>23620</td>
+<td>54.2</td>
+<td>PASS</td>
+<td>ENST00000262209</td>
+<td>ENST00000262209.5:c.375T&gt;C</td>
+<td>ENSP00000262209.4:p.Asn125=</td>
+<td>52</td>
+<td>76</td>
+<td>0*76</td>
+<td>54*55*0</td>
+<td></td>
+<td>G/G</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000262209.5:c.375A&gt;G</td>
+<td></td>
+<td>C/C</td>
+<td></td>
+<td>0.7062</td>
+<td>0.8598</td>
+<td>0.7386</td>
+<td>0.6767</td>
+<td>0.9778</td>
+<td>0.6147</td>
+<td>0.599</td>
+<td>0.7506</td>
+<td>0.6946</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1.063</td>
+<td>A/C/G/T</td>
+<td>2</td>
+<td>T</td>
+</tr>
+</tbody></table></div>
+<script>
+(function() {{
+  const table = document.getElementById('tabela');
+  const busca = document.getElementById('busca');
+  const btnCsv = document.getElementById('btnCsv');
+  if (!table) return;
+  const getCellText = (tr, idx) => (tr.cells[idx]?.innerText || "").trim();
+  const isNumber = (v) => /^-?\d+(\.\d+)?$/.test(v.replace(/\s+/g, '').replace(',', '.'));
+
+  Array.from(table.tHead.rows[0].cells).forEach((th, idx) => {{
+    th.classList.add('sortable');
+    th.addEventListener('click', () => {{
+      const tbody = table.tBodies[0];
+      const rows = Array.from(tbody.rows);
+      const current = th.classList.contains('sorted-asc') ? 'asc'
+                    : th.classList.contains('sorted-desc') ? 'desc' : null;
+      Array.from(table.tHead.rows[0].cells).forEach(h => h.classList.remove('sorted-asc','sorted-desc'));
+      const dir = current === 'asc' ? -1 : 1;
+      const colIsNum = rows.every(tr => isNumber(getCellText(tr, idx)) || getCellText(tr, idx) === "");
+      rows.sort((a,b) => {{
+        let A = getCellText(a, idx);
+        let B = getCellText(b, idx);
+        if (colIsNum) {{ A = parseFloat(A.replace(',', '.')) || 0; B = parseFloat(B.replace(',', '.')) || 0; }}
+        else {{ A = A.toLowerCase(); B = B.toLowerCase(); }}
+        if (A < B) return -1 * dir;
+        if (A > B) return  1 * dir;
+        return 0;
+      }});
+      rows.forEach(r => tbody.appendChild(r));
+      th.classList.add(dir === 1 ? 'sorted-asc' : 'sorted-desc');
+    }});
+  }});
+
+  busca?.addEventListener('input', () => {{
+    const q = busca.value.toLowerCase();
+    const rows = Array.from(table.tBodies[0].rows);
+    rows.forEach(tr => {{
+      const txt = tr.innerText.toLowerCase();
+      tr.style.display = txt.includes(q) ? '' : 'none';
+    }});
+  }});
+
+  btnCsv?.addEventListener('click', () => {{
+    const rows = [];
+    const selRows = Array.from(table.querySelectorAll('tr'));
+    selRows.forEach((tr, i) => {{
+      if (i>0 && tr.style.display === 'none') return;
+      const cells = Array.from(tr.cells).map(td => {{
+        const t = td.innerText.replace(/"/g,'""');
+        return /[",\n]/.test(t) ? `"${{t}}"` : t;
+      }});
+      rows.push(cells.join(','));
+    }});
+    const blob = new Blob([rows.join('\n')], {{type: 'text/csv;charset=utf-8;'}});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = (document.title || 'export') + '.csv';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(() => URL.revokeObjectURL(url), 5000);
+  }});
+}})();
+</script>
+</body>
+</html>
