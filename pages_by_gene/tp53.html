@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TP53 — Linhas da tabela dbo.variantes</title>
+<style>
+  :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif; }
+  body { margin: 24px; }
+  h1 { margin: 0 0 6px 0; font-size: 1.6rem; }
+  .meta { color: #444; font-size: .95rem; margin-bottom: 12px; }
+  .toolbar { display:flex; gap: 8px; align-items:center; margin: 12px 0; flex-wrap: wrap; }
+  input[type="search"] { padding: 8px 10px; border: 1px solid #ccc; border-radius: 10px; min-width: 260px; }
+  button { padding: 8px 12px; border: 1px solid #ccc; border-radius: 10px; background: #f7f7f7; cursor: pointer; }
+  button:hover { background: #eee; }
+  table { width: 100%; border-collapse: collapse; }
+  thead th { position: sticky; top: 0; background: #fafafa; border-bottom: 1px solid #ddd; text-align: left; padding: 10px; cursor: pointer; }
+  tbody td { border-bottom: 1px solid #f0f0f0; padding: 8px 10px; vertical-align: top; }
+  .sortable::after { content: " ⇅"; font-size: .8em; color: #888; }
+  .sorted-asc::after { content: " ↑"; }
+  .sorted-desc::after { content: " ↓"; }
+  .empty { padding: 16px; background: #fff6f6; border: 1px solid #ffdede; border-radius: 12px; }
+  a.btn { display:inline-block; margin: 0 8px 8px 0; padding: 6px 10px; border-radius: 10px; border:1px solid #ddd; text-decoration:none; color:#222; background:#f9f9f9; }
+  a.btn:hover { background:#f0f0f0; }
+</style>
+</head>
+<body>
+<h1>TP53 — Linhas da tabela dbo.variantes</h1>
+<div class="meta">Gene: <strong>TP53</strong> • Linhas: <strong>8</strong></div>
+<div class="toolbar">
+  <input id="busca" type="search" placeholder="Filtrar linhas... (busca global)">
+  <button id="btnCsv" type="button">Exportar CSV</button>
+  <a class="btn" href="index.html">Voltar ao índice</a>
+</div>
+<div id="wrap">
+<table id="tabela" border="0">
+<thead><tr>
+<th>Gene</th>
+<th>Chr</th>
+<th>Pos</th>
+<th>ID</th>
+<th>Ref</th>
+<th>Alt</th>
+<th>Impacto</th>
+<th>GT</th>
+<th>VAF</th>
+<th>ClinVar_ID</th>
+<th>ClinVar_Significance</th>
+<th>ClinVar_Review_Status</th>
+<th>ClinVar_Disease_Names</th>
+<th>ID_variante</th>
+<th>Qual</th>
+<th>Filtro</th>
+<th>Ensembl</th>
+<th>Alteracao_nucleotidica</th>
+<th>Alteracao_aminoacidica</th>
+<th>GQ</th>
+<th>DP</th>
+<th>AD</th>
+<th>PL</th>
+<th>HGMD</th>
+<th>Resultado</th>
+<th>Status</th>
+<th>Buscar</th>
+<th>SIFT</th>
+<th>PolyPhen</th>
+<th>Biotype</th>
+<th>Alteracao_nucleotidica_reversa</th>
+<th>Alteracao_aminoacidica_reversa</th>
+<th>Resultado_reverso</th>
+<th>encontrado_rsid</th>
+<th>gnomAD_AF_Global</th>
+<th>gnomAD_AFR_AF</th>
+<th>gnomAD_AMR_AF</th>
+<th>gnomAD_ASJ_AF</th>
+<th>gnomAD_EAS_AF</th>
+<th>gnomAD_FIN_AF</th>
+<th>gnomAD_NFE_AF</th>
+<th>gnomAD_SAS_AF</th>
+<th>gnomAD_OTH_AF</th>
+<th>PhyloP</th>
+<th>PhastCons</th>
+<th>GERP</th>
+<th>CADD_Raw</th>
+<th>CADD_Phred</th>
+<th>LOEUF</th>
+<th>Allele_String</th>
+<th>ClinVar_Disease_Count</th>
+<th>letra_inicial_gene</th>
+</tr></thead><tbody>
+<tr>
+<td>TP53</td>
+<td>chr17</td>
+<td>7666224</td>
+<td>rs74351250</td>
+<td>G</td>
+<td>A</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.512195</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>44107</td>
+<td>48.1</td>
+<td>PASS</td>
+<td>ENST00000269305</td>
+<td></td>
+<td></td>
+<td>47</td>
+<td>41</td>
+<td>20*21</td>
+<td>48*0*53</td>
+<td></td>
+<td>G/A</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td></td>
+<td></td>
+<td>C/T</td>
+<td></td>
+<td>0.02674</td>
+<td>0.008698</td>
+<td>0.02879</td>
+<td>0.03262</td>
+<td>0.0003915</td>
+<td>0.01897</td>
+<td>0.04216</td>
+<td>0.003963</td>
+<td>0.02431</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.449</td>
+<td>G/A</td>
+<td></td>
+<td>T</td>
+</tr>
+<tr>
+<td>TP53</td>
+<td>chr17</td>
+<td>7674326</td>
+<td>rs17880604</td>
+<td>C</td>
+<td>G</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.504348</td>
+<td>205748</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Hereditary breast ovarian cancer syndrome; Hereditary cancer-predisposing syndrome; Li-Fraumeni syndrome; Li-Fraumeni syndrome 1</td>
+<td>44108</td>
+<td>50.2</td>
+<td>PASS</td>
+<td>ENST00000269305</td>
+<td>ENST00000269305.9:c.673-36G&gt;C</td>
+<td></td>
+<td>45</td>
+<td>115</td>
+<td>57*58</td>
+<td>50*0*47</td>
+<td>CS004882</td>
+<td>C/G</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000269305.9:c.673-36C&gt;G</td>
+<td></td>
+<td>G/C</td>
+<td></td>
+<td>0.01168</td>
+<td>0.002676</td>
+<td>0.009693</td>
+<td>0.01445</td>
+<td>0.0003911</td>
+<td>0.005387</td>
+<td>0.01929</td>
+<td>0.005261</td>
+<td>0.01299</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.449</td>
+<td>C/A/G/T</td>
+<td>6</td>
+<td>T</td>
+</tr>
+<tr>
+<td>TP53</td>
+<td>chr17</td>
+<td>7674797</td>
+<td>rs1625895</td>
+<td>T</td>
+<td>C</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td>242317</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Hereditary cancer-predisposing syndrome; Li-Fraumeni syndrome 1</td>
+<td>44109</td>
+<td>56.8</td>
+<td>PASS</td>
+<td>ENST00000269305</td>
+<td>ENST00000269305.9:c.672+62A&gt;G</td>
+<td></td>
+<td>44</td>
+<td>94</td>
+<td>0*94</td>
+<td>56*43*0</td>
+<td></td>
+<td>C/C</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000269305.9:c.672+62T&gt;C</td>
+<td></td>
+<td>G/G</td>
+<td></td>
+<td>0.8305</td>
+<td>0.713</td>
+<td>0.8846</td>
+<td>0.8401</td>
+<td>0.9664</td>
+<td>0.8899</td>
+<td>0.8726</td>
+<td>0.7986</td>
+<td>0.8344</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.449</td>
+<td>T/A/C/G</td>
+<td>4</td>
+<td>T</td>
+</tr>
+<tr>
+<td>TP53</td>
+<td>chr17</td>
+<td>7675327</td>
+<td>rs2909430</td>
+<td>C</td>
+<td>T</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>0.996564</td>
+<td>507536</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Hereditary cancer-predisposing syndrome; Li-Fraumeni syndrome 1</td>
+<td>44110</td>
+<td>57.5</td>
+<td>PASS</td>
+<td>ENST00000269305</td>
+<td>ENST00000269305.9:c.376-91G&gt;A</td>
+<td></td>
+<td>47</td>
+<td>291</td>
+<td>0*290</td>
+<td>57*47*0</td>
+<td></td>
+<td>T/T</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000269305.9:c.376-91C&gt;T</td>
+<td></td>
+<td>A/A</td>
+<td></td>
+<td>0.8373</td>
+<td>0.7365</td>
+<td>0.8873</td>
+<td>0.8405</td>
+<td>0.9667</td>
+<td>0.8895</td>
+<td>0.8726</td>
+<td>0.7998</td>
+<td>0.8392</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.449</td>
+<td>C/G/T</td>
+<td>4</td>
+<td>T</td>
+</tr>
+<tr>
+<td>TP53</td>
+<td>chr17</td>
+<td>7675393</td>
+<td></td>
+<td>CTTT</td>
+<td>C</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>0.488889</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>44111</td>
+<td>33.2</td>
+<td>PASS</td>
+<td>ENST00000269305</td>
+<td>ENST00000269305.9:c.376-157_376-154del</td>
+<td></td>
+<td>14</td>
+<td>90</td>
+<td>5*44</td>
+<td>33*14*0</td>
+<td></td>
+<td>C/C</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td></td>
+<td></td>
+<td>G/G</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.449000</td>
+<td></td>
+<td></td>
+<td>T</td>
+</tr>
+<tr>
+<td>TP53</td>
+<td>chr17</td>
+<td>7676154</td>
+<td>rs1042522</td>
+<td>G</td>
+<td>C</td>
+<td>MODERATE</td>
+<td>1/1</td>
+<td>1</td>
+<td>152112</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td></td>
+<td>44112</td>
+<td>59.9</td>
+<td>PASS</td>
+<td>ENST00000269305</td>
+<td>ENST00000269305.9:c.215C&gt;G</td>
+<td>ENSP00000269305.4:p.Pro72Arg</td>
+<td>48</td>
+<td>161</td>
+<td>0*161</td>
+<td>59*47*0</td>
+<td>CM961374</td>
+<td>C/C</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000269305.9:c.215G&gt;C</td>
+<td>ENSP00000269305.4:p.Arg72Pro</td>
+<td>G/G</td>
+<td></td>
+<td>0.6268</td>
+<td>0.3866</td>
+<td>0.6995</td>
+<td>0.7206</td>
+<td>0.5756</td>
+<td>0.7357</td>
+<td>0.745</td>
+<td>0.5231</td>
+<td>0.6521</td>
+<td>1.438</td>
+<td>0.003</td>
+<td>1.87</td>
+<td></td>
+<td></td>
+<td>0.449</td>
+<td>G/A/C/T</td>
+<td>1</td>
+<td>T</td>
+</tr>
+<tr>
+<td>TP53</td>
+<td>chr17</td>
+<td>7676325</td>
+<td>rs745875962</td>
+<td>CCCCCAGCCCTCCAGGT</td>
+<td>C</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td>2268909</td>
+<td>likely-benign</td>
+<td>criteria_provided_single_submitter</td>
+<td></td>
+<td>44113</td>
+<td>55.6</td>
+<td>PASS</td>
+<td>ENST00000269305</td>
+<td>ENST00000269305.9:c.96+41_97-53del</td>
+<td></td>
+<td>47</td>
+<td>177</td>
+<td>0*177</td>
+<td>55*47*0</td>
+<td></td>
+<td>C/C</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td></td>
+<td></td>
+<td>G/G</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.449000</td>
+<td>CCCCCAGCCCTCCAGGTCCCC/CCCC</td>
+<td>1</td>
+<td>T</td>
+</tr>
+<tr>
+<td>TP53</td>
+<td>chr17</td>
+<td>7676483</td>
+<td>rs1642785</td>
+<td>G</td>
+<td>C</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td>250671</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Hereditary breast ovarian cancer syndrome; Hereditary cancer-predisposing syndrome; Li-Fraumeni syndrome; Li-Fraumeni syndrome 1</td>
+<td>44114</td>
+<td>56.1</td>
+<td>PASS</td>
+<td>ENST00000269305</td>
+<td>ENST00000269305.9:c.74+38C&gt;G</td>
+<td></td>
+<td>43</td>
+<td>139</td>
+<td>0*139</td>
+<td>56*42*0</td>
+<td>CR1413385</td>
+<td>C/C</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000269305.9:c.74+38G&gt;C</td>
+<td></td>
+<td>G/G</td>
+<td></td>
+<td>0.6598</td>
+<td>0.5147</td>
+<td>0.7106</td>
+<td>0.7153</td>
+<td>0.5729</td>
+<td>0.726</td>
+<td>0.7395</td>
+<td>0.521</td>
+<td>0.6762</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.449</td>
+<td>G/A/C/T</td>
+<td>6</td>
+<td>T</td>
+</tr>
+</tbody></table></div>
+<script>
+(function() {{
+  const table = document.getElementById('tabela');
+  const busca = document.getElementById('busca');
+  const btnCsv = document.getElementById('btnCsv');
+  if (!table) return;
+  const getCellText = (tr, idx) => (tr.cells[idx]?.innerText || "").trim();
+  const isNumber = (v) => /^-?\d+(\.\d+)?$/.test(v.replace(/\s+/g, '').replace(',', '.'));
+
+  Array.from(table.tHead.rows[0].cells).forEach((th, idx) => {{
+    th.classList.add('sortable');
+    th.addEventListener('click', () => {{
+      const tbody = table.tBodies[0];
+      const rows = Array.from(tbody.rows);
+      const current = th.classList.contains('sorted-asc') ? 'asc'
+                    : th.classList.contains('sorted-desc') ? 'desc' : null;
+      Array.from(table.tHead.rows[0].cells).forEach(h => h.classList.remove('sorted-asc','sorted-desc'));
+      const dir = current === 'asc' ? -1 : 1;
+      const colIsNum = rows.every(tr => isNumber(getCellText(tr, idx)) || getCellText(tr, idx) === "");
+      rows.sort((a,b) => {{
+        let A = getCellText(a, idx);
+        let B = getCellText(b, idx);
+        if (colIsNum) {{ A = parseFloat(A.replace(',', '.')) || 0; B = parseFloat(B.replace(',', '.')) || 0; }}
+        else {{ A = A.toLowerCase(); B = B.toLowerCase(); }}
+        if (A < B) return -1 * dir;
+        if (A > B) return  1 * dir;
+        return 0;
+      }});
+      rows.forEach(r => tbody.appendChild(r));
+      th.classList.add(dir === 1 ? 'sorted-asc' : 'sorted-desc');
+    }});
+  }});
+
+  busca?.addEventListener('input', () => {{
+    const q = busca.value.toLowerCase();
+    const rows = Array.from(table.tBodies[0].rows);
+    rows.forEach(tr => {{
+      const txt = tr.innerText.toLowerCase();
+      tr.style.display = txt.includes(q) ? '' : 'none';
+    }});
+  }});
+
+  btnCsv?.addEventListener('click', () => {{
+    const rows = [];
+    const selRows = Array.from(table.querySelectorAll('tr'));
+    selRows.forEach((tr, i) => {{
+      if (i>0 && tr.style.display === 'none') return;
+      const cells = Array.from(tr.cells).map(td => {{
+        const t = td.innerText.replace(/"/g,'""');
+        return /[",\n]/.test(t) ? `"${{t}}"` : t;
+      }});
+      rows.push(cells.join(','));
+    }});
+    const blob = new Blob([rows.join('\n')], {{type: 'text/csv;charset=utf-8;'}});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = (document.title || 'export') + '.csv';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(() => URL.revokeObjectURL(url), 5000);
+  }});
+}})();
+</script>
+</body>
+</html>
