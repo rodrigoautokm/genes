@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PTPN14 — Linhas da tabela dbo.variantes</title>
+<style>
+  :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif; }
+  body { margin: 24px; }
+  h1 { margin: 0 0 6px 0; font-size: 1.6rem; }
+  .meta { color: #444; font-size: .95rem; margin-bottom: 12px; }
+  .toolbar { display:flex; gap: 8px; align-items:center; margin: 12px 0; flex-wrap: wrap; }
+  input[type="search"] { padding: 8px 10px; border: 1px solid #ccc; border-radius: 10px; min-width: 260px; }
+  button { padding: 8px 12px; border: 1px solid #ccc; border-radius: 10px; background: #f7f7f7; cursor: pointer; }
+  button:hover { background: #eee; }
+  table { width: 100%; border-collapse: collapse; }
+  thead th { position: sticky; top: 0; background: #fafafa; border-bottom: 1px solid #ddd; text-align: left; padding: 10px; cursor: pointer; }
+  tbody td { border-bottom: 1px solid #f0f0f0; padding: 8px 10px; vertical-align: top; }
+  .sortable::after { content: " ⇅"; font-size: .8em; color: #888; }
+  .sorted-asc::after { content: " ↑"; }
+  .sorted-desc::after { content: " ↓"; }
+  .empty { padding: 16px; background: #fff6f6; border: 1px solid #ffdede; border-radius: 12px; }
+  a.btn { display:inline-block; margin: 0 8px 8px 0; padding: 6px 10px; border-radius: 10px; border:1px solid #ddd; text-decoration:none; color:#222; background:#f9f9f9; }
+  a.btn:hover { background:#f0f0f0; }
+</style>
+</head>
+<body>
+<h1>PTPN14 — Linhas da tabela dbo.variantes</h1>
+<div class="meta">Gene: <strong>PTPN14</strong> • Linhas: <strong>7</strong></div>
+<div class="toolbar">
+  <input id="busca" type="search" placeholder="Filtrar linhas... (busca global)">
+  <button id="btnCsv" type="button">Exportar CSV</button>
+  <a class="btn" href="index.html">Voltar ao índice</a>
+</div>
+<div id="wrap">
+<table id="tabela" border="0">
+<thead><tr>
+<th>Gene</th>
+<th>Chr</th>
+<th>Pos</th>
+<th>ID</th>
+<th>Ref</th>
+<th>Alt</th>
+<th>Impacto</th>
+<th>GT</th>
+<th>VAF</th>
+<th>ClinVar_ID</th>
+<th>ClinVar_Significance</th>
+<th>ClinVar_Review_Status</th>
+<th>ClinVar_Disease_Names</th>
+<th>ID_variante</th>
+<th>Qual</th>
+<th>Filtro</th>
+<th>Ensembl</th>
+<th>Alteracao_nucleotidica</th>
+<th>Alteracao_aminoacidica</th>
+<th>GQ</th>
+<th>DP</th>
+<th>AD</th>
+<th>PL</th>
+<th>HGMD</th>
+<th>Resultado</th>
+<th>Status</th>
+<th>Buscar</th>
+<th>SIFT</th>
+<th>PolyPhen</th>
+<th>Biotype</th>
+<th>Alteracao_nucleotidica_reversa</th>
+<th>Alteracao_aminoacidica_reversa</th>
+<th>Resultado_reverso</th>
+<th>encontrado_rsid</th>
+<th>gnomAD_AF_Global</th>
+<th>gnomAD_AFR_AF</th>
+<th>gnomAD_AMR_AF</th>
+<th>gnomAD_ASJ_AF</th>
+<th>gnomAD_EAS_AF</th>
+<th>gnomAD_FIN_AF</th>
+<th>gnomAD_NFE_AF</th>
+<th>gnomAD_SAS_AF</th>
+<th>gnomAD_OTH_AF</th>
+<th>PhyloP</th>
+<th>PhastCons</th>
+<th>GERP</th>
+<th>CADD_Raw</th>
+<th>CADD_Phred</th>
+<th>LOEUF</th>
+<th>Allele_String</th>
+<th>ClinVar_Disease_Count</th>
+<th>letra_inicial_gene</th>
+</tr></thead><tbody>
+<tr>
+<td>PTPN14</td>
+<td>chr1</td>
+<td>214369476</td>
+<td>rs1135352</td>
+<td>T</td>
+<td>C</td>
+<td>LOW</td>
+<td>1/1</td>
+<td>1</td>
+<td>1674759</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Lymphedema-posterior choanal atresia syndrome</td>
+<td>4635</td>
+<td>62.4</td>
+<td>PASS</td>
+<td>ENST00000366956</td>
+<td>ENST00000366956.10:c.3252A&gt;G</td>
+<td>ENSP00000355923.4:p.Glu1084=</td>
+<td>42</td>
+<td>90</td>
+<td>0*90</td>
+<td>62*42*0</td>
+<td></td>
+<td>C/C</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000366956.10:c.3252T&gt;C</td>
+<td></td>
+<td>G/G</td>
+<td></td>
+<td>0.8076</td>
+<td>0.9325</td>
+<td>0.6931</td>
+<td>0.7105</td>
+<td>0.6327</td>
+<td>0.7833</td>
+<td>0.784</td>
+<td>0.7805</td>
+<td>0.7644</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.523</td>
+<td>T/A/C</td>
+<td>2</td>
+<td>P</td>
+</tr>
+<tr>
+<td>PTPN14</td>
+<td>chr1</td>
+<td>214377933</td>
+<td>rs3013451</td>
+<td>G</td>
+<td>A</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td>1666657</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Lymphedema-posterior choanal atresia syndrome</td>
+<td>4636</td>
+<td>54.5</td>
+<td>PASS</td>
+<td>ENST00000366956</td>
+<td>ENST00000366956.10:c.2688+26C&gt;T</td>
+<td></td>
+<td>42</td>
+<td>62</td>
+<td>0*62</td>
+<td>54*42*0</td>
+<td></td>
+<td>A/A</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000366956.10:c.2688+26G&gt;A</td>
+<td></td>
+<td>T/T</td>
+<td></td>
+<td>0.8172</td>
+<td>0.9433</td>
+<td>0.6932</td>
+<td>0.7123</td>
+<td>0.6306</td>
+<td>0.8485</td>
+<td>0.7876</td>
+<td>0.7779</td>
+<td>0.7688</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.523</td>
+<td>G/A/T</td>
+<td>2</td>
+<td>P</td>
+</tr>
+<tr>
+<td>PTPN14</td>
+<td>chr1</td>
+<td>214390997</td>
+<td>rs7550799</td>
+<td>T</td>
+<td>C</td>
+<td>LOW</td>
+<td>1/1</td>
+<td>1</td>
+<td>1645177</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Lymphedema-posterior choanal atresia syndrome</td>
+<td>4637</td>
+<td>57.3</td>
+<td>PASS</td>
+<td>ENST00000366956</td>
+<td>ENST00000366956.10:c.978A&gt;G</td>
+<td>ENSP00000355923.4:p.Arg326=</td>
+<td>50</td>
+<td>63</td>
+<td>0*63</td>
+<td>57*50*0</td>
+<td></td>
+<td>C/C</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000366956.10:c.978T&gt;C</td>
+<td></td>
+<td>G/G</td>
+<td></td>
+<td>0.8168</td>
+<td>0.9587</td>
+<td>0.698</td>
+<td>0.7278</td>
+<td>0.6274</td>
+<td>0.7697</td>
+<td>0.79</td>
+<td>0.7644</td>
+<td>0.7756</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.523</td>
+<td>T/A/C</td>
+<td>2</td>
+<td>P</td>
+</tr>
+<tr>
+<td>PTPN14</td>
+<td>chr1</td>
+<td>214393670</td>
+<td></td>
+<td>CG</td>
+<td>C</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>4638</td>
+<td>54.5</td>
+<td>PASS</td>
+<td>ENST00000366956</td>
+<td>ENST00000366956.10:c.929+24_929+25del</td>
+<td></td>
+<td>40</td>
+<td>40</td>
+<td>0*40</td>
+<td>54*39*0</td>
+<td></td>
+<td>C/C</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td></td>
+<td></td>
+<td>G/G</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.523000</td>
+<td></td>
+<td></td>
+<td>P</td>
+</tr>
+<tr>
+<td>PTPN14</td>
+<td>chr1</td>
+<td>214397908</td>
+<td>rs11580603</td>
+<td>A</td>
+<td>C</td>
+<td>LOW</td>
+<td>1/1</td>
+<td>1</td>
+<td>1685304</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Lymphedema-posterior choanal atresia syndrome</td>
+<td>4639</td>
+<td>55.0</td>
+<td>PASS</td>
+<td>ENST00000366956</td>
+<td>ENST00000366956.10:c.758+5T&gt;G</td>
+<td></td>
+<td>37</td>
+<td>48</td>
+<td>0*48</td>
+<td>54*37*0</td>
+<td></td>
+<td>C/C</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000366956.10:c.758+5A&gt;C</td>
+<td></td>
+<td>G/G</td>
+<td></td>
+<td>0.3753</td>
+<td>0.3456</td>
+<td>0.3885</td>
+<td>0.4438</td>
+<td>0.4457</td>
+<td>0.3754</td>
+<td>0.3912</td>
+<td>0.2236</td>
+<td>0.3917</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.523</td>
+<td>A/C</td>
+<td>2</td>
+<td>P</td>
+</tr>
+<tr>
+<td>PTPN14</td>
+<td>chr1</td>
+<td>214464829</td>
+<td>rs10864100</td>
+<td>C</td>
+<td>T</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td>1651786</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Lymphedema-posterior choanal atresia syndrome</td>
+<td>4640</td>
+<td>40.8</td>
+<td>PASS</td>
+<td>ENST00000366956</td>
+<td>ENST00000366956.10:c.-26G&gt;A</td>
+<td></td>
+<td>26</td>
+<td>62</td>
+<td>0*62</td>
+<td>40*26*0</td>
+<td></td>
+<td>T/T</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td></td>
+<td></td>
+<td>A/A</td>
+<td></td>
+<td>0.8269</td>
+<td>0.8924</td>
+<td>0.8339</td>
+<td>0.7964</td>
+<td>0.7796</td>
+<td>0.778</td>
+<td>0.8009</td>
+<td>0.7705</td>
+<td>0.8318</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.523</td>
+<td>C/G/T</td>
+<td>2</td>
+<td>P</td>
+</tr>
+<tr>
+<td>PTPN14</td>
+<td>chr1</td>
+<td>214551325</td>
+<td>rs3806315</td>
+<td>G</td>
+<td>A</td>
+<td>MODIFIER</td>
+<td>0/1</td>
+<td>0.625</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>4641</td>
+<td>52.4</td>
+<td>PASS</td>
+<td>ENST00000366956</td>
+<td>ENST00000366956.10:c.-297C&gt;T</td>
+<td></td>
+<td>46</td>
+<td>80</td>
+<td>30*50</td>
+<td>52*0*47</td>
+<td></td>
+<td>G/A</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td></td>
+<td></td>
+<td>C/T</td>
+<td></td>
+<td>0.4411</td>
+<td>0.214</td>
+<td>0.3564</td>
+<td>0.5</td>
+<td>0.09518</td>
+<td>0.644</td>
+<td>0.5952</td>
+<td>0.3467</td>
+<td>0.4173</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.523</td>
+<td>G/A/C</td>
+<td></td>
+<td>P</td>
+</tr>
+</tbody></table></div>
+<script>
+(function() {{
+  const table = document.getElementById('tabela');
+  const busca = document.getElementById('busca');
+  const btnCsv = document.getElementById('btnCsv');
+  if (!table) return;
+  const getCellText = (tr, idx) => (tr.cells[idx]?.innerText || "").trim();
+  const isNumber = (v) => /^-?\d+(\.\d+)?$/.test(v.replace(/\s+/g, '').replace(',', '.'));
+
+  Array.from(table.tHead.rows[0].cells).forEach((th, idx) => {{
+    th.classList.add('sortable');
+    th.addEventListener('click', () => {{
+      const tbody = table.tBodies[0];
+      const rows = Array.from(tbody.rows);
+      const current = th.classList.contains('sorted-asc') ? 'asc'
+                    : th.classList.contains('sorted-desc') ? 'desc' : null;
+      Array.from(table.tHead.rows[0].cells).forEach(h => h.classList.remove('sorted-asc','sorted-desc'));
+      const dir = current === 'asc' ? -1 : 1;
+      const colIsNum = rows.every(tr => isNumber(getCellText(tr, idx)) || getCellText(tr, idx) === "");
+      rows.sort((a,b) => {{
+        let A = getCellText(a, idx);
+        let B = getCellText(b, idx);
+        if (colIsNum) {{ A = parseFloat(A.replace(',', '.')) || 0; B = parseFloat(B.replace(',', '.')) || 0; }}
+        else {{ A = A.toLowerCase(); B = B.toLowerCase(); }}
+        if (A < B) return -1 * dir;
+        if (A > B) return  1 * dir;
+        return 0;
+      }});
+      rows.forEach(r => tbody.appendChild(r));
+      th.classList.add(dir === 1 ? 'sorted-asc' : 'sorted-desc');
+    }});
+  }});
+
+  busca?.addEventListener('input', () => {{
+    const q = busca.value.toLowerCase();
+    const rows = Array.from(table.tBodies[0].rows);
+    rows.forEach(tr => {{
+      const txt = tr.innerText.toLowerCase();
+      tr.style.display = txt.includes(q) ? '' : 'none';
+    }});
+  }});
+
+  btnCsv?.addEventListener('click', () => {{
+    const rows = [];
+    const selRows = Array.from(table.querySelectorAll('tr'));
+    selRows.forEach((tr, i) => {{
+      if (i>0 && tr.style.display === 'none') return;
+      const cells = Array.from(tr.cells).map(td => {{
+        const t = td.innerText.replace(/"/g,'""');
+        return /[",\n]/.test(t) ? `"${{t}}"` : t;
+      }});
+      rows.push(cells.join(','));
+    }});
+    const blob = new Blob([rows.join('\n')], {{type: 'text/csv;charset=utf-8;'}});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = (document.title || 'export') + '.csv';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(() => URL.revokeObjectURL(url), 5000);
+  }});
+}})();
+</script>
+</body>
+</html>
