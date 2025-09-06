@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PRKCD — Linhas da tabela dbo.variantes</title>
+<style>
+  :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif; }
+  body { margin: 24px; }
+  h1 { margin: 0 0 6px 0; font-size: 1.6rem; }
+  .meta { color: #444; font-size: .95rem; margin-bottom: 12px; }
+  .toolbar { display:flex; gap: 8px; align-items:center; margin: 12px 0; flex-wrap: wrap; }
+  input[type="search"] { padding: 8px 10px; border: 1px solid #ccc; border-radius: 10px; min-width: 260px; }
+  button { padding: 8px 12px; border: 1px solid #ccc; border-radius: 10px; background: #f7f7f7; cursor: pointer; }
+  button:hover { background: #eee; }
+  table { width: 100%; border-collapse: collapse; }
+  thead th { position: sticky; top: 0; background: #fafafa; border-bottom: 1px solid #ddd; text-align: left; padding: 10px; cursor: pointer; }
+  tbody td { border-bottom: 1px solid #f0f0f0; padding: 8px 10px; vertical-align: top; }
+  .sortable::after { content: " ⇅"; font-size: .8em; color: #888; }
+  .sorted-asc::after { content: " ↑"; }
+  .sorted-desc::after { content: " ↓"; }
+  .empty { padding: 16px; background: #fff6f6; border: 1px solid #ffdede; border-radius: 12px; }
+  a.btn { display:inline-block; margin: 0 8px 8px 0; padding: 6px 10px; border-radius: 10px; border:1px solid #ddd; text-decoration:none; color:#222; background:#f9f9f9; }
+  a.btn:hover { background:#f0f0f0; }
+</style>
+</head>
+<body>
+<h1>PRKCD — Linhas da tabela dbo.variantes</h1>
+<div class="meta">Gene: <strong>PRKCD</strong> • Linhas: <strong>7</strong></div>
+<div class="toolbar">
+  <input id="busca" type="search" placeholder="Filtrar linhas... (busca global)">
+  <button id="btnCsv" type="button">Exportar CSV</button>
+  <a class="btn" href="index.html">Voltar ao índice</a>
+</div>
+<div id="wrap">
+<table id="tabela" border="0">
+<thead><tr>
+<th>Gene</th>
+<th>Chr</th>
+<th>Pos</th>
+<th>ID</th>
+<th>Ref</th>
+<th>Alt</th>
+<th>Impacto</th>
+<th>GT</th>
+<th>VAF</th>
+<th>ClinVar_ID</th>
+<th>ClinVar_Significance</th>
+<th>ClinVar_Review_Status</th>
+<th>ClinVar_Disease_Names</th>
+<th>ID_variante</th>
+<th>Qual</th>
+<th>Filtro</th>
+<th>Ensembl</th>
+<th>Alteracao_nucleotidica</th>
+<th>Alteracao_aminoacidica</th>
+<th>GQ</th>
+<th>DP</th>
+<th>AD</th>
+<th>PL</th>
+<th>HGMD</th>
+<th>Resultado</th>
+<th>Status</th>
+<th>Buscar</th>
+<th>SIFT</th>
+<th>PolyPhen</th>
+<th>Biotype</th>
+<th>Alteracao_nucleotidica_reversa</th>
+<th>Alteracao_aminoacidica_reversa</th>
+<th>Resultado_reverso</th>
+<th>encontrado_rsid</th>
+<th>gnomAD_AF_Global</th>
+<th>gnomAD_AFR_AF</th>
+<th>gnomAD_AMR_AF</th>
+<th>gnomAD_ASJ_AF</th>
+<th>gnomAD_EAS_AF</th>
+<th>gnomAD_FIN_AF</th>
+<th>gnomAD_NFE_AF</th>
+<th>gnomAD_SAS_AF</th>
+<th>gnomAD_OTH_AF</th>
+<th>PhyloP</th>
+<th>PhastCons</th>
+<th>GERP</th>
+<th>CADD_Raw</th>
+<th>CADD_Phred</th>
+<th>LOEUF</th>
+<th>Allele_String</th>
+<th>ClinVar_Disease_Count</th>
+<th>letra_inicial_gene</th>
+</tr></thead><tbody>
+<tr>
+<td>PRKCD</td>
+<td>chr3</td>
+<td>53165064</td>
+<td>rs1483186</td>
+<td>C</td>
+<td>T</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>10351</td>
+<td>56.1</td>
+<td>PASS</td>
+<td>ENST00000330452</td>
+<td>ENST00000330452.8:c.-131-40C&gt;T</td>
+<td></td>
+<td>39</td>
+<td>53</td>
+<td>0*53</td>
+<td>56*39*0</td>
+<td></td>
+<td>T/T</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000330452.8:c.-131-40C&gt;T</td>
+<td></td>
+<td>T/T</td>
+<td></td>
+<td>0.873</td>
+<td>0.8841</td>
+<td>0.8274</td>
+<td>0.9271</td>
+<td>0.7673</td>
+<td>0.9065</td>
+<td>0.8829</td>
+<td>0.7748</td>
+<td>0.8613</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.344</td>
+<td>C/G/T</td>
+<td></td>
+<td>P</td>
+</tr>
+<tr>
+<td>PRKCD</td>
+<td>chr3</td>
+<td>53178558</td>
+<td>rs2306571</td>
+<td>C</td>
+<td>G</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td>1682240</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Autoimmune lymphoproliferative syndrome: type III caused by mutation in PRKCD</td>
+<td>10352</td>
+<td>61.4</td>
+<td>PASS</td>
+<td>ENST00000330452</td>
+<td>ENST00000330452.8:c.115+21C&gt;G</td>
+<td></td>
+<td>45</td>
+<td>163</td>
+<td>0*163</td>
+<td>61*45*0</td>
+<td></td>
+<td>G/G</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000330452.8:c.115+21C&gt;G</td>
+<td></td>
+<td>G/G</td>
+<td></td>
+<td>0.5797</td>
+<td>0.3609</td>
+<td>0.6528</td>
+<td>0.7144</td>
+<td>0.7438</td>
+<td>0.7512</td>
+<td>0.6474</td>
+<td>0.5867</td>
+<td>0.6078</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.344</td>
+<td>C/A/G/T</td>
+<td>3</td>
+<td>P</td>
+</tr>
+<tr>
+<td>PRKCD</td>
+<td>chr3</td>
+<td>53179799</td>
+<td>rs3830263</td>
+<td>C</td>
+<td>CGTGT</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>0.861789</td>
+<td>3397071</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td></td>
+<td>10353</td>
+<td>36.8</td>
+<td>PASS</td>
+<td>ENST00000330452</td>
+<td>ENST00000330452.8:c.315+40_315+43dup</td>
+<td></td>
+<td>30</td>
+<td>123</td>
+<td>4*106</td>
+<td>36*31*0</td>
+<td></td>
+<td>CGTGT/CGTGT</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000330452.8:c.315+40_315+43dup</td>
+<td></td>
+<td>CGTGT/CGTGT</td>
+<td></td>
+<td>0.6636</td>
+<td>0.3564</td>
+<td>0.8002</td>
+<td>0.8055</td>
+<td>0.9578</td>
+<td>0.7863</td>
+<td>0.7672</td>
+<td>0.6775</td>
+<td>0.7179</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.344</td>
+<td>GTGTGTGTGTGTGTGTGTGT/GTGTGT/GTGTGTGTGTGT/GTGTGTGTG</td>
+<td>1</td>
+<td>P</td>
+</tr>
+<tr>
+<td>PRKCD</td>
+<td>chr3</td>
+<td>53188745</td>
+<td>rs2306574</td>
+<td>C</td>
+<td>T</td>
+<td>LOW</td>
+<td>1/1</td>
+<td>1</td>
+<td>455968</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Autoimmune lymphoproliferative syndrome: type III caused by mutation in PRKCD</td>
+<td>10354</td>
+<td>59.1</td>
+<td>PASS</td>
+<td>ENST00000330452</td>
+<td>ENST00000330452.8:c.1441C&gt;T</td>
+<td>ENSP00000331602.3:p.Leu481=</td>
+<td>45</td>
+<td>160</td>
+<td>0*160</td>
+<td>59*45*0</td>
+<td></td>
+<td>T/T</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000330452.8:c.1441C&gt;T</td>
+<td>ENSP00000331602.3:p.Leu481=</td>
+<td>T/T</td>
+<td></td>
+<td>0.7525</td>
+<td>0.7193</td>
+<td>0.7388</td>
+<td>0.756</td>
+<td>0.787</td>
+<td>0.7435</td>
+<td>0.7807</td>
+<td>0.6652</td>
+<td>0.7379</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.344</td>
+<td>C/A/T</td>
+<td>3</td>
+<td>P</td>
+</tr>
+<tr>
+<td>PRKCD</td>
+<td>chr3</td>
+<td>53189275</td>
+<td>rs7630600</td>
+<td>T</td>
+<td>G</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td>1595729</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Autoimmune lymphoproliferative syndrome: type III caused by mutation in PRKCD</td>
+<td>10355</td>
+<td>56.3</td>
+<td>PASS</td>
+<td>ENST00000330452</td>
+<td>ENST00000330452.8:c.1743+29T&gt;G</td>
+<td></td>
+<td>47</td>
+<td>146</td>
+<td>0*146</td>
+<td>56*46*0</td>
+<td></td>
+<td>G/G</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000330452.8:c.1743+29T&gt;G</td>
+<td></td>
+<td>G/G</td>
+<td></td>
+<td>0.748</td>
+<td>0.6374</td>
+<td>0.7597</td>
+<td>0.7873</td>
+<td>0.8301</td>
+<td>0.7809</td>
+<td>0.7832</td>
+<td>0.8018</td>
+<td>0.7596</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.344</td>
+<td>T/G</td>
+<td>3</td>
+<td>P</td>
+</tr>
+<tr>
+<td>PRKCD</td>
+<td>chr3</td>
+<td>53189911</td>
+<td>rs1075865</td>
+<td>C</td>
+<td>G</td>
+<td>LOW</td>
+<td>1/1</td>
+<td>1</td>
+<td>454840</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Autoimmune lymphoproliferative syndrome: type III caused by mutation in PRKCD</td>
+<td>10356</td>
+<td>67.1</td>
+<td>PASS</td>
+<td>ENST00000330452</td>
+<td>ENST00000330452.8:c.1782C&gt;G</td>
+<td>ENSP00000331602.3:p.Thr594=</td>
+<td>53</td>
+<td>137</td>
+<td>0*137</td>
+<td>67*52*0</td>
+<td></td>
+<td>G/G</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000330452.8:c.1782C&gt;G</td>
+<td>ENSP00000331602.3:p.Thr594=</td>
+<td>G/G</td>
+<td></td>
+<td>0.9391</td>
+<td>0.8049</td>
+<td>0.9778</td>
+<td>0.9991</td>
+<td>0.9719</td>
+<td>1</td>
+<td>0.9989</td>
+<td>0.8949</td>
+<td>0.9527</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.344</td>
+<td>C/A/G/T</td>
+<td>3</td>
+<td>P</td>
+</tr>
+<tr>
+<td>PRKCD</td>
+<td>chr3</td>
+<td>53189986</td>
+<td>rs900495</td>
+<td>T</td>
+<td>C</td>
+<td>LOW</td>
+<td>1/1</td>
+<td>1</td>
+<td>455503</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Autoimmune lymphoproliferative syndrome: type III caused by mutation in PRKCD</td>
+<td>10357</td>
+<td>63.0</td>
+<td>PASS</td>
+<td>ENST00000330452</td>
+<td>ENST00000330452.8:c.1857T&gt;C</td>
+<td>ENSP00000331602.3:p.Pro619=</td>
+<td>53</td>
+<td>118</td>
+<td>0*118</td>
+<td>63*53*0</td>
+<td></td>
+<td>C/C</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000330452.8:c.1857T&gt;C</td>
+<td>ENSP00000331602.3:p.Pro619=</td>
+<td>C/C</td>
+<td></td>
+<td>0.9475</td>
+<td>0.8192</td>
+<td>0.9792</td>
+<td>0.9991</td>
+<td>1</td>
+<td>1</td>
+<td>0.9991</td>
+<td>0.9992</td>
+<td>0.9588</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.344</td>
+<td>T/A/C/G</td>
+<td>3</td>
+<td>P</td>
+</tr>
+</tbody></table></div>
+<script>
+(function() {{
+  const table = document.getElementById('tabela');
+  const busca = document.getElementById('busca');
+  const btnCsv = document.getElementById('btnCsv');
+  if (!table) return;
+  const getCellText = (tr, idx) => (tr.cells[idx]?.innerText || "").trim();
+  const isNumber = (v) => /^-?\d+(\.\d+)?$/.test(v.replace(/\s+/g, '').replace(',', '.'));
+
+  Array.from(table.tHead.rows[0].cells).forEach((th, idx) => {{
+    th.classList.add('sortable');
+    th.addEventListener('click', () => {{
+      const tbody = table.tBodies[0];
+      const rows = Array.from(tbody.rows);
+      const current = th.classList.contains('sorted-asc') ? 'asc'
+                    : th.classList.contains('sorted-desc') ? 'desc' : null;
+      Array.from(table.tHead.rows[0].cells).forEach(h => h.classList.remove('sorted-asc','sorted-desc'));
+      const dir = current === 'asc' ? -1 : 1;
+      const colIsNum = rows.every(tr => isNumber(getCellText(tr, idx)) || getCellText(tr, idx) === "");
+      rows.sort((a,b) => {{
+        let A = getCellText(a, idx);
+        let B = getCellText(b, idx);
+        if (colIsNum) {{ A = parseFloat(A.replace(',', '.')) || 0; B = parseFloat(B.replace(',', '.')) || 0; }}
+        else {{ A = A.toLowerCase(); B = B.toLowerCase(); }}
+        if (A < B) return -1 * dir;
+        if (A > B) return  1 * dir;
+        return 0;
+      }});
+      rows.forEach(r => tbody.appendChild(r));
+      th.classList.add(dir === 1 ? 'sorted-asc' : 'sorted-desc');
+    }});
+  }});
+
+  busca?.addEventListener('input', () => {{
+    const q = busca.value.toLowerCase();
+    const rows = Array.from(table.tBodies[0].rows);
+    rows.forEach(tr => {{
+      const txt = tr.innerText.toLowerCase();
+      tr.style.display = txt.includes(q) ? '' : 'none';
+    }});
+  }});
+
+  btnCsv?.addEventListener('click', () => {{
+    const rows = [];
+    const selRows = Array.from(table.querySelectorAll('tr'));
+    selRows.forEach((tr, i) => {{
+      if (i>0 && tr.style.display === 'none') return;
+      const cells = Array.from(tr.cells).map(td => {{
+        const t = td.innerText.replace(/"/g,'""');
+        return /[",\n]/.test(t) ? `"${{t}}"` : t;
+      }});
+      rows.push(cells.join(','));
+    }});
+    const blob = new Blob([rows.join('\n')], {{type: 'text/csv;charset=utf-8;'}});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = (document.title || 'export') + '.csv';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(() => URL.revokeObjectURL(url), 5000);
+  }});
+}})();
+</script>
+</body>
+</html>
