@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CEP120 — Linhas da tabela dbo.variantes</title>
+<style>
+  :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif; }
+  body { margin: 24px; }
+  h1 { margin: 0 0 6px 0; font-size: 1.6rem; }
+  .meta { color: #444; font-size: .95rem; margin-bottom: 12px; }
+  .toolbar { display:flex; gap: 8px; align-items:center; margin: 12px 0; flex-wrap: wrap; }
+  input[type="search"] { padding: 8px 10px; border: 1px solid #ccc; border-radius: 10px; min-width: 260px; }
+  button { padding: 8px 12px; border: 1px solid #ccc; border-radius: 10px; background: #f7f7f7; cursor: pointer; }
+  button:hover { background: #eee; }
+  table { width: 100%; border-collapse: collapse; }
+  thead th { position: sticky; top: 0; background: #fafafa; border-bottom: 1px solid #ddd; text-align: left; padding: 10px; cursor: pointer; }
+  tbody td { border-bottom: 1px solid #f0f0f0; padding: 8px 10px; vertical-align: top; }
+  .sortable::after { content: " ⇅"; font-size: .8em; color: #888; }
+  .sorted-asc::after { content: " ↑"; }
+  .sorted-desc::after { content: " ↓"; }
+  .empty { padding: 16px; background: #fff6f6; border: 1px solid #ffdede; border-radius: 12px; }
+  a.btn { display:inline-block; margin: 0 8px 8px 0; padding: 6px 10px; border-radius: 10px; border:1px solid #ddd; text-decoration:none; color:#222; background:#f9f9f9; }
+  a.btn:hover { background:#f0f0f0; }
+</style>
+</head>
+<body>
+<h1>CEP120 — Linhas da tabela dbo.variantes</h1>
+<div class="meta">Gene: <strong>CEP120</strong> • Linhas: <strong>6</strong></div>
+<div class="toolbar">
+  <input id="busca" type="search" placeholder="Filtrar linhas... (busca global)">
+  <button id="btnCsv" type="button">Exportar CSV</button>
+  <a class="btn" href="index.html">Voltar ao índice</a>
+</div>
+<div id="wrap">
+<table id="tabela" border="0">
+<thead><tr>
+<th>Gene</th>
+<th>Chr</th>
+<th>Pos</th>
+<th>ID</th>
+<th>Ref</th>
+<th>Alt</th>
+<th>Impacto</th>
+<th>GT</th>
+<th>VAF</th>
+<th>ClinVar_ID</th>
+<th>ClinVar_Significance</th>
+<th>ClinVar_Review_Status</th>
+<th>ClinVar_Disease_Names</th>
+<th>ID_variante</th>
+<th>Qual</th>
+<th>Filtro</th>
+<th>Ensembl</th>
+<th>Alteracao_nucleotidica</th>
+<th>Alteracao_aminoacidica</th>
+<th>GQ</th>
+<th>DP</th>
+<th>AD</th>
+<th>PL</th>
+<th>HGMD</th>
+<th>Resultado</th>
+<th>Status</th>
+<th>Buscar</th>
+<th>SIFT</th>
+<th>PolyPhen</th>
+<th>Biotype</th>
+<th>Alteracao_nucleotidica_reversa</th>
+<th>Alteracao_aminoacidica_reversa</th>
+<th>Resultado_reverso</th>
+<th>encontrado_rsid</th>
+<th>gnomAD_AF_Global</th>
+<th>gnomAD_AFR_AF</th>
+<th>gnomAD_AMR_AF</th>
+<th>gnomAD_ASJ_AF</th>
+<th>gnomAD_EAS_AF</th>
+<th>gnomAD_FIN_AF</th>
+<th>gnomAD_NFE_AF</th>
+<th>gnomAD_SAS_AF</th>
+<th>gnomAD_OTH_AF</th>
+<th>PhyloP</th>
+<th>PhastCons</th>
+<th>GERP</th>
+<th>CADD_Raw</th>
+<th>CADD_Phred</th>
+<th>LOEUF</th>
+<th>Allele_String</th>
+<th>ClinVar_Disease_Count</th>
+<th>letra_inicial_gene</th>
+</tr></thead><tbody>
+<tr>
+<td>CEP120</td>
+<td>chr5</td>
+<td>123346654</td>
+<td>rs1047438</td>
+<td>A</td>
+<td>G</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.467391</td>
+<td>1517679</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Joubert syndrome 31; Short-rib thoracic dysplasia 13 with or without polydactyly</td>
+<td>15806</td>
+<td>56.8</td>
+<td>PASS</td>
+<td>ENST00000306467</td>
+<td>ENST00000306467.10:c.2826T&gt;C</td>
+<td>ENSP00000303058.6:p.Asp942=</td>
+<td>49</td>
+<td>92</td>
+<td>49*43</td>
+<td>56*0*50</td>
+<td></td>
+<td>A/G</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000306467.10:c.2826A&gt;G</td>
+<td></td>
+<td>T/C</td>
+<td></td>
+<td>0.7151</td>
+<td>0.7498</td>
+<td>0.7116</td>
+<td>0.7359</td>
+<td>0.5736</td>
+<td>0.7084</td>
+<td>0.7076</td>
+<td>0.6653</td>
+<td>0.7474</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.907</td>
+<td>A/G/T</td>
+<td>3</td>
+<td>C</td>
+</tr>
+<tr>
+<td>CEP120</td>
+<td>chr5</td>
+<td>123350033</td>
+<td>rs1047437</td>
+<td>C</td>
+<td>G</td>
+<td>MODERATE</td>
+<td>0/1</td>
+<td>0.396226</td>
+<td>1515785</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Short-rib thoracic dysplasia 13 with or without polydactyly</td>
+<td>15807</td>
+<td>38.2</td>
+<td>PASS</td>
+<td>ENST00000306467</td>
+<td>ENST00000306467.10:c.2637G&gt;C</td>
+<td>ENSP00000303058.6:p.Gln879His</td>
+<td>38</td>
+<td>106</td>
+<td>64*42</td>
+<td>38*0*53</td>
+<td></td>
+<td>C/G</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000306467.10:c.2637C&gt;G</td>
+<td>ENSP00000303058.6:p.His879Gln</td>
+<td>G/C</td>
+<td></td>
+<td>0.1634</td>
+<td>0.1286</td>
+<td>0.2146</td>
+<td>0.1251</td>
+<td>0.2456</td>
+<td>0.1528</td>
+<td>0.1683</td>
+<td>0.2143</td>
+<td>0.1662</td>
+<td>2.245</td>
+<td>1</td>
+<td>2.59</td>
+<td></td>
+<td></td>
+<td>0.907</td>
+<td>C/G</td>
+<td>2</td>
+<td>C</td>
+</tr>
+<tr>
+<td>CEP120</td>
+<td>chr5</td>
+<td>123383042</td>
+<td>rs6595440</td>
+<td>G</td>
+<td>C</td>
+<td>MODERATE</td>
+<td>0/1</td>
+<td>0.464286</td>
+<td>3871050</td>
+<td>likely-benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Short-rib thoracic dysplasia 13 with or without polydactyly</td>
+<td>15808</td>
+<td>51.4</td>
+<td>PASS</td>
+<td>ENST00000306467</td>
+<td>ENST00000306467.10:c.1804C&gt;G</td>
+<td>ENSP00000303058.6:p.Leu602Val</td>
+<td>48</td>
+<td>56</td>
+<td>30*26</td>
+<td>51*0*51</td>
+<td></td>
+<td>G/C</td>
+<td>Het</td>
+<td></td>
+<td>deleterious</td>
+<td>probably_damaging</td>
+<td>protein_coding</td>
+<td>ENST00000306467.10:c.1804G&gt;C</td>
+<td>ENSP00000303058.6:p.Val602Leu</td>
+<td>C/G</td>
+<td></td>
+<td>0.3996</td>
+<td>0.321</td>
+<td>0.41</td>
+<td>0.3634</td>
+<td>0.4782</td>
+<td>0.451</td>
+<td>0.4283</td>
+<td>0.4668</td>
+<td>0.4253</td>
+<td>2.835</td>
+<td>1</td>
+<td>1.93</td>
+<td></td>
+<td></td>
+<td>0.907</td>
+<td>G/A/C</td>
+<td>1</td>
+<td>C</td>
+</tr>
+<tr>
+<td>CEP120</td>
+<td>chr5</td>
+<td>123386676</td>
+<td>rs1491225681</td>
+<td>TA</td>
+<td>T</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.442308</td>
+<td>532566</td>
+<td>benign</td>
+<td>criteria_provided_single_submitter</td>
+<td>Short-rib thoracic dysplasia 13 with or without polydactyly</td>
+<td>15809</td>
+<td>3.7</td>
+<td>PASS</td>
+<td>ENST00000306467</td>
+<td>ENST00000306467.10:c.1431-10_1431-9del</td>
+<td></td>
+<td>4</td>
+<td>52</td>
+<td>5*23</td>
+<td>1*0*24</td>
+<td></td>
+<td>TA/T</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td></td>
+<td></td>
+<td>TA/A</td>
+<td></td>
+<td>0.007476</td>
+<td>0.0136</td>
+<td>0.001088</td>
+<td>0</td>
+<td>0.0004771</td>
+<td>0.03737</td>
+<td>0.003592</td>
+<td>0.003704</td>
+<td>0.004823</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.907</td>
+<td>TA/-</td>
+<td>2</td>
+<td>C</td>
+</tr>
+<tr>
+<td>CEP120</td>
+<td>chr5</td>
+<td>123391332</td>
+<td>rs6876883</td>
+<td>G</td>
+<td>A</td>
+<td>LOW</td>
+<td>0/1</td>
+<td>0.39759</td>
+<td>1517681</td>
+<td>benign</td>
+<td>criteria_provided_multiple_submitters_no_conflicts</td>
+<td>Joubert syndrome 31; Short-rib thoracic dysplasia 13 with or without polydactyly</td>
+<td>15810</td>
+<td>49.5</td>
+<td>PASS</td>
+<td>ENST00000306467</td>
+<td>ENST00000306467.10:c.816C&gt;T</td>
+<td>ENSP00000303058.6:p.His272=</td>
+<td>49</td>
+<td>83</td>
+<td>50*33</td>
+<td>49*0*57</td>
+<td></td>
+<td>G/A</td>
+<td>Het</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000306467.10:c.816G&gt;A</td>
+<td></td>
+<td>C/T</td>
+<td></td>
+<td>0.444</td>
+<td>0.4661</td>
+<td>0.4286</td>
+<td>0.3712</td>
+<td>0.4764</td>
+<td>0.4518</td>
+<td>0.4334</td>
+<td>0.4681</td>
+<td>0.4635</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.907</td>
+<td>G/A</td>
+<td>3</td>
+<td>C</td>
+</tr>
+<tr>
+<td>CEP120</td>
+<td>chr5</td>
+<td>123422574</td>
+<td>rs6882791</td>
+<td>G</td>
+<td>C</td>
+<td>MODIFIER</td>
+<td>1/1</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>15811</td>
+<td>61.2</td>
+<td>PASS</td>
+<td>ENST00000306467</td>
+<td>ENST00000306467.10:c.49+376C&gt;G</td>
+<td></td>
+<td>49</td>
+<td>81</td>
+<td>0*81</td>
+<td>61*49*0</td>
+<td></td>
+<td>C/C</td>
+<td>Hom</td>
+<td></td>
+<td></td>
+<td></td>
+<td>protein_coding</td>
+<td>ENST00000306467.10:c.49+376G&gt;C</td>
+<td></td>
+<td>G/G</td>
+<td></td>
+<td>0.7112</td>
+<td>0.6798</td>
+<td>0.7065</td>
+<td>0.6151</td>
+<td>0.9</td>
+<td>0.7405</td>
+<td>0.7138</td>
+<td>0.7901</td>
+<td>0.6969</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.907</td>
+<td>G/C</td>
+<td></td>
+<td>C</td>
+</tr>
+</tbody></table></div>
+<script>
+(function() {{
+  const table = document.getElementById('tabela');
+  const busca = document.getElementById('busca');
+  const btnCsv = document.getElementById('btnCsv');
+  if (!table) return;
+  const getCellText = (tr, idx) => (tr.cells[idx]?.innerText || "").trim();
+  const isNumber = (v) => /^-?\d+(\.\d+)?$/.test(v.replace(/\s+/g, '').replace(',', '.'));
+
+  Array.from(table.tHead.rows[0].cells).forEach((th, idx) => {{
+    th.classList.add('sortable');
+    th.addEventListener('click', () => {{
+      const tbody = table.tBodies[0];
+      const rows = Array.from(tbody.rows);
+      const current = th.classList.contains('sorted-asc') ? 'asc'
+                    : th.classList.contains('sorted-desc') ? 'desc' : null;
+      Array.from(table.tHead.rows[0].cells).forEach(h => h.classList.remove('sorted-asc','sorted-desc'));
+      const dir = current === 'asc' ? -1 : 1;
+      const colIsNum = rows.every(tr => isNumber(getCellText(tr, idx)) || getCellText(tr, idx) === "");
+      rows.sort((a,b) => {{
+        let A = getCellText(a, idx);
+        let B = getCellText(b, idx);
+        if (colIsNum) {{ A = parseFloat(A.replace(',', '.')) || 0; B = parseFloat(B.replace(',', '.')) || 0; }}
+        else {{ A = A.toLowerCase(); B = B.toLowerCase(); }}
+        if (A < B) return -1 * dir;
+        if (A > B) return  1 * dir;
+        return 0;
+      }});
+      rows.forEach(r => tbody.appendChild(r));
+      th.classList.add(dir === 1 ? 'sorted-asc' : 'sorted-desc');
+    }});
+  }});
+
+  busca?.addEventListener('input', () => {{
+    const q = busca.value.toLowerCase();
+    const rows = Array.from(table.tBodies[0].rows);
+    rows.forEach(tr => {{
+      const txt = tr.innerText.toLowerCase();
+      tr.style.display = txt.includes(q) ? '' : 'none';
+    }});
+  }});
+
+  btnCsv?.addEventListener('click', () => {{
+    const rows = [];
+    const selRows = Array.from(table.querySelectorAll('tr'));
+    selRows.forEach((tr, i) => {{
+      if (i>0 && tr.style.display === 'none') return;
+      const cells = Array.from(tr.cells).map(td => {{
+        const t = td.innerText.replace(/"/g,'""');
+        return /[",\n]/.test(t) ? `"${{t}}"` : t;
+      }});
+      rows.push(cells.join(','));
+    }});
+    const blob = new Blob([rows.join('\n')], {{type: 'text/csv;charset=utf-8;'}});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = (document.title || 'export') + '.csv';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(() => URL.revokeObjectURL(url), 5000);
+  }});
+}})();
+</script>
+</body>
+</html>
