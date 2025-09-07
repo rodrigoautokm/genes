@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processador de Exames com Resultados</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 100%;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .stat-label {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+        .button-group {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+        button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            font-weight: bold;
+        }
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        button.secondary {
+            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+        }
+        .table-container {
+            overflow-x: auto;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            max-height: 600px;
+            overflow-y: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 11px;
+        }
+        th, td {
+            border: 1px solid #e0e0e0;
+            padding: 6px;
+            text-align: center;
+            white-space: nowrap;
+        }
+        th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-weight: bold;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        th:nth-child(1), th:nth-child(2), th:nth-child(3), th:nth-child(4) {
+            position: sticky;
+            z-index: 11;
+        }
+        th:nth-child(1) {
+            left: 0;
+            min-width: 80px;
+        }
+        th:nth-child(2) {
+            left: 80px;
+            min-width: 200px;
+        }
+        th:nth-child(3) {
+            left: 280px;
+            min-width: 80px;
+        }
+        th:nth-child(4) {
+            left: 360px;
+            min-width: 120px;
+            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+        }
+        td:nth-child(1), td:nth-child(2), td:nth-child(3), td:nth-child(4) {
+            background: #f8f9fa;
+            position: sticky;
+            z-index: 5;
+        }
+        td:nth-child(1) {
+            left: 0;
+            min-width: 80px;
+            text-align: center;
+            font-weight: 600;
+        }
+        td:nth-child(2) {
+            left: 80px;
+            min-width: 200px;
+            text-align: left;
+        }
+        td:nth-child(3) {
+            left: 280px;
+            min-width: 80px;
+            text-align: center;
+            font-size: 10px;
+        }
+        td:nth-child(4) {
+            left: 360px;
+            min-width: 120px;
+            text-align: center;
+            font-weight: bold;
+        }
+        td.has-value {
+            background: #e8f5e9;
+            color: #2e7d32;
+            font-weight: 500;
+        }
+        td.out-of-range {
+            background: #fff3e0;
+            color: #f57c00;
+            font-weight: bold;
+        }
+        .processing {
+            text-align: center;
+            color: #666;
+            margin: 20px 0;
+            font-style: italic;
+        }
+        .input-section {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .input-section h3 {
+            margin-top: 0;
+            color: #333;
+        }
+        textarea {
+            width: 100%;
+            height: 150px;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: 12px;
+        }
+        .legend {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .legend-box {
+            width: 20px;
+            height: 20px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📊 Processador de Exames Laboratoriais com Resultados</h1>
+        
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-number" id="totalOrders">0</div>
+                <div class="stat-label">Total de Ordens</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="totalExams">0</div>
+                <div class="stat-label">Exames Diferentes</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="totalResults">0</div>
+                <div class="stat-label">Resultados Adicionados</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="dateRange">-</div>
+                <div class="stat-label">Período</div>
+            </div>
+        </div>
+
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-box" style="background: #e8f5e9;"></div>
+                <span>Resultado Normal</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box" style="background: #fff3e0;"></div>
+                <span>Fora da Referência</span>
+            </div>
+        </div>
+
+        <div class="input-section">
+            <h3>📝 Adicionar Resultados de Exames</h3>
+            <p>Cole aqui os resultados dos exames (formato do laboratório):</p>
+            <textarea id="examInput" placeholder="Cole os resultados aqui..."></textarea>
+            <button class="secondary" onclick="addResults()">➕ Adicionar Resultados</button>
+        </div>
+
+        <div class="button-group">
+            <button onclick="downloadExcel()">📥 Baixar Planilha Excel</button>
+            <button onclick="clearResults()">🗑️ Limpar Resultados</button>
+        </div>
+        
+        <div class="processing" id="processing">Processando dados iniciais...</div>
+        
+        <div class="table-container">
+            <table id="dataTable">
+                <thead>
+                    <tr id="headerRow"></tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        // Dados das ordens de serviço
+        const rawOrderData = `010-66337-230	16/08/2022 - 09:09:38	DHT-ESTRO-LPA-SOMAT-VTA-FCI-URE-FIB-EPF-SDHEA-TESTL-TESTO-PSATL-CORSDH-CORSDH2-CORSDH3	Sem solicitação Médica
+010-66327-202	06/08/2022 - 09:27:17	T3R-ETFG-T3L	Sem solicitação Médica
+010-66323-216	02/08/2022 - 09:16:53	HOMI-VTE-AUS-ALB-CAL-CAI-CRE-FE-FAL-GGT-HDL-LDL-MAG-K-TGO-TGP-TRI-COL-NA-HG-CITRA-FOLIC-CITRUI-DIOL-FER-SHBG-HBGLI-FSH-LH-PTH-PRL-PCRQT-T3-T4L-TESTO-AAT-TPO-TSH-VB12-25VD3-UR	Sem solicitação Médica
+004-66135-402	26/01/2022 - 16:48:46	DIMER	Sem solicitação Médica
+010-66135-315	26/01/2022 - 11:25:06	PCRQT-PSAT-TSH	Sem solicitação Médica
+010-66126-294	17/01/2022 - 11:13:27	DIMER-FIB-COR-FER-PCRQT	Sem solicitação Médica
+010-66119-363	10/01/2022 - 14:23:10	TROPT-MIO-CPK-TGO-TGP-TROP-DIMER-PCRQT	Sem solicitação Médica
+011-66114-483	05/01/2022 - 17:54:51	DIMER-PCRQT	Sem solicitação Médica
+004-66112-117	03/01/2022 - 09:37:52	AGCOVID	Sem solicitação Médica
+010-66107-119	29/12/2021 - 09:03:01	AMI-LIP-DIMER-PCRQT	Sem solicitação Médica
+004-65995-243	08/09/2021 - 10:49:58	HG-NCOVGM-PCRQT	Sem solicitação Médica
+004-65991-182	04/09/2021 - 09:55:03	HG	Sem solicitação Médica
+004-65987-247	31/08/2021 - 09:41:19	CPK-DIMER-FIB-HG-PCRQT	Sem solicitação Médica
+004-65983-302	27/08/2021 - 12:46:52	AL-CPK-CRE-GGT-LDH-K-TGO-TGP-DIMER-NA-FIB-VHS-FER	Sem solicitação Médica
+004-65983-298	27/08/2021 - 12:34:06	HG	Sem solicitação Médica
+004-65983-185	27/08/2021 - 09:11:19	NCOVGM-PCRQT	Sem solicitação Médica
+004-65980-315	24/08/2021 - 13:08:40	AGCOVID	Sem solicitação Médica
+004-65976-312	20/08/2021 - 15:49:20	DIMER	Sem solicitação Médica
+004-65972-398	16/08/2021 - 17:17:24	COBRE	Sem solicitação Médica
+010-65953-137	28/07/2021 - 09:03:38	ZN-LITIO-PLIP-TSH-25VD3	Sem solicitação Médica
+004-65946-340	21/07/2021 - 14:10:50	AGCOVID	Sem solicitação Médica
+004-65932-367	07/07/2021 - 15:00:27	NCOVGM-PTH	Sem solicitação Médica
+004-65925-351	30/06/2021 - 16:38:35	ZN-PCRQT-VB12-25VD3	Sem solicitação Médica
+004-65897-373	02/06/2021 - 14:16:01	ZN-25VD3	Sem solicitação Médica
+004-65862-336	28/04/2021 - 12:22:39	AGCOVID	Sem solicitação Médica
+004-65861-478	27/04/2021 - 17:29:29	PCRQT	Sem solicitação Médica
+004-65842-448	08/04/2021 - 17:19:54	PRL	Sem solicitação Médica
+010-65841-141	07/04/2021 - 08:26:36	SOMAT-AUS-CRE-GLI-TRI-URE-DIMER-COR-DIOL-FSH-LH-INS-TESTL-TESTO	Sem solicitação Médica
+004-65840-519	06/04/2021 - 16:50:24	ALU-COBRE-HOMI-ZN-CAL-CAI-GGT-K-TGO-TGP-PTF-NA-CEA-DHEA-FAN-FER-HBGLI-PTH-T4L-TPO-TSH	Sem solicitação Médica
+010-65825-236	22/03/2021 - 09:26:25	SDHEA	Sem solicitação Médica
+004-65823-200	20/03/2021 - 10:07:28	IL6-ACTH-FNT	Sem solicitação Médica
+004-65822-283	19/03/2021 - 10:13:47	AGCOVID-HG-PCRQT	Sem solicitação Médica
+010-65811-443	08/03/2021 - 17:07:00	DHT-PCRQT-TESTO-CORSDH-CORSDH2-CORSDH3	Sem solicitação Médica
+010-65804-442	01/03/2021 - 15:02:03	PCRQT	Sem solicitação Médica
+004-65801-461	26/02/2021 - 17:58:53	PCRQT-PSAT	Sem solicitação Médica
+004-65799-324	24/02/2021 - 12:53:11	FIB-TSACUR-CUR-FOLIC-PCRQT-UR	ANDRE RODRIGUES DA SILVA
+010-65793-408	18/02/2021 - 17:36:42	PCRQT-PSAT	Sem solicitação Médica
+004-65771-561	27/01/2021 - 18:21:40	PSAT	Sem solicitação Médica
+004-65735-411	22/12/2020 - 15:26:41	AGCOVID	Sem solicitação Médica
+004-65729-277	16/12/2020 - 10:17:12	PLIP-PSATL	Sem solicitação Médica
+010-65727-380	14/12/2020 - 13:23:38	TSACUR-CUR-PSAT-25VD3-UR	ANDRE RODRIGUES DA SILVA
+004-65724-440	11/12/2020 - 17:44:52	TSACEG-CEG-ESP	ANDRE RODRIGUES DA SILVA
+010-65695-415	12/11/2020 - 12:40:57	NCOVGM-PCRQT-25VD3	Sem solicitação Médica
+004-65641-226	19/09/2020 - 12:14:57	AGCOVID	Sem solicitação Médica
+010-65595-321	04/08/2020 - 11:07:20	ESTRO-HOMI-AUS-DIOL-FER-HBGLI-FSH-LH-PCRQT-T3L-T4L-TSH	Sem solicitação Médica
+010-65570-323	10/07/2020 - 13:09:54	NCOVGM-PCRQT	Sem solicitação Médica
+010-65546-192	16/06/2020 - 09:49:39	CRE-LDL-PCRQT-TESTO	Sem solicitação Médica
+010-65477-109	08/04/2020 - 09:12:38	NCOVGM	Sem solicitação Médica
+010-65449-187	11/03/2020 - 08:50:27	HDL-LDL-INS	Sem solicitação Médica
+010-65400-403	22/01/2020 - 17:16:53	TSACUR-CUR-CHLG-CHLM-UR	MARCOS AURELIO ANTUNES MACHADO
+010-65340-60	23/11/2019 - 07:35:10	LDL	Sem solicitação Médica
+010-65331-86	14/11/2019 - 07:23:27	LDL	Sem solicitação Médica
+010-65318-35	01/11/2019 - 07:03:19	LDL	Sem solicitação Médica
+011-65308-272	22/10/2019 - 10:41:23	LIP	Sem solicitação Médica
+011-65304-175	18/10/2019 - 08:55:01	LDL	Sem solicitação Médica
+010-65297-36	11/10/2019 - 07:02:57	LDL	Sem solicitação Médica
+011-65290-197	04/10/2019 - 09:10:59	LDL	Sem solicitação Médica
+011-65282-182	26/09/2019 - 09:21:33	LDL	Sem solicitação Médica
+011-65260-234	04/09/2019 - 09:51:55	APOA-APOB-PCRQT	Sem solicitação Médica
+011-65211-246	17/07/2019 - 09:58:22	PCRQT	Sem solicitação Médica
+011-65135-260	02/05/2019 - 10:08:58	LPA-PCRQT	Sem solicitação Médica
+011-65126-281	23/04/2019 - 10:10:42	HG	Sem solicitação Médica
+010-65112-254	09/04/2019 - 08:57:08	CRE-PLIP-HG-DHEA-FER-PCRQT-T3L-T4L-TESTL-TESTO-TSH-25VD3	Sem solicitação Médica
+011-64911-129	20/09/2018 - 08:03:19	AUS-CRE-MAG-PLIP-HG-FOLIC-DIOL-FER-FSH-LH-PCRQT-T3L-T4L-TESTL-TESTO-TSH-VB12-25VD3-CING5	VITOR MACHADO BENINCA
+010-64766-50	28/04/2018 - 07:38:55	DHT-PLIP-FER-FSH-LH-PCRQT-TESTL-TESTO	VITOR MACHADO BENINCA
+011-64719-47	12/03/2018 - 07:13:26	HOMI-AUS-GGT-GLI-HDL-TRI-COL-HG-SDHEA-HBGLI-INS-T3L-T4L-TESTO-TPO-TSH-VB12-25VD3	TERUO WATANABE
+011-64664-219	16/01/2018 - 09:37:56	COL	Sem solicitação Médica
+011-64611-221	24/11/2017 - 09:27:35	HOMI-AUS-GLI-HDL-TRI-COL-SDHEA-FER-HBGLI-INS-TESTO-TSH-VB12-25VD3	TERUO WATANABE
+011-64468-491	04/07/2017 - 17:07:46	PLIP-COR-SHBG-HBGLI-FSH-LH-PRL-TESTO-25VD3-PSATL	VITOR MACHADO BENINCA
+011-64434-377	31/05/2017 - 16:32:41	HOMI-AUS-BIL-GGT-GLI-HDL-TRI-COL-HG-SDHEA-FER-HBGLI-INS-T3L-T4L-TESTO-TPO-TSH-VB12-25VD3	TERUO WATANABE
+011-64350-82	08/03/2017 - 07:40:46	AUS-PCRQL-HG-25VD3	JOSE CARLOS GHEDIN
+011-64316-416	02/02/2017 - 14:58:33	HOMI-GGT-GLI-HDL-TRI-COL-HG-SDHEA-FER-HBGLI-INS-PCRQT-T3L-TESTO-TPO-TSH-VB12-25VD3	TERUO WATANABE`;
+
+        // Mapear nomes de exames para padronizar
+        const examNameMap = {
+            'FIBRINOGENIO': 'FIB',
+            'UREIA': 'URE',
+            'FERRO SÉRICO': 'FE',
+            'PSA TOTAL': 'PSAT',
+            'PSA LIVRE': 'PSATL',
+            'TESTOSTERONA TOTAL': 'TESTO',
+            'TESTOSTERONA LIVRE': 'TESTL',
+            'VITAMINA A': 'VTA',
+            'SULFATO DE DEHIDROEPIANDROSTERONA': 'SDHEA',
+            'DIHIDROTESTOSTERONA': 'DHT',
+            'LIPOPROTEINA A': 'LPA',
+            'SOMATOMEDINA C': 'SOMAT',
+            'ESTRONA': 'ESTRO',
+            'CORTISOL SALIVAR': 'CORSDH',
+            'PARASITOLOGICO': 'EPF'
+        };
+
+        // Nomes completos dos exames
+        const examFullNames = {
+            'HG': 'HEMOGRAMA',
+            'COL': 'COLESTEROL TOTAL',
+            'HDL': 'HDL COLESTEROL',
+            'LDL': 'LDL COLESTEROL',
+            'TRI': 'TRIGLICERÍDEOS',
+            'CRE': 'CREATININA',
+            'AUS': 'ÁCIDO ÚRICO',
+            'TGO': 'TGO/AST',
+            'TGP': 'TGP/ALT',
+            'GGT': 'GAMA GLUTAMIL TRANSFERASE',
+            'FAL': 'FOSFATASE ALCALINA',
+            'ALB': 'ALBUMINA',
+            'CAL': 'CÁLCIO',
+            'MAG': 'MAGNÉSIO',
+            'NA': 'SÓDIO',
+            'K': 'POTÁSSIO',
+            'CAI': 'CÁLCIO IÔNICO',
+            'FE': 'FERRO SÉRICO',
+            'FCI': 'FERRO SÉRICO',
+            'TSH': 'TSH',
+            'T4L': 'T4 LIVRE',
+            'T3': 'T3 TOTAL',
+            'T3L': 'T3 LIVRE',
+            'T3R': 'T3 REVERSO',
+            'TPO': 'ANTI-TPO',
+            'FSH': 'FSH',
+            'LH': 'LH',
+            'PRL': 'PROLACTINA',
+            'FER': 'FERRITINA',
+            'TESTO': 'TESTOSTERONA TOTAL',
+            'TESTL': 'TESTOSTERONA LIVRE',
+            'PTH': 'PARATORMÔNIO',
+            'VTE': 'VITAMINA E',
+            'VTA': 'VITAMINA A',
+            'FOLIC': 'ÁCIDO FÓLICO',
+            'VB12': 'VITAMINA B12',
+            '25VD3': 'VITAMINA D',
+            'CITRA': 'CITRATO',
+            'CITRUI': 'CITRATO URINÁRIO',
+            'SHBG': 'SHBG',
+            'HBGLI': 'HEMOGLOBINA GLICADA',
+            'PCRQT': 'PCR ULTRA-SENSÍVEL',
+            'AAT': 'ANTI-TRANSGLUTAMINASE',
+            'DIOL': 'ESTRADIOL',
+            'HOMI': 'HOMOCISTEÍNA',
+            'PLIP': 'PERFIL LIPÍDICO',
+            'PLIP_COL': 'PERFIL LIPÍDICO - COLESTEROL',
+            'PLIP_HDL': 'PERFIL LIPÍDICO - HDL',
+            'PLIP_LDL': 'PERFIL LIPÍDICO - LDL',
+            'PLIP_TRI': 'PERFIL LIPÍDICO - TRIGLICERÍDEOS',
+            'PLIP_VLDL': 'PERFIL LIPÍDICO - VLDL',
+            'DHEA': 'DHEA',
+            'GLI': 'GLICOSE',
+            'BIL': 'BILIRRUBINAS',
+            'INS': 'INSULINA',
+            'SDHEA': 'SULFATO DE DHEA',
+            'DHT': 'DIHIDROTESTOSTERONA',
+            'VHS': 'VHS',
+            'CPK': 'CPK',
+            'LDH': 'LDH',
+            'AMI': 'AMILASE',
+            'LIP': 'LIPASE',
+            'DIMER': 'D-DÍMERO',
+            'FIB': 'FIBRINOGÊNIO',
+            'COR': 'CORTISOL',
+            'CORSDH': 'CORTISOL SALIVAR (MANHÃ)',
+            'CORSDH2': 'CORTISOL SALIVAR (TARDE)',
+            'CORSDH3': 'CORTISOL SALIVAR (NOITE)',
+            'TROP': 'TROPONINA',
+            'TROPT': 'TROPONINA T',
+            'MIO': 'MIOGLOBINA',
+            'COBRE': 'COBRE',
+            'ZN': 'ZINCO',
+            'IL6': 'INTERLEUCINA 6',
+            'ACTH': 'ACTH',
+            'FNT': 'FATOR DE NECROSE TUMORAL',
+            'CEA': 'CEA',
+            'FAN': 'FAN',
+            'ALU': 'ALBUMINA URINÁRIA',
+            'PTF': 'PROTEÍNAS TOTAIS',
+            'APOA': 'APOLIPOPROTEÍNA A',
+            'APOB': 'APOLIPOPROTEÍNA B',
+            'LPA': 'LIPOPROTEÍNA A',
+            'URE': 'UREIA',
+            'ESTRO': 'ESTRONA',
+            'SOMAT': 'SOMATOMEDINA C (IGF-1)',
+            'EPF': 'PARASITOLÓGICO DE FEZES',
+            'ETFG': 'TAXA DE FILTRAÇÃO GLOMERULAR',
+            'PSAT': 'PSA TOTAL',
+            'PSATL': 'PSA LIVRE',
+            'AGCOVID': 'ANTÍGENO COVID-19',
+            'NCOVGM': 'ANTICORPOS COVID-19',
+            'NCOVGM_IGG': 'ANTICORPOS COVID-19 IGG',
+            'NCOVGM_IGM': 'ANTICORPOS COVID-19 IGM',
+            'LITIO': 'LÍTIO',
+            'AL': 'ALBUMINA',
+            'UR': 'UROCULTURA',
+            'ESP': 'ESPERMOGRAMA',
+            'CEG': 'CULTURA ESPERMÁTICA',
+            'CHLG': 'CLAMÍDIA IGG',
+            'CHLM': 'CLAMÍDIA IGM',
+            'TSACUR': 'TSA CULTURA',
+            'TSACEG': 'TSA CULTURA ESPERMÁTICA',
+            'CUR': 'CULTURA',
+            'CING5': 'CINCO ELEMENTOS',
+            'PCRQL': 'PCR QUALITATIVO'
+        };
+
+        let examData = {};
+        let allExams = new Set();
+        let allDates = new Set();
+        let examResults = {}; // Armazena os valores dos resultados
+        let examUnits = {}; // Armazena as unidades de medida
+
+        // Resultados iniciais ampliados com TODOS os dados fornecidos
+        const initialResults = {
+            '16/08/2022': {
+                'FIB': { value: '301,5', unit: 'mg/dL', ref: '200,0 a 400,0' },
+                'URE': { value: '28,1', unit: 'mg/dL', ref: '17,0 a 43,0' },
+                'FCI': { value: '105', unit: 'ug/dL', ref: '50 a 212' },
+                'PSAT': { value: '1,938', unit: 'ng/mL', ref: 'Inferior a 4,00' },
+                'PSATL': { value: '0,407', unit: 'ng/mL', ref: 'Inferior a 0,500' },
+                'TESTO': { value: '360,2', unit: 'ng/dL', ref: '175,0 a 781,0' },
+                'TESTL': { value: '6,997', unit: 'ng/dL', ref: '1,670 a 18,300' },
+                'VTA': { value: '0,95', unit: 'mg/L', ref: '0,30 a 0,70' },
+                'SDHEA': { value: '189,0', unit: 'ug/dL', ref: '70,0 a 495,0' },
+                'DHT': { value: '371', unit: 'pg/mL', ref: '160 a 790' },
+                'LPA': { value: '29,0', unit: 'mg/dL', ref: 'Até 30' },
+                'SOMAT': { value: '231,0', unit: 'ng/mL', ref: '74,0 a 236,0' },
+                'ESTRO': { value: '<14,8', unit: 'pg/mL', ref: 'Até 174,0' },
+                'CORSDH': { value: '0,140', unit: 'ug/dL', ref: '6-10h: <0,783' },
+                'CORSDH2': { value: '0,140', unit: 'ug/dL', ref: '16-20h: <0,243' },
+                'CORSDH3': { value: '<0,054', unit: 'ug/dL', ref: '23:30-00:30h: <0,274' },
+                'EPF': { value: 'Negativo', unit: '', ref: 'Negativo' }
+            },
+            '02/08/2022': {
+                'HG': { value: '14,6', unit: 'g/dL', ref: '13,0 a 17,0' },
+                'COL': { value: '381,0', unit: 'mg/dL', ref: '<190,0' },
+                'HDL': { value: '41,0', unit: 'mg/dL', ref: '>40,0' },
+                'LDL': { value: '304,3', unit: 'mg/dL', ref: 'variável' },
+                'TRI': { value: '182,0', unit: 'mg/dL', ref: '<150,0' },
+                'CRE': { value: '1,00', unit: 'mg/dL', ref: '0,67 a 1,17' },
+                'AUS': { value: '5,2', unit: 'mg/dL', ref: '4,4 a 7,6' },
+                'TGO': { value: '21,0', unit: 'U/L', ref: '<50' },
+                'TGP': { value: '36,0', unit: 'U/L', ref: '<50,0' },
+                'GGT': { value: '21,0', unit: 'U/L', ref: '9,0 a 64,0' },
+                'FAL': { value: '32,0', unit: 'U/L', ref: '34,0 a 104,0' },
+                'ALB': { value: '4,6', unit: 'g/dL', ref: '4,2 a 5,5' },
+                'CAL': { value: '9,54', unit: 'mg/dL', ref: '8,6 a 10,3' },
+                'MAG': { value: '2,1', unit: 'mg/dL', ref: '1,7 a 2,7' },
+                'NA': { value: '139', unit: 'mEq/L', ref: '136 a 145' },
+                'K': { value: '4,3', unit: 'mEq/L', ref: '3,5 a 5,1' },
+                'CAI': { value: '1,27', unit: 'mmol/L', ref: '1,12 a 1,36' },
+                'FE': { value: '96', unit: 'ug/dL', ref: '50 a 212' },
+                'TSH': { value: '2,2603', unit: 'uUI/mL', ref: '0,3800 a 5,3300' },
+                'T4L': { value: '0,74', unit: 'ng/dL', ref: '0,61 a 1,12' },
+                'T3': { value: '1,42', unit: 'ng/mL', ref: '0,87 a 1,78' },
+                'TPO': { value: '0,80', unit: 'IU/mL', ref: '<9,00' },
+                'FSH': { value: '3,41', unit: 'uUI/mL', ref: '1,27 a 19,26' },
+                'LH': { value: '1,77', unit: 'mUI/mL', ref: '1,24 a 8,62' },
+                'PRL': { value: '4,65', unit: 'ng/mL', ref: '2,64 a 13,13' },
+                'FER': { value: '94,60', unit: 'ng/mL', ref: '23,9 a 336,2' },
+                'TESTO': { value: '355,8', unit: 'ng/dL', ref: '175,0 a 781,0' },
+                'PTH': { value: '21,3', unit: 'pg/mL', ref: '12,0 a 88,0' },
+                'VTE': { value: '32,0', unit: 'mg/L', ref: '5,0 a 20,0' },
+                'FOLIC': { value: '>23,4', unit: 'ng/mL', ref: '>5,9' },
+                'VB12': { value: '493,0', unit: 'pg/mL', ref: '180 a 914' },
+                '25VD3': { value: '67,3', unit: 'ng/mL', ref: '>20' },
+                'CITRA': { value: '2,31', unit: 'mg/dL', ref: '0,96 a 2,50' },
+                'CITRUI': { value: '0,5', unit: 'mg/mg', ref: '>0,5' },
+                'SHBG': { value: '31,0', unit: 'nmol/L', ref: '13,3 a 89,5' },
+                'HBGLI': { value: '5,5', unit: '%', ref: '<5,7' },
+                'PCRQT': { value: '0,6', unit: 'mg/L', ref: '<1,0' },
+                'AAT': { value: '<0,01', unit: 'IU/mL', ref: '<4,00' },
+                'DIOL': { value: '<15,0', unit: 'pg/mL', ref: '<33' },
+                'HOMI': { value: '4,21', unit: 'umol/L', ref: '5,46 a 16,20' }
+            },
+            '06/08/2022': {
+                'ETFG': { value: '>90', unit: 'mL/min', ref: '>90' },
+                'T3L': { value: '3,70', unit: 'pg/mL', ref: '2,5 a 3,9' },
+                'T3R': { value: '0,18', unit: 'ng/mL', ref: '0,06 a 0,26' }
+            },
+            // Dados de 2019
+            '09/04/2019': {
+                'HG': { value: '15,1', unit: 'g/dL', ref: '13,0 a 17,0' },
+                'COL': { value: '384,0', unit: 'mg/dL', ref: '<190,0' },
+                'HDL': { value: '48,0', unit: 'mg/dL', ref: '>40,0' },
+                'LDL': { value: '325,4', unit: 'mg/dL', ref: 'variável' },
+                'TRI': { value: '53,0', unit: 'mg/dL', ref: '<150,0' },
+                'CRE': { value: '0,87', unit: 'mg/dL', ref: '0,67 a 1,17' },
+                'T3L': { value: '2,17', unit: 'pg/mL', ref: '2,5 a 3,9' },
+                '25VD3': { value: '50,3', unit: 'ng/mL', ref: '>20' },
+                'PCRQT': { value: '1,2', unit: 'mg/L', ref: '<1,0' },
+                'TSH': { value: '0,9776', unit: 'uUI/mL', ref: '0,3800 a 5,3300' },
+                'T4L': { value: '1,13', unit: 'ng/dL', ref: '0,61 a 1,12' },
+                'FER': { value: '206,97', unit: 'ng/mL', ref: '23,9 a 336,2' },
+                'TESTO': { value: '589,9', unit: 'ng/dL', ref: '175,0 a 781,0' },
+                'TESTL': { value: '64,3', unit: '%', ref: '20,4 a 81,2' },
+                'DHEA': { value: '6,2', unit: 'ng/mL', ref: '1,7 a 6,1' },
+                'PLIP_COL': { value: '384,0', unit: 'mg/dL', ref: '<190,0' },
+                'PLIP_VLDL': { value: '10,6', unit: 'mg/dL', ref: 'Critério médico' },
+                'PLIP_TRI': { value: '53,0', unit: 'mg/dL', ref: '<150,0' },
+                'PLIP_HDL': { value: '48,0', unit: 'mg/dL', ref: '>40,0' },
+                'PLIP_LDL': { value: '325,4', unit: 'mg/dL', ref: 'variável' }
+            },
+            // Dados de 2018
+            '20/09/2018': {
+                'HG': { value: '14,5', unit: 'g/dL', ref: '13,0 a 17,0' },
+                'CRE': { value: '0,88', unit: 'mg/dL', ref: '0,67 a 1,17' },
+                'AUS': { value: '4,4', unit: 'mg/dL', ref: '4,4 a 7,6' },
+                'MAG': { value: '2,1', unit: 'mg/dL', ref: '1,7 a 2,7' },
+                'COL': { value: '443,0', unit: 'mg/dL', ref: '<190,0' },
+                'HDL': { value: '47,0', unit: 'mg/dL', ref: '>40,0' },
+                'LDL': { value: '384,4', unit: 'mg/dL', ref: 'variável' },
+                'TRI': { value: '58,0', unit: 'mg/dL', ref: '<150,0' },
+                'T3L': { value: '2,24', unit: 'pg/mL', ref: '2,5 a 3,9' },
+                'FSH': { value: '2,75', unit: 'uUI/mL', ref: '1,27 a 19,26' },
+                'DIOL': { value: '15,9', unit: 'pg/mL', ref: '10,6 a 44,5' },
+                'FOLIC': { value: '8,20', unit: 'ng/mL', ref: '>5,9' },
+                'TSH': { value: '1,5677', unit: 'uUI/mL', ref: '0,3800 a 5,3300' },
+                'T4L': { value: '0,95', unit: 'ng/dL', ref: '0,61 a 1,12' },
+                'LH': { value: '0,83', unit: 'mUI/mL', ref: '1,24 a 8,62' },
+                'FER': { value: '168,43', unit: 'ng/mL', ref: '23,9 a 336,2' },
+                'TESTO': { value: '589,6', unit: 'ng/dL', ref: '175,0 a 781,0' },
+                'TESTL': { value: '46,7', unit: '%', ref: '20,4 a 81,2' },
+                'VB12': { value: '776,0', unit: 'pg/mL', ref: '180 a 914' },
+                '25VD3': { value: '33,2', unit: 'ng/mL', ref: '>20' },
+                'PCRQT': { value: '0,8', unit: 'mg/L', ref: '<1,0' },
+                'GLI': { value: '100', unit: 'mg/dL', ref: '<100' }
+            },
+            '28/04/2018': {
+                'COL': { value: '339,0', unit: 'mg/dL', ref: '<190,0' },
+                'HDL': { value: '39,0', unit: 'mg/dL', ref: '>40,0' },
+                'LDL': { value: '284,4', unit: 'mg/dL', ref: 'variável' },
+                'TRI': { value: '78,0', unit: 'mg/dL', ref: '<150,0' },
+                'FSH': { value: '2,91', unit: 'uUI/mL', ref: '1,27 a 19,26' },
+                'TESTL': { value: '43,0', unit: '%', ref: '20,4 a 81,2' },
+                'PCRQT': { value: '0,6', unit: 'mg/L', ref: '<1,0' },
+                'DHT': { value: '485,2', unit: 'pg/mL', ref: '123,0 a 1181,0' },
+                'TESTO': { value: '465,8', unit: 'ng/dL', ref: '175,0 a 781,0' },
+                'LH': { value: '2,30', unit: 'mUI/mL', ref: '1,24 a 8,62' },
+                'FER': { value: '222,56', unit: 'ng/mL', ref: '23,9 a 336,2' }
+            },
+            '12/03/2018': {
+                'HG': { value: '14,0', unit: 'g/dL', ref: '13,0 a 17,0' },
+                'COL': { value: '323,0', unit: 'mg/dL', ref: '<190,0' },
+                'HDL': { value: '38,0', unit: 'mg/dL', ref: '>40,0' },
+                'TRI': { value: '106,0', unit: 'mg/dL', ref: '<150,0' },
+                'AUS': { value: '4,6', unit: 'mg/dL', ref: '4,4 a 7,6' },
+                'GGT': { value: '12,0', unit: 'U/L', ref: '9,0 a 64,0' },
+                'GLI': { value: '98', unit: 'mg/dL', ref: '<100' },
+                'TSH': { value: '2,1838', unit: 'uUI/mL', ref: '0,3800 a 5,3300' },
+                'T4L': { value: '1,08', unit: 'ng/dL', ref: '0,61 a 1,12' },
+                'TPO': { value: '0,30', unit: 'IU/mL', ref: '<9,00' },
+                'TESTO': { value: '574,4', unit: 'ng/dL', ref: '175,0 a 781,0' },
+                'VB12': { value: '810,0', unit: 'pg/mL', ref: '180 a 914' },
+                'HBGLI': { value: '5,6', unit: '%', ref: '<5,7' },
+                'INS': { value: '7,80', unit: 'uUI/mL', ref: '3,21 a 16,32' },
+                '25VD3': { value: '50,8', unit: 'ng/mL', ref: '>20' },
+                'T3L': { value: '2,82', unit: 'pg/mL', ref: '2,20 a 4,20' },
+                'SDHEA': { value: '185,0', unit: 'ug/dL', ref: '106,0 a 464,0' },
+                'HOMI': { value: '6,54', unit: 'umol/L', ref: '5,46 a 16,20' }
+            },
+            '16/01/2018': {
+                'COL': { value: '381,0', unit: 'mg/dL', ref: '<190,0' }
+            },
+            // Dados de 2017
+            '24/11/2017': {
+                'TRI': { value: '59,0', unit: 'mg/dL', ref: '<150,0' },
+                'COL': { value: '353,0', unit: 'mg/dL', ref: '<190,0' },
+                'HDL': { value: '45,0', unit: 'mg/dL', ref: '>40,0' },
+                'AUS': { value: '4,8', unit: 'mg/dL', ref: '4,4 a 7,6' },
+                'GLI': { value: '100', unit: 'mg/dL', ref: '<100' },
+                'HBGLI': { value: '5,7', unit: '%', ref: '<5,7' },
+                'TSH': { value: '2,8009', unit: 'uUI/mL', ref: '0,3800 a 5,3300' },
+                'FER': { value: '178,09', unit: 'ng/mL', ref: '23,9 a 336,2' },
+                'TESTO': { value: '544,5', unit: 'ng/dL', ref: '175,0 a 781,0' },
+                'VB12': { value: '575,0', unit: 'pg/mL', ref: '180 a 914' },
+                'INS': { value: '5,80', unit: 'uUI/mL', ref: '3,21 a 16,32' },
+                '25VD3': { value: '35,8', unit: 'ng/mL', ref: '>20' },
+                'SDHEA': { value: '248,0', unit: 'ug/dL', ref: '106,0 a 464,0' },
+                'HOMI': { value: '5,37', unit: 'umol/L', ref: '5,46 a 16,20' }
+            },
+            '04/07/2017': {
+                'COL': { value: '371,0', unit: 'mg/dL', ref: '<190,0' },
+                'HDL': { value: '43,0', unit: 'mg/dL', ref: '>40,0' },
+                'LDL': { value: '318,0', unit: 'mg/dL', ref: 'variável' },
+                'TRI': { value: '50,0', unit: 'mg/dL', ref: '<150,0' },
+                'PSAT': { value: '1,665', unit: 'ng/mL', ref: '<4,00' },
+                'PSATL': { value: '0,460', unit: 'ng/mL', ref: '<0,500' },
+                'TESTO': { value: '466,3', unit: 'ng/dL', ref: '175,0 a 781,0' },
+                '25VD3': { value: '47,7', unit: 'ng/mL', ref: '>20' },
+                'FSH': { value: '2,72', unit: 'uUI/mL', ref: '1,27 a 19,26' },
+                'LH': { value: '1,73', unit: 'mUI/mL', ref: '1,24 a 8,62' },
+                'PRL': { value: '3,76', unit: 'ng/mL', ref: '3,46 a 19,40' },
+                'COR': { value: '6,07', unit: 'ug/dL', ref: '4,5 a 24,0' },
+                'SHBG': { value: '34,9', unit: 'nmol/L', ref: '11,2 a 78,1' },
+                'HBGLI': { value: '5,1', unit: '%', ref: '<5,7' }
+            },
+            '31/05/2017': {
+                'HG': { value: '14,5', unit: 'g/dL', ref: '13,0 a 17,0' },
+                'COL': { value: '388,0', unit: 'mg/dL', ref: '<190,0' },
+                'TRI': { value: '71,0', unit: 'mg/dL', ref: '<150,0' },
+                'GLI': { value: '86', unit: 'mg/dL', ref: '<100' },
+                'AUS': { value: '5,2', unit: 'mg/dL', ref: '4,4 a 7,6' },
+                'BIL': { value: '0,57', unit: 'mg/dL', ref: '0,30 a 1,00' },
+                'HDL': { value: '47,0', unit: 'mg/dL', ref: '>40,0' },
+                'GGT': { value: '16,0', unit: 'U/L', ref: '9,0 a 64,0' },
+                'TSH': { value: '2,2714', unit: 'uUI/mL', ref: '0,3800 a 5,3300' },
+                'T3L': { value: '3,08', unit: 'pg/mL', ref: '2,20 a 4,20' },
+                'TPO': { value: '0,19', unit: 'IU/mL', ref: '<9,00' },
+                'FER': { value: '258,66', unit: 'ng/mL', ref: '23,9 a 336,2' },
+                'INS': { value: '7,90', unit: 'uUI/mL', ref: '3,21 a 16,32' },
+                'VB12': { value: '663,0', unit: 'pg/mL', ref: '180 a 914' },
+                '25VD3': { value: '34,2', unit: 'ng/mL', ref: '>20' },
+                'T4L': { value: '0,97', unit: 'ng/dL', ref: '0,61 a 1,12' },
+                'TESTO': { value: '527,3', unit: 'ng/dL', ref: '175,0 a 781,0' },
+                'HBGLI': { value: '5,3', unit: '%', ref: '<5,7' },
+                'HOMI': { value: '5,80', unit: 'umol/L', ref: '5,46 a 16,20' }
+            },
+            '08/03/2017': {
+                'HG': { value: '13,9', unit: 'g/dL', ref: '13,0 a 17,0' },
+                'AUS': { value: '3,2', unit: 'mg/dL', ref: '4,4 a 7,6' },
+                '25VD3': { value: '28,3', unit: 'ng/mL', ref: '>20' }
+            },
+            '02/02/2017': {
+                'HG': { value: '14,0', unit: 'g/dL', ref: '13,0 a 17,0' },
+                'GGT': { value: '14,0', unit: 'U/L', ref: '9,0 a 64,0' },
+                'COL': { value: '395,0', unit: 'mg/dL', ref: '<190,0' },
+                'HDL': { value: '45,0', unit: 'mg/dL', ref: '>40,0' },
+                'TRI': { value: '97,0', unit: 'mg/dL', ref: '<150,0' },
+                'GLI': { value: '100', unit: 'mg/dL', ref: '<100' },
+                'TSH': { value: '1,8609', unit: 'uUI/mL', ref: '0,3800 a 5,3300' },
+                'T3L': { value: '2,68', unit: 'pg/mL', ref: '2,20 a 4,20' },
+                'TPO': { value: '0,13', unit: 'IU/mL', ref: '<9,00' },
+                'FER': { value: '201,65', unit: 'ng/mL', ref: '23,9 a 336,2' },
+                'TESTO': { value: '508,5', unit: 'ng/dL', ref: '175,0 a 781,0' },
+                'INS': { value: '6,60', unit: 'uUI/mL', ref: '3,21 a 16,32' },
+                'VB12': { value: '261,0', unit: 'pg/mL', ref: '180 a 914' },
+                '25VD3': { value: '17,8', unit: 'ng/mL', ref: '>20' },
+                'SDHEA': { value: '166,0', unit: 'ug/dL', ref: '106,0 a 464,0' },
+                'HBGLI': { value: '5,2', unit: '%', ref: '<5,7' },
+                'PCRQT': { value: '0,4', unit: 'mg/L', ref: '<1,0' },
+                'HOMI': { value: '8,80', unit: 'umol/L', ref: '5,46 a 16,20' }
+            },
+            // Adicionar os demais resultados de 2022 e 2021
+            '26/01/2022': {
+                'PCRQT': { value: '0,3', unit: 'mg/L', ref: '<1,0' },
+                'TSH': { value: '1,6501', unit: 'uUI/mL', ref: '0,3800 a 5,3300' },
+                'PSAT': { value: '1,447', unit: 'ng/mL', ref: '<4,00' },
+                'DIMER': { value: '355,3', unit: 'ng/mL', ref: '<500,0' }
+            },
+            '17/01/2022': {
+                'FIB': { value: '467,0', unit: 'mg/dL', ref: '200,0 a 400,0' },
+                'DIMER': { value: '347,3', unit: 'ng/mL', ref: '<500,0' },
+                'FER': { value: '148,10', unit: 'ng/mL', ref: '23,9 a 336,2' },
+                'COR': { value: '10,36', unit: 'ug/dL', ref: '4,5 a 24,0' },
+                'PCRQT': { value: '0,3', unit: 'mg/L', ref: '<1,0' }
+            },
+            '10/01/2022': {
+                'TGP': { value: '31,0', unit: 'U/L', ref: '<50,0' },
+                'DIMER': { value: '583,0', unit: 'ng/mL', ref: '<500,0' },
+                'CPK': { value: '77', unit: 'U/L', ref: '30 a 223' },
+                'TROPT': { value: '<2,3', unit: 'pg/mL', ref: '14,0 a 49,2' },
+                'TGO': { value: '19,0', unit: 'U/L', ref: '<50' },
+                'TROP': { value: '<0,003', unit: 'ng/mL', ref: '<0,014' },
+                'PCRQT': { value: '0,4', unit: 'mg/L', ref: '<1,0' },
+                'MIO': { value: '39,1', unit: 'ng/mL', ref: '<154,9' }
+            },
+            '05/01/2022': {
+                'DIMER': { value: '695,0', unit: 'ng/mL', ref: '<500,0' },
+                'PCRQT': { value: '0,8', unit: 'mg/L', ref: '<1,0' }
+            },
+            '03/01/2022': {
+                'AGCOVID': { value: 'Reagente', unit: '', ref: 'Não Reagente' }
+            },
+            '29/12/2021': {
+                'AMI': { value: '59', unit: 'U/L', ref: '29 a 103' },
+                'LIP': { value: '25,0', unit: 'U/L', ref: '11,0 a 82,0' },
+                'DIMER': { value: '560,2', unit: 'ng/mL', ref: '<500,0' },
+                'PCRQT': { value: '1,5', unit: 'mg/L', ref: '<1,0' }
+            },
+            '08/09/2021': {
+                'HG': { value: '14,5', unit: 'g/dL', ref: '13,0 a 17,0' },
+                'PCRQT': { value: '0,5', unit: 'mg/L', ref: '<1,0' },
+                'NCOVGM': { value: 'Não Reagente', unit: '', ref: 'Não Reagente' }
+            },
+            '04/09/2021': {
+                'HG': { value: '14,1', unit: 'g/dL', ref: '13,0 a 17,0' }
+            },
+            '31/08/2021': {
+                'HG': { value: '13,9', unit: 'g/dL', ref: '13,0 a 17,0' },
+                'FIB': { value: '458,0', unit: 'mg/dL', ref: '200,0 a 400,0' },
+                'CPK': { value: '71', unit: 'U/L', ref: '30 a 223' },
+                'DIMER': { value: '201,8', unit: 'ng/mL', ref: '<500,0' },
+                'PCRQT': { value: '1,2', unit: 'mg/L', ref: '<1,0' }
+            },
+            '27/08/2021': {
+                'HG': { value: '14,6', unit: 'g/dL', ref: '13,0 a 17,0' },
+                'VHS': { value: '9', unit: 'mm/h', ref: '0 a 15' },
+                'FIB': { value: '542,0', unit: 'mg/dL', ref: '200,0 a 400,0' },
+                'CRE': { value: '0,96', unit: 'mg/dL', ref: '0,67 a 1,17' },
+                'GGT': { value: '15,0', unit: 'U/L', ref: '9,0 a 64,0' },
+                'LDH': { value: '188', unit: 'U/L', ref: '140 a 271' },
+                'NA': { value: '139', unit: 'mEq/L', ref: '136 a 145' },
+                'K': { value: '3,8', unit: 'mEq/L', ref: '3,5 a 5,1' },
+                'CPK': { value: '224', unit: 'U/L', ref: '30 a 223' },
+                'TGO': { value: '29,0', unit: 'U/L', ref: '<50' },
+                'TGP': { value: '38,0', unit: 'U/L', ref: '<50,0' },
+                'DIMER': { value: '742,8', unit: 'ng/mL', ref: '<500,0' },
+                'AL': { value: '8,5', unit: 'mg/dL', ref: '4,5 a 19,8' },
+                'FER': { value: '72,4', unit: 'ng/mL', ref: '23,9 a 336,2' },
+                'PCRQT': { value: '10,2', unit: 'mg/L', ref: '<5,0' },
+                'NCOVGM': { value: 'Não Reagente', unit: '', ref: 'Não Reagente' },
+                'AGCOVID': { value: 'Não Reagente', unit: '', ref: 'Não Reagente' }
+            },
+            '24/08/2021': {
+                'AGCOVID': { value: 'Não Reagente', unit: '', ref: 'Não Reagente' }
+            },
+            '20/08/2021': {
+                'DIMER': { value: '121,1', unit: 'ng/mL', ref: '<500,0' }
+            },
+            '16/08/2021': {
+                'COBRE': { value: '77,6', unit: 'ug/dL', ref: '70,0 a 140,0' }
+            },
+            '28/07/2021': {
+                'PLIP_COL': { value: '307,0', unit: 'mg/dL', ref: '<190,0' },
+                'PLIP_VLDL': { value: '15,2', unit: 'mg/dL', ref: 'Critério médico' },
+                'PLIP_TRI': { value: '76,0', unit: 'mg/dL', ref: '<150,0' },
+                'PLIP_HDL': { value: '48,0', unit: 'mg/dL', ref: '>40,0' },
+                'PLIP_LDL': { value: '243,8', unit: 'mg/dL', ref: 'variável' },
+                'LITIO': { value: '<0,2', unit: 'mmol/L', ref: '0,6 a 1,2' },
+                '25VD3': { value: '62,2', unit: 'ng/mL', ref: '>20' },
+                'ZN': { value: '104,6', unit: 'mcg/dL', ref: '60,0 a 120,0' },
+                'TSH': { value: '2,2200', unit: 'uUI/mL', ref: '0,38 a 5,33' }
+            },
+            '21/07/2021': {
+                'AGCOVID': { value: 'Não Reagente', unit: '', ref: 'Não Reagente' }
+            },
+            '07/07/2021': {
+                'PTH': { value: '30,0', unit: 'pg/mL', ref: '12,0 a 88,0' },
+                'NCOVGM_IGG': { value: 'Não Reagente', unit: '', ref: 'Não Reagente' },
+                'NCOVGM_IGM': { value: 'Não Reagente', unit: '', ref: 'Não Reagente' }
+            },
+            '30/06/2021': {
+                'ZN': { value: '73,3', unit: 'mcg/dL', ref: '60,0 a 120,0' },
+                'VB12': { value: '915,0', unit: 'pg/mL', ref: '180 a 914' },
+                '25VD3': { value: '68,9', unit: 'ng/mL', ref: '>20' },
+                'PCRQT': { value: '2,2', unit: 'mg/L', ref: '<1,0' }
+            },
+            '02/06/2021': {
+                'ZN': { value: '67,3', unit: 'mcg/dL', ref: '60,0 a 120,0' },
+                '25VD3': { value: '53,8', unit: 'ng/mL', ref: '>20' }
+            },
+            '28/04/2021': {
+                'AGCOVID': { value: 'Não Reagente', unit: '', ref: 'Não Reagente' }
+            },
+            '27/04/2021': {
+                'PCRQT': { value: '0,9', unit: 'mg/L', ref: '<1,0' }
+            },
+            '08/04/2021': {
+                'PRL': { value: '11,72', unit: 'ng/mL', ref: '2,10 a 17,70' }
+            },
+            '07/04/2021': {
+                'TRI': { value: '79,0', unit: 'mg/dL', ref: '<150,0' },
+                'GLI': { value: '101', unit: 'mg/dL', ref: '<100' },
+                'CRE': { value: '0,96', unit: 'mg/dL', ref: '0,67 a 1,17' },
+                'URE': { value: '27,0', unit: 'mg/dL', ref: '17,0 a 43,0' },
+                'AUS': { value: '5,3', unit: 'mg/dL', ref: '4,4 a 7,6' },
+                'DIMER': { value: '269,7', unit: 'ng/mL', ref: '<500,0' },
+                'FSH': { value: '3,71', unit: 'uUI/mL', ref: '1,27 a 19,26' },
+                'LH': { value: '2,20', unit: 'mUI/mL', ref: '1,24 a 8,62' },
+                'COR': { value: '7,61', unit: 'ug/dL', ref: '4,5 a 24,0' },
+                'TESTO': { value: '554,3', unit: 'ng/dL', ref: '175,0 a 781,0' },
+                'TESTL': { value: '8,970', unit: 'ng/dL', ref: '1,670 a 18,300' },
+                'INS': { value: '8,90', unit: 'uUI/mL', ref: '3,21 a 16,32' },
+                'SOMAT': { value: '188,0', unit: 'ng/mL', ref: '74,0 a 236,0' },
+                'DIOL': { value: '14,7', unit: 'pg/mL', ref: '10,6 a 44,5' }
+            },
+            '06/04/2021': {
+                'TGO': { value: '16,0', unit: 'U/L', ref: '<50' },
+                'TGP': { value: '25,0', unit: 'U/L', ref: '<50,0' },
+                'GGT': { value: '18,0', unit: 'U/L', ref: '9,0 a 64,0' },
+                'CAL': { value: '9,60', unit: 'mg/dL', ref: '8,6 a 10,3' },
+                'NA': { value: '140', unit: 'mEq/L', ref: '136 a 145' },
+                'K': { value: '4,0', unit: 'mEq/L', ref: '3,5 a 5,1' },
+                'CAI': { value: '1,14', unit: 'mmol/L', ref: '1,12 a 1,36' },
+                'PTF': { value: '7,3', unit: 'g/dL', ref: '6,0 a 8,3' },
+                'ALB': { value: '4,1', unit: 'g/dL', ref: '4,2 a 5,5' },
+                'HOMI': { value: '5,29', unit: 'umol/L', ref: '5,46 a 16,20' },
+                'TSH': { value: '1,1704', unit: 'uUI/mL', ref: '0,3800 a 5,3300' },
+                'T4L': { value: '0,98', unit: 'ng/dL', ref: '0,61 a 1,12' },
+                'TPO': { value: '0,22', unit: 'IU/mL', ref: '<9,00' },
+                'PTH': { value: '39,0', unit: 'pg/mL', ref: '12,0 a 88,0' },
+                'ZN': { value: '64,8', unit: 'mcg/dL', ref: '60,0 a 120,0' },
+                'CEA': { value: '1,04', unit: 'ng/mL', ref: '<3,00' },
+                'DHEA': { value: '5,5', unit: 'ng/mL', ref: '1,7 a 6,1' },
+                'HBGLI': { value: '5,4', unit: '%', ref: '<5,7' },
+                'ALU': { value: '4,4', unit: 'ug/L', ref: '<10,0' },
+                'COBRE': { value: '96,5', unit: 'ug/dL', ref: '70,0 a 140,0' },
+                'FER': { value: '142,43', unit: 'ng/mL', ref: '23,9 a 336,2' },
+                'FAN': { value: 'Não reagente', unit: '', ref: 'Não Reagente' }
+            },
+            '22/03/2021': {
+                'SDHEA': { value: '198,5', unit: 'ug/dL', ref: '70,0 a 495,0' }
+            },
+            '20/03/2021': {
+                'IL6': { value: '2,8', unit: 'pg/mL', ref: '<7,0' },
+                'ACTH': { value: '18,5', unit: 'pg/mL', ref: '7,2 a 63,3' },
+                'FNT': { value: '7,2', unit: 'pg/mL', ref: '<8,1' }
+            },
+            '19/03/2021': {
+                'AGCOVID': { value: 'Não Reagente', unit: '', ref: 'Não Reagente' },
+                'HG': { value: '14,8', unit: 'g/dL', ref: '13,0 a 17,0' },
+                'PCRQT': { value: '1,5', unit: 'mg/L', ref: '<1,0' }
+            },
+            '08/03/2021': {
+                'DHT': { value: '425', unit: 'pg/mL', ref: '160 a 790' },
+                'PCRQT': { value: '1,1', unit: 'mg/L', ref: '<1,0' },
+                'TESTO': { value: '395,5', unit: 'ng/dL', ref: '175,0 a 781,0' },
+                'CORSDH': { value: '0,095', unit: 'ug/dL', ref: '6-10h: <0,783' },
+                'CORSDH2': { value: '0,078', unit: 'ug/dL', ref: '16-20h: <0,243' },
+                'CORSDH3': { value: '<0,054', unit: 'ug/dL', ref: '23:30-00:30h: <0,274' }
+            },
+            '01/03/2021': {
+                'PCRQT': { value: '1,9', unit: 'mg/L', ref: '<1,0' }
+            },
+            '26/02/2021': {
+                'PCRQT': { value: '2,3', unit: 'mg/L', ref: '<1,0' },
+                'PSAT': { value: '1,225', unit: 'ng/mL', ref: '<4,00' }
+            },
+            '24/02/2021': {
+                'FIB': { value: '385,0', unit: 'mg/dL', ref: '200,0 a 400,0' },
+                'FOLIC': { value: '19,8', unit: 'ng/mL', ref: '>5,9' },
+                'PCRQT': { value: '0,8', unit: 'mg/L', ref: '<1,0' },
+                'UR': { value: 'Cultura Negativa', unit: '', ref: 'Negativa' }
+            },
+            '18/02/2021': {
+                'PCRQT': { value: '2,0', unit: 'mg/L', ref: '<1,0' },
+                'PSAT': { value: '1,050', unit: 'ng/mL', ref: '<4,00' }
+            },
+            '27/01/2021': {
+                'PSAT': { value: '1,180', unit: 'ng/mL', ref: '<4,00' }
+            },
+            '22/12/2020': {
+                'AGCOVID': { value: 'Não Reagente', unit: '', ref: 'Não Reagente' }
+            },
+            '16/12/2020': {
+                'PLIP': { value: '343,0', unit: 'mg/dL', ref: '<190,0' },
+                'PSATL': { value: '0,269', unit: 'ng/mL', ref: '<0,500' }
+            },
+            '14/12/2020': {
+                'PSAT': { value: '1,000', unit: 'ng/mL', ref: '<4,00' },
+                '25VD3': { value: '40,1', unit: 'ng/mL', ref: '>20' }
+            },
+            '12/11/2020': {
+                'NCOVGM': { value: 'Não Reagente', unit: '', ref: 'Não Reagente' },
+                'PCRQT': { value: '0,2', unit: 'mg/L', ref: '<1,0' },
+                '25VD3': { value: '43,2', unit: 'ng/mL', ref: '>20' }
+            },
+            '19/09/2020': {
+                'AGCOVID': { value: 'Não Reagente', unit: '', ref: 'Não Reagente' }
+            },
+            '04/08/2020': {
+                'ESTRO': { value: '<14,8', unit: 'pg/mL', ref: 'Até 174,0' },
+                'HOMI': { value: '4,63', unit: 'umol/L', ref: '5,46 a 16,20' },
+                'AUS': { value: '4,6', unit: 'mg/dL', ref: '4,4 a 7,6' },
+                'DIOL': { value: '<15,0', unit: 'pg/mL', ref: '<33' },
+                'FER': { value: '72,07', unit: 'ng/mL', ref: '23,9 a 336,2' },
+                'HBGLI': { value: '5,5', unit: '%', ref: '<5,7' },
+                'FSH': { value: '3,85', unit: 'uUI/mL', ref: '1,27 a 19,26' },
+                'LH': { value: '2,51', unit: 'mUI/mL', ref: '1,24 a 8,62' },
+                'PCRQT': { value: '0,5', unit: 'mg/L', ref: '<1,0' },
+                'T3L': { value: '3,62', unit: 'pg/mL', ref: '2,5 a 3,9' },
+                'T4L': { value: '0,99', unit: 'ng/dL', ref: '0,61 a 1,12' },
+                'TSH': { value: '1,1481', unit: 'uUI/mL', ref: '0,3800 a 5,3300' }
+            },
+            '10/07/2020': {
+                'NCOVGM': { value: 'Não Reagente', unit: '', ref: 'Não Reagente' },
+                'PCRQT': { value: '0,4', unit: 'mg/L', ref: '<1,0' }
+            },
+            '16/06/2020': {
+                'CRE': { value: '0,92', unit: 'mg/dL', ref: '0,67 a 1,17' },
+                'LDL': { value: '265,0', unit: 'mg/dL', ref: 'variável' },
+                'PCRQT': { value: '0,3', unit: 'mg/L', ref: '<1,0' },
+                'TESTO': { value: '532,4', unit: 'ng/dL', ref: '175,0 a 781,0' }
+            },
+            '08/04/2020': {
+                'NCOVGM': { value: 'Não Reagente', unit: '', ref: 'Não Reagente' }
+            },
+            '11/03/2020': {
+                'HDL': { value: '45,0', unit: 'mg/dL', ref: '>40,0' },
+                'LDL': { value: '265,0', unit: 'mg/dL', ref: 'variável' },
+                'INS': { value: '5,90', unit: 'uUI/mL', ref: '3,21 a 16,32' }
+            }
+        };
+
+        function processOrderData() {
+            const lines = rawOrderData.trim().split('\n');
+            
+            lines.forEach(line => {
+                const parts = line.split('\t');
+                if (parts.length >= 3) {
+                    const dateTime = parts[1];
+                    const date = dateTime.split(' - ')[0];
+                    const exams = parts[2].split('-');
+                    
+                    allDates.add(date);
+                    
+                    exams.forEach(exam => {
+                        exam = exam.trim();
+                        if (exam) {
+                            allExams.add(exam);
+                            if (!examData[exam]) {
+                                examData[exam] = {};
+                            }
+                            examData[exam][date] = true;
+                        }
+                    });
+                }
+            });
+
+            // Adicionar resultados iniciais
+            Object.keys(initialResults).forEach(date => {
+                allDates.add(date); // Garantir que a data seja adicionada
+                Object.keys(initialResults[date]).forEach(exam => {
+                    allExams.add(exam); // Garantir que o exame seja adicionado
+                    if (!examResults[exam]) {
+                        examResults[exam] = {};
+                    }
+                    examResults[exam][date] = initialResults[date][exam];
+                    examUnits[exam] = initialResults[date][exam].unit;
+                });
+            });
+
+            updateDisplay();
+        }
+
+        function parseExamResults(text) {
+            const results = {};
+            const lines = text.split('\n');
+            let currentExam = null;
+            let currentDate = null;
+            
+            for (let i = 0; i < lines.length; i++) {
+                const line = lines[i].trim();
+                
+                // Detectar nome do exame
+                if (line.match(/^[A-Z\s\-]+$/)) {
+                    currentExam = line;
+                }
+                
+                // Detectar data de coleta
+                if (line.includes('Coleta') && line.includes(':')) {
+                    const dateMatch = line.match(/(\d{2}\/\d{2}\/\d{4})/);
+                    if (dateMatch) {
+                        currentDate = dateMatch[1];
+                    }
+                }
+                
+                // Detectar resultado
+                if (line.includes('RESULTADO:') && i + 1 < lines.length) {
+                    const value = lines[i + 1].trim();
+                    const unit = lines[i + 2] ? lines[i + 2].trim() : '';
+                    
+                    if (currentExam && currentDate) {
+                        const examCode = examNameMap[currentExam] || currentExam;
+                        
+                        if (!results[currentDate]) {
+                            results[currentDate] = {};
+                        }
+                        
+                        results[currentDate][examCode] = {
+                            value: value,
+                            unit: unit,
+                            examName: currentExam
+                        };
+                    }
+                }
+                
+                // Detectar valores de referência
+                if (line.includes('Valor de Referência:')) {
+                    const ref = line.replace('Valor de Referência:', '').trim();
+                    if (currentExam && currentDate && results[currentDate]) {
+                        const examCode = examNameMap[currentExam] || currentExam;
+                        if (results[currentDate][examCode]) {
+                            results[currentDate][examCode].ref = ref;
+                        }
+                    }
+                }
+            }
+            
+            return results;
+        }
+
+        function addResults() {
+            const input = document.getElementById('examInput').value;
+            if (!input.trim()) {
+                alert('Por favor, cole os resultados dos exames.');
+                return;
+            }
+            
+            const newResults = parseExamResults(input);
+            
+            // Adicionar novos resultados
+            Object.keys(newResults).forEach(date => {
+                Object.keys(newResults[date]).forEach(exam => {
+                    if (!examResults[exam]) {
+                        examResults[exam] = {};
+                    }
+                    examResults[exam][date] = newResults[date][exam];
+                    examUnits[exam] = newResults[date][exam].unit;
+                    allExams.add(exam);
+                    allDates.add(date);
+                });
+            });
+            
+            updateDisplay();
+            document.getElementById('examInput').value = '';
+            alert('Resultados adicionados com sucesso!');
+        }
+
+        function clearResults() {
+            if (confirm('Tem certeza que deseja limpar todos os resultados?')) {
+                examResults = {};
+                examUnits = {};
+                
+                // Re-adicionar resultados iniciais
+                Object.keys(initialResults).forEach(date => {
+                    Object.keys(initialResults[date]).forEach(exam => {
+                        if (!examResults[exam]) {
+                            examResults[exam] = {};
+                        }
+                        examResults[exam][date] = initialResults[date][exam];
+                        examUnits[exam] = initialResults[date][exam].unit;
+                    });
+                });
+                
+                updateDisplay();
+            }
+        }
+
+        function updateDisplay() {
+            const sortedDates = Array.from(allDates).sort((a, b) => {
+                const [dayA, monthA, yearA] = a.split('/');
+                const [dayB, monthB, yearB] = b.split('/');
+                const dateA = new Date(yearA, monthA - 1, dayA);
+                const dateB = new Date(yearB, monthB - 1, dayB);
+                return dateB - dateA;
+            });
+
+            const sortedExams = Array.from(allExams).sort();
+
+            // Atualizar estatísticas
+            document.getElementById('totalOrders').textContent = allDates.size;
+            document.getElementById('totalExams').textContent = sortedExams.length;
+            
+            let totalResults = 0;
+            Object.keys(examResults).forEach(exam => {
+                totalResults += Object.keys(examResults[exam]).length;
+            });
+            document.getElementById('totalResults').textContent = totalResults;
+            
+            if (sortedDates.length > 0) {
+                const firstDate = sortedDates[sortedDates.length - 1];
+                const lastDate = sortedDates[0];
+                document.getElementById('dateRange').innerHTML = `<span style="font-size: 0.5em">${firstDate} - ${lastDate}</span>`;
+            }
+
+            // Criar tabela HTML
+            createHTMLTable(sortedExams, sortedDates);
+            document.getElementById('processing').style.display = 'none';
+        }
+
+        function createHTMLTable(exams, dates) {
+            const headerRow = document.getElementById('headerRow');
+            const tableBody = document.getElementById('tableBody');
+
+            // AQUI ESTÁ A MUDANÇA PRINCIPAL - ADICIONANDO A COLUNA "ÚLTIMO RESULTADO"
+            headerRow.innerHTML = '<th>Sigla</th>' +
+                '<th>Nome do Exame</th>' +
+                '<th>Unidade</th>' +
+                '<th style="background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);">Último Resultado</th>' + 
+                dates.map(date => `<th>${date}</th>`).join('');
+
+            // Criar linhas com a nova coluna
+            tableBody.innerHTML = exams.map(exam => {
+                const unit = examUnits[exam] || '';
+                const fullName = examFullNames[exam] || exam;
+                
+                // Encontrar o último resultado (data mais recente)
+                let lastResult = '';
+                let lastResultDate = null;
+                let isLastOutOfRange = false;
+                
+                if (examResults[exam]) {
+                    // Converter as datas e encontrar a mais recente
+                    const examDates = Object.keys(examResults[exam]);
+                    if (examDates.length > 0) {
+                        examDates.sort((a, b) => {
+                            const [dayA, monthA, yearA] = a.split('/');
+                            const [dayB, monthB, yearB] = b.split('/');
+                            const dateA = new Date(yearA, monthA - 1, dayA);
+                            const dateB = new Date(yearB, monthB - 1, dayB);
+                            return dateB - dateA;
+                        });
+                        lastResultDate = examDates[0];
+                        const result = examResults[exam][lastResultDate];
+                        lastResult = result.value;
+                        isLastOutOfRange = checkIfOutOfRange(result.value, result.ref);
+                    }
+                }
+                
+                const row = `<tr>
+                    <td>${exam}</td>
+                    <td>${fullName}</td>
+                    <td>${unit}</td>
+                    <td class="${isLastOutOfRange ? 'out-of-range' : (lastResult ? 'has-value' : '')}" style="font-weight: bold;" title="${lastResultDate ? 'Data: ' + lastResultDate : ''}">${lastResult}</td>
+                    ${dates.map(date => {
+                        if (examResults[exam] && examResults[exam][date]) {
+                            const result = examResults[exam][date];
+                            const isOutOfRange = checkIfOutOfRange(result.value, result.ref);
+                            return `<td class="${isOutOfRange ? 'out-of-range' : 'has-value'}">${result.value}</td>`;
+                        } else if (examData[exam] && examData[exam][date]) {
+                            return `<td class="has-value">✓</td>`;
+                        } else {
+                            return `<td></td>`;
+                        }
+                    }).join('')}
+                </tr>`;
+                return row;
+            }).join('');
+        }
+
+        function checkIfOutOfRange(value, ref) {
+            // Simplificado - você pode melhorar esta função
+            if (!ref || !value) return false;
+            
+            // Para valores como "<14,8"
+            if (value.includes('<') || value.includes('>')) return false;
+            
+            // Para valores "Negativo", "Positivo", "Reagente"
+            if (isNaN(parseFloat(value.replace(',', '.')))) {
+                // Verificar se é um resultado qualitativo fora do padrão
+                if (value === 'Reagente' && ref.includes('Não Reagente')) return true;
+                if (value === 'Positivo' && ref.includes('Negativo')) return true;
+                return false;
+            }
+            
+            // Aqui você pode adicionar lógica mais complexa para verificar ranges
+            const numValue = parseFloat(value.replace(',', '.'));
+            
+            // Verificar valores com range simples
+            if (ref.includes('<')) {
+                const maxMatch = ref.match(/<\s*(\d+[,.]?\d*)/);
+                if (maxMatch) {
+                    const maxValue = parseFloat(maxMatch[1].replace(',', '.'));
+                    if (numValue > maxValue) return true;
+                }
+            }
+            
+            if (ref.includes('>')) {
+                const minMatch = ref.match(/>\s*(\d+[,.]?\d*)/);
+                if (minMatch) {
+                    const minValue = parseFloat(minMatch[1].replace(',', '.'));
+                    if (numValue < minValue) return true;
+                }
+            }
+            
+            // Verificar ranges com "a"
+            if (ref.includes(' a ')) {
+                const rangeMatch = ref.match(/(\d+[,.]?\d*)\s*a\s*(\d+[,.]?\d*)/);
+                if (rangeMatch) {
+                    const minValue = parseFloat(rangeMatch[1].replace(',', '.'));
+                    const maxValue = parseFloat(rangeMatch[2].replace(',', '.'));
+                    if (numValue < minValue || numValue > maxValue) return true;
+                }
+            }
+            
+            return false;
+        }
+
+        function downloadExcel() {
+            const sortedDates = Array.from(allDates).sort((a, b) => {
+                const [dayA, monthA, yearA] = a.split('/');
+                const [dayB, monthB, yearB] = b.split('/');
+                const dateA = new Date(yearA, monthA - 1, dayA);
+                const dateB = new Date(yearB, monthB - 1, dayB);
+                return dateB - dateA;
+            });
+
+            const sortedExams = Array.from(allExams).sort();
+
+            // Criar dados para Excel - Aba principal COM A NOVA COLUNA
+            const excelData = [];
+            
+            // Cabeçalho
+            excelData.push(['Sigla', 'Nome do Exame', 'Unidade', 'Último Resultado', ...sortedDates]);
+            
+            // Dados
+            sortedExams.forEach(exam => {
+                const fullName = examFullNames[exam] || exam;
+                
+                // Encontrar o último resultado
+                let lastResult = '';
+                if (examResults[exam]) {
+                    const examDates = Object.keys(examResults[exam]);
+                    if (examDates.length > 0) {
+                        examDates.sort((a, b) => {
+                            const [dayA, monthA, yearA] = a.split('/');
+                            const [dayB, monthB, yearB] = b.split('/');
+                            const dateA = new Date(yearA, monthA - 1, dayA);
+                            const dateB = new Date(yearB, monthB - 1, dayB);
+                            return dateB - dateA;
+                        });
+                        lastResult = examResults[exam][examDates[0]].value;
+                    }
+                }
+                
+                const row = [exam, fullName, examUnits[exam] || '', lastResult];
+                sortedDates.forEach(date => {
+                    if (examResults[exam] && examResults[exam][date]) {
+                        row.push(examResults[exam][date].value);
+                    } else if (examData[exam] && examData[exam][date]) {
+                        row.push('Realizado');
+                    } else {
+                        row.push('');
+                    }
+                });
+                excelData.push(row);
+            });
+
+            // Criar workbook
+            const wb = XLSX.utils.book_new();
+            const ws = XLSX.utils.aoa_to_sheet(excelData);
+
+            // Ajustar largura das colunas - COM A NOVA COLUNA
+            const colWidths = [{ wch: 10 }, { wch: 35 }, { wch: 12 }, { wch: 15 }];
+            sortedDates.forEach(() => colWidths.push({ wch: 12 }));
+            ws['!cols'] = colWidths;
+
+            // Aplicar estilos ao cabeçalho
+            const range = XLSX.utils.decode_range(ws['!ref']);
+            
+            // Estilizar cabeçalho (primeira linha)
+            for (let C = range.s.c; C <= range.e.c; ++C) {
+                const address = XLSX.utils.encode_col(C) + "1";
+                if (!ws[address]) continue;
+                
+                // Adicionar estilo ao cabeçalho
+                ws[address].s = {
+                    fill: {
+                        patternType: "solid",
+                        fgColor: { rgb: "667EEA" }
+                    },
+                    font: {
+                        bold: true,
+                        color: { rgb: "FFFFFF" },
+                        sz: 12
+                    },
+                    alignment: {
+                        horizontal: "center",
+                        vertical: "center"
+                    },
+                    border: {
+                        top: { style: "thin", color: { rgb: "333333" } },
+                        bottom: { style: "thin", color: { rgb: "333333" } },
+                        left: { style: "thin", color: { rgb: "333333" } },
+                        right: { style: "thin", color: { rgb: "333333" } }
+                    }
+                };
+            }
+
+            // Congelar painéis (primeiras 4 colunas e primeira linha)
+            ws['!freeze'] = { xSplit: 4, ySplit: 1 };
+
+            XLSX.utils.book_append_sheet(wb, ws, "Resultados");
+
+            // Criar aba de detalhes
+            const detailData = [
+                ['Detalhes dos Exames com Resultados'],
+                [''],
+                ['Data', 'Sigla', 'Nome do Exame', 'Resultado', 'Unidade', 'Valor de Referência', 'Status']
+            ];
+
+            Object.keys(examResults).forEach(exam => {
+                const fullName = examFullNames[exam] || exam;
+                Object.keys(examResults[exam]).forEach(date => {
+                    const result = examResults[exam][date];
+                    const isOutOfRange = checkIfOutOfRange(result.value, result.ref);
+                    const status = isOutOfRange ? 'FORA DO RANGE' : 'NORMAL';
+                    detailData.push([
+                        date,
+                        exam,
+                        fullName,
+                        result.value,
+                        result.unit || '',
+                        result.ref || '',
+                        status
+                    ]);
+                });
+            });
+
+            const ws2 = XLSX.utils.aoa_to_sheet(detailData);
+            ws2['!cols'] = [
+                { wch: 12 },
+                { wch: 10 },
+                { wch: 35 },
+                { wch: 15 },
+                { wch: 10 },
+                { wch: 30 },
+                { wch: 15 }
+            ];
+
+            XLSX.utils.book_append_sheet(wb, ws2, "Detalhes");
+
+            // Download
+            XLSX.writeFile(wb, "exames_laboratoriais_estilizados.xlsx");
+        }
+
+        // Inicializar
+        window.onload = processOrderData;
+    </script>
+</body>
+</html>
